@@ -103,8 +103,14 @@ extension Int {
     var root : Int { return Int(sqrt(Double(self)))}
 }
 
+extension Double {
+    var cg: CGFloat { return CGFloat(self)}
+}
 
 protocol SudokuDelegate: class {
     func gameLost()
     func gameWon()
 }
+
+
+

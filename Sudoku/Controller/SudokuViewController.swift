@@ -15,7 +15,6 @@ class SudokuViewController: GameViewController, SudokuDelegate {
             $0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(touchField)))
         }}}
     
-    @IBOutlet weak var difficultChooser: UISegmentedControl!
     @IBOutlet var digits: [Button]!
     @IBOutlet weak var mistakesLabel: UILabel!
     @IBOutlet weak var hintsLabel: UILabel!
@@ -24,7 +23,7 @@ class SudokuViewController: GameViewController, SudokuDelegate {
     // MARK: - private vars
     
     private var hasActiveButton: Bool?
-    private var selectedIndex: Int { difficultChooser.selectedSegmentIndex }
+    
     
     // MARK: - ViewController lifecycle
     
@@ -40,7 +39,6 @@ class SudokuViewController: GameViewController, SudokuDelegate {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(clear)))
         NotificationCenter.default.addObserver(self, selector: #selector(saveGame), name: UIApplication.willResignActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateBoard), name: UIApplication.willEnterForegroundNotification, object: nil)
-        updateDifficultChooser()
         recreateGameIfNeeded()
     }
     
@@ -48,25 +46,18 @@ class SudokuViewController: GameViewController, SudokuDelegate {
     
     // MARK: - IBActions
     
-    @IBAction func changeDifficult(_ sender:UISegmentedControl) {
-        if sender == difficultChooser {
-            UserDefaults.standard.set(selectedIndex, forKey: "index")
-            reset(full: false)
-            saveGame()
-            recreateGameIfNeeded()
-        }
-    }
-    
-    @IBAction func newGame(_ sender: UIButton) {
-        newGame()
-    }
     
     @IBAction func erase(_ sender: UIButton) {
         hasActiveButton = nil
         guard let button = selectedButton else { return }
         guard let buttonIndex = cells.firstIndex(of: button) else { return }
         guard let title = button.currentTitle else { return }
-        guard let digit = Int(title) else { return }
+        let center = button.convert(button.bounds.center, to: stackView)
+        let pivot = stackView.convert(center, to: view)
+        guard let digit = Int(title) else {
+            showErrorAt(rightFrameBasedOn(pivot), message: "Can't erase empty cell")
+            return
+        }
         if sudoku.mistakesMade.contains(buttonIndex) {// erase only mistakes
             eraseDigit(digit, at: buttonIndex)
             if #available(iOS 13, *) {
@@ -74,6 +65,8 @@ class SudokuViewController: GameViewController, SudokuDelegate {
             } else {
                 cells[buttonIndex].setTitleColor(.black, for: .normal)
             }
+        } else {
+            showErrorAt(rightFrameBasedOn(pivot), message: "Can't erase native cell")
         }
     }
     
@@ -121,7 +114,8 @@ class SudokuViewController: GameViewController, SudokuDelegate {
     }
     
     
-    @objc private func touchField(_ recognizer: UITapGestureRecognizer) {
+    @objc
+    private func touchField(_ recognizer: UITapGestureRecognizer) {
         if recognizer.state == .ended {
             if let button = recognizer.view as? Cell,
                 let index = cells.firstIndex(of: button) {
@@ -139,7 +133,6 @@ class SudokuViewController: GameViewController, SudokuDelegate {
     private func updateUI() {
         updateBoard()
         updateLabels()
-        cells.forEach { $0.expert = sudoku.difficult == .expert  }
         hideDigitIfPossible()
     }
     
@@ -172,7 +165,6 @@ class SudokuViewController: GameViewController, SudokuDelegate {
     @objc private func clear() { reset(full: false) }
     
     @objc private func reset(full:Bool) {
-        print(full)
         cells.forEach {
             $0.active = false
             $0.highlight = false
@@ -188,11 +180,6 @@ class SudokuViewController: GameViewController, SudokuDelegate {
         }
     }
     
-    private func updateDifficultChooser() {
-        if let index = UserDefaults.standard.value(forKey: "index") as? Int {
-            difficultChooser.selectedSegmentIndex = index
-        }
-    }
     
     private func eraseDigit(_ digit:Int,at index:Int) {
         sudoku.eraseAt(index, digit)
@@ -224,9 +211,6 @@ class SudokuViewController: GameViewController, SudokuDelegate {
     private func recreateGameIfNeeded() {
         if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("games"),let data = try? Data(contentsOf: url),let newValue = Game(json: data) {
             game = newValue
-            print(game)
-            guard let game = game.games[selectedIndex] else { newGame();return  }
-            sudoku = game
             sudoku.delegate = self
             updateUI()
             saveGame()
@@ -238,7 +222,6 @@ class SudokuViewController: GameViewController, SudokuDelegate {
     
     @objc private func saveGame() {
         if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("games"),let json = game.json {
-            game.games[selectedIndex] = sudoku
             try? json.write(to: url)
         }
     }
@@ -250,14 +233,35 @@ class SudokuViewController: GameViewController, SudokuDelegate {
         view.isUserInteractionEnabled = true
         spinner.isHidden = false
         spinner.startAnimating()
-        sudoku = SudokuGenerator(difficult: selectedIndex,
-                                  delegate: self) { // game created
-                                        DispatchQueue.main.async { [weak self] in
-                                            self?.saveGame()
-                                            self?.updateUI()
-                                            self?.spinner.stopAnimating()
-                                    }
-        }
     }
+    
+    @IBAction func back(_ sender:UIButton) {
+        dismiss(animated: true)
+    }
+    
+    
+    private func showErrorAt(_ rect:CGRect,message:String) {
+        let errorView = ErrorView(frame: rect)
+        errorView.message = message
+        view.insertSubview(errorView, at: view.subviews.count)
+    }
+    
+    
+    private func rightFrameBasedOn(_ center: CGPoint) -> CGRect {
+        guard let button = selectedButton else { return CGRect.zero}
+        var x:CGFloat = 10.0
+        if center.x - 100 < 10 { // left ofset
+            x = 10.0
+        } else if center.x + 100 > view.bounds.width - 10 { // rightOffset
+            x = view.bounds.width - 200 - 10
+        } else { // somewhere in the middle
+            x = center.x - 100.0.cg
+        }
+        
+        return CGRect(x: x, y: center.y - button.bounds.height*1.5, width: 200, height: button.bounds.height)
+    }
+  
+    
+    
     
 }

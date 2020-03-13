@@ -8,6 +8,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var buttonsStackView: UIStackView!
     @IBOutlet weak var digitsStackView: UIStackView!
     
+    @IBOutlet weak var stackView: UIStackView!
+    
     //constraints for digits
     @IBOutlet private weak var centerXDigitsStackViewConstraint: NSLayoutConstraint!
     @IBOutlet private weak var topAnchorDigitsStackView: NSLayoutConstraint!
@@ -15,7 +17,6 @@ class GameViewController: UIViewController {
     
     //constraint for buttons
     @IBOutlet private weak var centerXButtonsStackViewConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var verticalSpacingConstraint:NSLayoutConstraint!
     @IBOutlet private weak var trailingAnchorButtonsStackView: NSLayoutConstraint!
     @IBOutlet private weak var topAnchorButtonsStackView: NSLayoutConstraint!
     
@@ -41,7 +42,6 @@ class GameViewController: UIViewController {
             leadingAnchorDigitsStackView.isActive = UIDevice.isLandscape
             leadingAnchorDigitsStackView.constant = 20
             centerXButtonsStackViewConstraint.isActive = !UIDevice.isLandscape
-            verticalSpacingConstraint.isActive = !UIDevice.isLandscape
             trailingAnchorButtonsStackView.isActive = UIDevice.isLandscape
             topAnchorButtonsStackView.isActive = UIDevice.isLandscape
             centerXLabelsStackViewConstraint.isActive = !UIDevice.isLandscape

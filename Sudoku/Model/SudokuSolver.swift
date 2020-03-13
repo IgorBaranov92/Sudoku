@@ -2,18 +2,16 @@ import Foundation
 
 class SudokuSolver: Sudoku {
     
-    private(set) var lines = [Int:Set<Int>]()
-    private(set) var columns = [Int:Set<Int>]()
-    private(set) var blocks = [Int:Set<Int>]()
-    private(set) var leftDiagonal = Set<Int>()
-    private(set) var rightDiagonal = Set<Int>()
+    var lines = [Int:Set<Int>]()
+    var columns = [Int:Set<Int>]()
+    var blocks = [Int:Set<Int>]()
     
-    override init(expert:Bool) {
-        super.init(expert:expert)
+    override init() {
+        super.init()
     }
     
     required init(from decoder: Decoder) throws {
-        super.init(expert: false)
+        try super.init(from: decoder)
     }
     
     func prepareForSolving() {
@@ -36,11 +34,6 @@ class SudokuSolver: Sudoku {
                 blocks[coordinate.row/3 + 3*(coordinate.column/3)]!.insert(digits[index])
             }
         }
-        if expert {
-            leftDiagonal.insert(digits[0])
-            rightDiagonal.insert(digits[8])
-        }
- 
     }
     
     @discardableResult
@@ -68,25 +61,13 @@ class SudokuSolver: Sudoku {
     }
     
     private func isSaveAt(_ i:Int,_ j:Int,_ digit:Int) -> Bool {
-        if lines[j]!.contains(digit) || columns[i]!.contains(digit) || blocks[i/3 + 3*(j/3)]!.contains(digit) || isLeftDiagonalSafe(i, j, digit) || isRightDiagonalSafe(i, j, digit)  {
+        if lines[j]!.contains(digit) || columns[i]!.contains(digit) || blocks[i/3 + 3*(j/3)]!.contains(digit) {
             return false
          }
         return true
      }
 
-    private func isLeftDiagonalSafe(_ i:Int,_ j:Int,_ digit:Int) -> Bool {
-        if expert && i == j && leftDiagonal.contains(digit) {
-            return true
-        }
-        return false
-    }
-    
-    private func isRightDiagonalSafe(_ i:Int,_ j:Int,_ digit:Int) -> Bool {
-        if expert && i + j == dimension - 1 && rightDiagonal.contains(digit) {
-            return true
-        }
-        return false
-    }
+
     
      // return cell without digit
     private func unsolvableCell(_ base:Int) -> (row:Int,column:Int) {
@@ -105,14 +86,11 @@ class SudokuSolver: Sudoku {
             lines[column]!.insert(num)
             columns[row]!.insert(num)
             blocks[row/3+3*(column/3)]!.insert(num)
-            if expert && row == column { leftDiagonal.insert(num)}
-            if expert && row + column == dimension-1 { rightDiagonal.insert(num)}
+            
         } else {
             lines[column]!.remove(num)
             columns[row]!.remove(num)
             blocks[row/3+3*(column/3)]!.remove(num)
-            if expert && row == column { leftDiagonal.remove(num)}
-            if expert && row + column == dimension-1 { rightDiagonal.remove(num)}
         }
     }
     
@@ -120,8 +98,6 @@ class SudokuSolver: Sudoku {
         lines.removeAll()
         columns.removeAll()
         blocks.removeAll()
-        leftDiagonal.removeAll()
-        rightDiagonal.removeAll()
     }
     
 }

@@ -5,12 +5,15 @@ class Sudoku: Codable {
     let dimension = 9
     var digits = [Int]()
     var answers = [Int]()
-        
-    var expert = false
+   
 
-    init(expert:Bool) {
-        self.expert = expert
+    //how many cells delete
+    enum Difficult: Int, Codable {
+        case easy = 42
+        case medium = 48
+        case hard = 52
     }
+
     
     subscript(_ i:Int,_ j:Int) -> Int {
        set {

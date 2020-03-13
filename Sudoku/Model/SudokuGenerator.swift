@@ -16,7 +16,7 @@ class SudokuGenerator: Sudoku {
     
           
     init(difficult:Int, delegate: SudokuDelegate? = nil,completion:(() -> ())? = nil  ) {
-        super.init(expert: difficult == 3)
+        super.init()
         DispatchQueue.global(qos: .userInitiated).async {
             self.delegate = delegate
             self.completion = completion
@@ -24,7 +24,6 @@ class SudokuGenerator: Sudoku {
             case 0: self.difficult = .easy;self.mistakes = 4;self.hints = 4
             case 1: self.difficult = .medium;self.mistakes = 3;self.hints = 3
             case 2: self.difficult = .hard; self.mistakes = 2;self.hints = 2
-            case 3: self.difficult = .expert; self.mistakes = 1;self.hints = 1
             default:break
             }
             self.clear()
@@ -64,15 +63,6 @@ class SudokuGenerator: Sudoku {
             indexes.append(dimension*coordinates.column + i )
             indexes.append(coordinates.row + dimension*i )
             indexes.append(columnOffset*dimension + rowOffset + i/3*dimension + i%3)
-            if expert {
-                let coordinates = self[index]
-                if coordinates.row == coordinates.column { // left
-                    indexes.append(i*dimension + i)
-                }
-                if coordinates.row + coordinates.column == dimension - 1 { // right
-                    indexes.append((dimension-1-i)*dimension + i)
-                }
-            }
         }
         return indexes.unique()
     }
@@ -99,16 +89,6 @@ class SudokuGenerator: Sudoku {
             }
         }
     }
-    
-
-
-    //how many cells delete
-    enum Difficult: Int, Codable {
-        case easy = 42
-        case medium = 48
-        case hard = 52
-        case expert = 54
-    }
 
 
     private func generate() {
@@ -122,7 +102,7 @@ class SudokuGenerator: Sudoku {
     }
     
     private func createBoard() {
-        let solver = SudokuSolver(expert: self.expert)
+        let solver = SudokuSolver()
         solver.digits = digits
         solver.prepareForSolving()
         if solver.solve() {
@@ -174,7 +154,7 @@ class SudokuGenerator: Sudoku {
     // persistence
     
     required init(from decoder: Decoder) throws {
-        super.init(expert: false)
+        super.init()
         let container = try decoder.container(keyedBy: CodingKeys.self)
         hints = try container.decode(Int.self, forKey: .hints)
         hintsMade = try container.decode(Int.self, forKey: .hintsMade)
@@ -184,7 +164,6 @@ class SudokuGenerator: Sudoku {
         digits = try container.decode([Int].self, forKey: .digits)
         answers = try container.decode([Int].self, forKey: .answers)
         digitsCount = try container.decode([Int:Int].self, forKey: .digitsCount)
-        expert = try container.decode(Bool.self, forKey: .expert)
     }
     
     override func encode(to encoder: Encoder) throws {
@@ -197,7 +176,6 @@ class SudokuGenerator: Sudoku {
         try container.encode(digits, forKey: .digits)
         try container.encode(answers, forKey: .answers)
         try container.encode(digitsCount, forKey: .digitsCount)
-        try container.encode(expert, forKey: .expert)
     }
     
     private enum CodingKeys:String,CodingKey {
