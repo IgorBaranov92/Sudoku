@@ -9,7 +9,7 @@ class LevelsViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        scrollView.contentSize = CGSize(width: view.bounds.width, height: stackView.bounds.height + 25)
+        scrollView.contentSize = CGSize(width: view.bounds.width, height: stackView.bounds.height + 25)        
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {

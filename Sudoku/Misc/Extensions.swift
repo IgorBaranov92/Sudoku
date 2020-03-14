@@ -24,30 +24,75 @@ extension CALayer {
         addSublayer(subLayer)
     }
     
-    func addDiagonalAt(edge:UIRectEdge,width:CGFloat) {
+    func addDiagonalAt(edge:LayerType,width:CGFloat) {
         let subLayer = CAShapeLayer()
-        let path = UIBezierPath()
+        let path = CGMutablePath()
+        let upperLeft = CGPoint.zero
+        let upperRight = CGPoint(x: frame.width, y: 0)
+        let lowerLeft = CGPoint(x: 0, y: frame.height)
+        let lowerRight = CGPoint(x: frame.width, y: frame.height)
+        let center = CGPoint(x: frame.width/2, y: frame.height/2)
         switch edge {
-        case .top:
-            path.move(to: CGPoint(x: 0, y: 0))
-            path.addLine(to: CGPoint(x: frame.width, y: frame.height))
-        case .bottom:
-            path.move(to: CGPoint(x: 0, y: frame.height))
-            path.addLine(to: CGPoint(x: frame.width, y: 0))
-        default:break
+        case .leftDiagonal:
+            path.move(to: upperLeft)
+            path.addLine(to: lowerRight)
+        case .rightDiagonal:
+            path.move(to: lowerLeft)
+            path.addLine(to: upperRight)
+        case .leftAngle:
+            path.move(to: lowerRight)
+            path.addLine(to: center)
+            let p1 = CGMutablePath()
+            p1.move(to: center)
+            p1.addLine(to: upperRight)
+            path.addPath(p1)
+        case .rightAngle:
+            path.move(to: lowerLeft)
+            path.addLine(to: center)
+            let p1 = CGMutablePath()
+            p1.move(to: center)
+            p1.addLine(to: upperLeft)
+            path.addPath(p1)
+        case .topAngle:
+            path.move(to: lowerLeft)
+            path.addLine(to: center)
+            let p1 = CGMutablePath()
+            p1.move(to: center)
+            p1.addLine(to: lowerRight)
+            path.addPath(p1)
+        case .bottomAngle:
+            path.move(to: upperLeft)
+            path.addLine(to: center)
+            let p1 = CGMutablePath()
+            p1.move(to: center)
+            p1.addLine(to: upperRight)
+            path.addPath(p1)
         }
-        path.lineWidth = width
-        UIColor.black.setStroke()
-        path.stroke()
-        subLayer.path = path.cgPath
+        
+        subLayer.path = path
         if #available(iOS 13.0, *) {
             subLayer.strokeColor =  Colors.dynamicDiagonalColor.cgColor
         } else {
             subLayer.strokeColor =  #colorLiteral(red: 0.7737190911, green: 0.7737190911, blue: 0.7737190911, alpha: 1).cgColor
         }
-        subLayer.name = "diagonal"
+        subLayer.name = edge.rawValue
         insertSublayer(subLayer, at: 0)
     }
+    
+    enum LayerType:String {
+        case leftDiagonal
+        case rightDiagonal
+        case leftAngle
+        case rightAngle
+        case topAngle
+        case bottomAngle
+    }
+    
+    
+    
+    
+    
+    
 }
 
 extension UIDevice {

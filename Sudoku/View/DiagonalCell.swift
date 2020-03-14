@@ -13,10 +13,10 @@ class DiagonalCell: Cell {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         if needsLeftDiagonal {
-            layer.addDiagonalAt(edge: .top, width: 1.0)
+            layer.addDiagonalAt(edge: .leftDiagonal, width: Constants.lineWidthForDiagonal)
         }
         if needsRightDiagonal {
-            layer.addDiagonalAt(edge: .bottom, width: 1.0)
+            layer.addDiagonalAt(edge: .rightDiagonal, width: Constants.lineWidthForDiagonal)
         }
     }
     

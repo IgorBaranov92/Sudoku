@@ -19,6 +19,8 @@
 		78294FCD241A8D0500854A97 /* HexagonSudokuSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FCC241A8D0500854A97 /* HexagonSudokuSolver.swift */; };
 		78294FCF241B882C00854A97 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FCE241B882C00854A97 /* ErrorView.swift */; };
 		78294FD1241B93A700854A97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FD0241B93A700854A97 /* Constants.swift */; };
+		78294FD3241BAA6400854A97 /* RombCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FD2241BAA6400854A97 /* RombCell.swift */; };
+		78294FD5241BAC4E00854A97 /* RombViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FD4241BAC4E00854A97 /* RombViewController.swift */; };
 		785C733D23F1856B00757B0E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C733C23F1856B00757B0E /* Colors.swift */; };
 		785C733F23F18CB300757B0E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C733E23F18CB300757B0E /* Button.swift */; };
 		785C734123F192A000757B0E /* SudokuSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C734023F192A000757B0E /* SudokuSolver.swift */; };
@@ -34,13 +36,17 @@
 		7895216B241A431C004F8C1C /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895216A241A431C004F8C1C /* BackButton.swift */; };
 		78952170241A54EB004F8C1C /* Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895216F241A54EB004F8C1C /* Hexagon.swift */; };
 		78969737241A2FAB0054397E /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78969736241A2FAB0054397E /* LevelsViewController.swift */; };
-		78969739241A2FD50054397E /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78969738241A2FD50054397E /* PlayButton.swift */; };
 		7896973B241A31870054397E /* DiagonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896973A241A31870054397E /* DiagonalViewController.swift */; };
 		7896973D241A31910054397E /* TwoDiagonalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896973C241A31910054397E /* TwoDiagonalsViewController.swift */; };
 		7896973F241A321B0054397E /* DiagonalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896973E241A321B0054397E /* DiagonalCell.swift */; };
-		78969743241A34240054397E /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78969742241A34240054397E /* CircleButton.swift */; };
 		78B1ABC3241A78C80084F441 /* HexagonDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1ABC2241A78C80084F441 /* HexagonDeck.swift */; };
 		78B1ABC5241A78EE0084F441 /* HexagonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1ABC4241A78EE0084F441 /* HexagonViewController.swift */; };
+		78C9B5DB241BE98100E1DB7A /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5DA241BE98100E1DB7A /* TutorialView.swift */; };
+		78C9B5DD241BEAAC00E1DB7A /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5DC241BEAAC00E1DB7A /* DoneButton.swift */; };
+		78C9B5E0241BF27000E1DB7A /* TutorialViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5DF241BF27000E1DB7A /* TutorialViewAnimator.swift */; };
+		78C9B5E2241BF35D00E1DB7A /* ErrorViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5E1241BF35D00E1DB7A /* ErrorViewAnimation.swift */; };
+		78C9B5E6241D08A500E1DB7A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5E5241D08A500E1DB7A /* OptionsViewController.swift */; };
+		78C9B5E8241D08BC00E1DB7A /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5E7241D08BC00E1DB7A /* StatisticViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +81,8 @@
 		78294FCC241A8D0500854A97 /* HexagonSudokuSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonSudokuSolver.swift; sourceTree = "<group>"; };
 		78294FCE241B882C00854A97 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		78294FD0241B93A700854A97 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		78294FD2241BAA6400854A97 /* RombCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RombCell.swift; sourceTree = "<group>"; };
+		78294FD4241BAC4E00854A97 /* RombViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RombViewController.swift; sourceTree = "<group>"; };
 		785C733C23F1856B00757B0E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		785C733E23F18CB300757B0E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		785C734023F192A000757B0E /* SudokuSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuSolver.swift; sourceTree = "<group>"; };
@@ -94,13 +102,17 @@
 		7895216A241A431C004F8C1C /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		7895216F241A54EB004F8C1C /* Hexagon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexagon.swift; sourceTree = "<group>"; };
 		78969736241A2FAB0054397E /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
-		78969738241A2FD50054397E /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		7896973A241A31870054397E /* DiagonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalViewController.swift; sourceTree = "<group>"; };
 		7896973C241A31910054397E /* TwoDiagonalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoDiagonalsViewController.swift; sourceTree = "<group>"; };
 		7896973E241A321B0054397E /* DiagonalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalCell.swift; sourceTree = "<group>"; };
-		78969742241A34240054397E /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
 		78B1ABC2241A78C80084F441 /* HexagonDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonDeck.swift; sourceTree = "<group>"; };
 		78B1ABC4241A78EE0084F441 /* HexagonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonViewController.swift; sourceTree = "<group>"; };
+		78C9B5DA241BE98100E1DB7A /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		78C9B5DC241BEAAC00E1DB7A /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
+		78C9B5DF241BF27000E1DB7A /* TutorialViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewAnimator.swift; sourceTree = "<group>"; };
+		78C9B5E1241BF35D00E1DB7A /* ErrorViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewAnimation.swift; sourceTree = "<group>"; };
+		78C9B5E5241D08A500E1DB7A /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		78C9B5E7241D08BC00E1DB7A /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +166,9 @@
 				78181EFE23E5BD9B00836109 /* Main.storyboard */,
 				785C734423F19E6900757B0E /* Model */,
 				785C734523F19E7200757B0E /* View */,
+				78C9B5DE241BF18400E1DB7A /* Animation */,
 				7895216C241A4B6A004F8C1C /* Button */,
+				78294FD6241BACDA00854A97 /* GameControllers */,
 				7862EC8423F2F4D300399263 /* Controller */,
 				78181F0C23E5BDCA00836109 /* Misc */,
 			);
@@ -167,12 +181,25 @@
 				78181EF823E5BD9B00836109 /* AppDelegate.swift */,
 				78181F1323E5C7F000836109 /* Extensions.swift */,
 				785C733C23F1856B00757B0E /* Colors.swift */,
+				78294FD0241B93A700854A97 /* Constants.swift */,
 				78181F0123E5BD9C00836109 /* Assets.xcassets */,
 				78181F0323E5BD9C00836109 /* LaunchScreen.storyboard */,
 				78181F0623E5BD9C00836109 /* Info.plist */,
-				78294FD0241B93A700854A97 /* Constants.swift */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		78294FD6241BACDA00854A97 /* GameControllers */ = {
+			isa = PBXGroup;
+			children = (
+				78181F0F23E5BE2A00836109 /* SudokuViewController.swift */,
+				7862EC8223F2F4CD00399263 /* GameViewController.swift */,
+				7896973A241A31870054397E /* DiagonalViewController.swift */,
+				7896973C241A31910054397E /* TwoDiagonalsViewController.swift */,
+				78B1ABC4241A78EE0084F441 /* HexagonViewController.swift */,
+				78294FD4241BAC4E00854A97 /* RombViewController.swift */,
+			);
+			path = GameControllers;
 			sourceTree = "<group>";
 		};
 		785C734423F19E6900757B0E /* Model */ = {
@@ -196,9 +223,11 @@
 				7877D1B823ED95B000E43314 /* BorderedCell.swift */,
 				78181F1123E5BE3300836109 /* Cell.swift */,
 				7896973E241A321B0054397E /* DiagonalCell.swift */,
+				78294FD2241BAA6400854A97 /* RombCell.swift */,
 				7895216F241A54EB004F8C1C /* Hexagon.swift */,
 				78B1ABC2241A78C80084F441 /* HexagonDeck.swift */,
 				78294FCE241B882C00854A97 /* ErrorView.swift */,
+				78C9B5DA241BE98100E1DB7A /* TutorialView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,13 +253,10 @@
 		7862EC8423F2F4D300399263 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				78181F0F23E5BE2A00836109 /* SudokuViewController.swift */,
-				7862EC8223F2F4CD00399263 /* GameViewController.swift */,
 				7891FA7F241A2F3D003BF6BA /* MainViewController.swift */,
 				78969736241A2FAB0054397E /* LevelsViewController.swift */,
-				7896973A241A31870054397E /* DiagonalViewController.swift */,
-				7896973C241A31910054397E /* TwoDiagonalsViewController.swift */,
-				78B1ABC4241A78EE0084F441 /* HexagonViewController.swift */,
+				78C9B5E5241D08A500E1DB7A /* OptionsViewController.swift */,
+				78C9B5E7241D08BC00E1DB7A /* StatisticViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -240,10 +266,18 @@
 			children = (
 				7895216A241A431C004F8C1C /* BackButton.swift */,
 				785C733E23F18CB300757B0E /* Button.swift */,
-				78969738241A2FD50054397E /* PlayButton.swift */,
-				78969742241A34240054397E /* CircleButton.swift */,
+				78C9B5DC241BEAAC00E1DB7A /* DoneButton.swift */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		78C9B5DE241BF18400E1DB7A /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				78C9B5DF241BF27000E1DB7A /* TutorialViewAnimator.swift */,
+				78C9B5E1241BF35D00E1DB7A /* ErrorViewAnimation.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +416,8 @@
 				785C734323F1957A00757B0E /* SudokuGenerator.swift in Sources */,
 				7891FA80241A2F3D003BF6BA /* MainViewController.swift in Sources */,
 				78181F1423E5C7F000836109 /* Extensions.swift in Sources */,
+				78294FD5241BAC4E00854A97 /* RombViewController.swift in Sources */,
+				78C9B5E8241D08BC00E1DB7A /* StatisticViewController.swift in Sources */,
 				78294FD1241B93A700854A97 /* Constants.swift in Sources */,
 				78181F1023E5BE2A00836109 /* SudokuViewController.swift in Sources */,
 				7895216B241A431C004F8C1C /* BackButton.swift in Sources */,
@@ -393,16 +429,20 @@
 				785C733D23F1856B00757B0E /* Colors.swift in Sources */,
 				78952169241A42EB004F8C1C /* BackgroundView.swift in Sources */,
 				78952170241A54EB004F8C1C /* Hexagon.swift in Sources */,
+				78C9B5DD241BEAAC00E1DB7A /* DoneButton.swift in Sources */,
 				785C734723F19EBC00757B0E /* Game.swift in Sources */,
+				78C9B5E0241BF27000E1DB7A /* TutorialViewAnimator.swift in Sources */,
+				78294FD3241BAA6400854A97 /* RombCell.swift in Sources */,
+				78C9B5E6241D08A500E1DB7A /* OptionsViewController.swift in Sources */,
 				78181F1223E5BE3300836109 /* Cell.swift in Sources */,
 				7896973F241A321B0054397E /* DiagonalCell.swift in Sources */,
 				78181EF923E5BD9B00836109 /* AppDelegate.swift in Sources */,
 				78294FCD241A8D0500854A97 /* HexagonSudokuSolver.swift in Sources */,
 				78B1ABC3241A78C80084F441 /* HexagonDeck.swift in Sources */,
-				78969743241A34240054397E /* CircleButton.swift in Sources */,
-				78969739241A2FD50054397E /* PlayButton.swift in Sources */,
+				78C9B5E2241BF35D00E1DB7A /* ErrorViewAnimation.swift in Sources */,
 				78969737241A2FAB0054397E /* LevelsViewController.swift in Sources */,
 				7877D1B923ED95B000E43314 /* BorderedCell.swift in Sources */,
+				78C9B5DB241BE98100E1DB7A /* TutorialView.swift in Sources */,
 				78294FCB241A8CEB00854A97 /* TwoDiagonalsSudokuSolver.swift in Sources */,
 				785C733F23F18CB300757B0E /* Button.swift in Sources */,
 				78B1ABC5241A78EE0084F441 /* HexagonViewController.swift in Sources */,

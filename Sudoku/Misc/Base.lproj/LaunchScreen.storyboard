@@ -15,24 +15,7 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sudoku" translatesAutoresizingMaskIntoConstraints="NO" id="Fmc-ch-AOY">
-                                <rect key="frame" x="157" y="398" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="T6J-gs-DCh">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
-                                    </constraint>
-                                    <constraint firstAttribute="width" constant="100" id="wPX-YR-Sb7">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
-                                    </constraint>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="Fmc-ch-AOY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ngj-OM-7Ah"/>
-                            <constraint firstItem="Fmc-ch-AOY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ybf-Xj-uZY"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -41,7 +24,4 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="sudoku" width="512" height="512"/>
-    </resources>
 </document>

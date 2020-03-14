@@ -2,7 +2,7 @@ import UIKit
 
 class ErrorView: UIView {
 
-    var message = "" { didSet { setNeedsDisplay() }}
+    var message = " " { didSet { setNeedsDisplay() }}
     
     
     override func draw(_ rect: CGRect) {
@@ -15,22 +15,7 @@ class ErrorView: UIView {
         label.textAlignment = .center
         addSubview(label)
         alpha = 0
-        UIViewPropertyAnimator.runningPropertyAnimator(
-            withDuration: Constants.durationForAppearingErrorView,
-            delay: 0.0,
-            options: .curveLinear,
-            animations: { self.alpha = 1.0})
-        { if $0 == .end {
-            UIViewPropertyAnimator.runningPropertyAnimator(
-                withDuration: Constants.durationForDisappearingErrorView,
-                delay: 1.0,
-                options: .curveLinear,
-                animations: {
-                    self.alpha = 0
-            }) {  if $0 == .end { self.removeFromSuperview() }
-            }
-        }
-        }
+        ErrorViewAnimation.show(self)
     }
 
     
