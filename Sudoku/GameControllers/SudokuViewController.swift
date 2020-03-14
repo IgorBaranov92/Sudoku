@@ -18,7 +18,6 @@ class SudokuViewController: GameViewController, SudokuDelegate {
     @IBOutlet var digits: [Button]!
     @IBOutlet weak var mistakesLabel: UILabel!
     @IBOutlet weak var hintsLabel: UILabel!
-    @IBOutlet private weak var spinner: UIActivityIndicatorView!
     
     // MARK: - private vars
     
@@ -231,8 +230,6 @@ class SudokuViewController: GameViewController, SudokuDelegate {
         digits.forEach { $0.isHidden = false }
         hasActiveButton = nil
         view.isUserInteractionEnabled = true
-        spinner.isHidden = false
-        spinner.startAnimating()
     }
     
     @IBAction func back(_ sender:UIButton) {

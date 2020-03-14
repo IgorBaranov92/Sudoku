@@ -565,6 +565,7 @@
                             <constraint firstItem="Q5M-Sd-okg" firstAttribute="top" secondItem="b7b-8Y-Pt1" secondAttribute="bottom" id="7WQ-oo-VQw"/>
                             <constraint firstItem="WQy-Nj-RrJ" firstAttribute="leading" secondItem="hVe-9O-iiN" secondAttribute="leading" id="L46-fY-XZA"/>
                             <constraint firstItem="WQy-Nj-RrJ" firstAttribute="bottom" secondItem="1Pk-bi-YS1" secondAttribute="top" id="ZiM-h6-npf"/>
+                            <constraint firstItem="WQy-Nj-RrJ" firstAttribute="top" secondItem="Q5M-Sd-okg" secondAttribute="bottom" constant="8" id="efT-Sr-NK8"/>
                             <constraint firstItem="WQy-Nj-RrJ" firstAttribute="trailing" secondItem="hVe-9O-iiN" secondAttribute="trailing" id="mlU-yj-7fX"/>
                             <constraint firstItem="Q5M-Sd-okg" firstAttribute="leading" secondItem="hVe-9O-iiN" secondAttribute="leading" constant="10" id="rec-we-vgs"/>
                         </constraints>
@@ -3706,10 +3707,6 @@
                                 </subviews>
                                 <variation key="heightClass=compact" axis="vertical" spacing="15"/>
                             </stackView>
-                            <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kDq-ot-QPA">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                                <color key="color" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -3717,7 +3714,6 @@
                             <constraint firstItem="1vd-YN-xa5" firstAttribute="centerX" secondItem="1gO-ca-xfq" secondAttribute="centerX" id="4bG-DB-L7o"/>
                             <constraint firstItem="jG0-sl-qWi" firstAttribute="leading" secondItem="1gO-ca-xfq" secondAttribute="leading" constant="10" id="I1q-Rn-Ryt"/>
                             <constraint firstItem="3cD-S0-kJF" firstAttribute="top" secondItem="jG0-sl-qWi" secondAttribute="bottom" constant="10" id="L4F-bU-eR9"/>
-                            <constraint firstItem="kDq-ot-QPA" firstAttribute="centerX" secondItem="1gO-ca-xfq" secondAttribute="centerX" id="M7f-Rd-gWl"/>
                             <constraint firstItem="REX-wb-A4z" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="3cD-S0-kJF" secondAttribute="top" id="O4w-za-PVb"/>
                             <constraint firstAttribute="trailing" secondItem="9bn-Jp-OYf" secondAttribute="trailing" constant="16" id="P2c-OQ-BG1"/>
                             <constraint firstItem="REX-wb-A4z" firstAttribute="bottom" secondItem="3cD-S0-kJF" secondAttribute="top" id="RU2-4X-QDn"/>
@@ -3736,7 +3732,6 @@
                             <constraint firstItem="REX-wb-A4z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gyd-hM-f8R" secondAttribute="bottom" symbolic="YES" id="uLQ-fF-tRu"/>
                             <constraint firstAttribute="trailing" secondItem="jG0-sl-qWi" secondAttribute="trailing" constant="10" id="xmE-9E-mND"/>
                             <constraint firstItem="1vd-YN-xa5" firstAttribute="top" secondItem="gyd-hM-f8R" secondAttribute="bottom" constant="20" id="yJF-cw-5IJ"/>
-                            <constraint firstItem="kDq-ot-QPA" firstAttribute="centerY" secondItem="1gO-ca-xfq" secondAttribute="centerY" id="zxe-GF-9EK"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -3797,7 +3792,6 @@
                         <outlet property="leadingAnchorDigitsStackView" destination="rgj-wq-7tq" id="ef4-iY-UGF"/>
                         <outlet property="mistakesLabel" destination="EmB-bj-EiF" id="uaO-kE-Q2v"/>
                         <outlet property="offsetConstraint" destination="dJC-Wc-ecg" id="Tl0-Ou-NKj"/>
-                        <outlet property="spinner" destination="kDq-ot-QPA" id="ivN-U8-7dH"/>
                         <outlet property="stackView" destination="jG0-sl-qWi" id="gEY-HG-Vec"/>
                         <outlet property="topAnchorButtonsStackView" destination="yJF-cw-5IJ" id="mmU-eH-3J6"/>
                         <outlet property="topAnchorDigitsStackView" destination="uLQ-fF-tRu" id="i9V-ri-UQQ"/>
@@ -5396,10 +5390,6 @@
                                 </subviews>
                                 <variation key="heightClass=compact" axis="vertical" spacing="15"/>
                             </stackView>
-                            <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HpV-ER-4z3">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                                <color key="color" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -5407,7 +5397,6 @@
                             <constraint firstItem="HN5-g4-QLN" firstAttribute="top" secondItem="mZW-W9-k8T" secondAttribute="bottom" constant="8" id="6zg-xU-nmJ"/>
                             <constraint firstAttribute="trailing" secondItem="lKO-5t-GU3" secondAttribute="trailing" constant="10" id="9jz-tt-989"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8B6-3h-XHe" secondAttribute="trailing" id="ABJ-2M-fMC"/>
-                            <constraint firstItem="HpV-ER-4z3" firstAttribute="centerX" secondItem="tYB-lP-TMV" secondAttribute="centerX" id="CnW-gZ-PSk"/>
                             <constraint firstItem="lKO-5t-GU3" firstAttribute="leading" secondItem="tYB-lP-TMV" secondAttribute="leading" constant="10" id="HXc-CJ-9S3"/>
                             <constraint firstItem="8B6-3h-XHe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dR0-86-5Al" secondAttribute="bottom" symbolic="YES" id="M8X-it-4m5"/>
                             <constraint firstItem="L7G-4j-x0d" firstAttribute="top" secondItem="dR0-86-5Al" secondAttribute="bottom" constant="20" id="M9B-BQ-5EO"/>
@@ -5417,7 +5406,6 @@
                             <constraint firstItem="lKO-5t-GU3" firstAttribute="centerX" secondItem="tYB-lP-TMV" secondAttribute="centerX" id="P39-ry-OMa"/>
                             <constraint firstAttribute="trailing" secondItem="L7G-4j-x0d" secondAttribute="trailing" constant="16" id="PDV-Bm-OFO"/>
                             <constraint firstItem="lKO-5t-GU3" firstAttribute="top" secondItem="dR0-86-5Al" secondAttribute="bottom" constant="10" id="PUZ-xU-5MF"/>
-                            <constraint firstItem="HpV-ER-4z3" firstAttribute="centerY" secondItem="tYB-lP-TMV" secondAttribute="centerY" id="Rmk-MZ-GqE"/>
                             <constraint firstItem="HN5-g4-QLN" firstAttribute="centerX" secondItem="tYB-lP-TMV" secondAttribute="centerX" id="ZNi-dp-Kzf"/>
                             <constraint firstItem="p7r-Xl-dUm" firstAttribute="top" secondItem="lKO-5t-GU3" secondAttribute="bottom" constant="10" id="Zg8-xl-YBf"/>
                             <constraint firstItem="8B6-3h-XHe" firstAttribute="centerX" secondItem="tYB-lP-TMV" secondAttribute="centerX" id="czP-QL-So5"/>
@@ -5487,7 +5475,6 @@
                         <outlet property="leadingAnchorDigitsStackView" destination="NBR-MM-iIp" id="skw-BR-4zO"/>
                         <outlet property="mistakesLabel" destination="KB3-a0-Aa4" id="904-tz-6VA"/>
                         <outlet property="offsetConstraint" destination="xnm-He-Qlv" id="zTD-ly-j2K"/>
-                        <outlet property="spinner" destination="HpV-ER-4z3" id="1Mb-HQ-yeu"/>
                         <outlet property="stackView" destination="lKO-5t-GU3" id="jdv-i8-RHA"/>
                         <outlet property="topAnchorButtonsStackView" destination="M9B-BQ-5EO" id="DAB-pI-P6g"/>
                         <outlet property="topAnchorDigitsStackView" destination="M8X-it-4m5" id="6cS-yZ-EX9"/>
@@ -7126,10 +7113,6 @@
                                 </subviews>
                                 <variation key="heightClass=compact" axis="vertical" spacing="15"/>
                             </stackView>
-                            <activityIndicatorView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Qlb-1d-nfo">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                                <color key="color" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -7144,7 +7127,6 @@
                             <constraint firstItem="elz-5a-VxM" firstAttribute="centerY" secondItem="kxZ-CG-RlY" secondAttribute="centerY" id="UyF-mh-5ah"/>
                             <constraint firstItem="lFE-1O-YmF" firstAttribute="top" secondItem="elz-5a-VxM" secondAttribute="bottom" constant="10" id="Xhz-Xn-61h"/>
                             <constraint firstItem="Fel-HH-Hcz" firstAttribute="centerX" secondItem="kxZ-CG-RlY" secondAttribute="centerX" id="Y7e-Rg-9t4"/>
-                            <constraint firstItem="Qlb-1d-nfo" firstAttribute="centerX" secondItem="kxZ-CG-RlY" secondAttribute="centerX" id="Zj5-EM-sOq"/>
                             <constraint firstItem="elz-5a-VxM" firstAttribute="leading" secondItem="kxZ-CG-RlY" secondAttribute="leading" constant="10" id="amB-eK-8FJ"/>
                             <constraint firstItem="elz-5a-VxM" firstAttribute="top" secondItem="jbp-eb-YET" secondAttribute="bottom" constant="10" id="bXm-o0-GKY"/>
                             <constraint firstItem="syX-X5-vEq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kxZ-CG-RlY" secondAttribute="leading" id="cei-3t-4RI"/>
@@ -7152,7 +7134,6 @@
                             <constraint firstAttribute="trailing" secondItem="elz-5a-VxM" secondAttribute="trailing" constant="10" id="gpf-dN-gLO"/>
                             <constraint firstItem="Vq4-8g-gID" firstAttribute="centerX" secondItem="kxZ-CG-RlY" secondAttribute="centerX" id="gv5-cY-PbW"/>
                             <constraint firstItem="syX-X5-vEq" firstAttribute="leading" secondItem="kxZ-CG-RlY" secondAttribute="leading" constant="16" id="hAI-v8-YWY"/>
-                            <constraint firstItem="Qlb-1d-nfo" firstAttribute="centerY" secondItem="kxZ-CG-RlY" secondAttribute="centerY" id="miG-sv-E0H"/>
                             <constraint firstItem="syX-X5-vEq" firstAttribute="bottom" secondItem="lFE-1O-YmF" secondAttribute="top" id="pfz-S9-xIG"/>
                             <constraint firstItem="syX-X5-vEq" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="lFE-1O-YmF" secondAttribute="top" id="rqI-Xg-9c5"/>
                             <constraint firstItem="syX-X5-vEq" firstAttribute="centerX" secondItem="kxZ-CG-RlY" secondAttribute="centerX" id="t56-hX-4H5"/>
@@ -7217,7 +7198,6 @@
                         <outlet property="leadingAnchorDigitsStackView" destination="cei-3t-4RI" id="TzC-ax-2oA"/>
                         <outlet property="mistakesLabel" destination="mCh-gs-Usw" id="8jv-Sd-uYY"/>
                         <outlet property="offsetConstraint" destination="zfu-CE-bs9" id="rPi-hz-wPI"/>
-                        <outlet property="spinner" destination="Qlb-1d-nfo" id="Tv6-Km-Yeo"/>
                         <outlet property="stackView" destination="elz-5a-VxM" id="FqK-Vx-ago"/>
                         <outlet property="topAnchorButtonsStackView" destination="Pbe-wX-dE1" id="TqY-IS-Bgi"/>
                         <outlet property="topAnchorDigitsStackView" destination="5EY-B9-VQH" id="03e-i7-fjg"/>

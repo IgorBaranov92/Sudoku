@@ -20,7 +20,7 @@ class BackButton: UIButton {
             controlPoint1: CGPoint(x: 0.6*bounds.width, y: 0.6*bounds.height),
             controlPoint2: CGPoint(x: 0.55*bounds.width, y: 0.6*bounds.height))
         
-        UIColor.white.setFill()
+        UIColor.black.setFill()
         triangle.fill()
         curve.fill()
     }
