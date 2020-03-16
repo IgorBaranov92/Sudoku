@@ -152,6 +152,13 @@ extension Double {
     var cg: CGFloat { return CGFloat(self)}
 }
 
+extension CGRect {
+    var center:CGPoint {
+        CGPoint(x: midX, y: midY)
+    }
+}
+
+
 protocol SudokuDelegate: class {
     func gameLost()
     func gameWon()

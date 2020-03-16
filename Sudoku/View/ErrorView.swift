@@ -26,7 +26,6 @@ class ErrorView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        backgroundColor = .clear
     }
     
 }

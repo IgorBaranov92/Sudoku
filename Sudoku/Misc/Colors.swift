@@ -1,6 +1,7 @@
 import UIKit
 
 @available(iOS 13.0, *)
+
 class Colors {
     static var dynamicBackgroundColor = UIColor { (traitCollection:UITraitCollection) -> UIColor in
         if traitCollection.userInterfaceStyle == .dark {

@@ -9,7 +9,7 @@ struct Constants {
     static let durationForDisappearingErrorView = 0.75
     static let durationForAppearingErrorView = 0.4
     static let lineWidthForDiagonal: CGFloat = 1.0
-    static let durationForCompression = 0.75
+    static let durationForDisapperaingTutorialView = 0.5
     static let durationForAppearingTutorialView = 0.3
 
 }

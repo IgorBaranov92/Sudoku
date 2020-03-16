@@ -8,7 +8,8 @@ class DoneButton: UIButton {
         #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1).setFill()
         path.fill()
         titleLabel?.textAlignment = .center
-        setTitle("Done", for: .normal)
+        titleLabel?.font = UIFont(name: "Avenir Next", size: 20.0)
+        setTitle(NSLocalizedString("done", comment: ""), for: .normal)
     }
 
 }

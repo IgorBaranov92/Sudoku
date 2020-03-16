@@ -41,6 +41,10 @@ class SudokuViewController: GameViewController, SudokuDelegate {
         recreateGameIfNeeded()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        showRules()
+    }
 
     
     // MARK: - IBActions
@@ -236,6 +240,9 @@ class SudokuViewController: GameViewController, SudokuDelegate {
         dismiss(animated: true)
     }
     
+    @IBAction func showRules(_ sender: UIButton) {
+        showRules()
+    }
     
     private func showErrorAt(_ rect:CGRect,message:String) {
         let errorView = ErrorView(frame: rect)
@@ -258,7 +265,17 @@ class SudokuViewController: GameViewController, SudokuDelegate {
         return CGRect(x: x, y: center.y - button.bounds.height*1.5, width: 200, height: button.bounds.height)
     }
   
-    
+    private func showRules() {
+//        let tutorialView = TutorialView()
+//        view.addSubview(tutorialView)
+//        TutorialViewConstraint.activate(tutorialView, self.view)
+//        TutorialViewAnimator.show(tutorialView)
+//
+        let victory = FInishGameView()
+        view.addSubview(victory)
+        TutorialViewConstraint.activate(victory, self.view)
+        TutorialViewAnimator.show(victory)
+    }
     
     
 }

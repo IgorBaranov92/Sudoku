@@ -17,7 +17,7 @@ class TutorialViewAnimator: UIViewPropertyAnimator {
     
     static func dismiss(_ view:UIView) {
         UIViewPropertyAnimator.runningPropertyAnimator(
-                   withDuration: Constants.durationForCompression,
+                   withDuration: Constants.durationForDisapperaingTutorialView,
                    delay: 0.0,
                    options: .curveLinear,
                    animations: {

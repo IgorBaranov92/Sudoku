@@ -16,7 +16,6 @@
 		78181F1423E5C7F000836109 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78181F1323E5C7F000836109 /* Extensions.swift */; };
 		78294FC9241A8CCF00854A97 /* DiagonalSudokuSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FC8241A8CCF00854A97 /* DiagonalSudokuSolver.swift */; };
 		78294FCB241A8CEB00854A97 /* TwoDiagonalsSudokuSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FCA241A8CEB00854A97 /* TwoDiagonalsSudokuSolver.swift */; };
-		78294FCD241A8D0500854A97 /* HexagonSudokuSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FCC241A8D0500854A97 /* HexagonSudokuSolver.swift */; };
 		78294FCF241B882C00854A97 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FCE241B882C00854A97 /* ErrorView.swift */; };
 		78294FD1241B93A700854A97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FD0241B93A700854A97 /* Constants.swift */; };
 		78294FD3241BAA6400854A97 /* RombCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FD2241BAA6400854A97 /* RombCell.swift */; };
@@ -31,16 +30,16 @@
 		785F42BB23EC69AB00B2CCA0 /* Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F42BA23EC69AB00B2CCA0 /* Sudoku.swift */; };
 		7862EC8323F2F4CE00399263 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862EC8223F2F4CD00399263 /* GameViewController.swift */; };
 		7877D1B923ED95B000E43314 /* BorderedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7877D1B823ED95B000E43314 /* BorderedCell.swift */; };
+		78810CCA241F90B6002828E2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78810CC9241F90B6002828E2 /* MessageView.swift */; };
+		7883A1C4241D2BE100ECB3FD /* TutorialViewConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */; };
+		7883A1C9241D3D9200ECB3FD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7883A1CB241D3D9200ECB3FD /* Localizable.strings */; };
+		7883A1CF241D43AC00ECB3FD /* FInishGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7883A1CE241D43AC00ECB3FD /* FInishGameView.swift */; };
 		7891FA80241A2F3D003BF6BA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7891FA7F241A2F3D003BF6BA /* MainViewController.swift */; };
-		78952169241A42EB004F8C1C /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78952168241A42EB004F8C1C /* BackgroundView.swift */; };
 		7895216B241A431C004F8C1C /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895216A241A431C004F8C1C /* BackButton.swift */; };
-		78952170241A54EB004F8C1C /* Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895216F241A54EB004F8C1C /* Hexagon.swift */; };
 		78969737241A2FAB0054397E /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78969736241A2FAB0054397E /* LevelsViewController.swift */; };
 		7896973B241A31870054397E /* DiagonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896973A241A31870054397E /* DiagonalViewController.swift */; };
 		7896973D241A31910054397E /* TwoDiagonalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896973C241A31910054397E /* TwoDiagonalsViewController.swift */; };
 		7896973F241A321B0054397E /* DiagonalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896973E241A321B0054397E /* DiagonalCell.swift */; };
-		78B1ABC3241A78C80084F441 /* HexagonDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1ABC2241A78C80084F441 /* HexagonDeck.swift */; };
-		78B1ABC5241A78EE0084F441 /* HexagonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B1ABC4241A78EE0084F441 /* HexagonViewController.swift */; };
 		78C9B5DB241BE98100E1DB7A /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5DA241BE98100E1DB7A /* TutorialView.swift */; };
 		78C9B5DD241BEAAC00E1DB7A /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5DC241BEAAC00E1DB7A /* DoneButton.swift */; };
 		78C9B5E0241BF27000E1DB7A /* TutorialViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5DF241BF27000E1DB7A /* TutorialViewAnimator.swift */; };
@@ -78,7 +77,6 @@
 		78181F1323E5C7F000836109 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		78294FC8241A8CCF00854A97 /* DiagonalSudokuSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalSudokuSolver.swift; sourceTree = "<group>"; };
 		78294FCA241A8CEB00854A97 /* TwoDiagonalsSudokuSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoDiagonalsSudokuSolver.swift; sourceTree = "<group>"; };
-		78294FCC241A8D0500854A97 /* HexagonSudokuSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonSudokuSolver.swift; sourceTree = "<group>"; };
 		78294FCE241B882C00854A97 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		78294FD0241B93A700854A97 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		78294FD2241BAA6400854A97 /* RombCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RombCell.swift; sourceTree = "<group>"; };
@@ -97,16 +95,20 @@
 		785F42BA23EC69AB00B2CCA0 /* Sudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sudoku.swift; sourceTree = "<group>"; };
 		7862EC8223F2F4CD00399263 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		7877D1B823ED95B000E43314 /* BorderedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedCell.swift; sourceTree = "<group>"; };
+		78810CC9241F90B6002828E2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewConstraint.swift; sourceTree = "<group>"; };
+		7883A1C5241D3CF200ECB3FD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		7883A1C6241D3D1300ECB3FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		7883A1CA241D3D9200ECB3FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7883A1CC241D3D9B00ECB3FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7883A1CD241D3D9C00ECB3FD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7883A1CE241D43AC00ECB3FD /* FInishGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FInishGameView.swift; sourceTree = "<group>"; };
 		7891FA7F241A2F3D003BF6BA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		78952168241A42EB004F8C1C /* BackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		7895216A241A431C004F8C1C /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
-		7895216F241A54EB004F8C1C /* Hexagon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexagon.swift; sourceTree = "<group>"; };
 		78969736241A2FAB0054397E /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
 		7896973A241A31870054397E /* DiagonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalViewController.swift; sourceTree = "<group>"; };
 		7896973C241A31910054397E /* TwoDiagonalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoDiagonalsViewController.swift; sourceTree = "<group>"; };
 		7896973E241A321B0054397E /* DiagonalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalCell.swift; sourceTree = "<group>"; };
-		78B1ABC2241A78C80084F441 /* HexagonDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonDeck.swift; sourceTree = "<group>"; };
-		78B1ABC4241A78EE0084F441 /* HexagonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexagonViewController.swift; sourceTree = "<group>"; };
 		78C9B5DA241BE98100E1DB7A /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		78C9B5DC241BEAAC00E1DB7A /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
 		78C9B5DF241BF27000E1DB7A /* TutorialViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewAnimator.swift; sourceTree = "<group>"; };
@@ -164,8 +166,10 @@
 			isa = PBXGroup;
 			children = (
 				78181EFE23E5BD9B00836109 /* Main.storyboard */,
+				7883A1CB241D3D9200ECB3FD /* Localizable.strings */,
 				785C734423F19E6900757B0E /* Model */,
 				785C734523F19E7200757B0E /* View */,
+				7883A1C2241D2BBB00ECB3FD /* Constraints */,
 				78C9B5DE241BF18400E1DB7A /* Animation */,
 				7895216C241A4B6A004F8C1C /* Button */,
 				78294FD6241BACDA00854A97 /* GameControllers */,
@@ -196,7 +200,6 @@
 				7862EC8223F2F4CD00399263 /* GameViewController.swift */,
 				7896973A241A31870054397E /* DiagonalViewController.swift */,
 				7896973C241A31910054397E /* TwoDiagonalsViewController.swift */,
-				78B1ABC4241A78EE0084F441 /* HexagonViewController.swift */,
 				78294FD4241BAC4E00854A97 /* RombViewController.swift */,
 			);
 			path = GameControllers;
@@ -211,7 +214,6 @@
 				785C734023F192A000757B0E /* SudokuSolver.swift */,
 				78294FC8241A8CCF00854A97 /* DiagonalSudokuSolver.swift */,
 				78294FCA241A8CEB00854A97 /* TwoDiagonalsSudokuSolver.swift */,
-				78294FCC241A8D0500854A97 /* HexagonSudokuSolver.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,15 +221,14 @@
 		785C734523F19E7200757B0E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				78952168241A42EB004F8C1C /* BackgroundView.swift */,
 				7877D1B823ED95B000E43314 /* BorderedCell.swift */,
 				78181F1123E5BE3300836109 /* Cell.swift */,
 				7896973E241A321B0054397E /* DiagonalCell.swift */,
 				78294FD2241BAA6400854A97 /* RombCell.swift */,
-				7895216F241A54EB004F8C1C /* Hexagon.swift */,
-				78B1ABC2241A78C80084F441 /* HexagonDeck.swift */,
+				78810CC9241F90B6002828E2 /* MessageView.swift */,
 				78294FCE241B882C00854A97 /* ErrorView.swift */,
 				78C9B5DA241BE98100E1DB7A /* TutorialView.swift */,
+				7883A1CE241D43AC00ECB3FD /* FInishGameView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,6 +260,14 @@
 				78C9B5E7241D08BC00E1DB7A /* StatisticViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		7883A1C2241D2BBB00ECB3FD /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */,
+			);
+			path = Constraints;
 			sourceTree = "<group>";
 		};
 		7895216C241A4B6A004F8C1C /* Button */ = {
@@ -366,6 +375,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				de,
 			);
 			mainGroup = 78181EEC23E5BD9B00836109;
 			productRefGroup = 78181EF623E5BD9B00836109 /* Products */;
@@ -385,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78181F0523E5BD9C00836109 /* LaunchScreen.storyboard in Resources */,
+				7883A1C9241D3D9200ECB3FD /* Localizable.strings in Resources */,
 				78181F0223E5BD9C00836109 /* Assets.xcassets in Resources */,
 				78181F0023E5BD9B00836109 /* Main.storyboard in Resources */,
 			);
@@ -424,28 +436,26 @@
 				785C734123F192A000757B0E /* SudokuSolver.swift in Sources */,
 				7896973B241A31870054397E /* DiagonalViewController.swift in Sources */,
 				7862EC8323F2F4CE00399263 /* GameViewController.swift in Sources */,
+				78810CCA241F90B6002828E2 /* MessageView.swift in Sources */,
 				785F42BB23EC69AB00B2CCA0 /* Sudoku.swift in Sources */,
 				78294FCF241B882C00854A97 /* ErrorView.swift in Sources */,
 				785C733D23F1856B00757B0E /* Colors.swift in Sources */,
-				78952169241A42EB004F8C1C /* BackgroundView.swift in Sources */,
-				78952170241A54EB004F8C1C /* Hexagon.swift in Sources */,
 				78C9B5DD241BEAAC00E1DB7A /* DoneButton.swift in Sources */,
 				785C734723F19EBC00757B0E /* Game.swift in Sources */,
 				78C9B5E0241BF27000E1DB7A /* TutorialViewAnimator.swift in Sources */,
 				78294FD3241BAA6400854A97 /* RombCell.swift in Sources */,
 				78C9B5E6241D08A500E1DB7A /* OptionsViewController.swift in Sources */,
 				78181F1223E5BE3300836109 /* Cell.swift in Sources */,
+				7883A1CF241D43AC00ECB3FD /* FInishGameView.swift in Sources */,
 				7896973F241A321B0054397E /* DiagonalCell.swift in Sources */,
 				78181EF923E5BD9B00836109 /* AppDelegate.swift in Sources */,
-				78294FCD241A8D0500854A97 /* HexagonSudokuSolver.swift in Sources */,
-				78B1ABC3241A78C80084F441 /* HexagonDeck.swift in Sources */,
+				7883A1C4241D2BE100ECB3FD /* TutorialViewConstraint.swift in Sources */,
 				78C9B5E2241BF35D00E1DB7A /* ErrorViewAnimation.swift in Sources */,
 				78969737241A2FAB0054397E /* LevelsViewController.swift in Sources */,
 				7877D1B923ED95B000E43314 /* BorderedCell.swift in Sources */,
 				78C9B5DB241BE98100E1DB7A /* TutorialView.swift in Sources */,
 				78294FCB241A8CEB00854A97 /* TwoDiagonalsSudokuSolver.swift in Sources */,
 				785C733F23F18CB300757B0E /* Button.swift in Sources */,
-				78B1ABC5241A78EE0084F441 /* HexagonViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +495,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				78181EFF23E5BD9B00836109 /* Base */,
+				7883A1C5241D3CF200ECB3FD /* ru */,
+				7883A1C6241D3D1300ECB3FD /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -497,6 +509,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		7883A1CB241D3D9200ECB3FD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7883A1CA241D3D9200ECB3FD /* en */,
+				7883A1CC241D3D9B00ECB3FD /* de */,
+				7883A1CD241D3D9C00ECB3FD /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -504,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -564,6 +587,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

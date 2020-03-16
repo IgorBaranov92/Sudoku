@@ -7,15 +7,20 @@ class LevelsViewController: UIViewController, UIScrollViewDelegate {
         scrollView.delegate = self
         }}
     
+    
+    // MARK: - ViewController lifecycle
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        scrollView.flashScrollIndicators()
+    }
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         scrollView.contentSize = CGSize(width: view.bounds.width, height: stackView.bounds.height + 25)        
     }
     
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return stackView
-    }
-    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -24,4 +29,5 @@ class LevelsViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func done(_ sender: UIButton) {
         dismiss(animated: true)
     }
+    
 }
