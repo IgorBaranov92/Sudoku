@@ -48,7 +48,7 @@ class Cell: BorderedCell {
             layer.borderColor = Colors.dynamicBorderColor.cgColor
         } else {
             layer.borderColor = UIColor.black.cgColor
-        }
+        } 
     }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {

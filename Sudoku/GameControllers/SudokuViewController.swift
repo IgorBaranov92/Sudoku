@@ -1,6 +1,6 @@
 import UIKit
 
-class SudokuViewController: GameViewController, SudokuDelegate {
+class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDelegate {
     
     // MARK: - Public API
     
@@ -253,16 +253,22 @@ class SudokuViewController: GameViewController, SudokuDelegate {
     }
   
     private func showRules() {
-        let tutorialView = TutorialView()
-        view.addSubview(tutorialView)
-        TutorialViewConstraint.activate(tutorialView, self.view)
-        TutorialViewAnimator.show(tutorialView)
+//        let tutorialView = TutorialView()
+//        view.addSubview(tutorialView)
+//        TutorialViewConstraint.activate(tutorialView, self.view)
+//        TutorialViewAnimator.show(tutorialView)
 //
-//        let victory = FInishGameView()
-//        view.addSubview(victory)
-//        TutorialViewConstraint.activate(victory, self.view)
-//        TutorialViewAnimator.show(victory)
+        let victory = FInishGameView()
+        victory.delegate = self
+        view.addSubview(victory)
+        TutorialViewConstraint.activate(victory, self.view)
+        TutorialViewAnimator.show(victory)
     }
     
+    // MARK: - Protocol conformance
     
+    func cancelButtonTouched() {
+        //save game progress
+        dismiss(animated: true)
+    }
 }

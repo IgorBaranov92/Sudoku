@@ -1,5 +1,3 @@
-"0SH-dR-VTi.normalTitle" = "Снежинка";
-
 "1W1-Wk-K6J.segmentTitles[0]" = "Легкий";
 "1W1-Wk-K6J.segmentTitles[1]" = "Средний";
 "1W1-Wk-K6J.segmentTitles[2]" = "Тяжелый";
@@ -18,6 +16,10 @@
 "oe6-0v-wIK.segmentTitles[1]" = "Средний";
 "oe6-0v-wIK.segmentTitles[2]" = "Тяжелый";
 
+"BRr-3K-MYQ.segmentTitles[0]" = "Легкий";
+"BRr-3K-MYQ.segmentTitles[1]" = "Средний";
+"BRr-3K-MYQ.segmentTitles[2]" = "Тяжелый";
+
 
 "hoF-0J-NiR.normalTitle" = "Стереть";
 
@@ -27,34 +29,57 @@
 
 "mZW-W9-k8T.normalTitle" = "Стереть";
 
+"bna-BD-8Oo.normalTitle" = "Стереть";
+
+"GTy-GX-ojb.normalTitle" = "Подсказка";
+
+"K3f-l1-fef.normalTitle" = "Подсказка";
+
+"fFG-uV-D3m.normalTitle" = "Подсказка";
+
+"oSV-QH-Ind.normalTitle" = "Подсказка";
+
+"pqe-Y4-aTK.normalTitle" = "Подсказка";
+
+
+"jY8-jR-lWJ.normalTitle" = "Правила";
+
+"A4I-WI-Tit.normalTitle" = "Правила";
+
+"nZv-kP-AMg.normalTitle" = "Правила";
+
+"Kyt-c4-jfL.normalTitle" = "Правила";
+
+"4uK-yS-wM9.normalTitle" = "Правила";
+
+
 "2md-Gb-ho4.normalTitle" = "Чет-нечет";
 
 "3KN-tg-pS2.text" = "Подсказки: 0/4";
-
-"Ahs-EY-5j2.normalTitle" = "Фигурные";
+"RhD-72-0bo.text" = "Подсказки: 0/4";
+"eOF-ed-wax.text" = "Подсказки: 0/4";
+"xeA-uw-tBu.text" = "Подсказки: 0/4";
+"AYq-ug-Xve.text" = "Подсказки: 0/4";
 
 
 "EmB-bj-EiF.text" = "Ошибки: 0/4";
+"KB3-a0-Aa4.text" = "Ошибки: 0/4";
+"heH-O6-dxb.text" = "Ошибки: 0/4";
+"mCh-gs-Usw.text" = "Ошибки: 0/4";
+"Q95-IW-SCH.text" = "Ошибки: 0/4";
 
-"Exf-Tq-ugo.normalTitle" = "5";
 
-"GTy-GX-ojb.normalTitle" = "Подсказка";
+"Ahs-EY-5j2.normalTitle" = "Фигурные";
 
 "GYT-aI-joU.normalTitle" = "С перегородками";
 
 "JiB-IA-0yH.normalTitle" = "Диагональ";
-
-"K3f-l1-fef.normalTitle" = "Подсказка";
-
-"KB3-a0-Aa4.text" = "Ошибки: 0/4";
 
 "OWE-NN-06t.normalTitle" = "Статистика";
 
 "PVT-01-rDv.normalTitle" = "Классика";
 
 "Qdt-RD-rk5.title" = "Статистика";
-
-"RhD-72-0bo.text" = "Подсказки: 0/4";
 
 "TpC-x8-pYJ.normalTitle" = "Ромб";
 
@@ -64,28 +89,11 @@
 
 "eCQ-xb-tAC.normalTitle" = "Настройки";
 
-"eOF-ed-wax.text" = "Подсказки: 0/4";
-
-"fFG-uV-D3m.normalTitle" = "Подсказка";
-
-"heH-O6-dxb.text" = "Ошибок: 0/4";
-
-"jY8-jR-lWJ.normalTitle" = "Правила";
-
 "jpn-gE-ape.normalTitle" = "Две диагонали";
-
-"mCh-gs-Usw.text" = "Ошибок: 0/4";
-
-"oSV-QH-Ind.normalTitle" = "Подсказка";
 
 "sXf-s9-Bty.normalTitle" = "Новая игра";
 
 "wKJ-8W-8IW.title" = "Настройки";
 
-"xeA-uw-tBu.text" = "Подсказки: 0/4";
 
-"A4I-WI-Tit.normalTitle" = "Правила";
 
-"nZv-kP-AMg.normalTitle" = "Правила";
-
-"Kyt-c4-jfL.normalTitle" = "Правила";
