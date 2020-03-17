@@ -24,6 +24,10 @@ class TutorialViewAnimator: UIViewPropertyAnimator {
                        view.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
                        view.alpha = 0.0
                }) {  if $0 == .end {
+                if let superview = view.superview {
+                    superview.backgroundColor = UIColor(named: "DynamicBackgroundColor") ?? .white
+                    superview.subviews.forEach { $0.isUserInteractionEnabled = true }
+                }
                    view.removeFromSuperview()
                    }
                }

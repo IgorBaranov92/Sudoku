@@ -1,228 +1,91 @@
-
-/* Class = "UIButton"; normalTitle = "Снежинка"; ObjectID = "0SH-dR-VTi"; */
 "0SH-dR-VTi.normalTitle" = "Снежинка";
 
-/* Class = "UIButton"; normalTitle = "Erase"; ObjectID = "0lC-4k-3Wp"; */
-"0lC-4k-3Wp.normalTitle" = "Erase";
+"1W1-Wk-K6J.segmentTitles[0]" = "Легкий";
+"1W1-Wk-K6J.segmentTitles[1]" = "Средний";
+"1W1-Wk-K6J.segmentTitles[2]" = "Тяжелый";
 
-/* Class = "UISegmentedControl"; 1W1-Wk-K6J.segmentTitles[0] = "Easy"; ObjectID = "1W1-Wk-K6J"; */
-"1W1-Wk-K6J.segmentTitles[0]" = "Easy";
 
-/* Class = "UISegmentedControl"; 1W1-Wk-K6J.segmentTitles[1] = "Medium"; ObjectID = "1W1-Wk-K6J"; */
-"1W1-Wk-K6J.segmentTitles[1]" = "Medium";
+"Npj-NW-VQX.segmentTitles[0]" = "Легкий";
+"Npj-NW-VQX.segmentTitles[1]" = "Средний";
+"Npj-NW-VQX.segmentTitles[2]" = "Тяжелый";
 
-/* Class = "UISegmentedControl"; 1W1-Wk-K6J.segmentTitles[2] = "Hard"; ObjectID = "1W1-Wk-K6J"; */
-"1W1-Wk-K6J.segmentTitles[2]" = "Hard";
+"4HT-zv-Tle.segmentTitles[0]" = "Легкий";
+"4HT-zv-Tle.segmentTitles[1]" = "Средний";
+"4HT-zv-Tle.segmentTitles[2]" = "Тяжелый";
 
-/* Class = "UIButton"; normalTitle = "5"; ObjectID = "1l8-pE-QQN"; */
-"1l8-pE-QQN.normalTitle" = "5";
 
-/* Class = "UIButton"; normalTitle = "Чет-нечет"; ObjectID = "2md-Gb-ho4"; */
+"oe6-0v-wIK.segmentTitles[0]" = "Легкий";
+"oe6-0v-wIK.segmentTitles[1]" = "Средний";
+"oe6-0v-wIK.segmentTitles[2]" = "Тяжелый";
+
+
+"hoF-0J-NiR.normalTitle" = "Стереть";
+
+"FgE-uf-Yym.normalTitle" = "Стереть";
+
+"0lC-4k-3Wp.normalTitle" = "Стереть";
+
+"mZW-W9-k8T.normalTitle" = "Стереть";
+
 "2md-Gb-ho4.normalTitle" = "Чет-нечет";
 
-/* Class = "UILabel"; text = "Hints: 0/4"; ObjectID = "3KN-tg-pS2"; */
-"3KN-tg-pS2.text" = "Hints: 0/4";
+"3KN-tg-pS2.text" = "Подсказки: 0/4";
 
-/* Class = "UIButton"; normalTitle = "7"; ObjectID = "3uw-b5-MGc"; */
-"3uw-b5-MGc.normalTitle" = "7";
-
-/* Class = "UIButton"; normalTitle = "2"; ObjectID = "5YY-CV-rlF"; */
-"5YY-CV-rlF.normalTitle" = "2";
-
-/* Class = "UIButton"; normalTitle = "4"; ObjectID = "6xn-6j-AdW"; */
-"6xn-6j-AdW.normalTitle" = "4";
-
-/* Class = "UIButton"; normalTitle = "8"; ObjectID = "7T5-wI-FD1"; */
-"7T5-wI-FD1.normalTitle" = "8";
-
-/* Class = "UIButton"; normalTitle = "7"; ObjectID = "93O-h7-IlD"; */
-"93O-h7-IlD.normalTitle" = "7";
-
-/* Class = "UIButton"; normalTitle = "Фигурные"; ObjectID = "Ahs-EY-5j2"; */
 "Ahs-EY-5j2.normalTitle" = "Фигурные";
 
-/* Class = "UIButton"; normalTitle = "2"; ObjectID = "BjL-od-pse"; */
-"BjL-od-pse.normalTitle" = "2";
 
-/* Class = "UIButton"; normalTitle = "1"; ObjectID = "EBL-lo-gdU"; */
-"EBL-lo-gdU.normalTitle" = "1";
+"EmB-bj-EiF.text" = "Ошибки: 0/4";
 
-/* Class = "UILabel"; text = "Mistakes: 0/4"; ObjectID = "EmB-bj-EiF"; */
-"EmB-bj-EiF.text" = "Mistakes: 0/4";
-
-/* Class = "UIButton"; normalTitle = "5"; ObjectID = "Exf-Tq-ugo"; */
 "Exf-Tq-ugo.normalTitle" = "5";
 
-/* Class = "UIButton"; normalTitle = "Erase"; ObjectID = "FgE-uf-Yym"; */
-"FgE-uf-Yym.normalTitle" = "Erase";
+"GTy-GX-ojb.normalTitle" = "Подсказка";
 
-/* Class = "UIButton"; normalTitle = "Hint"; ObjectID = "GTy-GX-ojb"; */
-"GTy-GX-ojb.normalTitle" = "Hint";
-
-/* Class = "UIButton"; normalTitle = "С перегородками"; ObjectID = "GYT-aI-joU"; */
 "GYT-aI-joU.normalTitle" = "С перегородками";
 
-/* Class = "UIButton"; normalTitle = "4"; ObjectID = "HJ6-gS-XNH"; */
-"HJ6-gS-XNH.normalTitle" = "4";
-
-/* Class = "UIButton"; normalTitle = "Erase"; ObjectID = "Hsd-GR-z0K"; */
-"Hsd-GR-z0K.normalTitle" = "Erase";
-
-/* Class = "UIButton"; normalTitle = "3"; ObjectID = "I6m-wm-lRs"; */
-"I6m-wm-lRs.normalTitle" = "3";
-
-/* Class = "UIButton"; normalTitle = "Диагональ"; ObjectID = "JiB-IA-0yH"; */
 "JiB-IA-0yH.normalTitle" = "Диагональ";
 
-/* Class = "UIButton"; normalTitle = "Hint"; ObjectID = "K3f-l1-fef"; */
-"K3f-l1-fef.normalTitle" = "Hint";
+"K3f-l1-fef.normalTitle" = "Подсказка";
 
-/* Class = "UILabel"; text = "Mistakes: 0/4"; ObjectID = "KB3-a0-Aa4"; */
-"KB3-a0-Aa4.text" = "Mistakes: 0/4";
+"KB3-a0-Aa4.text" = "Ошибки: 0/4";
 
-/* Class = "UIButton"; normalTitle = "5"; ObjectID = "N2u-tX-Cr6"; */
-"N2u-tX-Cr6.normalTitle" = "5";
+"OWE-NN-06t.normalTitle" = "Статистика";
 
-/* Class = "UIButton"; normalTitle = "8"; ObjectID = "NTU-mP-bnM"; */
-"NTU-mP-bnM.normalTitle" = "8";
-
-/* Class = "UIButton"; normalTitle = "1"; ObjectID = "Nt4-1L-ZG4"; */
-"Nt4-1L-ZG4.normalTitle" = "1";
-
-/* Class = "UIButton"; normalTitle = "Statistic"; ObjectID = "OWE-NN-06t"; */
-"OWE-NN-06t.normalTitle" = "Statistic";
-
-/* Class = "UIButton"; normalTitle = "Классика"; ObjectID = "PVT-01-rDv"; */
 "PVT-01-rDv.normalTitle" = "Классика";
 
-/* Class = "UINavigationItem"; title = "Statistic"; ObjectID = "Qdt-RD-rk5"; */
-"Qdt-RD-rk5.title" = "Statistic";
+"Qdt-RD-rk5.title" = "Статистика";
 
-/* Class = "UIButton"; normalTitle = "1"; ObjectID = "RCc-YR-8I7"; */
-"RCc-YR-8I7.normalTitle" = "1";
+"RhD-72-0bo.text" = "Подсказки: 0/4";
 
-/* Class = "UILabel"; text = "Hints: 0/4"; ObjectID = "RhD-72-0bo"; */
-"RhD-72-0bo.text" = "Hints: 0/4";
-
-/* Class = "UIButton"; normalTitle = "7"; ObjectID = "SPn-X3-G2S"; */
-"SPn-X3-G2S.normalTitle" = "7";
-
-/* Class = "UIButton"; normalTitle = "Ромб"; ObjectID = "TpC-x8-pYJ"; */
 "TpC-x8-pYJ.normalTitle" = "Ромб";
 
-/* Class = "UIButton"; normalTitle = "3"; ObjectID = "UEz-OV-zWC"; */
-"UEz-OV-zWC.normalTitle" = "3";
+"aJy-6w-W8X.text" = "Судоку";
 
-/* Class = "UIButton"; normalTitle = "6"; ObjectID = "WPV-1N-AEN"; */
-"WPV-1N-AEN.normalTitle" = "6";
-
-/* Class = "UILabel"; text = "Sudoku"; ObjectID = "aJy-6w-W8X"; */
-"aJy-6w-W8X.text" = "Sudoku";
-
-/* Class = "UIButton"; normalTitle = "2"; ObjectID = "aSV-Vl-zZA"; */
-"aSV-Vl-zZA.normalTitle" = "2";
-
-/* Class = "UIButton"; normalTitle = "3"; ObjectID = "bGk-Un-e56"; */
-"bGk-Un-e56.normalTitle" = "3";
-
-/* Class = "UIButton"; normalTitle = "Erase"; ObjectID = "bXh-Vh-npc"; */
-"bXh-Vh-npc.normalTitle" = "Erase";
-
-/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "bq9-EJ-eGB"; */
-"bq9-EJ-eGB.normalTitle" = "Back";
-
-/* Class = "UIButton"; normalTitle = "2"; ObjectID = "bwR-id-cQo"; */
-"bwR-id-cQo.normalTitle" = "2";
-
-/* Class = "UILabel"; text = "Режим"; ObjectID = "clp-7A-Ylc"; */
 "clp-7A-Ylc.text" = "Режим";
 
-/* Class = "UIButton"; normalTitle = "Options"; ObjectID = "eCQ-xb-tAC"; */
-"eCQ-xb-tAC.normalTitle" = "Options";
+"eCQ-xb-tAC.normalTitle" = "Настройки";
 
-/* Class = "UILabel"; text = "Hints: 0/4"; ObjectID = "eOF-ed-wax"; */
-"eOF-ed-wax.text" = "Hints: 0/4";
+"eOF-ed-wax.text" = "Подсказки: 0/4";
 
-/* Class = "UIButton"; normalTitle = "8"; ObjectID = "emy-fO-ESO"; */
-"emy-fO-ESO.normalTitle" = "8";
+"fFG-uV-D3m.normalTitle" = "Подсказка";
 
-/* Class = "UIButton"; normalTitle = "9"; ObjectID = "f9d-Xv-yMc"; */
-"f9d-Xv-yMc.normalTitle" = "9";
+"heH-O6-dxb.text" = "Ошибок: 0/4";
 
-/* Class = "UIButton"; normalTitle = "Hint"; ObjectID = "fFG-uV-D3m"; */
-"fFG-uV-D3m.normalTitle" = "Hint";
+"jY8-jR-lWJ.normalTitle" = "Правила";
 
-/* Class = "UIButton"; normalTitle = "8"; ObjectID = "h1T-oL-meJ"; */
-"h1T-oL-meJ.normalTitle" = "8";
-
-/* Class = "UILabel"; text = "Mistakes: 0/4"; ObjectID = "heH-O6-dxb"; */
-"heH-O6-dxb.text" = "Mistakes: 0/4";
-
-/* Class = "UIButton"; normalTitle = "Erase"; ObjectID = "hoF-0J-NiR"; */
-"hoF-0J-NiR.normalTitle" = "Erase";
-
-/* Class = "UIButton"; normalTitle = "3"; ObjectID = "ih8-kA-6Ch"; */
-"ih8-kA-6Ch.normalTitle" = "3";
-
-/* Class = "UIButton"; normalTitle = "Rules"; ObjectID = "jY8-jR-lWJ"; */
-"jY8-jR-lWJ.normalTitle" = "Rules";
-
-/* Class = "UIButton"; normalTitle = "Две диагонали"; ObjectID = "jpn-gE-ape"; */
 "jpn-gE-ape.normalTitle" = "Две диагонали";
 
-/* Class = "UIButton"; normalTitle = "Erase"; ObjectID = "lRK-LY-prw"; */
-"lRK-LY-prw.normalTitle" = "Erase";
+"mCh-gs-Usw.text" = "Ошибок: 0/4";
 
-/* Class = "UILabel"; text = "Mistakes: 0/4"; ObjectID = "mCh-gs-Usw"; */
-"mCh-gs-Usw.text" = "Mistakes: 0/4";
+"oSV-QH-Ind.normalTitle" = "Подсказка";
 
-/* Class = "UIButton"; normalTitle = "Erase"; ObjectID = "mZW-W9-k8T"; */
-"mZW-W9-k8T.normalTitle" = "Erase";
+"sXf-s9-Bty.normalTitle" = "Новая игра";
 
-/* Class = "UIButton"; normalTitle = "Hint"; ObjectID = "oSV-QH-Ind"; */
-"oSV-QH-Ind.normalTitle" = "Hint";
+"wKJ-8W-8IW.title" = "Настройки";
 
-/* Class = "UIButton"; normalTitle = "9"; ObjectID = "ohn-nJ-Rua"; */
-"ohn-nJ-Rua.normalTitle" = "9";
+"xeA-uw-tBu.text" = "Подсказки: 0/4";
 
-/* Class = "UIButton"; normalTitle = "Erase"; ObjectID = "p1m-kN-yym"; */
-"p1m-kN-yym.normalTitle" = "Erase";
+"A4I-WI-Tit.normalTitle" = "Правила";
 
-/* Class = "UIButton"; normalTitle = "5"; ObjectID = "pFV-sA-kIH"; */
-"pFV-sA-kIH.normalTitle" = "5";
+"nZv-kP-AMg.normalTitle" = "Правила";
 
-/* Class = "UIButton"; normalTitle = "4"; ObjectID = "paJ-s2-Nh3"; */
-"paJ-s2-Nh3.normalTitle" = "4";
-
-/* Class = "UIButton"; normalTitle = "New game"; ObjectID = "sXf-s9-Bty"; */
-"sXf-s9-Bty.normalTitle" = "New game";
-
-/* Class = "UIButton"; normalTitle = "7"; ObjectID = "spT-YI-UY5"; */
-"spT-YI-UY5.normalTitle" = "7";
-
-/* Class = "UIButton"; normalTitle = "6"; ObjectID = "tVh-KH-732"; */
-"tVh-KH-732.normalTitle" = "6";
-
-/* Class = "UIButton"; normalTitle = "6"; ObjectID = "utB-QM-hdO"; */
-"utB-QM-hdO.normalTitle" = "6";
-
-/* Class = "UIButton"; normalTitle = "1"; ObjectID = "vR1-9w-OdF"; */
-"vR1-9w-OdF.normalTitle" = "1";
-
-/* Class = "UINavigationItem"; title = "Options"; ObjectID = "wKJ-8W-8IW"; */
-"wKJ-8W-8IW.title" = "Options";
-
-/* Class = "UILabel"; text = "Hints: 0/4"; ObjectID = "xeA-uw-tBu"; */
-"xeA-uw-tBu.text" = "Hints: 0/4";
-
-/* Class = "UIButton"; normalTitle = "9"; ObjectID = "xxu-qm-cph"; */
-"xxu-qm-cph.normalTitle" = "9";
-
-/* Class = "UIButton"; normalTitle = "9"; ObjectID = "zGp-mf-tRs"; */
-"zGp-mf-tRs.normalTitle" = "9";
-
-/* Class = "UIButton"; normalTitle = "4"; ObjectID = "zaY-Vh-hOB"; */
-"zaY-Vh-hOB.normalTitle" = "4";
-
-/* Class = "UIButton"; normalTitle = "6"; ObjectID = "zhr-sE-U6S"; */
-"zhr-sE-U6S.normalTitle" = "6";
+"Kyt-c4-jfL.normalTitle" = "Правила";

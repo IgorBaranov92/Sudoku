@@ -8,7 +8,7 @@ class FInishGameView: MessageView {
         label.textAlignment = .center
         label.textColor = .systemGreen
         label.font = UIFont(name: "Avenir Next", size: 25)
-        label.text = "Victory!"
+        label.text = localized("Victory")
         addSubview(label)
         
         let backButton = BackButton(frame: CGRect(x: 10, y: 10, width: 20, height: 20))

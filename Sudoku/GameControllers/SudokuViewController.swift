@@ -15,7 +15,7 @@ class SudokuViewController: GameViewController, SudokuDelegate {
             $0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(touchField)))
         }}}
     
-    @IBOutlet var digits: [Button]!
+    @IBOutlet var digits: [UIButton]!
     @IBOutlet weak var mistakesLabel: UILabel!
     @IBOutlet weak var hintsLabel: UILabel!
     
@@ -26,12 +26,6 @@ class SudokuViewController: GameViewController, SudokuDelegate {
     
     // MARK: - ViewController lifecycle
     
-    override func loadView() {
-        super.loadView()
-        if #available(iOS 13.0, *) {
-            view.backgroundColor = Colors.dynamicBackgroundColor
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +52,7 @@ class SudokuViewController: GameViewController, SudokuDelegate {
         let center = button.convert(button.bounds.center, to: stackView)
         let pivot = stackView.convert(center, to: view)
         guard let digit = Int(title) else {
-            showErrorAt(rightFrameBasedOn(pivot), message: "Can't erase empty cell")
+            showErrorAt(pivot, message: localized("ErrorEmpty"))
             return
         }
         if sudoku.mistakesMade.contains(buttonIndex) {// erase only mistakes
@@ -69,7 +63,7 @@ class SudokuViewController: GameViewController, SudokuDelegate {
                 cells[buttonIndex].setTitleColor(.black, for: .normal)
             }
         } else {
-            showErrorAt(rightFrameBasedOn(pivot), message: "Can't erase native cell")
+            showErrorAt(pivot, message: localized("ErrorNative"))
         }
     }
     
@@ -155,8 +149,8 @@ class SudokuViewController: GameViewController, SudokuDelegate {
     }
     
     private func updateLabels() {
-        mistakesLabel.text = "Mistakes: \(sudoku.mistakesMade.count)/\(sudoku.mistakes)"
-        hintsLabel.text = "Hints: \(sudoku.hintsMade)/\(sudoku.hints)"
+        mistakesLabel.text = "\(localized("mistakes")): \(sudoku.mistakesMade.count)/\(sudoku.mistakes)"
+        hintsLabel.text = "\(localized("hints")): \(sudoku.hintsMade)/\(sudoku.hints)"
     }
     
     private func hideDigitIfPossible() {
@@ -244,37 +238,30 @@ class SudokuViewController: GameViewController, SudokuDelegate {
         showRules()
     }
     
-    private func showErrorAt(_ rect:CGRect,message:String) {
+    private func showErrorAt(_ pivot:CGPoint,message:String) {
+        let rect = rightFrameBasedOn(pivot)
         let errorView = ErrorView(frame: rect)
         errorView.message = message
-        view.insertSubview(errorView, at: view.subviews.count)
+        errorView.pivot = pivot
+        view.addSubview(errorView)
     }
     
     
     private func rightFrameBasedOn(_ center: CGPoint) -> CGRect {
         guard let button = selectedButton else { return CGRect.zero}
-        var x:CGFloat = 10.0
-        if center.x - 100 < 10 { // left ofset
-            x = 10.0
-        } else if center.x + 100 > view.bounds.width - 10 { // rightOffset
-            x = view.bounds.width - 200 - 10
-        } else { // somewhere in the middle
-            x = center.x - 100.0.cg
-        }
-        
-        return CGRect(x: x, y: center.y - button.bounds.height*1.5, width: 200, height: button.bounds.height)
+        return CGRect(x: 0, y: center.y - button.bounds.height*1.5, width: view.bounds.width, height: button.bounds.height)
     }
   
     private func showRules() {
-//        let tutorialView = TutorialView()
-//        view.addSubview(tutorialView)
-//        TutorialViewConstraint.activate(tutorialView, self.view)
-//        TutorialViewAnimator.show(tutorialView)
+        let tutorialView = TutorialView()
+        view.addSubview(tutorialView)
+        TutorialViewConstraint.activate(tutorialView, self.view)
+        TutorialViewAnimator.show(tutorialView)
 //
-        let victory = FInishGameView()
-        view.addSubview(victory)
-        TutorialViewConstraint.activate(victory, self.view)
-        TutorialViewAnimator.show(victory)
+//        let victory = FInishGameView()
+//        view.addSubview(victory)
+//        TutorialViewConstraint.activate(victory, self.view)
+//        TutorialViewAnimator.show(victory)
     }
     
     

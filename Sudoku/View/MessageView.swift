@@ -5,13 +5,16 @@ class MessageView: UIView {
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath(roundedRect: bounds,
                                 cornerRadius: Constants.cornerRadiusForTutorialView)
-        UIColor.white.setFill()
+        (UIColor(named: "DynamicColorForMessageView") ?? .white).setFill()
         path.fill()
         if let superview = self.superview {
-            superview.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            superview.backgroundColor = UIColor(named: "DynamicBackgroundSuperviewColor") ?? #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
             superview.subviews.forEach {
-                if $0 != self  {
+                if !$0.isKind(of: BackButton.self)  {
                     $0.isUserInteractionEnabled = false
+                }
+                if $0 == self {
+                    $0.isUserInteractionEnabled = true
                 }
             }
         }
