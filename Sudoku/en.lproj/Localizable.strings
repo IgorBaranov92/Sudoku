@@ -12,3 +12,19 @@
 
 "mistakes" = "Mistakes";
 "hints" = "Hints";
+
+"mistakesLimit" = "mistakes limit";
+
+"mistakesCheck" = "mistakesCheck";
+
+"areaSelection" = "areaSelection";
+
+"hideDigits" = "hideDigits";
+
+"noMistakesLimit" = "noMistakesLimit";
+
+"noMistakesCheck" = "noMistakesCheck";
+
+"noAreaSelection" = "noAreaSelection";
+
+"noHideDigits" = "noHideDigits";

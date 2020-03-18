@@ -13,3 +13,14 @@ struct Constants {
     static let durationForAppearingTutorialView = 0.3
 
 }
+
+struct Keys {
+    
+    static let mistakesLimit = "mistakesLimit"
+    static let mistakesCheck = "mistakesCheck"
+    static let hideDigits = "hideDigits"
+    static let areaSelection = "areaSelection"
+    
+    
+    
+}

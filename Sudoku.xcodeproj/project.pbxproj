@@ -18,9 +18,7 @@
 		782239CD2420ECF7004E7D35 /* ShrinkableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782239CC2420ECF7004E7D35 /* ShrinkableButton.swift */; };
 		782239CF2421021E004E7D35 /* FenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782239CE2421021E004E7D35 /* FenceViewController.swift */; };
 		782239D124210226004E7D35 /* EvenOddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782239D024210226004E7D35 /* EvenOddViewController.swift */; };
-		782239D32421022C004E7D35 /* ShapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782239D22421022C004E7D35 /* ShapeViewController.swift */; };
-		782239D72421078D004E7D35 /* ShapeSudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782239D62421078D004E7D35 /* ShapeSudoku.swift */; };
-		782239D924211764004E7D35 /* ShapeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782239D824211764004E7D35 /* ShapeButton.swift */; };
+		782239DB242133EF004E7D35 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782239DA242133EF004E7D35 /* Options.swift */; };
 		78294FC9241A8CCF00854A97 /* DiagonalSudokuSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FC8241A8CCF00854A97 /* DiagonalSudokuSolver.swift */; };
 		78294FCB241A8CEB00854A97 /* TwoDiagonalsSudokuSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FCA241A8CEB00854A97 /* TwoDiagonalsSudokuSolver.swift */; };
 		78294FCF241B882C00854A97 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78294FCE241B882C00854A97 /* ErrorView.swift */; };
@@ -85,9 +83,7 @@
 		782239CC2420ECF7004E7D35 /* ShrinkableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShrinkableButton.swift; sourceTree = "<group>"; };
 		782239CE2421021E004E7D35 /* FenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FenceViewController.swift; sourceTree = "<group>"; };
 		782239D024210226004E7D35 /* EvenOddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvenOddViewController.swift; sourceTree = "<group>"; };
-		782239D22421022C004E7D35 /* ShapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViewController.swift; sourceTree = "<group>"; };
-		782239D62421078D004E7D35 /* ShapeSudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSudoku.swift; sourceTree = "<group>"; };
-		782239D824211764004E7D35 /* ShapeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeButton.swift; sourceTree = "<group>"; };
+		782239DA242133EF004E7D35 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		78294FC8241A8CCF00854A97 /* DiagonalSudokuSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalSudokuSolver.swift; sourceTree = "<group>"; };
 		78294FCA241A8CEB00854A97 /* TwoDiagonalsSudokuSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoDiagonalsSudokuSolver.swift; sourceTree = "<group>"; };
 		78294FCE241B882C00854A97 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
@@ -215,7 +211,6 @@
 				78294FD4241BAC4E00854A97 /* RombViewController.swift */,
 				782239CE2421021E004E7D35 /* FenceViewController.swift */,
 				782239D024210226004E7D35 /* EvenOddViewController.swift */,
-				782239D22421022C004E7D35 /* ShapeViewController.swift */,
 			);
 			path = GameControllers;
 			sourceTree = "<group>";
@@ -229,7 +224,7 @@
 				785C734023F192A000757B0E /* SudokuSolver.swift */,
 				78294FC8241A8CCF00854A97 /* DiagonalSudokuSolver.swift */,
 				78294FCA241A8CEB00854A97 /* TwoDiagonalsSudokuSolver.swift */,
-				782239D62421078D004E7D35 /* ShapeSudoku.swift */,
+				782239DA242133EF004E7D35 /* Options.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,7 +281,6 @@
 		7895216C241A4B6A004F8C1C /* Button */ = {
 			isa = PBXGroup;
 			children = (
-				782239D824211764004E7D35 /* ShapeButton.swift */,
 				78181F1123E5BE3300836109 /* Cell.swift */,
 				7895216A241A431C004F8C1C /* BackButton.swift */,
 				78C9B5DC241BEAAC00E1DB7A /* DoneButton.swift */,
@@ -443,7 +437,6 @@
 			files = (
 				78294FC9241A8CCF00854A97 /* DiagonalSudokuSolver.swift in Sources */,
 				782239CF2421021E004E7D35 /* FenceViewController.swift in Sources */,
-				782239D72421078D004E7D35 /* ShapeSudoku.swift in Sources */,
 				782239D124210226004E7D35 /* EvenOddViewController.swift in Sources */,
 				7896973D241A31910054397E /* TwoDiagonalsViewController.swift in Sources */,
 				785C734323F1957A00757B0E /* SudokuGenerator.swift in Sources */,
@@ -451,7 +444,6 @@
 				78181F1423E5C7F000836109 /* Extensions.swift in Sources */,
 				78294FD5241BAC4E00854A97 /* RombViewController.swift in Sources */,
 				782239CD2420ECF7004E7D35 /* ShrinkableButton.swift in Sources */,
-				782239D924211764004E7D35 /* ShapeButton.swift in Sources */,
 				78C9B5E8241D08BC00E1DB7A /* StatisticViewController.swift in Sources */,
 				782239CB2420D967004E7D35 /* TriangleView.swift in Sources */,
 				78294FD1241B93A700854A97 /* Constants.swift in Sources */,
@@ -476,9 +468,9 @@
 				7883A1C4241D2BE100ECB3FD /* TutorialViewConstraint.swift in Sources */,
 				78C9B5E2241BF35D00E1DB7A /* ErrorViewAnimation.swift in Sources */,
 				78969737241A2FAB0054397E /* LevelsViewController.swift in Sources */,
+				782239DB242133EF004E7D35 /* Options.swift in Sources */,
 				7877D1B923ED95B000E43314 /* BorderedCell.swift in Sources */,
 				78C9B5DB241BE98100E1DB7A /* TutorialView.swift in Sources */,
-				782239D32421022C004E7D35 /* ShapeViewController.swift in Sources */,
 				78294FCB241A8CEB00854A97 /* TwoDiagonalsSudokuSolver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -134,7 +134,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     }
     
     @objc private func updateBoard() {
-        cells.forEach { $0.setTitle("", for: .normal) }
+        cells?.forEach { $0.setTitle("", for: .normal) }
         for index in sudoku.digits.indices {
             if sudoku.digits[index] != 0 {
                 cells[index].setTitle("\(sudoku.digits[index])", for: .normal)
