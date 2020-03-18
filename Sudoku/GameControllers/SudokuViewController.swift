@@ -95,6 +95,10 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
                 selectedButton.setTitleColor(.orange, for: .normal)
                 updateLabels()
             }
+        } else {
+            let center = selectedButton.convert(selectedButton.bounds.center, to: stackView)
+            let pivot = stackView.convert(center, to: view)
+            showErrorAt(pivot, message: localized("ErrorFilled"))
         }
     }
     
@@ -133,7 +137,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         hideDigitIfPossible()
     }
     
-    @objc private func updateBoard() {
+    @objc
+    private func updateBoard() {
         cells?.forEach { $0.setTitle("", for: .normal) }
         for index in sudoku.digits.indices {
             if sudoku.digits[index] != 0 {
@@ -189,10 +194,11 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     // MARK: - Gamedelegate
 
     func gameWon() {
-        view.isUserInteractionEnabled = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.newGame()
-        }
+        let victory = FinishGameView()
+        victory.delegate = self
+        view.addSubview(victory)
+        TutorialViewConstraint.activate(victory, self.view)
+        TutorialViewAnimator.show(victory)
     }
     
     func gameLost() {
@@ -201,6 +207,18 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
             self.newGame()
         }))
         present(alert, animated: true)
+    }
+    
+    func animateRowWith(_ indexes: [Int]) {
+        
+    }
+    
+    func animateLineWith(_ indexes: [Int]) {
+        
+    }
+    
+    func animateBlockWith(_ indexes: [Int]) {
+        
     }
  
     // MARK: - Restoring and saving games
@@ -253,16 +271,10 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     }
   
     private func showRules() {
-//        let tutorialView = TutorialView()
-//        view.addSubview(tutorialView)
-//        TutorialViewConstraint.activate(tutorialView, self.view)
-//        TutorialViewAnimator.show(tutorialView)
-//
-        let victory = FInishGameView()
-        victory.delegate = self
-        view.addSubview(victory)
-        TutorialViewConstraint.activate(victory, self.view)
-        TutorialViewAnimator.show(victory)
+        let tutorialView = TutorialView()
+        view.addSubview(tutorialView)
+        TutorialViewConstraint.activate(tutorialView, self.view)
+        TutorialViewAnimator.show(tutorialView)
     }
     
     // MARK: - Protocol conformance

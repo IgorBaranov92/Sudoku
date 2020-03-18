@@ -13,7 +13,8 @@ class SudokuGenerator: Sudoku {
     private(set) var mistakesMade = [Int?]()
     private(set) var hintsMade = 0
     private(set) var hints = 0
-    
+    private let solver = SudokuSolver()
+
           
     init(difficult:Int, delegate: SudokuDelegate? = nil,completion:(() -> ())? = nil  ) {
         super.init()
@@ -41,6 +42,8 @@ class SudokuGenerator: Sudoku {
                 if delegate == nil { fatalError("delegate can't be nil")}
                 delegate?.gameLost()
             }
+        } else { // line or row or block is right
+            checkForAnimationAt(index)
         }
         if gameCompleted {
             if delegate == nil { fatalError("delegate can't be nil")}
@@ -101,8 +104,8 @@ class SudokuGenerator: Sudoku {
         completion?()
     }
     
+
     private func createBoard() {
-        let solver = SudokuSolver()
         solver.digits = digits
         solver.prepareForSolving()
         if solver.solve() {
@@ -150,6 +153,23 @@ class SudokuGenerator: Sudoku {
         digitsCount.removeAll()
         mistakesMade.removeAll()
     }
+    
+    private func checkForAnimationAt(_ index:Int) {
+        let coordinates = self[index]
+        if solver.lines[coordinates.row]?.count == 9 { //whole row filled
+            let start = coordinates.row*9
+            delegate?.animateRowWith([start,start+1,start+2,
+                                      start+3,start+4,start+5,
+                                      start+6,start+7,start+8])
+        }
+        if solver.columns[coordinates.column]?.count == 9 { //whole column filled
+            let start = coordinates.column
+            delegate?.animateRowWith([start,start+9,start+18,
+                                      start+27,start+36,start+45,
+                                      start+54,start+63,start+72])
+        }
+    }
+    
     
     // persistence
     

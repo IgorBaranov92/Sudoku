@@ -8,6 +8,8 @@
 
 "ErrorEmpty" = "Can't erase empty cell";
 
+"ErrorFilled" = "Already filled cell";
+
 "Victory" = "Victory!";
 
 "mistakes" = "Mistakes";

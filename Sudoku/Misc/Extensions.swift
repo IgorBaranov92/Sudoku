@@ -162,6 +162,9 @@ extension CGRect {
 protocol SudokuDelegate: class {
     func gameLost()
     func gameWon()
+    func animateRowWith(_ indexes:[Int])
+    func animateLineWith(_ indexes:[Int])
+    func animateBlockWith(_ indexes:[Int])
 }
 
 
