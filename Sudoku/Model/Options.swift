@@ -22,12 +22,14 @@ struct Options: Codable {
         options[Keys.mistakesCheck] = true
         options[Keys.areaSelection] = true
         options[Keys.hideDigits] = true
+        options[Keys.timer] = false
 
-        descriptions[Keys.mistakesLimit] = localized("mistakesLimit")
-        descriptions[Keys.mistakesCheck] = localized("mistakesCheck")
-        descriptions[Keys.areaSelection] = localized("areaSelection")
-        descriptions[Keys.hideDigits] = localized("hideDigits")
-        
+        descriptions[Keys.mistakesLimit] = Keys.mistakesLimit
+        descriptions[Keys.mistakesCheck] = Keys.mistakesCheck
+        descriptions[Keys.areaSelection] = Keys.areaSelection
+        descriptions[Keys.hideDigits] = Keys.hideDigits
+        descriptions[Keys.timer] = Keys.timer
+
     }
     
 }

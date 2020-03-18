@@ -13,18 +13,42 @@
 "mistakes" = "Mistakes";
 "hints" = "Hints";
 
-"mistakesLimit" = "mistakes limit";
+"mistakeslimit" = "For the game, depending on the level of difficulty, it is allowed to make a certain number of mistakes";
 
-"mistakesCheck" = "mistakesCheck";
+"mistakescheck" = "Automatically highlight a wrong digit";
 
-"areaSelection" = "areaSelection";
+"areaselection" = "Highlight a row, column, 3x3 square (in some mode diagonal also) relative to the selected digit";
 
-"hideDigits" = "hideDigits";
+"hidedigits" = "Hide used numbers (for example, all units are arranged)";
 
-"noMistakesLimit" = "noMistakesLimit";
+"timer" = "Time limited game (100 minutes)";
 
-"noMistakesCheck" = "noMistakesCheck";
 
-"noAreaSelection" = "noAreaSelection";
+"nomistakeslimit" = "Any number of errors allowed";
 
-"noHideDigits" = "noHideDigits";
+"nomistakescheck" = "Do not highlight the wrong digit";
+
+"noareaselection" = "Highlight only the selected cell";
+
+"nohidedigits" = "Do not hide used numbers";
+
+"notimer" = "No time limit";
+
+"classic" = "Classic";
+"diagonal" = "Diagonal";
+"twoDiagonals" = "Two diagonals";
+"romb" = "Romb";
+"evenOdd" = "Even-Odd";
+"fence" = "Fence";
+
+
+"mistakesMade" = "Mistakes made";
+"hintsUsed" = "Hints used";
+"gameWon" = "Game won";
+"gameLost" = "Game lost";
+
+"Attention" = "Attention!";
+"ResetAllWarning" = "Are you sure to reset all statistic?\nIt can't be undone";
+
+"no" = "No";
+"yes" = "Yes";

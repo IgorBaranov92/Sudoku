@@ -14,19 +14,44 @@
 
 "hints" = "Подсказок";
 
-"mistakesLimit" = "mistakes limit";
 
-"mistakesCheck" = "mistakesCheck";
+"mistakeslimit" = "За игру, в зависимости от уровня сложности допускается совершить определенное количество ошибок";
 
-"areaSelection" = "areaSelection";
+"mistakescheck" = "Автоматически подсвечивать неправильно поставленную цифру";
 
-"hideDigits" = "hideDigits";
+"areaselection" = "Подсвечивать строку, столбец, квадрат 3х3 (в некоторых режимах диагонали) относительно выбранной цифры";
 
-"noMistakesLimit" = "noMistakesLimit";
+"hidedigits" = "Спрятать использованные цифры (например расcтавлены все единицы)";
 
-"noMistakesCheck" = "noMistakesCheck";
+"timer" = "Игра с ограничением по времени (100 минут)";
 
-"noAreaSelection" = "noAreaSelection";
 
-"noHideDigits" = "noHideDigits";
+"nomistakeslimit" = "Допускается любое количество ошибок";
 
+"nomistakescheck" = "Не подсвечивать неправильно поставленную цифру";
+
+"noareaselection" = "Выделять только выбранную клетку";
+
+"nohidedigits" = "Не скрывать использованные цифры";
+
+"notimer" = "Игра без ограничения по времени";
+
+
+"classic" = "Классика";
+"diagonal" = "Диагональ";
+"twoDiagonals" = "Две диагонали";
+"romb" = "Ромб";
+"evenOdd" = "Чет-нечет";
+"fence" = "С перегородками";
+
+
+"mistakesMade" = "Ошибок допущено";
+"hintsUsed" = "Подсказок использовано";
+"gameWon" = "Выигранных игр";
+"gameLost" = "Проигранных игр";
+
+"Attention" = "Внимание!";
+"ResetAllWarning" = "Вы действительно хотите стереть всю статистику?\nДействие нельзя отменить";
+
+"no" = "Нет";
+"yes" = "Да";

@@ -7,13 +7,16 @@ class OptionsViewController: UITableViewController {
     @IBOutlet weak var mistakesLimitSwitch: UISwitch!
     @IBOutlet weak var checkMistakesSwitch: UISwitch!
     @IBOutlet weak var areaSelectionSwitch: UISwitch!
-    @IBOutlet weak var hideDigitsSwitch:    UISwitch!
+    @IBOutlet weak var hideDigitsSwitch: UISwitch!
+    @IBOutlet weak var timerSwitch: UISwitch!
     
     @IBOutlet weak var mistakesLimitLabel: UILabel!
     @IBOutlet weak var mistakesCheckLabel: UILabel!
     @IBOutlet weak var areaSelectionLabel: UILabel!
     @IBOutlet weak var hideDigitsLabel: UILabel!
-
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    @IBOutlet private weak var offsetConstraint: NSLayoutConstraint!
     
     // MARK: - ViewController lifecycle
     
@@ -22,37 +25,40 @@ class OptionsViewController: UITableViewController {
         updateUI()
     }
 
+
     
     // MARK: - IBActions
     
     @IBAction func changeMistakesLimitSwitch(_ sender: UISwitch) {
-        options.options[Keys.mistakesLimit] = sender.isOn
-        options.descriptions[Keys.mistakesLimit] = sender.isOn ? localized("mistakesLimit") : localized("noMistakesLimit")
-        mistakesLimitLabel.text = options.descriptions[Keys.mistakesLimit] ?? " "
-        saveOptions()
+        update(sender.isOn, key: Keys.mistakesLimit, label: mistakesLimitLabel)
+
     }
     
     @IBAction func changeCheckMistakesSwitch(_ sender: UISwitch) {
-        options.options[Keys.mistakesCheck] = sender.isOn
-        options.descriptions[Keys.mistakesCheck] = sender.isOn ? localized("mistakesCheck") : localized("noMistakesCheck")
-        mistakesCheckLabel.text = options.descriptions[Keys.mistakesCheck] ?? " "
-        saveOptions()
+        update(sender.isOn, key: Keys.mistakesCheck, label: mistakesCheckLabel)
+
     }
     
     @IBAction func changeAreaSelectionSwitch(_ sender: UISwitch) {
-        options.options[Keys.areaSelection] = sender.isOn
-        options.descriptions[Keys.areaSelection] = sender.isOn ? localized("areaSelection") : localized("noAreaSelection")
-        areaSelectionLabel.text = options.descriptions[Keys.areaSelection] ?? " "
-        saveOptions()
+        update(sender.isOn, key: Keys.areaSelection, label: areaSelectionLabel)
+
     }
     
     @IBAction func changeHideDigitsSwitch(_ sender: UISwitch) {
-        options.options[Keys.hideDigits] = sender.isOn
-        options.descriptions[Keys.hideDigits] = sender.isOn ? localized("hideDigits") : localized("noHideDigits")
-        hideDigitsLabel.text = options.descriptions[Keys.hideDigits] ?? " "
-        saveOptions()
+        update(sender.isOn, key: Keys.hideDigits, label: hideDigitsLabel)
+
     }
     
+    @IBAction func changeTimerSwitch(_ sender: UISwitch) {
+        update(sender.isOn, key: Keys.timer, label: timerLabel)
+    }
+    
+    func update(_ isOn: Bool,key:String,label:UILabel) {
+        options.options[key] = isOn
+        options.descriptions[key] = isOn ? key : "no" + key
+        label.text = localized(options.descriptions[key] ?? " ")
+        saveOptions()
+    }
     
     @IBAction func done(_ sender:UIBarButtonItem) {
         dismiss(animated: true)
@@ -62,6 +68,7 @@ class OptionsViewController: UITableViewController {
     private func saveOptions() {
         if let validUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("options"),let json = options.json {
             try? json.write(to: validUrl)
+            tableView.reloadData()
         }
     }
     
@@ -73,18 +80,37 @@ class OptionsViewController: UITableViewController {
             checkMistakesSwitch.isOn = options.options[Keys.mistakesCheck] ?? true
             areaSelectionSwitch.isOn = options.options[Keys.areaSelection] ?? true
             hideDigitsSwitch.isOn = options.options[Keys.hideDigits] ?? true
-            mistakesLimitLabel.text = options.descriptions[Keys.mistakesLimit] ?? " "
-            mistakesCheckLabel.text = options.descriptions[Keys.mistakesCheck] ?? " "
-            areaSelectionLabel.text = options.descriptions[Keys.areaSelection] ?? " "
-            hideDigitsLabel.text = options.descriptions[Keys.hideDigits] ?? " "
+            timerSwitch.isOn = options.options[Keys.timer] ?? true
+        mistakesLimitLabel.text = localized(options.descriptions[Keys.mistakesLimit] ?? " ")
+        mistakesCheckLabel.text = localized(options.descriptions[Keys.mistakesCheck] ?? " ")
+        areaSelectionLabel.text = localized(options.descriptions[Keys.areaSelection] ?? " ")
+        hideDigitsLabel.text = localized(options.descriptions[Keys.hideDigits] ?? " ")
+        timerLabel.text = localized(options.descriptions[Keys.timer] ?? " ")
             saveOptions()
         } else { // first time
-            mistakesLimitLabel.text = localized("mistakesLimit")
-            mistakesCheckLabel.text = localized("mistakesCheck")
-            areaSelectionLabel.text = localized("areaSelection")
-            hideDigitsLabel.text = localized("hideDigits")
+            mistakesLimitLabel.text = localized(Keys.mistakesLimit)
+            mistakesCheckLabel.text = localized(Keys.mistakesCheck)
+            areaSelectionLabel.text = localized(Keys.areaSelection)
+            hideDigitsLabel.text = localized(Keys.hideDigits)
+            timerLabel.text = localized("no" + Keys.timer)
         }
     }
     
+    // MARK: - UItableViewDelegate
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 1 { return calculateHeightFor(mistakesLimitLabel)}
+        if indexPath.row == 3 { return calculateHeightFor(mistakesCheckLabel)}
+        if indexPath.row == 5 { return calculateHeightFor(areaSelectionLabel)}
+        if indexPath.row == 7 { return calculateHeightFor(hideDigitsLabel)}
+        if indexPath.row == 9 { return calculateHeightFor(timerLabel)}
+
+        return 50.0
+    }
+    
+    private func calculateHeightFor(_ label: UILabel) -> CGFloat {
+        let sized = label.sizeThatFits(CGSize(width: view.bounds.width - offsetConstraint.constant*2, height: 200))
+        return sized.height + 10.0
+    }
+        
 }
