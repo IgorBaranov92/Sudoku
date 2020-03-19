@@ -156,13 +156,15 @@ class SudokuGenerator: Sudoku {
     
     private func checkForAnimationAt(_ index:Int) {
         let coordinates = self[index]
-        if solver.lines[coordinates.row]?.count == 9 { //whole row filled
+        
+        if solver.lines[coordinates.row]?.count == 10 { //whole row filled
             let start = coordinates.row*9
             delegate?.animateRowWith([start,start+1,start+2,
                                       start+3,start+4,start+5,
                                       start+6,start+7,start+8])
+            
         }
-        if solver.columns[coordinates.column]?.count == 9 { //whole column filled
+        if solver.columns[coordinates.column]?.count == 10 { //whole column filled
             let start = coordinates.column
             delegate?.animateRowWith([start,start+9,start+18,
                                       start+27,start+36,start+45,

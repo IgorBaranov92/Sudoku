@@ -16,11 +16,7 @@ extension CALayer {
         default:break
         }
         subLayer.name = "border"
-        if #available(iOS 13.0, *) {
-            subLayer.backgroundColor = Colors.dynamicBorderColor.cgColor
-        } else {
-            subLayer.backgroundColor = UIColor.black.cgColor
-        }
+        subLayer.backgroundColor = UIColor.border.cgColor
         addSublayer(subLayer)
     }
     
@@ -70,11 +66,7 @@ extension CALayer {
         }
         
         subLayer.path = path
-        if #available(iOS 13.0, *) {
-            subLayer.strokeColor =  Colors.dynamicDiagonalColor.cgColor
-        } else {
-            subLayer.strokeColor =  #colorLiteral(red: 0.7737190911, green: 0.7737190911, blue: 0.7737190911, alpha: 1).cgColor
-        }
+        subLayer.strokeColor = UIColor.diagonal.cgColor
         subLayer.name = edge.rawValue
         insertSublayer(subLayer, at: 0)
     }

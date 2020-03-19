@@ -7,23 +7,16 @@ class Cell: BorderedCell {
     var highlight = false { didSet { setNeedsDisplay() }}
     var hinted = false { didSet { setNeedsDisplay() }}
     
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         if active || hinted {
             let path = UIBezierPath(rect: rect)
-            if #available(iOS 13.0, *) {
-                Colors.dynamicSelectionColor.setFill()
-            } else {
-                #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1).setFill()
-            }
+            UIColor.selection.setFill()
             path.fill()
         } else if highlight {
             let path = UIBezierPath(rect: rect)
-            if #available(iOS 13.0, *) {
-                Colors.dynamicHighlightColor.setFill()
-            } else {
-                #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1).setFill()
-            }
+            UIColor.highlight.setFill()
             path.fill()
         } else {
             let path = UIBezierPath(rect: rect)
@@ -44,17 +37,11 @@ class Cell: BorderedCell {
     
     private func setup() {
         layer.borderWidth = UIDevice.isIpad ? 0.5 : 0.25
-        if #available(iOS 13.0, *) {
-            layer.borderColor = Colors.dynamicBorderColor.cgColor
-        } else {
-            layer.borderColor = UIColor.black.cgColor
-        } 
+        layer.borderColor = UIColor.border.cgColor
     }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        if #available(iOS 13.0, *) {
-            setTitleColor(Colors.dynamicTextColor, for: .normal)
-        }
+        setTitleColor(.text, for: .normal)
     }
     
     

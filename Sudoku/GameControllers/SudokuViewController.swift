@@ -37,9 +37,16 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        showRules()
+    //    showRules()
     }
 
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        cells[0].backgroundColor = .red
+//        CellAnimator.show(cells[0])
+
+    }
     
     // MARK: - IBActions
     
@@ -57,11 +64,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         }
         if sudoku.mistakesMade.contains(buttonIndex) {// erase only mistakes
             eraseDigit(digit, at: buttonIndex)
-            if #available(iOS 13, *) {
-                cells[buttonIndex].setTitleColor(Colors.dynamicTextColor, for: .normal)
-            } else {
-                cells[buttonIndex].setTitleColor(.black, for: .normal)
-            }
+            cells[buttonIndex].setTitleColor(.text, for: .normal)
+
         } else {
             showErrorAt(pivot, message: localized("ErrorNative"))
         }
@@ -86,11 +90,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
             hideDigitIfPossible()
             selectedButton.setTitle(title, for: .normal)
             if digit == sudoku.answers[index] { //right digit
-                if #available(iOS 13.0, *) {
-                    selectedButton.setTitleColor(Colors.dynamicTextColor, for: .normal)
-                } else {
-                    selectedButton.setTitleColor(.black, for: .normal)
-                }
+                selectedButton.setTitleColor(.text, for: .normal)
             } else { //mistake
                 selectedButton.setTitleColor(.orange, for: .normal)
                 updateLabels()
@@ -106,12 +106,19 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     @IBAction func showHint(_ sender:UIButton){
         guard let selectedButton = selectedButton else { return }
         guard let index = cells.firstIndex(of: selectedButton) else { return }
-        sudoku.hint(index: index)
-        updateBoard()
-        updateLabels()
-        hideDigitIfPossible()
-        hasActiveButton = nil
-        saveGame()
+        if sudoku.digits[index] != 0 { //cell is solved already
+            let center = selectedButton.convert(selectedButton.bounds.center, to: stackView)
+            let pivot = stackView.convert(center, to: view)
+            showErrorAt(pivot, message: localized("ErrorFilled"))
+        } else { // empty cell, please hint me
+            sudoku.hint(index: index)
+            updateBoard()
+            updateLabels()
+            hideDigitIfPossible()
+            hasActiveButton = nil
+            saveGame()
+        }
+        
     }
     
     
@@ -145,7 +152,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
                 cells[index].setTitle("\(sudoku.digits[index])", for: .normal)
             }
             if #available(iOS 13, *) {
-                cells[index].setTitleColor(sudoku.mistakesMade.contains(index) ? .orange : Colors.dynamicTextColor, for: .normal)
+                cells[index].setTitleColor(sudoku.mistakesMade.contains(index) ? .orange : .text, for: .normal)
 
             } else {
                 cells[index].setTitleColor(sudoku.mistakesMade.contains(index) ? .orange : .black, for: .normal)
@@ -166,18 +173,15 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     @objc private func clear() { reset(full: false) }
     
-    @objc private func reset(full:Bool) {
+    @objc
+    private func reset(full:Bool) {
         cells.forEach {
             $0.active = false
             $0.highlight = false
             $0.hinted = false
             if full {
                 $0.setTitle("", for: .normal)
-                if #available(iOS 13.0, *) {
-                    $0.setTitleColor(Colors.dynamicTextColor, for: .normal)
-                } else {
-                    $0.setTitleColor(.black, for: .normal)
-                }
+                $0.setTitleColor(.text, for: .normal)
             }
         }
     }
@@ -210,15 +214,21 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     }
     
     func animateRowWith(_ indexes: [Int]) {
-        
+//        indexes.forEach {
+//            let cell = cells[$0]
+//        }
     }
     
     func animateLineWith(_ indexes: [Int]) {
-        
+//        indexes.forEach {
+//            let cell = cells[$0]
+//        }
     }
     
     func animateBlockWith(_ indexes: [Int]) {
-        
+//        indexes.forEach {
+//            let cell = cells[$0]
+//        }
     }
  
     // MARK: - Restoring and saving games
@@ -226,6 +236,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     private func recreateGameIfNeeded() {
         if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("games"),let data = try? Data(contentsOf: url),let newValue = Game(json: data) {
             game = newValue
+            guard let game = game.games[0] else { newGame();return  }
+            sudoku = game
             sudoku.delegate = self
             updateUI()
             saveGame()
@@ -246,6 +258,12 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         digits.forEach { $0.isHidden = false }
         hasActiveButton = nil
         view.isUserInteractionEnabled = true
+        sudoku = SudokuGenerator(difficult: 0,delegate: self) { // game created
+                                        DispatchQueue.main.async { [weak self] in
+                                            self?.saveGame()
+                                            self?.updateUI()
+            }}
+
     }
     
     @IBAction func back(_ sender:UIButton) {
@@ -272,6 +290,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
   
     private func showRules() {
         let tutorialView = TutorialView()
+        tutorialView.message = localized("classicMessage")
         view.addSubview(tutorialView)
         TutorialViewConstraint.activate(tutorialView, self.view)
         TutorialViewAnimator.show(tutorialView)
