@@ -5,6 +5,7 @@ class SudokuGenerator: Sudoku {
     var difficult: Difficult = .easy
     var gameCompleted: Bool { digits.filter { $0 == 0 }.isEmpty } //all cells solved
     var completion: (() -> () )?
+    private(set) var timerCount = 0
     
     weak var delegate: SudokuDelegate?
     
@@ -13,8 +14,6 @@ class SudokuGenerator: Sudoku {
     private(set) var mistakesMade = [Int?]()
     private(set) var hintsMade = 0
     private(set) var hints = 0
-    private let solver = SudokuSolver()
-
           
     init(difficult:Int, delegate: SudokuDelegate? = nil,completion:(() -> ())? = nil  ) {
         super.init()
@@ -106,6 +105,7 @@ class SudokuGenerator: Sudoku {
     
 
     private func createBoard() {
+        let solver = SudokuSolver()
         solver.digits = digits
         solver.prepareForSolving()
         if solver.solve() {
@@ -155,21 +155,7 @@ class SudokuGenerator: Sudoku {
     }
     
     private func checkForAnimationAt(_ index:Int) {
-        let coordinates = self[index]
         
-        if solver.lines[coordinates.row]?.count == 10 { //whole row filled
-            let start = coordinates.row*9
-            delegate?.animateRowWith([start,start+1,start+2,
-                                      start+3,start+4,start+5,
-                                      start+6,start+7,start+8])
-            
-        }
-        if solver.columns[coordinates.column]?.count == 10 { //whole column filled
-            let start = coordinates.column
-            delegate?.animateRowWith([start,start+9,start+18,
-                                      start+27,start+36,start+45,
-                                      start+54,start+63,start+72])
-        }
     }
     
     
@@ -186,6 +172,7 @@ class SudokuGenerator: Sudoku {
         digits = try container.decode([Int].self, forKey: .digits)
         answers = try container.decode([Int].self, forKey: .answers)
         digitsCount = try container.decode([Int:Int].self, forKey: .digitsCount)
+        timerCount = try container.decode(Int.self, forKey: .timer)
     }
     
     override func encode(to encoder: Encoder) throws {
@@ -198,6 +185,7 @@ class SudokuGenerator: Sudoku {
         try container.encode(digits, forKey: .digits)
         try container.encode(answers, forKey: .answers)
         try container.encode(digitsCount, forKey: .digitsCount)
+        try container.encode(timerCount, forKey: .timer)
     }
     
     private enum CodingKeys:String,CodingKey {
@@ -210,6 +198,7 @@ class SudokuGenerator: Sudoku {
         case answers = "answers"
         case digitsCount = "digitsCount"
         case expert = "expert"
+        case timer = "timer"
     }
    
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-class ErrorViewAnimation: UIViewPropertyAnimator {
+class ErrorViewAnimation {
 
     static func show(_ view:UIView) {
         UIViewPropertyAnimator.runningPropertyAnimator(

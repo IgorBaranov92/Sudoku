@@ -2,6 +2,11 @@ import UIKit
 
 class GameViewController: UIViewController {
 
+    
+    @IBOutlet weak var mistakesLabel: UILabel!
+    @IBOutlet weak var hintsLabel: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
+    
     @IBOutlet weak var offsetConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var labelsStackView:UIStackView!
@@ -24,6 +29,7 @@ class GameViewController: UIViewController {
     
     @IBOutlet private weak var centerXLabelsStackViewConstraint: NSLayoutConstraint!
     @IBOutlet private weak var trailingAnchorLabelsStackView: NSLayoutConstraint!
+    
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()

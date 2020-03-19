@@ -204,10 +204,10 @@
 				78181EF823E5BD9B00836109 /* AppDelegate.swift */,
 				78181F1323E5C7F000836109 /* Extensions.swift */,
 				78294FD0241B93A700854A97 /* Constants.swift */,
+				788CDC8D242345D800420F9B /* UIColor+Colors.swift */,
 				78181F0123E5BD9C00836109 /* Assets.xcassets */,
 				78181F0323E5BD9C00836109 /* LaunchScreen.storyboard */,
 				78181F0623E5BD9C00836109 /* Info.plist */,
-				788CDC8D242345D800420F9B /* UIColor+Colors.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";

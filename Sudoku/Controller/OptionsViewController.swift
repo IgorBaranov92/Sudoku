@@ -31,7 +31,10 @@ class OptionsViewController: UITableViewController {
     
     @IBAction func changeMistakesLimitSwitch(_ sender: UISwitch) {
         update(sender.isOn, key: Keys.mistakesLimit, label: mistakesLimitLabel)
-
+        checkMistakesSwitch.isOn = sender.isOn
+        checkMistakesSwitch.isUserInteractionEnabled = !sender.isOn
+        checkMistakesSwitch.alpha = sender.isOn ? 0.5 : 1.0
+        update(checkMistakesSwitch.isOn, key: Keys.mistakesCheck, label: mistakesCheckLabel)
     }
     
     @IBAction func changeCheckMistakesSwitch(_ sender: UISwitch) {
@@ -81,6 +84,8 @@ class OptionsViewController: UITableViewController {
             areaSelectionSwitch.isOn = options.options[Keys.areaSelection] ?? true
             hideDigitsSwitch.isOn = options.options[Keys.hideDigits] ?? true
             timerSwitch.isOn = options.options[Keys.timer] ?? true
+            checkMistakesSwitch.isUserInteractionEnabled = !mistakesLimitSwitch.isOn
+            checkMistakesSwitch.alpha = mistakesLimitSwitch.isOn ? 0.5 : 1.0
         mistakesLimitLabel.text = localized(options.descriptions[Keys.mistakesLimit] ?? " ")
         mistakesCheckLabel.text = localized(options.descriptions[Keys.mistakesCheck] ?? " ")
         areaSelectionLabel.text = localized(options.descriptions[Keys.areaSelection] ?? " ")

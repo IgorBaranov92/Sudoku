@@ -1,7 +1,7 @@
 import UIKit
 
-class TutorialViewAnimator: UIViewPropertyAnimator {
-
+class TutorialViewAnimator {
+    
     static func show(_ view:UIView) {
         view.alpha = 0
         view.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)

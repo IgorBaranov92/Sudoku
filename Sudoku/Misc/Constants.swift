@@ -12,8 +12,8 @@ struct Constants {
     static let durationForDisapperaingTutorialView = 0.5
     static let durationForAppearingTutorialView = 0.3
 
-    static let durationForFirstCellAnimation = 0.5
-    static let durationForSecondCellAnimation = 0.5
+    static let durationForTextAppearing = 0.5
+    static let durationForTextDisappearing = 0.5
 
     
 }
