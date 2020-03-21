@@ -5,7 +5,7 @@ class SudokuGenerator: Sudoku {
     var difficult: Difficult = .easy
     var gameCompleted: Bool { digits.filter { $0 == 0 }.isEmpty } //all cells solved
     var completion: (() -> () )?
-    private(set) var timerCount = 0
+    var timerCount = 0
     
     weak var delegate: SudokuDelegate?
     
@@ -32,15 +32,18 @@ class SudokuGenerator: Sudoku {
    }
     
    
-    func cellTouchedAt(index:Int, digit:Int) {
+    func cellTouchedAt(index:Int, digit:Int,shouldCountMistakes:Bool) {
         digits[index] = digit
         digitsCount[digit] = digitsCount[digit]! + 1
         if digits[index] != answers[index] { //mistake
             mistakesMade.append(index)
-            if mistakesMade.count == mistakes + 1 { //game lost
-                if delegate == nil { fatalError("delegate can't be nil")}
-                delegate?.gameLost()
+            if shouldCountMistakes {
+                if mistakesMade.count == mistakes + 1 { //game lost
+                    if delegate == nil { fatalError("delegate can't be nil")}
+                    delegate?.gameLost()
+                }
             }
+            
         } else { // line or row or block is right
             checkForAnimationAt(index)
         }

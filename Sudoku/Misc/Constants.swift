@@ -18,13 +18,3 @@ struct Constants {
     
 }
 
-struct Keys {
-    
-    static let mistakesLimit = "mistakeslimit"
-    static let mistakesCheck = "mistakescheck"
-    static let hideDigits = "hidedigits"
-    static let areaSelection = "areaselection"
-    static let timer = "timer"
-    
-    
-}

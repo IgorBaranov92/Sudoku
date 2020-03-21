@@ -9,8 +9,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     var game = Game()
     var options = Options()
     
-    private weak var timer: Timer!
-
     // MARK: - Outlets
     
     @IBOutlet var cells: [Cell]! { didSet {
@@ -19,12 +17,12 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         }}}
     
     @IBOutlet var digits: [UIButton]!
-
     
     // MARK: - private vars
     
     private var hasActiveButton: Bool?
-    
+    private weak var timer: Timer!
+
     
     // MARK: - ViewController lifecycle
     
@@ -36,17 +34,12 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         NotificationCenter.default.addObserver(self, selector: #selector(updateBoard), name: UIApplication.willEnterForegroundNotification, object: nil)
         restoreOptions()
         recreateGameIfNeeded()
+        startTimerIfNeeded()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     //    showRules()
-    }
-
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        startTimerIfNeeded()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -92,14 +85,14 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         guard let selectedButton = selectedButton else { return }
         guard let index = cells.firstIndex(of: selectedButton) else { return }
         if selectedButton.currentTitle == "" {
-            sudoku.cellTouchedAt(index: index, digit: digit)
+            sudoku.cellTouchedAt(index: index, digit: digit,shouldCountMistakes: options.options[0])
             saveGame()
             hideDigitIfPossible()
             TextAppearenceAnimator.show(cells[index], string: title)
             if digit == sudoku.answers[index] { //right digit
                 selectedButton.setTitleColor(.text, for: .normal)
             } else { //mistake
-                if options.options[Keys.mistakesCheck] ?? true {
+                if options.options[1] {
                     selectedButton.setTitleColor(.orange, for: .normal)
                 } else {
                     selectedButton.setTitleColor(.text, for: .normal)
@@ -140,7 +133,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
                 let index = cells.firstIndex(of: button) {
                 reset(full:false)
                 cells[index].active = true
-                if options.options[Keys.areaSelection] ?? true {
+                if options.options[2] {
                     sudoku.highlightButtons(index).forEach { cells[$0].highlight = true }
                 }
                 hasActiveButton = true
@@ -154,7 +147,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     private func updateUI() {
         updateBoard()
         updateLabels()
-        if options.options[Keys.hideDigits] ?? true {
+        if options.options[3]  {
             hideDigitIfPossible()
         }
     }
@@ -162,13 +155,13 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     @objc
     private func updateBoard() {
-        timerLabel.isHidden = !(options.options[Keys.timer] ?? true)
+        timerLabel.isHidden = !(options.options[5])
         cells.forEach { $0.setTitle("", for: .normal) }
         for index in sudoku.digits.indices {
             if sudoku.digits[index] != 0 {
                 cells[index].setTitle("\(sudoku.digits[index])", for: .normal)
             }
-            if options.options[Keys.mistakesCheck] ?? true {
+            if options.options[1] {
              cells[index].setTitleColor(sudoku.mistakesMade.contains(index) ? .orange : .text, for: .normal)
             } else {
                 cells[index].setTitleColor(.text, for: .normal)
@@ -177,7 +170,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     }
     
     private func updateLabels() {
-        mistakesLabel.isHidden = !(options.options[Keys.mistakesLimit] ?? false)
+        mistakesLabel.isHidden = !(options.options[0])
         mistakesLabel.text = "\(localized("mistakes")): \(sudoku.mistakesMade.count)/\(sudoku.mistakes)"
         hintsLabel.text = "\(localized("hints")): \(sudoku.hintsMade)/\(sudoku.hints)"
     }
@@ -280,6 +273,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     @objc
     private func saveGame() {
         if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("games"),let json = game.json {
+            sudoku.timerCount = counter
+            game.games[0] = sudoku
             try? json.write(to: url)
         }
     }
@@ -328,8 +323,11 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     }
     
     var counter = 0
+    
     private func startTimerIfNeeded() {
-        if options.options[Keys.timer] ?? false {
+        if options.options[5] {
+            counter = sudoku.timerCount
+            timerLabel.text = TimerCounter.getTime(counter, completion: {})
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimerLabel), userInfo: nil, repeats: true)
         }
     }

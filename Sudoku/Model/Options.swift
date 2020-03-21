@@ -2,9 +2,11 @@ import Foundation
 
 struct Options: Codable {
     
-    var options = [String:Bool]()
+    var options = [Bool]()
     
-    var descriptions = [String:String]()
+    var descriptions = [String]()
+    
+    private(set) var identity = ["mistakeslimit","mistakescheck","areaselection","smarthints","hidedigits","timer","darktheme","darkmodesync"]
     
     var json: Data? {
         return try? JSONEncoder().encode(self)
@@ -16,20 +18,19 @@ struct Options: Codable {
         }
     }
     
+//mistakes limit
+//check mistakes
+//area selection
+//smart hints
+//hide digits
+//timer
+//darktheme
+//darkmodesync
     
     init() {
-        options[Keys.mistakesLimit] = true
-        options[Keys.mistakesCheck] = true
-        options[Keys.areaSelection] = true
-        options[Keys.hideDigits] = true
-        options[Keys.timer] = false
-
-        descriptions[Keys.mistakesLimit] = Keys.mistakesLimit
-        descriptions[Keys.mistakesCheck] = Keys.mistakesCheck
-        descriptions[Keys.areaSelection] = Keys.areaSelection
-        descriptions[Keys.hideDigits] = Keys.hideDigits
-        descriptions[Keys.timer] = Keys.timer
-
+        options = [true,true,true,true,true,true,true,false]
+        descriptions = identity
+        
     }
     
 }

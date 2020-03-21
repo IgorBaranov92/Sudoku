@@ -25,14 +25,15 @@ struct Statistic: Codable {
     
     struct Scores: Codable {
 
-//        var mistakesMade = 0
-//        var hintsUsed = 0
-//        var gameWon = 0
-//        var gameLost = 0
+//mistakesMade
+//hintsUsed
+//gameWon
+//gameLost
+//best time
         
-        var scores = [0,0,0,0]
+        var scores = [0,0,0,0,0]
         
-        let descriptions = [localized("mistakesMade"),localized("hintsUsed"),localized("gameWon"),localized("gameLost")]
+        let descriptions = [localized("mistakesMade"),localized("hintsUsed"),localized("gameWon"),localized("gameLost"),localized("besttime")]
         
         mutating func updateMistakes() {
             scores[0] += 1

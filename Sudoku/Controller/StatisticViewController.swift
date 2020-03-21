@@ -1,9 +1,26 @@
 import UIKit
 
-class StatisticViewController: UITableViewController {
-
+class StatisticViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    
+// MARK: - Model
+    
     var statistic = Statistic()
-
+    
+// MARK: - Outlets
+    
+    @IBOutlet weak var tableView: UITableView! { didSet {
+        tableView.dataSource = self
+        tableView.delegate = self
+        }}
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet var buttons: [UIButton]!
+    
+    
+    @IBOutlet private weak var heightConstaint: NSLayoutConstraint!
+    
+    
     // MARK: - ViewController lifecycle
     
     override func viewDidLoad() {
@@ -11,20 +28,24 @@ class StatisticViewController: UITableViewController {
         updateStatistic()
     }
     
-
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        scrollView.contentSize = CGSize(width: stackView.bounds.width,
+                                       height: heightConstaint.constant)
+    }
     
     // MARK: - UITableViewDataSourse
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return statistic.scoresFor.count
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return statistic.scoresFor[.classic]?.descriptions.count ?? 0
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticCell", for: indexPath)
         if let statisticCell = cell as? StatisticTableViewCell {
             let gameType = statistic.gameTypes[indexPath.section]
@@ -42,7 +63,7 @@ class StatisticViewController: UITableViewController {
     
     // MARK: - UITableView delegate
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return localized(statistic.gameTypes[section].rawValue)
     }
 
@@ -65,6 +86,13 @@ class StatisticViewController: UITableViewController {
         present(alert, animated: true)
     }
     
+    @IBAction func changeStatisticBasedOnGameType(_ sender: UIButton) {
+        buttons.forEach { $0.setTitleColor(.text, for: .normal)}
+        if let index = buttons.firstIndex(of:sender) {
+            sender.setTitleColor(.red, for: .normal)
+            print(index)
+        }
+    }
     
     private func updateStatistic() {
         
