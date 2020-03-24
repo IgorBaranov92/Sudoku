@@ -8,6 +8,8 @@ class OptionsViewController: UITableViewController {
     
     @IBOutlet var switches: [UISwitch]!
     
+    @IBOutlet var heightConstaints: [NSLayoutConstraint]!
+    
     @IBOutlet private weak var offsetConstraint: NSLayoutConstraint!
     
     // MARK: - ViewController lifecycle

@@ -67,3 +67,8 @@
 
 "no" = "No";
 "yes" = "Yes";
+
+
+"easy" = "Easy";
+"medium" = "Medium";
+"hard" = "Hard";

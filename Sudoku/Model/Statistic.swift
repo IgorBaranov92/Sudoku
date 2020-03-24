@@ -1,6 +1,19 @@
 import Foundation
 
+//mistakesMade
+//hintsUsed
+//gameWon
+//gameLost
+//best time
+
 struct Statistic: Codable {
+    
+    static let difficult = ["easy","medium","hard"]
+    
+    static subscript(_ i:Int) -> GameType {
+        return GameType(rawValue: i) ?? .classic
+    }
+    
     
     var scoresFor:[GameType:Scores] = [
         .classic:Scores(),
@@ -10,9 +23,7 @@ struct Statistic: Codable {
         .evenOdd:Scores(),
         .fence:Scores()
     ]
-    
-    private(set) var gameTypes:[GameType] = [GameType.classic,.diagonal,.twoDiagonals,.romb,.evenOdd,.fence]
-    
+        
     var json: Data? { try? JSONEncoder().encode(self) }
     
     init() {}
@@ -25,42 +36,40 @@ struct Statistic: Codable {
     
     struct Scores: Codable {
 
-//mistakesMade
-//hintsUsed
-//gameWon
-//gameLost
-//best time
-        
-        var scores = [0,0,0,0,0]
+        var scores = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
         
         let descriptions = [localized("mistakesMade"),localized("hintsUsed"),localized("gameWon"),localized("gameLost"),localized("besttime")]
         
-        mutating func updateMistakes() {
-            scores[0] += 1
+        mutating func updateMistakes(difficult:Int) {
+            scores[difficult][0] += 1
         }
         
-        mutating func updateHints() {
-            scores[1] += 1
+        mutating func updateHints(difficult:Int) {
+            scores[difficult][1] += 1
         }
         
-        mutating func updateGameWon() {
-            scores[2] += 1
+        mutating func updateGameWon(difficult:Int) {
+            scores[difficult][2] += 1
         }
         
-        mutating func updateGameLost() {
-            scores[3] += 1
+        mutating func updateGameLost(difficult:Int) {
+            scores[difficult][3] += 1
+        }
+        
+        mutating func updateBestTime(difficult:Int) {
+            scores[difficult][4] += 1
         }
         
     }
      
-    enum GameType: String,Codable {
-        case classic 
-        case diagonal
-        case twoDiagonals
-        case romb
-        case evenOdd
-        case fence
-    }
 }
 
 
+enum GameType: Int,Codable {
+    case classic = 0
+    case diagonal = 1
+    case twoDiagonals = 2
+    case romb = 3
+    case evenOdd = 4
+    case fence = 5
+}

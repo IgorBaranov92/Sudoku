@@ -15,7 +15,9 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet var buttons: [UIButton]!
+    @IBOutlet var buttons: [UIButton]! { didSet {
+        buttons[0].setTitleColor(.red, for: .normal)
+        }}
     
     
     @IBOutlet private weak var heightConstaint: NSLayoutConstraint!
@@ -37,7 +39,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     // MARK: - UITableViewDataSourse
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return statistic.scoresFor.count
+        return Statistic.difficult.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,10 +50,10 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticCell", for: indexPath)
         if let statisticCell = cell as? StatisticTableViewCell {
-            let gameType = statistic.gameTypes[indexPath.section]
+            let gameType = Statistic[0]
             if let scores = statistic.scoresFor[gameType] {
-                statisticCell.descriptionLabel.text = scores.descriptions[indexPath.row]
-                statisticCell.scoreLabel.text = "\(scores.scores[indexPath.row])"
+//                statisticCell.descriptionLabel.text = scores.descriptions[indexPath.row]
+//                statisticCell.scoreLabel.text = "\(scores.scores[indexPath.row])"
             }
             return statisticCell
         }
@@ -64,7 +66,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     // MARK: - UITableView delegate
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return localized(statistic.gameTypes[section].rawValue)
+        return localized(Statistic.difficult[section])
     }
 
     
@@ -73,6 +75,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
          dismiss(animated: true)
      }
      
+    
     @IBAction func resetAll(_ sender: UIButton) {
         let alert = UIAlertController(title: localized("Attention"), message: localized("ResetAllWarning"), preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: localized("no"), style: .cancel))
@@ -88,9 +91,9 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     
     @IBAction func changeStatisticBasedOnGameType(_ sender: UIButton) {
         buttons.forEach { $0.setTitleColor(.text, for: .normal)}
-        if let index = buttons.firstIndex(of:sender) {
+        StatisticButtonAnimator.animate(sender)
+        if buttons.firstIndex(of:sender) != nil {
             sender.setTitleColor(.red, for: .normal)
-            print(index)
         }
     }
     

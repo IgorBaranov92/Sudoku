@@ -15,6 +15,9 @@ struct Constants {
     static let durationForTextAppearing = 0.5
     static let durationForTextDisappearing = 0.5
 
+    static let durationForScalingStatisticButton = 0.25
+    
+    static let durationForChangingConstraint = 0.5
     
 }
 
