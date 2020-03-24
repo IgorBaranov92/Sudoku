@@ -5,7 +5,6 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var mistakesLabel: UILabel!
     @IBOutlet weak var hintsLabel: UILabel!
-    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var offsetConstraint: NSLayoutConstraint!
     

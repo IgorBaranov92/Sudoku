@@ -29,10 +29,6 @@ class OptionsViewController: UITableViewController {
             switches[1].alpha = sender.isOn ? 0.5 : 1.0
             update(switches[1].isOn, options.identity[1], labels[1], 1)
         }
-        if sender == switches[7] {//darkmode sync switch
-            switches[6].isUserInteractionEnabled = !sender.isOn
-            switches[6].alpha = sender.isOn ? 0.5 : 1.0
-        }
     }
     
     func update(_ isOn: Bool,_ key:String,_ label:UILabel,_ index:Int) {
@@ -76,8 +72,6 @@ class OptionsViewController: UITableViewController {
         }
         switches[1].isUserInteractionEnabled = !switches[0].isOn
         switches[1].alpha = switches[0].isOn ? 0.5 : 1.0
-        switches[6].isUserInteractionEnabled = !switches[7].isOn
-        switches[6].alpha = switches[7].isOn ? 0.5 : 1.0
     }
     
     // MARK: - UItableViewDelegate
@@ -85,17 +79,9 @@ class OptionsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath == IndexPath(row: 1, section: 0) { return calculateHeightFor(labels[0])}
         if indexPath == IndexPath(row: 3, section: 0) { return calculateHeightFor(labels[1])}
-        if indexPath == IndexPath(row: 1, section: 1) { return calculateHeightFor(labels[2])}
-        if indexPath == IndexPath(row: 3, section: 1) { return calculateHeightFor(labels[3])}
-        if indexPath == IndexPath(row: 5, section: 1) { return calculateHeightFor(labels[4])}
-        if indexPath == IndexPath(row: 1, section: 2) { return calculateHeightFor(labels[5])}
-        if indexPath == IndexPath(row: 1, section: 3) { return calculateHeightFor(labels[6])}
-        if #available(iOS 13, *) {
-        if indexPath == IndexPath(row: 3, section: 3) { return calculateHeightFor(labels[7])}
-        } else {
-            if indexPath == IndexPath(row: 2, section: 3) { return 0 }
-            if indexPath == IndexPath(row: 3, section: 3) { return 0 }
-        }
+        if indexPath == IndexPath(row: 5, section: 0) { return calculateHeightFor(labels[2])}
+        if indexPath == IndexPath(row: 7, section: 0) { return calculateHeightFor(labels[3])}
+        if indexPath == IndexPath(row: 9, section: 0) { return calculateHeightFor(labels[4])}
         return 50.0
     }
     

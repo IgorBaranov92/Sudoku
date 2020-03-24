@@ -6,6 +6,8 @@ class SudokuGenerator: Sudoku {
     var gameCompleted: Bool { digits.filter { $0 == 0 }.isEmpty } //all cells solved
     var completion: (() -> () )?
     var timerCount = 0
+    var shouldRestartGame = false
+    
     
     weak var delegate: SudokuDelegate?
     
@@ -155,6 +157,7 @@ class SudokuGenerator: Sudoku {
         answers.removeAll()
         digitsCount.removeAll()
         mistakesMade.removeAll()
+        shouldRestartGame = false
     }
     
     private func checkForAnimationAt(_ index:Int) {

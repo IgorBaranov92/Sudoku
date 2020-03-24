@@ -4,7 +4,6 @@ import Foundation
 //hintsUsed
 //gameWon
 //gameLost
-//best time
 
 struct Statistic: Codable {
     
@@ -20,8 +19,6 @@ struct Statistic: Codable {
         .diagonal:Scores(),
         .twoDiagonals:Scores(),
         .romb:Scores(),
-        .evenOdd:Scores(),
-        .fence:Scores()
     ]
         
     var json: Data? { try? JSONEncoder().encode(self) }
@@ -36,9 +33,9 @@ struct Statistic: Codable {
     
     struct Scores: Codable {
 
-        var scores = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+        var scores = [[0,0,0,0],[0,0,0,0],[0,0,0,0]]
         
-        let descriptions = [localized("mistakesMade"),localized("hintsUsed"),localized("gameWon"),localized("gameLost"),localized("besttime")]
+        let descriptions = [localized("mistakesMade"),localized("hintsUsed"),localized("gameWon"),localized("gameLost")]
         
         mutating func updateMistakes(difficult:Int) {
             scores[difficult][0] += 1
@@ -56,10 +53,6 @@ struct Statistic: Codable {
             scores[difficult][3] += 1
         }
         
-        mutating func updateBestTime(difficult:Int) {
-            scores[difficult][4] += 1
-        }
-        
     }
      
 }
@@ -70,6 +63,4 @@ enum GameType: Int,Codable {
     case diagonal = 1
     case twoDiagonals = 2
     case romb = 3
-    case evenOdd = 4
-    case fence = 5
 }

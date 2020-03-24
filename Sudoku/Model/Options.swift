@@ -6,7 +6,7 @@ struct Options: Codable {
     
     var descriptions = [String]()
     
-    private(set) var identity = ["mistakeslimit","mistakescheck","areaselection","smarthints","hidedigits","timer","darktheme","darkmodesync"]
+    private(set) var identity = ["mistakeslimit","mistakescheck","areaselection","smarthints","hidedigits"]
     
     var json: Data? {
         return try? JSONEncoder().encode(self)
@@ -23,12 +23,9 @@ struct Options: Codable {
 //area selection
 //smart hints
 //hide digits
-//timer
-//darktheme
-//darkmodesync
     
     init() {
-        options = [true,true,true,true,true,true,true,false]
+        options = [true,true,true,true,true]
         descriptions = identity
         
     }
