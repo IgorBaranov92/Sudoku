@@ -1,14 +1,17 @@
 import Foundation
 
-class TimeCounter {
+class TimerCounter {
     
-    static func getTime(_ seconds:Int) -> String {
+    static func getTime(_ seconds:Int,completion:@escaping ()->Void ) -> String {
+        if seconds >= 60*100 {
+            completion()
+            return "99:59"
+        }
         let minutes = seconds/60
-        let hours = minutes/60
         let newSeconds = seconds - minutes*60
-        var result = hours <= 9 ? "0" : ""
+        var result = minutes <= 9 ? "0" : ""
         let sec = newSeconds <= 9 ? "0" : ""
-        result = "\(hours)\(minutes):\(sec+String(newSeconds))"
+        result += "\(minutes):\(sec+String(newSeconds))"
         return result
     }
     

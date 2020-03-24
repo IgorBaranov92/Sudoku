@@ -17,11 +17,7 @@ class BackButton: UIButton {
         path.addLine(to: CGPoint(x: bounds.midX, y: bounds.midY))
         path.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
         path.lineWidth = 5.0
-        if #available(iOS 13.0, *) {
-            Colors.dynamicButtonColor.setStroke()
-        } else {
-            UIColor.black.setStroke()
-        }
+        UIColor.button.setStroke()
         path.stroke()
     }
     

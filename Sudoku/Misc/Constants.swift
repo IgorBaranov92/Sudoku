@@ -12,15 +12,10 @@ struct Constants {
     static let durationForDisapperaingTutorialView = 0.5
     static let durationForAppearingTutorialView = 0.3
 
+    static let durationForTextAppearing = 0.5
+    static let durationForTextDisappearing = 0.5
+
+    static let durationForScalingStatisticButton = 0.25
+        
 }
 
-struct Keys {
-    
-    static let mistakesLimit = "mistakeslimit"
-    static let mistakesCheck = "mistakescheck"
-    static let hideDigits = "hidedigits"
-    static let areaSelection = "areaselection"
-    static let timer = "timer"
-    
-    
-}

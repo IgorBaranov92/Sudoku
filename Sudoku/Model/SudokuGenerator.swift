@@ -5,6 +5,9 @@ class SudokuGenerator: Sudoku {
     var difficult: Difficult = .easy
     var gameCompleted: Bool { digits.filter { $0 == 0 }.isEmpty } //all cells solved
     var completion: (() -> () )?
+    var timerCount = 0
+    var shouldRestartGame = false
+    
     
     weak var delegate: SudokuDelegate?
     
@@ -13,7 +16,6 @@ class SudokuGenerator: Sudoku {
     private(set) var mistakesMade = [Int?]()
     private(set) var hintsMade = 0
     private(set) var hints = 0
-    
           
     init(difficult:Int, delegate: SudokuDelegate? = nil,completion:(() -> ())? = nil  ) {
         super.init()
@@ -32,15 +34,20 @@ class SudokuGenerator: Sudoku {
    }
     
    
-    func cellTouchedAt(index:Int, digit:Int) {
+    func cellTouchedAt(index:Int, digit:Int,shouldCountMistakes:Bool) {
         digits[index] = digit
         digitsCount[digit] = digitsCount[digit]! + 1
         if digits[index] != answers[index] { //mistake
             mistakesMade.append(index)
-            if mistakesMade.count == mistakes + 1 { //game lost
-                if delegate == nil { fatalError("delegate can't be nil")}
-                delegate?.gameLost()
+            if shouldCountMistakes {
+                if mistakesMade.count == mistakes + 1 { //game lost
+                    if delegate == nil { fatalError("delegate can't be nil")}
+                    delegate?.gameLost()
+                }
             }
+            
+        } else { // line or row or block is right
+            checkForAnimationAt(index)
         }
         if gameCompleted {
             if delegate == nil { fatalError("delegate can't be nil")}
@@ -101,6 +108,7 @@ class SudokuGenerator: Sudoku {
         completion?()
     }
     
+
     private func createBoard() {
         let solver = SudokuSolver()
         solver.digits = digits
@@ -149,7 +157,13 @@ class SudokuGenerator: Sudoku {
         answers.removeAll()
         digitsCount.removeAll()
         mistakesMade.removeAll()
+        shouldRestartGame = false
     }
+    
+    private func checkForAnimationAt(_ index:Int) {
+        
+    }
+    
     
     // persistence
     
@@ -164,6 +178,7 @@ class SudokuGenerator: Sudoku {
         digits = try container.decode([Int].self, forKey: .digits)
         answers = try container.decode([Int].self, forKey: .answers)
         digitsCount = try container.decode([Int:Int].self, forKey: .digitsCount)
+        timerCount = try container.decode(Int.self, forKey: .timer)
     }
     
     override func encode(to encoder: Encoder) throws {
@@ -176,6 +191,7 @@ class SudokuGenerator: Sudoku {
         try container.encode(digits, forKey: .digits)
         try container.encode(answers, forKey: .answers)
         try container.encode(digitsCount, forKey: .digitsCount)
+        try container.encode(timerCount, forKey: .timer)
     }
     
     private enum CodingKeys:String,CodingKey {
@@ -188,6 +204,7 @@ class SudokuGenerator: Sudoku {
         case answers = "answers"
         case digitsCount = "digitsCount"
         case expert = "expert"
+        case timer = "timer"
     }
    
 }

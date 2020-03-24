@@ -1,6 +1,6 @@
 import UIKit
 
-class FInishGameView: MessageView {
+class FinishGameView: MessageView {
 
     weak var delegate: MessageViewDelegate?
     

@@ -7,6 +7,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     lazy var sudoku = SudokuGenerator(difficult: 0,delegate: self)
     var selectedButton: Cell? { cells.filter { $0.active == true }.first}
     var game = Game()
+    var options = Options()
+    var statistic = Statistic()
     
     // MARK: - Outlets
     
@@ -16,13 +18,12 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         }}}
     
     @IBOutlet var digits: [UIButton]!
-    @IBOutlet weak var mistakesLabel: UILabel!
-    @IBOutlet weak var hintsLabel: UILabel!
     
     // MARK: - private vars
     
     private var hasActiveButton: Bool?
-    
+    private weak var timer: Timer!
+
     
     // MARK: - ViewController lifecycle
     
@@ -32,14 +33,22 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(clear)))
         NotificationCenter.default.addObserver(self, selector: #selector(saveGame), name: UIApplication.willResignActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateBoard), name: UIApplication.willEnterForegroundNotification, object: nil)
+        restoreOptions()
+        restoreStatistic()
         recreateGameIfNeeded()
+//        startTimerIfNeeded()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        showRules()
+    //    showRules()
     }
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer?.invalidate()
+        saveGame()
+    }
     
     // MARK: - IBActions
     
@@ -57,11 +66,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         }
         if sudoku.mistakesMade.contains(buttonIndex) {// erase only mistakes
             eraseDigit(digit, at: buttonIndex)
-            if #available(iOS 13, *) {
-                cells[buttonIndex].setTitleColor(Colors.dynamicTextColor, for: .normal)
-            } else {
-                cells[buttonIndex].setTitleColor(.black, for: .normal)
-            }
+            cells[buttonIndex].setTitleColor(.text, for: .normal)
+
         } else {
             showErrorAt(pivot, message: localized("ErrorNative"))
         }
@@ -73,28 +79,34 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         guard let digit = Int(title) else { return }
         guard hasActiveButton != nil else {
             reset(full:false)
-            sudoku.highlightAllButtonsBasedOn(digit: digit).related.forEach { cells[$0].highlight = true }
             sudoku.highlightAllButtonsBasedOn(digit: digit).active.forEach { cells[$0].hinted = true }
+            if options.options[3] {
+                sudoku.highlightAllButtonsBasedOn(digit: digit).related.forEach { cells[$0].highlight = true }
+            }
             return
         }
         hasActiveButton = nil
         guard let selectedButton = selectedButton else { return }
         guard let index = cells.firstIndex(of: selectedButton) else { return }
         if selectedButton.currentTitle == "" {
-            sudoku.cellTouchedAt(index: index, digit: digit)
+            sudoku.cellTouchedAt(index: index, digit: digit,shouldCountMistakes: options.options[0])
             saveGame()
             hideDigitIfPossible()
-            selectedButton.setTitle(title, for: .normal)
+            TextAppearenceAnimator.show(cells[index], string: title)
             if digit == sudoku.answers[index] { //right digit
-                if #available(iOS 13.0, *) {
-                    selectedButton.setTitleColor(Colors.dynamicTextColor, for: .normal)
-                } else {
-                    selectedButton.setTitleColor(.black, for: .normal)
-                }
+                selectedButton.setTitleColor(.text, for: .normal)
             } else { //mistake
-                selectedButton.setTitleColor(.orange, for: .normal)
+                if options.options[1] {
+                    selectedButton.setTitleColor(.orange, for: .normal)
+                } else {
+                    selectedButton.setTitleColor(.text, for: .normal)
+                }
                 updateLabels()
             }
+        } else {
+            let center = selectedButton.convert(selectedButton.bounds.center, to: stackView)
+            let pivot = stackView.convert(center, to: view)
+            showErrorAt(pivot, message: localized("ErrorFilled"))
         }
     }
     
@@ -102,12 +114,19 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     @IBAction func showHint(_ sender:UIButton){
         guard let selectedButton = selectedButton else { return }
         guard let index = cells.firstIndex(of: selectedButton) else { return }
-        sudoku.hint(index: index)
-        updateBoard()
-        updateLabels()
-        hideDigitIfPossible()
-        hasActiveButton = nil
-        saveGame()
+        if sudoku.digits[index] != 0 { //cell is solved already
+            let center = selectedButton.convert(selectedButton.bounds.center, to: stackView)
+            let pivot = stackView.convert(center, to: view)
+            showErrorAt(pivot, message: localized("ErrorFilled"))
+        } else { // empty cell, please hint me
+            sudoku.hint(index: index)
+            TextAppearenceAnimator.show(cells[index], string: String(sudoku.answers[index]))
+            updateLabels()
+            hideDigitIfPossible()
+            hasActiveButton = nil
+            saveGame()
+        }
+        
     }
     
     
@@ -118,7 +137,9 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
                 let index = cells.firstIndex(of: button) {
                 reset(full:false)
                 cells[index].active = true
-                sudoku.highlightButtons(index).forEach { cells[$0].highlight = true }
+                if options.options[2] {
+                    sudoku.highlightButtons(index).forEach { cells[$0].highlight = true }
+                }
                 hasActiveButton = true
             }
         }
@@ -133,46 +154,48 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         hideDigitIfPossible()
     }
     
-    @objc private func updateBoard() {
-        cells?.forEach { $0.setTitle("", for: .normal) }
+    
+    @objc
+    private func updateBoard() {
+//        timerLabel.isHidden = !(options.options[5])
+        cells.forEach { $0.setTitle("", for: .normal) }
         for index in sudoku.digits.indices {
             if sudoku.digits[index] != 0 {
                 cells[index].setTitle("\(sudoku.digits[index])", for: .normal)
             }
-            if #available(iOS 13, *) {
-                cells[index].setTitleColor(sudoku.mistakesMade.contains(index) ? .orange : Colors.dynamicTextColor, for: .normal)
-
+            if options.options[1] {
+             cells[index].setTitleColor(sudoku.mistakesMade.contains(index) ? .orange : .text, for: .normal)
             } else {
-                cells[index].setTitleColor(sudoku.mistakesMade.contains(index) ? .orange : .black, for: .normal)
+                cells[index].setTitleColor(.text, for: .normal)
             }
         }
     }
     
     private func updateLabels() {
+        mistakesLabel.isHidden = !(options.options[0])
         mistakesLabel.text = "\(localized("mistakes")): \(sudoku.mistakesMade.count)/\(sudoku.mistakes)"
         hintsLabel.text = "\(localized("hints")): \(sudoku.hintsMade)/\(sudoku.hints)"
     }
     
     private func hideDigitIfPossible() {
-        for digit in 1...9 {
-            digits[digit-1].isHidden = sudoku.digitsCount[digit] == 9 ? true : false
+        if options.options[4] {
+            for digit in 1...9 {
+                digits[digit-1].isHidden = sudoku.digitsCount[digit] == 9 ? true : false
+            }
         }
     }
     
     @objc private func clear() { reset(full: false) }
     
-    @objc private func reset(full:Bool) {
+    @objc
+    private func reset(full:Bool) {
         cells.forEach {
             $0.active = false
             $0.highlight = false
             $0.hinted = false
             if full {
                 $0.setTitle("", for: .normal)
-                if #available(iOS 13.0, *) {
-                    $0.setTitleColor(Colors.dynamicTextColor, for: .normal)
-                } else {
-                    $0.setTitleColor(.black, for: .normal)
-                }
+                $0.setTitleColor(.text, for: .normal)
             }
         }
     }
@@ -180,7 +203,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     private func eraseDigit(_ digit:Int,at index:Int) {
         sudoku.eraseAt(index, digit)
-        cells[index].setTitle("", for: .normal)
+        TextAppearenceAnimator.dismiss(cells[index])
         hideDigitIfPossible()
         saveGame()
     }
@@ -189,10 +212,11 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     // MARK: - Gamedelegate
 
     func gameWon() {
-        view.isUserInteractionEnabled = false
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            self.newGame()
-        }
+        let victory = FinishGameView()
+        victory.delegate = self
+        view.addSubview(victory)
+        TutorialViewConstraint.activate(victory, self.view)
+        TutorialViewAnimator.show(victory)
     }
     
     func gameLost() {
@@ -202,12 +226,32 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         }))
         present(alert, animated: true)
     }
+    
+    func animateRowWith(_ indexes: [Int]) {
+//        indexes.forEach {
+//            let cell = cells[$0]
+//        }
+    }
+    
+    func animateLineWith(_ indexes: [Int]) {
+//        indexes.forEach {
+//            let cell = cells[$0]
+//        }
+    }
+    
+    func animateBlockWith(_ indexes: [Int]) {
+//        indexes.forEach {
+//            let cell = cells[$0]
+//        }
+    }
  
     // MARK: - Restoring and saving games
        
     private func recreateGameIfNeeded() {
         if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("games"),let data = try? Data(contentsOf: url),let newValue = Game(json: data) {
             game = newValue
+            guard let game = game.games[0] else { newGame();return  }
+            sudoku = game
             sudoku.delegate = self
             updateUI()
             saveGame()
@@ -216,9 +260,40 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         }
     }
     
+    private func restoreOptions() {
+        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("options"),let data = try? Data(contentsOf: url),let newValue = Options(json: data) {
+            options = newValue
+            updateUI()
+            saveOptions()
+        }
+    }
     
-    @objc private func saveGame() {
+    private func saveOptions() {
+        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("options"),let json = options.json {
+            try? json.write(to: url)
+        }
+    }
+    
+    private func restoreStatistic() {
+        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("statistic"),let data = try? Data(contentsOf: url),let newValue = Statistic(json: data) {
+            statistic = newValue
+            saveStatistic()
+        }
+    }
+    
+    private func saveStatistic() {
+        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("statistic"),let json = statistic.json {
+            try? json.write(to: url)
+        }
+    }
+    
+    
+    
+    @objc
+    private func saveGame() {
         if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("games"),let json = game.json {
+//            sudoku.timerCount = counter
+            game.games[0] = sudoku
             try? json.write(to: url)
         }
     }
@@ -228,6 +303,12 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         digits.forEach { $0.isHidden = false }
         hasActiveButton = nil
         view.isUserInteractionEnabled = true
+        sudoku = SudokuGenerator(difficult: 0,delegate: self) { // game created
+                                        DispatchQueue.main.async { [weak self] in
+                                            self?.saveGame()
+                                            self?.updateUI()
+            }}
+
     }
     
     @IBAction func back(_ sender:UIButton) {
@@ -253,17 +334,32 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     }
   
     private func showRules() {
-//        let tutorialView = TutorialView()
-//        view.addSubview(tutorialView)
-//        TutorialViewConstraint.activate(tutorialView, self.view)
-//        TutorialViewAnimator.show(tutorialView)
-//
-        let victory = FInishGameView()
-        victory.delegate = self
-        view.addSubview(victory)
-        TutorialViewConstraint.activate(victory, self.view)
-        TutorialViewAnimator.show(victory)
+        let tutorialView = TutorialView()
+        tutorialView.message = localized("classicMessage")
+        view.addSubview(tutorialView)
+        TutorialViewConstraint.activate(tutorialView, self.view)
+        TutorialViewAnimator.show(tutorialView)
     }
+    
+//    var counter = 0
+//
+//    private func startTimerIfNeeded() {
+//        if options.options[5] {
+//            counter = sudoku.timerCount
+//            timerLabel.text = TimerCounter.getTime(counter, completion: {})
+//            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimerLabel), userInfo: nil, repeats: true)
+//        }
+//    }
+    
+//    @objc
+//    private func updateTimerLabel() {
+//        counter += 1
+//        timerLabel.text = TimerCounter.getTime(counter) { [weak self] in
+//            self?.timer?.invalidate()
+//            self?.gameLost()
+//        }
+//    }
+    
     
     // MARK: - Protocol conformance
     

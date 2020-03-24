@@ -34,8 +34,11 @@ class MessageView: UIView {
     func setup() {
         backgroundColor = .clear
         layer.cornerRadius = Constants.cornerRadiusForTutorialView
-        layer.borderColor = UIColor.black.cgColor
+        layer.borderColor = UIColor(named:"DynamicBorderMessageViewColor")?.cgColor ?? UIColor.black.cgColor
         layer.borderWidth = 2.0
-        
      }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        setup()
+    }
 }

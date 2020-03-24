@@ -8,6 +8,8 @@
 
 "ErrorEmpty" = "Can't erase empty cell";
 
+"ErrorFilled" = "Already filled cell";
+
 "Victory" = "Victory!";
 
 "mistakes" = "Mistakes";
@@ -19,10 +21,15 @@
 
 "areaselection" = "Highlight a row, column, 3x3 square (in some mode diagonal also) relative to the selected digit";
 
+"smarthints" = "When you press any digit at the bottom of the screen, all cells where this digit cannot be placed will be highlighted";
+
 "hidedigits" = "Hide used numbers (for example, all units are arranged)";
 
 "timer" = "Time limited game (100 minutes)";
 
+"darktheme" = "Turns on dark mode";
+
+"darkmodesync" = "Turns on dark mode automatically";
 
 "nomistakeslimit" = "Any number of errors allowed";
 
@@ -30,9 +37,16 @@
 
 "noareaselection" = "Highlight only the selected cell";
 
+"nosmarthints" = "When you press any digit at the bottom of the screen, all the same digits on the playing field will be highlighted";
+
 "nohidedigits" = "Do not hide used numbers";
 
 "notimer" = "No time limit";
+
+"nodarktheme" = "Turns on light mode";
+
+"nodarkmodesync" = "Сolor mode will be selected depending on the settings";
+
 
 "classic" = "Classic";
 "diagonal" = "Diagonal";
@@ -46,9 +60,15 @@
 "hintsUsed" = "Hints used";
 "gameWon" = "Game won";
 "gameLost" = "Game lost";
+"besttime" = "Best time";
 
 "Attention" = "Attention!";
 "ResetAllWarning" = "Are you sure to reset all statistic?\nIt can't be undone";
 
 "no" = "No";
 "yes" = "Yes";
+
+
+"easy" = "Easy";
+"medium" = "Medium";
+"hard" = "Hard";
