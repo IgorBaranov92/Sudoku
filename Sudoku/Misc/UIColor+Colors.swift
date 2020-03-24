@@ -27,5 +27,8 @@ extension UIColor {
         return UIColor(named: "DynamicTextColor") ?? .black
     }
     
+    static var dynamicGreen: UIColor {
+        return UIColor(named:"DynamicGreenColor") ?? .green
+    }
     
 }

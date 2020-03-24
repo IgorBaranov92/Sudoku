@@ -7,9 +7,7 @@ class OptionsViewController: UITableViewController {
     @IBOutlet var labels: [UILabel]!
     
     @IBOutlet var switches: [UISwitch]!
-    
-    @IBOutlet var heightConstaints: [NSLayoutConstraint]!
-    
+        
     @IBOutlet private weak var offsetConstraint: NSLayoutConstraint!
     
     // MARK: - ViewController lifecycle
@@ -52,7 +50,8 @@ class OptionsViewController: UITableViewController {
     private func saveOptions() {
         if let validUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("options"),let json = options.json {
             try? json.write(to: validUrl)
-            tableView.reloadData()
+            tableView.beginUpdates()
+            tableView.endUpdates()
         }
     }
     

@@ -16,7 +16,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet var buttons: [UIButton]! { didSet {
-        buttons[0].setTitleColor(.red, for: .normal)
+        buttons[0].setTitleColor(.dynamicGreen, for: .normal)
         }}
     
     
@@ -50,11 +50,11 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticCell", for: indexPath)
         if let statisticCell = cell as? StatisticTableViewCell {
-            let gameType = Statistic[0]
-            if let scores = statistic.scoresFor[gameType] {
+//            let gameType = Statistic[0]
+//            if let scores = statistic.scoresFor[gameType] {
 //                statisticCell.descriptionLabel.text = scores.descriptions[indexPath.row]
 //                statisticCell.scoreLabel.text = "\(scores.scores[indexPath.row])"
-            }
+//            }
             return statisticCell
         }
         
@@ -93,7 +93,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         buttons.forEach { $0.setTitleColor(.text, for: .normal)}
         StatisticButtonAnimator.animate(sender)
         if buttons.firstIndex(of:sender) != nil {
-            sender.setTitleColor(.red, for: .normal)
+            sender.setTitleColor(.dynamicGreen, for: .normal)
         }
     }
     
