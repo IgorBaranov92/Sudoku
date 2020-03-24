@@ -16,13 +16,6 @@ class ScrollView: UIScrollView, UIScrollViewDelegate {
             scrollView.setContentOffset(CGPoint.zero, animated: false)
         }
         
-        if let stackView = stackView,let superview = self.superview {
-            if scrollView.contentOffset.x >= stackView.bounds.width - superview.bounds.width {
-                scrollView.setContentOffset(CGPoint(x: stackView.bounds.width - superview.bounds.width+30, y: 0), animated: false)
-            }
-            
-            
-        }
     }
     
     

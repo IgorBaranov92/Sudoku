@@ -8,6 +8,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     var selectedButton: Cell? { cells.filter { $0.active == true }.first}
     var game = Game()
     var options = Options()
+    var statistic = Statistic()
     
     // MARK: - Outlets
     
@@ -33,6 +34,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         NotificationCenter.default.addObserver(self, selector: #selector(saveGame), name: UIApplication.willResignActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateBoard), name: UIApplication.willEnterForegroundNotification, object: nil)
         restoreOptions()
+        restoreStatistic()
         recreateGameIfNeeded()
         startTimerIfNeeded()
     }
@@ -269,6 +271,21 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
             try? json.write(to: url)
         }
     }
+    
+    private func restoreStatistic() {
+        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("statistic"),let data = try? Data(contentsOf: url),let newValue = Statistic(json: data) {
+            statistic = newValue
+            saveStatistic()
+        }
+    }
+    
+    private func saveStatistic() {
+        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("statistic"),let json = statistic.json {
+            try? json.write(to: url)
+        }
+    }
+    
+    
     
     @objc
     private func saveGame() {
