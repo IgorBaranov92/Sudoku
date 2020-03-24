@@ -32,7 +32,6 @@
 		785ED3FA23F2EAE6009E78B0 /* SudokuSolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785ED3F923F2EAE6009E78B0 /* SudokuSolverTests.swift */; };
 		785F42BB23EC69AB00B2CCA0 /* Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F42BA23EC69AB00B2CCA0 /* Sudoku.swift */; };
 		7862E4ED242651AD0030F8E8 /* StatisticButtonAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4EC242651AD0030F8E8 /* StatisticButtonAnimator.swift */; };
-		7862E4F1242A2FE10030F8E8 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F0242A2FE10030F8E8 /* ScrollView.swift */; };
 		7862EC8323F2F4CE00399263 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862EC8223F2F4CD00399263 /* GameViewController.swift */; };
 		7877D1B923ED95B000E43314 /* BorderedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7877D1B823ED95B000E43314 /* BorderedCell.swift */; };
 		78810CCA241F90B6002828E2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78810CC9241F90B6002828E2 /* MessageView.swift */; };
@@ -108,7 +107,6 @@
 		785F42B423EC53E200B2CCA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		785F42BA23EC69AB00B2CCA0 /* Sudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sudoku.swift; sourceTree = "<group>"; };
 		7862E4EC242651AD0030F8E8 /* StatisticButtonAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticButtonAnimator.swift; sourceTree = "<group>"; };
-		7862E4F0242A2FE10030F8E8 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		7862EC8223F2F4CD00399263 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		7877D1B823ED95B000E43314 /* BorderedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedCell.swift; sourceTree = "<group>"; };
 		78810CC9241F90B6002828E2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -254,7 +252,6 @@
 				78C9B5DA241BE98100E1DB7A /* TutorialView.swift */,
 				7883A1CE241D43AC00ECB3FD /* FinishGameView.swift */,
 				782239CA2420D967004E7D35 /* TriangleView.swift */,
-				7862E4F0242A2FE10030F8E8 /* ScrollView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -465,7 +462,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				78294FC9241A8CCF00854A97 /* DiagonalSudokuSolver.swift in Sources */,
-				7862E4F1242A2FE10030F8E8 /* ScrollView.swift in Sources */,
 				788CDC8A2422745900420F9B /* CellAnimator.swift in Sources */,
 				782239CF2421021E004E7D35 /* FenceViewController.swift in Sources */,
 				782239D124210226004E7D35 /* EvenOddViewController.swift in Sources */,
