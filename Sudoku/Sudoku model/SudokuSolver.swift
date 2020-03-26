@@ -13,6 +13,7 @@ class SudokuSolver: Sudoku {
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
     }
+    // MARK: - Public overridable functions
     
     func prepareForSolving() {
         clear()
@@ -42,6 +43,28 @@ class SudokuSolver: Sudoku {
         return solverHelper(firstUnsolvedCell.row, firstUnsolvedCell.column, false)
     }
     
+    func updateData(insert:Bool,_ row:Int,_ column:Int, _ num:Int) {
+        if insert {
+            lines[column]!.insert(num)
+            columns[row]!.insert(num)
+            blocks[row/3+3*(column/3)]!.insert(num)
+            
+        } else {
+            lines[column]!.remove(num)
+            columns[row]!.remove(num)
+            blocks[row/3+3*(column/3)]!.remove(num)
+        }
+    }
+    
+    func isSaveAt(_ i:Int,_ j:Int,_ digit:Int) -> Bool {
+       if lines[j]!.contains(digit) || columns[i]!.contains(digit) || blocks[i/3 + 3*(j/3)]!.contains(digit) {
+           return false
+        }
+       return true
+    }
+    
+    // MARK: - Private
+    
      private func solverHelper(_ row:Int,_ column:Int,_ start:Bool) -> Bool {
         if row == 0 && column == 0 && start {
             answers = digits
@@ -59,14 +82,6 @@ class SudokuSolver: Sudoku {
         }
         return false
     }
-    
-    private func isSaveAt(_ i:Int,_ j:Int,_ digit:Int) -> Bool {
-        if lines[j]!.contains(digit) || columns[i]!.contains(digit) || blocks[i/3 + 3*(j/3)]!.contains(digit) {
-            return false
-         }
-        return true
-     }
-
 
     
      // return cell without digit
@@ -78,20 +93,6 @@ class SudokuSolver: Sudoku {
             }
         }
         return (0,0)
-    }
-    
-    
-     private func updateData(insert:Bool,_ row:Int,_ column:Int, _ num:Int) {
-        if insert {
-            lines[column]!.insert(num)
-            columns[row]!.insert(num)
-            blocks[row/3+3*(column/3)]!.insert(num)
-            
-        } else {
-            lines[column]!.remove(num)
-            columns[row]!.remove(num)
-            blocks[row/3+3*(column/3)]!.remove(num)
-        }
     }
     
     private func clear() {

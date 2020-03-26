@@ -27,7 +27,6 @@ struct Options: Codable {
     init() {
         options = [true,true,true,true,true]
         descriptions = identity
-        
     }
     
 }
