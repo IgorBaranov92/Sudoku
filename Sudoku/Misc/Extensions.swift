@@ -159,6 +159,9 @@ protocol SudokuDelegate: class {
     func animateBlockWith(_ indexes:[Int])
 }
 
+protocol EraseViewDelegate: class {
+    func eraseConfirmed()
+}
 
 
 func localized(_ key:String) -> String {

@@ -1,6 +1,6 @@
 import UIKit
 
-class TutorialViewConstraint: NSLayoutConstraint {
+class TutorialViewConstraint {
 
     class func activate(_ v1:UIView,_ v2: UIView) {
         v1.translatesAutoresizingMaskIntoConstraints = false

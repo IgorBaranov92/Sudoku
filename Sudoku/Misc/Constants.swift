@@ -4,7 +4,7 @@ import UIKit
 struct Constants {
     
     static let cornerRadiusForErrorView:CGFloat = 10.0
-    static let cornerRadiusForTutorialView: CGFloat = 25.0
+    static let cornerRadiusForTutorialView: CGFloat = 15.0
     static let cornerRadiusForDoneButton:  CGFloat = 10.0
     static let durationForDisappearingErrorView = 0.75
     static let durationForAppearingErrorView = 0.4
@@ -17,5 +17,8 @@ struct Constants {
 
     static let durationForScalingStatisticButton = 0.25
         
+    static let cornerRadiusForNoButton = 10
+    static let cornerRadiusForYesButton = 10
+    
 }
 

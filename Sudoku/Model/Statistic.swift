@@ -9,27 +9,10 @@ struct Statistic: Codable {
     
     static let difficult = ["easy","medium","hard"]
     
-    static subscript(_ i:Int) -> GameType {
-        return GameType(rawValue: i) ?? .classic
-    }
-    
-    
-    var scoresFor:[GameType:Scores] = [
-        .classic:Scores(),
-        .diagonal:Scores(),
-        .twoDiagonals:Scores(),
-        .romb:Scores(),
-    ]
+    var scores = Array(repeating: Scores(), count: 4)
         
     var json: Data? { try? JSONEncoder().encode(self) }
     
-    init() {}
-    
-    init?(json:Data){
-        if let newValue = try? JSONDecoder().decode(Statistic.self, from: json) {
-            self = newValue
-        }
-    }
     
     struct Scores: Codable {
 
@@ -55,6 +38,14 @@ struct Statistic: Codable {
         
     }
      
+    init() {}
+    
+    init?(json:Data){
+        if let newValue = try? JSONDecoder().decode(Statistic.self, from: json) {
+            self = newValue
+        }
+    }
+    
 }
 
 

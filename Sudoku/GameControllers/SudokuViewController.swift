@@ -38,15 +38,11 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         recreateGameIfNeeded()
 //        startTimerIfNeeded()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    //    showRules()
-    }
+
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        timer?.invalidate()
+   //     timer?.invalidate()
         saveGame()
     }
     

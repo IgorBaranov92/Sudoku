@@ -1,6 +1,6 @@
 import UIKit
 
-class StatisticViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class StatisticViewController: UIViewController,UITableViewDataSource,UITableViewDelegate, EraseViewDelegate {
     
 // MARK: - Model
     
@@ -19,9 +19,11 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         buttons[0].setTitleColor(.dynamicGreen, for: .normal)
         }}
     
-    
+    // MARK: - Private API
     @IBOutlet private weak var heightConstaint: NSLayoutConstraint!
     
+    private var currentTitle = "classic"
+    private var index = 0
     
     // MARK: - ViewController lifecycle
     
@@ -43,26 +45,21 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return statistic.scoresFor[.classic]?.descriptions.count ?? 0
+        return statistic.scores[0].descriptions.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StatisticCell", for: indexPath)
         if let statisticCell = cell as? StatisticTableViewCell {
-//            let gameType = Statistic[0]
-//            if let scores = statistic.scoresFor[gameType] {
-//                statisticCell.descriptionLabel.text = scores.descriptions[indexPath.row]
-//                statisticCell.scoreLabel.text = "\(scores.scores[indexPath.row])"
-//            }
+            let scores = statistic.scores[index]
+            statisticCell.descriptionLabel.text = scores.descriptions[indexPath.row]
+            statisticCell.scoreLabel.text = "\(scores.scores[indexPath.section][indexPath.row])"
             return statisticCell
         }
-        
-
         return cell
     }
-    
-    
+
     // MARK: - UITableView delegate
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -77,30 +74,47 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
      
     
     @IBAction func resetAll(_ sender: UIButton) {
-        let alert = UIAlertController(title: localized("Attention"), message: localized("ResetAllWarning"), preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: localized("no"), style: .cancel))
-        alert.addAction(UIAlertAction(title: localized("yes"), style: .destructive, handler: { action in
-            if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("statistic"), let json = self.statistic.json {
-                    self.statistic = Statistic()
-                    try? json.write(to: url)
-                self.tableView.reloadData()
-            }
-        }))
-        present(alert, animated: true)
+        let eraseView = EraseStatisticView()
+        eraseView.delegate = self
+        eraseView.attentionMessage = localized("erareAttention")
+        eraseView.message = localized("eraseQuestion") + "'" + localized(currentTitle) + "'?" + "\n" + localized("eraseDescription")
+        view.addSubview(eraseView)
+        EraseViewConstraints.activate(eraseView, view)
+        TutorialViewAnimator.show(eraseView)
     }
     
     @IBAction func changeStatisticBasedOnGameType(_ sender: UIButton) {
         buttons.forEach { $0.setTitleColor(.text, for: .normal)}
+        self.currentTitle = sender.currentTitle ?? " "
         StatisticButtonAnimator.animate(sender)
-        if buttons.firstIndex(of:sender) != nil {
+        if let buttonIndex = buttons.firstIndex(of:sender) {
             sender.setTitleColor(.dynamicGreen, for: .normal)
+            index = buttonIndex
+            tableView.reloadData()
         }
     }
     
     private func updateStatistic() {
-        
+        if let validUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("statistic"),let data = try? Data(contentsOf: validUrl),let newValue = Statistic(json: data) {
+            statistic = newValue
+            saveStatistic()
+            tableView.reloadData()
+        }
     }
     
+    private func saveStatistic() {
+        if let validUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("statistic"),let json = statistic.json {
+            try? json.write(to: validUrl)
+        }
+    }
     
+    // MARK: - Protocol conformance
+
+       
+    func eraseConfirmed() {
+        statistic.scores[index] = Statistic.Scores()
+        saveStatistic()
+        tableView.reloadData()
+    }
     
 }
