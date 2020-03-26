@@ -17,24 +17,12 @@ class SudokuSolver: Sudoku {
     
     func prepareForSolving() {
         clear()
-        for index in digits.indices {
-            let coordinate = self[index]
-            if lines[coordinate.column] == nil {
-                lines[coordinate.column] = Set(arrayLiteral: digits[index])
-            } else {
-                lines[coordinate.column]!.insert(digits[index])
-            }
-            if columns[coordinate.row] == nil {
-                columns[coordinate.row] = Set(arrayLiteral: digits[index])
-            } else {
-                columns[coordinate.row]!.insert(digits[index])
-            }
-            if blocks[coordinate.row/3 + 3*(coordinate.column/3)] == nil {
-                blocks[coordinate.row/3 + 3*(coordinate.column/3)] = Set(arrayLiteral: digits[index])
-            } else {
-                blocks[coordinate.row/3 + 3*(coordinate.column/3)]!.insert(digits[index])
-            }
+        for index in 0...9 {
+            lines[index] = Set(arrayLiteral: 0)
+            blocks[index] = Set(arrayLiteral: 0)
+            columns[index] = Set(arrayLiteral: 0)
         }
+        lines[0] = Set(arrayLiteral: 1,2,3,4,5,6,7,8,9)
     }
     
     @discardableResult

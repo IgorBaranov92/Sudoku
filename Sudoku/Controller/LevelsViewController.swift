@@ -23,7 +23,19 @@ class LevelsViewController: UIViewController, UIScrollViewDelegate {
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if let destination = segue.destination as? SudokuViewController,let id = segue.identifier {
+            switch id {
+            case "ClassicSudoku":
+                destination.gameType = .classic
+             case "DiagonalSudoku":
+                destination.gameType = .diagonal
+            case "TwoDiagonalsSudoku":
+                destination.gameType = .twoDiagonals
+            case "RombSudoku":
+                destination.gameType = .romb
+            default:break
+            }
+        }
     }
     
     @IBAction func done(_ sender: UIButton) {

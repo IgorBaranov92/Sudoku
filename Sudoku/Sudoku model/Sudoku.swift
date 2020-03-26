@@ -23,6 +23,10 @@ class Sudoku: Codable {
        }
    }
    
+    static subscript(_ i:Int,_ j:Int) -> Int {
+        return j*8+i
+    }
+    
     subscript(_ index:Int) -> (row:Int,column:Int) {
        return (index%dimension,index/dimension)
    }

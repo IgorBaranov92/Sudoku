@@ -3,9 +3,10 @@ import Foundation
 class SudokuGenerator: Sudoku {
     
     var difficult: Difficult = .easy
+    var gameType: GameType = .classic
+    
     var gameCompleted: Bool { digits.filter { $0 == 0 }.isEmpty } //all cells solved
     var completion: (() -> () )?
-    var timerCount = 0
     var shouldRestartGame = false
     
     
@@ -17,10 +18,11 @@ class SudokuGenerator: Sudoku {
     private(set) var hintsMade = 0
     private(set) var hints = 0
           
-    init(difficult:Int, delegate: SudokuDelegate? = nil,completion:(() -> ())? = nil  ) {
+    init(difficult:Int,gameType:GameType, delegate: SudokuDelegate? = nil,completion:(() -> ())? = nil  ) {
         super.init()
         DispatchQueue.global(qos: .userInitiated).async {
             self.delegate = delegate
+            self.gameType = gameType
             self.completion = completion
             switch difficult {
             case 0: self.difficult = .easy;self.mistakes = 4;self.hints = 4
@@ -46,9 +48,7 @@ class SudokuGenerator: Sudoku {
                 }
             }
             
-        } else { // line or row or block is right
-            checkForAnimationAt(index)
-        }
+        } 
         if gameCompleted {
             if delegate == nil { fatalError("delegate can't be nil")}
             delegate?.gameWon()
@@ -70,6 +70,36 @@ class SudokuGenerator: Sudoku {
             indexes.append(dimension*coordinates.column + i )
             indexes.append(coordinates.row + dimension*i )
             indexes.append(columnOffset*dimension + rowOffset + i/3*dimension + i%3)
+            switch gameType {
+            case .diagonal:
+                if coordinates.row == coordinates.column {//left
+                    indexes.append(i*dimension + i)
+                }
+                if coordinates.row + coordinates.column == dimension - 1 { //right
+                    indexes.append(8*(i+1))
+                }
+            case .twoDiagonals:
+                if coordinates.row - coordinates.column == 1 { //upper left
+                    indexes += [1,11,21,31,41,51,61,71]
+                }
+                if coordinates.column - coordinates.row == 1 { //lower left
+                    indexes += [9,19,29,39,49,59,69,79]
+                }
+                if coordinates.row + coordinates.column == 7 { //upper right
+                    indexes += [63,55,47,39,31,23,15,7]
+                }
+                if coordinates.row + coordinates.column == 9 {
+                    indexes += [73,65,57,49,41,33,25,17]
+                }
+            case .romb:
+                if (coordinates.row + coordinates.column) == 4 || (coordinates.column - coordinates.row) == 4 { //left
+                    indexes += [4,12,20,28,36,46,56,66,76]
+                }
+                if coordinates.row - coordinates.column == 4 || coordinates.row + coordinates.column == 12 { // right
+                    indexes += [4,14,24,34,44,52,60,68,76]
+                }
+            default:break
+            }
         }
         return indexes.unique()
     }
@@ -160,9 +190,6 @@ class SudokuGenerator: Sudoku {
         shouldRestartGame = false
     }
     
-    private func checkForAnimationAt(_ index:Int) {
-        
-    }
     
     
     // persistence
@@ -178,7 +205,6 @@ class SudokuGenerator: Sudoku {
         digits = try container.decode([Int].self, forKey: .digits)
         answers = try container.decode([Int].self, forKey: .answers)
         digitsCount = try container.decode([Int:Int].self, forKey: .digitsCount)
-        timerCount = try container.decode(Int.self, forKey: .timer)
     }
     
     override func encode(to encoder: Encoder) throws {
@@ -191,7 +217,6 @@ class SudokuGenerator: Sudoku {
         try container.encode(digits, forKey: .digits)
         try container.encode(answers, forKey: .answers)
         try container.encode(digitsCount, forKey: .digitsCount)
-        try container.encode(timerCount, forKey: .timer)
     }
     
     private enum CodingKeys:String,CodingKey {

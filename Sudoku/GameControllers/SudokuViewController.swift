@@ -4,7 +4,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     // MARK: - Public API
     
-    lazy var sudoku = SudokuGenerator(difficult: 0,delegate: self)
+    lazy var sudoku = SudokuGenerator(difficult: 0,gameType:gameType,delegate: self)
+    var gameType: GameType = .classic
     var selectedButton: Cell? { cells.filter { $0.active == true }.first}
     var game = Game()
     var options = Options()
@@ -288,9 +289,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     @objc
     private func saveGame() {
         if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("games"),let json = game.json {
-//            sudoku.timerCount = counter
             game.games[0] = sudoku
-            try? json.write(to: url)
+//            try? json.write(to: url)
         }
     }
     
@@ -299,7 +299,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         digits.forEach { $0.isHidden = false }
         hasActiveButton = nil
         view.isUserInteractionEnabled = true
-        sudoku = SudokuGenerator(difficult: 0,delegate: self) { // game created
+        
+        sudoku = SudokuGenerator(difficult: 0,gameType:gameType,delegate: self) { // game created
                                         DispatchQueue.main.async { [weak self] in
                                             self?.saveGame()
                                             self?.updateUI()
@@ -336,27 +337,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         TutorialViewConstraint.activate(tutorialView, self.view)
         TutorialViewAnimator.show(tutorialView)
     }
-    
-//    var counter = 0
-//
-//    private func startTimerIfNeeded() {
-//        if options.options[5] {
-//            counter = sudoku.timerCount
-//            timerLabel.text = TimerCounter.getTime(counter, completion: {})
-//            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimerLabel), userInfo: nil, repeats: true)
-//        }
-//    }
-    
-//    @objc
-//    private func updateTimerLabel() {
-//        counter += 1
-//        timerLabel.text = TimerCounter.getTime(counter) { [weak self] in
-//            self?.timer?.invalidate()
-//            self?.gameLost()
-//        }
-//    }
-    
-    
+
+
     // MARK: - Protocol conformance
     
     func cancelButtonTouched() {
