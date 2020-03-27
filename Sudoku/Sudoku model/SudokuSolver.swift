@@ -20,9 +20,12 @@ class SudokuSolver: Sudoku {
         for index in 0...9 {
             lines[index] = Set(arrayLiteral: 0)
             blocks[index] = Set(arrayLiteral: 0)
-            columns[index] = Set(arrayLiteral: 0)
+            columns[index] = Set(arrayLiteral: 9-index)
         }
         lines[0] = Set(arrayLiteral: 1,2,3,4,5,6,7,8,9)
+        blocks[0] = Set(arrayLiteral: 9,8,7)
+        blocks[1] = Set(arrayLiteral: 6,5,4)
+        blocks[2] = Set(arrayLiteral: 3,2,1)
     }
     
     @discardableResult
@@ -89,22 +92,4 @@ class SudokuSolver: Sudoku {
         blocks.removeAll()
     }
     
-}
-
-
-
-extension SudokuSolver: CustomStringConvertible {
-    var description: String {
-        var output = String()
-        for index in digits.indices {
-            output += "\(digits[index]) "
-            if index%dimension.root == dimension.root - 1 {
-                output += "|"
-            }
-            if index%dimension == dimension-1 {
-                output += "\n"
-            }
-        }
-        return output
-    }
 }

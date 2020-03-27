@@ -27,12 +27,16 @@ class LevelsViewController: UIViewController, UIScrollViewDelegate {
             switch id {
             case "ClassicSudoku":
                 destination.gameType = .classic
+                destination.path = "classic"
              case "DiagonalSudoku":
                 destination.gameType = .diagonal
+                destination.path = "diagonal"
             case "TwoDiagonalsSudoku":
                 destination.gameType = .twoDiagonals
+                destination.path = "twodiagonals"
             case "RombSudoku":
                 destination.gameType = .romb
+                destination.path = "romb"
             default:break
             }
         }
