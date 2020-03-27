@@ -7,7 +7,7 @@ import Foundation
 
 struct Statistic: Codable {
     
-    static let difficult = ["easy","medium","hard"]
+    static let difficult = [localized("easy"),localized("medium"),localized("hard")]
     
     var scores = Array(repeating: Scores(), count: 4)
         
@@ -20,21 +20,7 @@ struct Statistic: Codable {
         
         let descriptions = [localized("mistakesMade"),localized("hintsUsed"),localized("gameWon"),localized("gameLost")]
         
-        mutating func updateMistakes(difficult:Int) {
-            scores[difficult][0] += 1
-        }
         
-        mutating func updateHints(difficult:Int) {
-            scores[difficult][1] += 1
-        }
-        
-        mutating func updateGameWon(difficult:Int) {
-            scores[difficult][2] += 1
-        }
-        
-        mutating func updateGameLost(difficult:Int) {
-            scores[difficult][3] += 1
-        }
         
     }
      

@@ -23,8 +23,10 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     // MARK: - private vars
     
     private var hasActiveButton: Bool?
-    private weak var timer: Timer!
 
+    private var index: Int {
+        return difficultChooser.selectedSegmentIndex
+    }
     
     // MARK: - ViewController lifecycle
     
@@ -93,6 +95,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
             if digit == sudoku.answers[index] { //right digit
                 selectedButton.setTitleColor(.text, for: .normal)
             } else { //mistake
+                statistic.scores[gameType.rawValue].scores[index][0] += 1
+                saveStatistic()
                 if options.options[1] {
                     selectedButton.setTitleColor(.orange, for: .normal)
                 } else {
@@ -122,6 +126,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
             hideDigitIfPossible()
             hasActiveButton = nil
             saveGame()
+            statistic.scores[gameType.rawValue].scores[index][1] += 1
+            saveStatistic()
         }
         
     }
@@ -214,6 +220,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         view.addSubview(victory)
         TutorialViewConstraint.activate(victory, self.view)
         TutorialViewAnimator.show(victory)
+        statistic.scores[gameType.rawValue].scores[index][2] += 1
+        saveStatistic()
     }
     
     func gameLost() {
@@ -221,6 +229,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         alert.addAction(UIAlertAction(title: "New game", style: .default, handler: { action in
             self.newGame()
         }))
+        statistic.scores[gameType.rawValue].scores[index][3] += 1
+        saveStatistic()
         present(alert, animated: true)
     }
     
@@ -288,10 +298,10 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     @objc
     private func saveGame() {
-        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("games"),let json = game.json {
-            game.games[0] = sudoku
+//        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("games"),let json = game.json {
+//            game.games[0] = sudoku
 //            try? json.write(to: url)
-        }
+//        }
     }
     
     private func newGame() {

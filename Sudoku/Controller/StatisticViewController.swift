@@ -63,7 +63,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     // MARK: - UITableView delegate
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return localized(Statistic.difficult[section])
+        return Statistic.difficult[section]
     }
 
     

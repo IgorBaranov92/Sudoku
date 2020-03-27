@@ -113,7 +113,6 @@
 		78810CC9241F90B6002828E2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewConstraint.swift; sourceTree = "<group>"; };
 		7883A1C5241D3CF200ECB3FD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		7883A1C6241D3D1300ECB3FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		7883A1CA241D3D9200ECB3FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7883A1CC241D3D9B00ECB3FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7883A1CD241D3D9C00ECB3FD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -135,6 +134,7 @@
 		78C9B5E1241BF35D00E1DB7A /* ErrorViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewAnimation.swift; sourceTree = "<group>"; };
 		78C9B5E5241D08A500E1DB7A /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		78C9B5E7241D08BC00E1DB7A /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		78EABF38242E21B900EF9A1E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -552,7 +552,7 @@
 			children = (
 				78181EFF23E5BD9B00836109 /* Base */,
 				7883A1C5241D3CF200ECB3FD /* ru */,
-				7883A1C6241D3D1300ECB3FD /* de */,
+				78EABF38242E21B900EF9A1E /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

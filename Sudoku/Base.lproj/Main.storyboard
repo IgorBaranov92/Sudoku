@@ -2248,6 +2248,7 @@
                         <outlet property="centerXButtonsStackViewConstraint" destination="hqt-UP-PGY" id="KNi-WB-cqp"/>
                         <outlet property="centerXDigitsStackViewConstraint" destination="Qes-WP-5ad" id="sNp-Gb-elV"/>
                         <outlet property="centerXLabelsStackViewConstraint" destination="sS6-eC-TTx" id="GBI-P4-Sge"/>
+                        <outlet property="difficultChooser" destination="1W1-Wk-K6J" id="lfD-I6-gn0"/>
                         <outlet property="digitsStackView" destination="3xN-pe-Wcm" id="07J-lD-fjO"/>
                         <outlet property="hintsLabel" destination="xeA-uw-tBu" id="Dx5-6D-gdQ"/>
                         <outlet property="labelsStackView" destination="W4t-Pk-sPM" id="sHf-AK-Xvr"/>
@@ -3948,6 +3949,7 @@
                         <outlet property="centerXButtonsStackViewConstraint" destination="4bG-DB-L7o" id="teq-No-uMX"/>
                         <outlet property="centerXDigitsStackViewConstraint" destination="t8n-St-eXW" id="H5c-42-27d"/>
                         <outlet property="centerXLabelsStackViewConstraint" destination="Whz-4M-BpB" id="RQC-mW-sif"/>
+                        <outlet property="difficultChooser" destination="oe6-0v-wIK" id="JtW-09-LgV"/>
                         <outlet property="digitsStackView" destination="REX-wb-A4z" id="d1Y-QK-ktk"/>
                         <outlet property="hintsLabel" destination="3KN-tg-pS2" id="hFI-8S-v99"/>
                         <outlet property="labelsStackView" destination="9bn-Jp-OYf" id="ECV-Nx-yIJ"/>
@@ -5656,6 +5658,7 @@
                         <outlet property="centerXButtonsStackViewConstraint" destination="s9b-Z0-qQa" id="Dx9-MQ-5tN"/>
                         <outlet property="centerXDigitsStackViewConstraint" destination="czP-QL-So5" id="lyp-6S-cUi"/>
                         <outlet property="centerXLabelsStackViewConstraint" destination="ZNi-dp-Kzf" id="eHx-He-6wg"/>
+                        <outlet property="difficultChooser" destination="Npj-NW-VQX" id="oWb-Tq-SM4"/>
                         <outlet property="digitsStackView" destination="8B6-3h-XHe" id="TWz-Nk-FCg"/>
                         <outlet property="hintsLabel" destination="RhD-72-0bo" id="Ded-VK-mhd"/>
                         <outlet property="labelsStackView" destination="HN5-g4-QLN" id="0Mz-iE-KXt"/>
@@ -7406,6 +7409,7 @@
                         <outlet property="centerXButtonsStackViewConstraint" destination="gv5-cY-PbW" id="tQN-sK-yqo"/>
                         <outlet property="centerXDigitsStackViewConstraint" destination="t56-hX-4H5" id="Xrf-8o-1ZD"/>
                         <outlet property="centerXLabelsStackViewConstraint" destination="Y7e-Rg-9t4" id="4tc-AX-314"/>
+                        <outlet property="difficultChooser" destination="4HT-zv-Tle" id="bQ1-bz-kqK"/>
                         <outlet property="digitsStackView" destination="syX-X5-vEq" id="vfF-IG-BmA"/>
                         <outlet property="hintsLabel" destination="eOF-ed-wax" id="jtb-zT-Qkq"/>
                         <outlet property="labelsStackView" destination="Fel-HH-Hcz" id="fpB-tq-E4H"/>
