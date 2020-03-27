@@ -7,7 +7,8 @@ class DiagonalSudokuSolver: SudokuSolver {
 
     override func prepareForSolving() {
         super.prepareForSolving()
-        
+        leftDiagonal = Set(arrayLiteral: 9)
+        rightDiagonal = Set(arrayLiteral: 1)
     }
     
     override func updateData(insert: Bool, _ row: Int, _ column: Int, _ num: Int) {

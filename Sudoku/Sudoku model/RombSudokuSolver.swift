@@ -2,6 +2,6 @@ import Foundation
 
 
 
-class RombSudokuSolver: Sudoku {
+class RombSudokuSolver: SudokuSolver {
     
 }

@@ -129,18 +129,28 @@ class SudokuGenerator: Sudoku {
 
 
     private func generate() {
-        let firstRow = [1,2,3,4,5,6,7,8,9].shuffled()
+        let firstRow = [9,8,7,6,5,4,3,2,1].shuffled()
         digits = firstRow + Array(repeating: 0, count: 72)
         createBoard()
         replaceDigits()
-        removeDigits()
+//        removeDigits()
         calculateDigits()
         completion?()
     }
     
 
     private func createBoard() {
-        let solver = SudokuSolver()
+        var solver: SudokuSolver!
+        switch gameType {
+        case .classic:
+            solver = SudokuSolver()
+        case .diagonal:
+            solver = DiagonalSudokuSolver()
+        case .twoDiagonals:
+            solver = TwoDiagonalsSudokuSolver()
+        case .romb:
+            solver = RombSudokuSolver()
+        }
         solver.digits = digits
         solver.prepareForSolving()
         if solver.solve() {

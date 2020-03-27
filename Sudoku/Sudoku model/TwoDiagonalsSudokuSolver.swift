@@ -1,6 +1,6 @@
 import Foundation
 
 
-class TwoDiagonalsSudokuSolver: Sudoku {
+class TwoDiagonalsSudokuSolver: SudokuSolver {
     
 }
