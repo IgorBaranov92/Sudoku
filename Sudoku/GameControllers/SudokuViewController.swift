@@ -343,7 +343,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
   
     private func showRules() {
         let tutorialView = TutorialView()
-        tutorialView.message = localized("classicMessage")
+        tutorialView.message = Rules.getRulesDescriptionBasedOn(gameType)
         view.addSubview(tutorialView)
         TutorialViewConstraint.activate(tutorialView, self.view)
         TutorialViewAnimator.show(tutorialView)

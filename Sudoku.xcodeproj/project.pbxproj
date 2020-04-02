@@ -56,6 +56,7 @@
 		78C9B5E2241BF35D00E1DB7A /* ErrorViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5E1241BF35D00E1DB7A /* ErrorViewAnimation.swift */; };
 		78C9B5E6241D08A500E1DB7A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5E5241D08A500E1DB7A /* OptionsViewController.swift */; };
 		78C9B5E8241D08BC00E1DB7A /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5E7241D08BC00E1DB7A /* StatisticViewController.swift */; };
+		78EABF3A242E296B00EF9A1E /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EABF39242E296B00EF9A1E /* Rules.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		78C9B5E5241D08A500E1DB7A /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		78C9B5E7241D08BC00E1DB7A /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		78EABF38242E21B900EF9A1E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		78EABF39242E296B00EF9A1E /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				782239DA242133EF004E7D35 /* Options.swift */,
 				788CDC7E2422373900420F9B /* Statistic.swift */,
 				788CDC8524225DAB00420F9B /* TimerCounter.swift */,
+				78EABF39242E296B00EF9A1E /* Rules.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				7877D1B923ED95B000E43314 /* BorderedCell.swift in Sources */,
 				7862E4ED242651AD0030F8E8 /* StatisticButtonAnimator.swift in Sources */,
 				78C9B5DB241BE98100E1DB7A /* TutorialView.swift in Sources */,
+				78EABF3A242E296B00EF9A1E /* Rules.swift in Sources */,
 				7862E4F3242A5B610030F8E8 /* EraseStatisticView.swift in Sources */,
 				78294FCB241A8CEB00854A97 /* TwoDiagonalsSudokuSolver.swift in Sources */,
 			);

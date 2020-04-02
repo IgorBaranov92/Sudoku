@@ -13,6 +13,7 @@ class SudokuSolver: Sudoku {
     required init(from decoder: Decoder) throws {
         try super.init(from: decoder)
     }
+    
     // MARK: - Public overridable functions
     
     func prepareForSolving() {
@@ -26,12 +27,6 @@ class SudokuSolver: Sudoku {
         blocks[0] = Set(arrayLiteral: 9,8,7)
         blocks[1] = Set(arrayLiteral: 6,5,4)
         blocks[2] = Set(arrayLiteral: 3,2,1)
-    }
-    
-    @discardableResult
-    func solve(_ row:Int = 0,_ column:Int = 0,_ start:Bool = false) -> Bool {
-        let firstUnsolvedCell = unsolvableCell(0)
-        return solverHelper(firstUnsolvedCell.row, firstUnsolvedCell.column, false)
     }
     
     func updateData(insert:Bool,_ row:Int,_ column:Int, _ num:Int) {
@@ -53,6 +48,13 @@ class SudokuSolver: Sudoku {
         }
        return true
     }
+    
+    @discardableResult
+    func solve(_ row:Int = 0,_ column:Int = 0,_ start:Bool = false) -> Bool {
+       let firstUnsolvedCell = unsolvableCell(0)
+       return solverHelper(firstUnsolvedCell.row, firstUnsolvedCell.column, false)
+   }
+    
     
     // MARK: - Private
     

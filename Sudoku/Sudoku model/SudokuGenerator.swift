@@ -129,12 +129,12 @@ class SudokuGenerator: Sudoku {
 
 
     private func generate() {
-        let firstRow = [9,8,7,6,5,4,3,2,1].shuffled()
+        let firstRow = [9,8,7,6,5,4,3,2,1]
         digits = firstRow + Array(repeating: 0, count: 72)
         createBoard()
-        replaceDigits()
+     //   replaceDigits()
 //        removeDigits()
-        calculateDigits()
+      //  calculateDigits()
         completion?()
     }
     

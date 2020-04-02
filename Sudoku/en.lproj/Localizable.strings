@@ -15,6 +15,15 @@
 "mistakes" = "Mistakes";
 "hints" = "Hints";
 
+"classicRules" = "Заполните игровое поле так чтобы:\n -в каждой строке\n -в каждом столбце\n -в каждом квадрате 3х3\n\n все цифры были разные";
+
+"diagonalRules" = "Заполните игровое поле так чтобы:\n -в каждой строке\n -в каждом столбце\n -в каждом квадрате 3х3\n-в каждой диагонали\n все цифры были разные";
+
+"twoDiagonalsRules" = "Заполните игровое поле так чтобы:\n -в каждой строке\n -в каждом столбце\n -в каждом квадрате 3х3\n\n все цифры были разные";
+
+"rombRules" = "Заполните игровое поле так чтобы:\n -в каждой строке\n -в каждом столбце\n -в каждом квадрате 3х3\n\n все цифры были разные";
+
+
 "mistakeslimit" = "For the game, depending on the level of difficulty, it is allowed to make a certain number of mistakes";
 
 "mistakescheck" = "Automatically highlight a wrong digit";
