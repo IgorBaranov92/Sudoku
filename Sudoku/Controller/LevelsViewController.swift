@@ -1,19 +1,11 @@
 import UIKit
 
-class LevelsViewController: UIViewController, UIScrollViewDelegate {
+class LevelsViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet weak var scrollView: UIScrollView! { didSet {
-        scrollView.delegate = self
-        }}
-    
+    @IBOutlet weak var scrollView: UIScrollView!
     
     // MARK: - ViewController lifecycle
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        scrollView.flashScrollIndicators()
-    }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
