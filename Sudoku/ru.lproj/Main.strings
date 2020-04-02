@@ -20,6 +20,10 @@
 "BRr-3K-MYQ.segmentTitles[1]" = "Средний";
 "BRr-3K-MYQ.segmentTitles[2]" = "Тяжелый";
 
+"FjS-It-nn4.segmentTitles[0]" = "Легкий";
+"FjS-It-nn4.segmentTitles[1]" = "Средний";
+"FjS-It-nn4.segmentTitles[2]" = "Тяжелый";
+
 
 "hoF-0J-NiR.normalTitle" = "Стереть";
 
@@ -31,6 +35,8 @@
 
 "bna-BD-8Oo.normalTitle" = "Стереть";
 
+"ns7-8V-eSq.normalTitle" = "Стереть";
+
 "GTy-GX-ojb.normalTitle" = "Подсказка";
 
 "K3f-l1-fef.normalTitle" = "Подсказка";
@@ -40,6 +46,9 @@
 "oSV-QH-Ind.normalTitle" = "Подсказка";
 
 "pqe-Y4-aTK.normalTitle" = "Подсказка";
+
+"B5t-uD-fYG.normalTitle" = "Подсказка";
+
 
 
 "jY8-jR-lWJ.normalTitle" = "Правила";
@@ -52,14 +61,16 @@
 
 "4uK-yS-wM9.normalTitle" = "Правила";
 
+"YDo-29-bjI.normalTitle" = "Правила";
 
-"2md-Gb-ho4.normalTitle" = "Чет-нечет";
+
 
 "3KN-tg-pS2.text" = "Подсказки: 0/4";
 "RhD-72-0bo.text" = "Подсказки: 0/4";
 "eOF-ed-wax.text" = "Подсказки: 0/4";
 "xeA-uw-tBu.text" = "Подсказки: 0/4";
 "AYq-ug-Xve.text" = "Подсказки: 0/4";
+"yHs-y1-Xlf.text" = "Подсказки: 0/4";
 
 
 "EmB-bj-EiF.text" = "Ошибки: 0/4";
@@ -67,11 +78,8 @@
 "heH-O6-dxb.text" = "Ошибки: 0/4";
 "mCh-gs-Usw.text" = "Ошибки: 0/4";
 "Q95-IW-SCH.text" = "Ошибки: 0/4";
+"Ni9-Vu-kfS.text" = "Ошибки: 0/4";
 
-
-"Ahs-EY-5j2.normalTitle" = "Фигурные";
-
-"GYT-aI-joU.normalTitle" = "С перегородками";
 
 "JiB-IA-0yH.normalTitle" = "Диагональ";
 
@@ -119,5 +127,5 @@
 "4og-8D-820.normalTitle" = "Диагональ";
 "RKw-wd-TAh.normalTitle" = "Две диагонали";
 "OGs-XB-u5r.normalTitle" = "Ромб";
-"gpd-6A-vFF.normalTitle" = "Чет-нечет";
-"tm8-fo-FwS.normalTitle" = "С перегородками";
+"hfd-D4-rK4.normalTitle" = "Два ромба";
+

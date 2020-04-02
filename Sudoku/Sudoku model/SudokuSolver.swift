@@ -1,97 +1,20 @@
 import Foundation
 
-class SudokuSolver: Sudoku {
+final class SudokuSolver {
     
-    var lines = [Int:Set<Int>]()
-    var columns = [Int:Set<Int>]()
-    var blocks = [Int:Set<Int>]()
-    
-    override init() {
-        super.init()
-    }
-    
-    required init(from decoder: Decoder) throws {
-        try super.init(from: decoder)
-    }
-    
-    // MARK: - Public overridable functions
-    
-    func prepareForSolving() {
-        clear()
-        for index in 0...9 {
-            lines[index] = Set(arrayLiteral: 0)
-            blocks[index] = Set(arrayLiteral: 0)
-            columns[index] = Set(arrayLiteral: 9-index)
+    class func getBaseGridBasedOn(_ gameType:GameType) -> [Int] {
+        switch gameType {
+        case .classic:
+            return [9,8,7,6,5,4,3,2,1,1,2,3,7,8,9,4,5,6,4,5,6,1,2,3,7,8,9,2,1,4,3,6,5,8,9,7,3,6,5,8,9,7,1,4,2,7,9,8,2,4,1,5,6,3,5,3,2,4,1,6,9,7,8,6,4,1,9,7,8,2,3,5,8,7,9,5,3,2,6,1,4]
+        case .diagonal:
+            return [9,8,7,6,5,4,3,2,1,1,2,3,7,8,9,4,5,6,4,5,6,1,2,3,7,8,9,2,1,4,3,6,8,5,9,7,3,6,5,9,4,7,8,1,2,7,9,8,2,1,5,6,3,4,5,4,9,8,7,2,1,6,3,8,3,1,4,9,6,2,7,5,6,7,2,5,3,1,9,4,8]
+        case .twoDiagonals:
+            return [9,8,7,6,5,4,3,2,1,1,2,3,7,8,9,4,5,6,4,5,6,1,2,3,7,8,9,2,1,4,8,6,5,9,3,7,3,6,5,9,4,7,2,1,8,7,9,8,2,3,1,5,6,4,6,7,9,5,1,2,8,4,3,5,3,1,4,7,8,6,9,2,8,4,2,3,9,6,1,7,5]
+        case .romb:
+            return [9,8,7,6,5,4,3,2,1,1,2,3,7,8,9,4,5,6,4,5,6,1,2,3,7,8,9,2,1,4,3,7,5,9,6,8,3,6,5,4,9,8,1,7,2,7,9,8,2,1,6,5,3,4,5,4,2,9,6,7,8,1,3,6,7,9,8,3,1,2,4,5,8,3,1,5,4,2,6,9,7]
+        case .twoRombs:
+            return [2]
         }
-        lines[0] = Set(arrayLiteral: 1,2,3,4,5,6,7,8,9)
-        blocks[0] = Set(arrayLiteral: 9,8,7)
-        blocks[1] = Set(arrayLiteral: 6,5,4)
-        blocks[2] = Set(arrayLiteral: 3,2,1)
-    }
-    
-    func updateData(insert:Bool,_ row:Int,_ column:Int, _ num:Int) {
-        if insert {
-            lines[column]!.insert(num)
-            columns[row]!.insert(num)
-            blocks[row/3+3*(column/3)]!.insert(num)
-            
-        } else {
-            lines[column]!.remove(num)
-            columns[row]!.remove(num)
-            blocks[row/3+3*(column/3)]!.remove(num)
-        }
-    }
-    
-    func isSaveAt(_ i:Int,_ j:Int,_ digit:Int) -> Bool {
-       if lines[j]!.contains(digit) || columns[i]!.contains(digit) || blocks[i/3 + 3*(j/3)]!.contains(digit) {
-           return false
-        }
-       return true
-    }
-    
-    @discardableResult
-    func solve(_ row:Int = 0,_ column:Int = 0,_ start:Bool = false) -> Bool {
-       let firstUnsolvedCell = unsolvableCell(0)
-       return solverHelper(firstUnsolvedCell.row, firstUnsolvedCell.column, false)
-   }
-    
-    
-    // MARK: - Private
-    
-     private func solverHelper(_ row:Int,_ column:Int,_ start:Bool) -> Bool {
-        if row == 0 && column == 0 && start {
-            answers = digits
-            return true
-        }
-        for num in 1...9 {
-            if isSaveAt(row, column, num)  {
-                self[row,column] = num
-                updateData(insert: true, row, column, num)
-                let cell = unsolvableCell(column*dimension+row)
-                if solverHelper(cell.row, cell.column,true) { return true }
-                self[row,column] = 0
-                updateData(insert: false, row, column, num)
-            }
-        }
-        return false
-    }
-
-    
-     // return cell without digit
-    private func unsolvableCell(_ base:Int) -> (row:Int,column:Int) {
-        let start = base == 0 ? 0 : base + 1
-        for index in start..<dimension*dimension {
-            if digits[index] == 0 {
-                return self[index]
-            }
-        }
-        return (0,0)
-    }
-    
-    private func clear() {
-        lines.removeAll()
-        columns.removeAll()
-        blocks.removeAll()
     }
     
 }

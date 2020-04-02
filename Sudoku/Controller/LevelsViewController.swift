@@ -29,6 +29,9 @@ class LevelsViewController: UIViewController {
             case "RombSudoku":
                 destination.gameType = .romb
                 destination.path = "romb"
+            case "TwoRombsSudoku":
+                destination.gameType = .twoRombs
+                destination.path = "twoRombs"
             default:break
             }
         }

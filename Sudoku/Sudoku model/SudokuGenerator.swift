@@ -70,36 +70,42 @@ class SudokuGenerator: Sudoku {
             indexes.append(dimension*coordinates.column + i )
             indexes.append(coordinates.row + dimension*i )
             indexes.append(columnOffset*dimension + rowOffset + i/3*dimension + i%3)
-            switch gameType {
-            case .diagonal:
-                if coordinates.row == coordinates.column {//left
-                    indexes.append(i*dimension + i)
-                }
-                if coordinates.row + coordinates.column == dimension - 1 { //right
-                    indexes.append(8*(i+1))
-                }
-            case .twoDiagonals:
-                if coordinates.row - coordinates.column == 1 { //upper left
-                    indexes += [1,11,21,31,41,51,61,71]
-                }
-                if coordinates.column - coordinates.row == 1 { //lower left
-                    indexes += [9,19,29,39,49,59,69,79]
-                }
-                if coordinates.row + coordinates.column == 7 { //upper right
-                    indexes += [63,55,47,39,31,23,15,7]
-                }
-                if coordinates.row + coordinates.column == 9 {
-                    indexes += [73,65,57,49,41,33,25,17]
-                }
-            case .romb:
-                if (coordinates.row + coordinates.column) == 4 || (coordinates.column - coordinates.row) == 4 { //left
-                    indexes += [4,12,20,28,36,46,56,66,76]
-                }
-                if coordinates.row - coordinates.column == 4 || coordinates.row + coordinates.column == 12 { // right
-                    indexes += [4,14,24,34,44,52,60,68,76]
-                }
-            default:break
+        }
+        switch gameType {
+        case .diagonal:
+            if coordinates.row == coordinates.column {//left
+                indexes += [0,10,20,30,40,50,60,70,80]
             }
+            if coordinates.row + coordinates.column == dimension - 1 { //right
+                indexes += [8,16,24,32,40,48,56,64,72]
+            }
+        case .twoDiagonals:
+            if coordinates.row - coordinates.column == 1 { //upper left
+                indexes += [1,11,21,31,41,51,61,71]
+            }
+            if coordinates.column - coordinates.row == 1 { //lower left
+                indexes += [9,19,29,39,49,59,69,79]
+            }
+            if coordinates.row + coordinates.column == 7 { //upper right
+                indexes += [63,55,47,39,31,23,15,7]
+            }
+            if coordinates.row + coordinates.column == 9 {
+                indexes += [73,65,57,49,41,33,25,17]
+            }
+        case .twoRombs:
+            let set = Set(arrayLiteral: 22,30,38,48,58,50,42,32)
+            if set.contains(index) {
+                indexes += [22,30,38,48,58,50,42,32]
+            }
+            fallthrough
+        case .romb:
+            if (coordinates.row + coordinates.column) == 4 || (coordinates.column - coordinates.row) == 4 { //left
+                indexes += [4,12,20,28,36,46,56,66,76]
+            }
+            if coordinates.row - coordinates.column == 4 || coordinates.row + coordinates.column == 12 { // right
+                indexes += [4,14,24,34,44,52,60,68,76]
+            }
+        default:break
         }
         return indexes.unique()
     }
@@ -131,7 +137,7 @@ class SudokuGenerator: Sudoku {
     private func generate() {
         let firstRow = [9,8,7,6,5,4,3,2,1]
         digits = firstRow + Array(repeating: 0, count: 72)
-        createBoard()
+        digits = SudokuSolver.getBaseGridBasedOn(gameType)
      //   replaceDigits()
 //        removeDigits()
       //  calculateDigits()
@@ -139,25 +145,6 @@ class SudokuGenerator: Sudoku {
     }
     
 
-    private func createBoard() {
-        var solver: SudokuSolver!
-        switch gameType {
-        case .classic:
-            solver = SudokuSolver()
-        case .diagonal:
-            solver = DiagonalSudokuSolver()
-        case .twoDiagonals:
-            solver = TwoDiagonalsSudokuSolver()
-        case .romb:
-            solver = RombSudokuSolver()
-        }
-        solver.digits = digits
-        solver.prepareForSolving()
-        if solver.solve() {
-            digits = solver.answers
-        }
-    }
-    
     private func replaceDigits() {
         let newDigits = [1,2,3,4,5,6,7,8,9].shuffled()
         for index in digits.indices {

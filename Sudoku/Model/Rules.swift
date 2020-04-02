@@ -12,6 +12,8 @@ final class Rules {
             return localized("twoDiagonalsRules")
         case .romb:
             return localized("rombRules")
+        case .twoRombs:
+            return localized("twoRombsRules")
         }
     }
     

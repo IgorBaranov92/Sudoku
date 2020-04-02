@@ -40,4 +40,5 @@ enum GameType: Int,Codable {
     case diagonal = 1
     case twoDiagonals = 2
     case romb = 3
+    case twoRombs = 4
 }
