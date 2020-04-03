@@ -53,6 +53,11 @@
 		78C9B5E2241BF35D00E1DB7A /* ErrorViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5E1241BF35D00E1DB7A /* ErrorViewAnimation.swift */; };
 		78C9B5E6241D08A500E1DB7A /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5E5241D08A500E1DB7A /* OptionsViewController.swift */; };
 		78C9B5E8241D08BC00E1DB7A /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5E7241D08BC00E1DB7A /* StatisticViewController.swift */; };
+		78D0FDFE24363AC5003640FE /* 2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D0FDFD24363AC5003640FE /* 2.xib */; };
+		78D0FE0024363ACE003640FE /* 1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D0FDFF24363ACE003640FE /* 1.xib */; };
+		78D0FE0224363AD2003640FE /* 3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D0FE0124363AD2003640FE /* 3.xib */; };
+		78D0FE0424363AD9003640FE /* 4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D0FE0324363AD9003640FE /* 4.xib */; };
+		78D0FE0624363AE0003640FE /* 5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D0FE0524363AE0003640FE /* 5.xib */; };
 		78EABF3A242E296B00EF9A1E /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EABF39242E296B00EF9A1E /* Rules.swift */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +134,11 @@
 		78C9B5E1241BF35D00E1DB7A /* ErrorViewAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewAnimation.swift; sourceTree = "<group>"; };
 		78C9B5E5241D08A500E1DB7A /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		78C9B5E7241D08BC00E1DB7A /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		78D0FDFD24363AC5003640FE /* 2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = 2.xib; sourceTree = "<group>"; };
+		78D0FDFF24363ACE003640FE /* 1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = 1.xib; sourceTree = "<group>"; };
+		78D0FE0124363AD2003640FE /* 3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = 3.xib; sourceTree = "<group>"; };
+		78D0FE0324363AD9003640FE /* 4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = 4.xib; sourceTree = "<group>"; };
+		78D0FE0524363AE0003640FE /* 5.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = 5.xib; sourceTree = "<group>"; };
 		78EABF38242E21B900EF9A1E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		78EABF39242E296B00EF9A1E /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +195,7 @@
 				7883A1CB241D3D9200ECB3FD /* Localizable.strings */,
 				785C734423F19E6900757B0E /* Model */,
 				7894D919242B62B90067D313 /* Sudoku model */,
+				78D0FDFA24363AA5003640FE /* Shapes */,
 				7895216C241A4B6A004F8C1C /* Button */,
 				785C734523F19E7200757B0E /* View */,
 				7883A1C2241D2BBB00ECB3FD /* Constraints */,
@@ -329,6 +340,18 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
+		78D0FDFA24363AA5003640FE /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				78D0FDFF24363ACE003640FE /* 1.xib */,
+				78D0FDFD24363AC5003640FE /* 2.xib */,
+				78D0FE0124363AD2003640FE /* 3.xib */,
+				78D0FE0324363AD9003640FE /* 4.xib */,
+				78D0FE0524363AE0003640FE /* 5.xib */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -435,8 +458,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D0FE0624363AE0003640FE /* 5.xib in Resources */,
+				78D0FDFE24363AC5003640FE /* 2.xib in Resources */,
+				78D0FE0224363AD2003640FE /* 3.xib in Resources */,
+				78D0FE0424363AD9003640FE /* 4.xib in Resources */,
 				78181F0523E5BD9C00836109 /* LaunchScreen.storyboard in Resources */,
 				7883A1C9241D3D9200ECB3FD /* Localizable.strings in Resources */,
+				78D0FE0024363ACE003640FE /* 1.xib in Resources */,
 				78181F0223E5BD9C00836109 /* Assets.xcassets in Resources */,
 				78181F0023E5BD9B00836109 /* Main.storyboard in Resources */,
 			);
@@ -621,7 +649,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -676,7 +704,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

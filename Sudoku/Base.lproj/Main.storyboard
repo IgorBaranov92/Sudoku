@@ -582,7 +582,7 @@
                                 <rect key="frame" x="0.0" y="177.66666666666669" width="375" height="600.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ncn-0N-Gdr">
-                                        <rect key="frame" x="16" y="48.333333333333343" width="343" height="360"/>
+                                        <rect key="frame" x="16" y="11" width="343" height="435"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVT-01-rDv" customClass="ShrinkableButton" customModule="Sudoku" customModuleProvider="target">
                                                 <rect key="frame" x="116" y="0.0" width="111" height="60"/>
@@ -599,7 +599,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiB-IA-0yH" customClass="ShrinkableButton" customModule="Sudoku" customModuleProvider="target">
-                                                <rect key="frame" x="98.666666666666686" y="75" width="146" height="60"/>
+                                                <rect key="frame" x="98.666666666666686" y="75.000000000000028" width="146" height="60"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
                                                 <state key="normal" title="Diagonal">
                                                     <color key="titleColor" name="DynamicBlackColor"/>
@@ -613,7 +613,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpn-gE-ape" customClass="ShrinkableButton" customModule="Sudoku" customModuleProvider="target">
-                                                <rect key="frame" x="56.666666666666686" y="150" width="230" height="60"/>
+                                                <rect key="frame" x="56.666666666666686" y="150.00000000000003" width="230" height="60"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
                                                 <state key="normal" title="Two diagonals">
                                                     <color key="titleColor" name="DynamicBlackColor"/>
@@ -627,7 +627,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpC-x8-pYJ" customClass="ShrinkableButton" customModule="Sudoku" customModuleProvider="target">
-                                                <rect key="frame" x="123.66666666666666" y="225" width="96" height="60"/>
+                                                <rect key="frame" x="123.66666666666666" y="225.00000000000003" width="96" height="59.999999999999972"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
                                                 <state key="normal" title="Romb">
                                                     <color key="titleColor" name="DynamicBlackColor"/>
@@ -652,6 +652,19 @@
                                                 <connections>
                                                     <action selector="erase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cck-32-mvo"/>
                                                     <segue destination="Cce-8j-vP1" kind="presentation" identifier="TwoRombsSudoku" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="BsS-8M-w9W"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKr-qD-unK" customClass="ShrinkableButton" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="113" y="375" width="117" height="60"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                                <state key="normal" title="Shapes">
+                                                    <color key="titleColor" name="DynamicBlackColor"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="erase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mOF-oV-sYc"/>
                                                 </connections>
                                             </button>
                                         </subviews>
