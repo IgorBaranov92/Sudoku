@@ -69,7 +69,9 @@ class SudokuGenerator: Sudoku {
         for i in 0..<dimension {
             indexes.append(dimension*coordinates.column + i )
             indexes.append(coordinates.row + dimension*i )
-            indexes.append(columnOffset*dimension + rowOffset + i/3*dimension + i%3)
+            if gameType != .shape {
+                indexes.append(columnOffset*dimension + rowOffset + i/3*dimension + i%3)
+            }
         }
         switch gameType {
         case .diagonal:
@@ -92,12 +94,6 @@ class SudokuGenerator: Sudoku {
             if coordinates.row + coordinates.column == 9 {
                 indexes += [73,65,57,49,41,33,25,17]
             }
-        case .twoRombs:
-            let set = Set(arrayLiteral: 22,30,38,48,58,50,42,32)
-            if set.contains(index) {
-                indexes += [22,30,38,48,58,50,42,32]
-            }
-            fallthrough
         case .romb:
             if (coordinates.row + coordinates.column) == 4 || (coordinates.column - coordinates.row) == 4 { //left
                 indexes += [4,12,20,28,36,46,56,66,76]
@@ -105,6 +101,8 @@ class SudokuGenerator: Sudoku {
             if coordinates.row - coordinates.column == 4 || coordinates.row + coordinates.column == 12 { // right
                 indexes += [4,14,24,34,44,52,60,68,76]
             }
+        case .shape :
+            indexes += ShapeSudoku.returnRightIndexesBasedOn(index)
         default:break
         }
         return indexes.unique()
@@ -138,7 +136,7 @@ class SudokuGenerator: Sudoku {
         let firstRow = [9,8,7,6,5,4,3,2,1]
         digits = firstRow + Array(repeating: 0, count: 72)
         digits = SudokuSolver.getBaseGridBasedOn(gameType)
-     //   replaceDigits()
+        replaceDigits()
 //        removeDigits()
       //  calculateDigits()
         completion?()

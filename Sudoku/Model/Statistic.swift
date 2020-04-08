@@ -9,7 +9,7 @@ struct Statistic: Codable {
     
     static let difficult = [localized("easy"),localized("medium"),localized("hard")]
     
-    var scores = Array(repeating: Scores(), count: 4)
+    var scores = Array(repeating: Scores(), count: 6)
         
     var json: Data? { try? JSONEncoder().encode(self) }
     
@@ -40,5 +40,5 @@ enum GameType: Int,Codable {
     case diagonal = 1
     case twoDiagonals = 2
     case romb = 3
-    case twoRombs = 4
+    case shape = 4
 }

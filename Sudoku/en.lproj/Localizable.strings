@@ -1,19 +1,9 @@
-"rules" = "Rules";
-
-"done" = "Done";
-
-"classicMessage" = "Completed games are always an example of a Latin square which include an additional constraint on the contents of individual regions. For example, the same single integer may not appear twice in the same row, column, or any of the nine 3×3 subregions of the 9×9 playing board.";
-
 "ErrorNative" = "Can't erase native cell";
 
 "ErrorEmpty" = "Can't erase empty cell";
 
-"ErrorFilled" = "Already filled cell";
+"ErrorFilled" = "Can't solve native cell";
 
-"Victory" = "Victory!";
-
-"mistakes" = "Mistakes";
-"hints" = "Hints";
 
 "classicRules" = "Заполните игровое поле так чтобы:\n -в каждой строке\n -в каждом столбце\n -в каждом квадрате 3х3\n\n все цифры были разные";
 
@@ -34,11 +24,6 @@
 
 "hidedigits" = "Hide used numbers (for example, all units are arranged)";
 
-"timer" = "Time limited game (100 minutes)";
-
-"darktheme" = "Turns on dark mode";
-
-"darkmodesync" = "Turns on dark mode automatically";
 
 "nomistakeslimit" = "Any number of errors allowed";
 
@@ -50,27 +35,20 @@
 
 "nohidedigits" = "Do not hide used numbers";
 
-"notimer" = "No time limit";
-
-"nodarktheme" = "Turns on light mode";
-
-"nodarkmodesync" = "Сolor mode will be selected depending on the settings";
-
 
 "classic" = "Classic";
 "diagonal" = "Diagonal";
 "twoDiagonals" = "Two diagonals";
 "romb" = "Romb";
-"evenOdd" = "Even-Odd";
-"fence" = "Fence";
+"shapes" = "Shapes";
 
 
 "mistakesMade" = "Mistakes made";
 "hintsUsed" = "Hints used";
 "gameWon" = "Game won";
 "gameLost" = "Game lost";
-"besttime" = "Best time";
 
+"erareAttention" = "Attention!";
 "Attention" = "Attention!";
 "ResetAllWarning" = "Are you sure to reset all statistic?\nIt can't be undone";
 
@@ -82,4 +60,9 @@
 "medium" = "Medium";
 "hard" = "Hard";
 
-"erareAttention" = "Attention!";
+"Victory" = "Victory!";
+"rules" = "Rules";
+
+"done" = "Done";
+"mistakes" = "Mistakes";
+"hints" = "Hints";

@@ -1,6 +1,6 @@
 import UIKit
 
-class EraseStatisticView: MessageView {
+class EraseStatisticView: InfoView {
 
     var attentionMessage = " " { didSet { setNeedsDisplay()}}
     
@@ -34,13 +34,20 @@ class EraseStatisticView: MessageView {
         
         let yesButtonFrame = CGRect(x: rect.width/2 + 5, y: rect.height*0.8+5, width: rect.width/2-10, height: rect.height*0.2-10)
         let yesButton = YesButton(frame: yesButtonFrame)
-        yesButton.addTarget(self, action: #selector(dismiss), for: .touchUpInside)
+        yesButton.addTarget(self, action: #selector(erase), for: .touchUpInside)
         addSubview(yesButton)
         
     }
    
     @objc
     private func dismiss() {
+        delegate?.eraseCanceled()
+        TutorialViewAnimator.dismiss(self)
+    }
+    
+    @objc
+    private func erase () {
+        delegate?.eraseConfirmed()
         TutorialViewAnimator.dismiss(self)
     }
 

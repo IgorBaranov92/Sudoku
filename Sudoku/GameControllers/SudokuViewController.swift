@@ -25,9 +25,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     private var hasActiveButton: Bool?
 
-    private var index: Int {
-        return difficultChooser.selectedSegmentIndex
-    }
+    private var index: Int { return difficultChooser.selectedSegmentIndex }
     
     // MARK: - ViewController lifecycle
     
@@ -40,7 +38,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         restoreOptions()
         restoreStatistic()
         recreateGameIfNeeded()
-//        startTimerIfNeeded()
     }
 
     
@@ -133,6 +130,11 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         
     }
     
+    @IBAction private func changeDifficult(_ sender: UISegmentedControl) {
+//        let index = sender.selectedSegmentIndex
+    }
+    
+  
     
     @objc
     private func touchField(_ recognizer: UITapGestureRecognizer) {
@@ -161,7 +163,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     @objc
     private func updateBoard() {
-//        timerLabel.isHidden = !(options.options[5])
         cells.forEach { $0.setTitle("", for: .normal) }
         for index in sudoku.digits.indices {
             if sudoku.digits[index] != 0 {
@@ -310,7 +311,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         digits.forEach { $0.isHidden = false }
         hasActiveButton = nil
         view.isUserInteractionEnabled = true
-        
         sudoku = SudokuGenerator(difficult: 0,gameType:gameType,delegate: self) { // game created
                                         DispatchQueue.main.async { [weak self] in
                                             self?.saveGame()

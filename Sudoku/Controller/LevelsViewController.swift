@@ -1,15 +1,22 @@
 import UIKit
 
-class LevelsViewController: UIViewController {
+class LevelsViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollView: UIScrollView! { didSet {
+        scrollView.delegate = self
+        }}
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return stackView
+    }
     
     // MARK: - ViewController lifecycle
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        scrollView.contentSize = CGSize(width: view.bounds.width, height: stackView.bounds.height + 25)        
+        scrollView.contentSize = CGSize(width: view.bounds.width,
+                                       height: stackView.bounds.height + 25)
     }
     
 
@@ -29,9 +36,9 @@ class LevelsViewController: UIViewController {
             case "RombSudoku":
                 destination.gameType = .romb
                 destination.path = "romb"
-            case "TwoRombsSudoku":
-                destination.gameType = .twoRombs
-                destination.path = "twoRombs"
+            case "ShapeSudoku":
+                destination.gameType = .shape
+                destination.path = "shape"
             default:break
             }
         }
@@ -40,5 +47,10 @@ class LevelsViewController: UIViewController {
     @IBAction func done(_ sender: UIButton) {
         dismiss(animated: true)
     }
+    
+    
+    
+    
+    
     
 }

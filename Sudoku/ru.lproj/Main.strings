@@ -20,10 +20,9 @@
 "BRr-3K-MYQ.segmentTitles[1]" = "Средний";
 "BRr-3K-MYQ.segmentTitles[2]" = "Тяжелый";
 
-"FjS-It-nn4.segmentTitles[0]" = "Легкий";
-"FjS-It-nn4.segmentTitles[1]" = "Средний";
-"FjS-It-nn4.segmentTitles[2]" = "Тяжелый";
-
+"BFr-Nm-hFg.segmentTitles[0]" = "Легкий";
+"BFr-Nm-hFg.segmentTitles[1]" = "Средний";
+"BFr-Nm-hFg.segmentTitles[2]" = "Тяжелый";
 
 "hoF-0J-NiR.normalTitle" = "Стереть";
 
@@ -35,7 +34,8 @@
 
 "bna-BD-8Oo.normalTitle" = "Стереть";
 
-"ns7-8V-eSq.normalTitle" = "Стереть";
+"q04-zi-D07.normalTitle" = "Стереть";
+
 
 "GTy-GX-ojb.normalTitle" = "Подсказка";
 
@@ -47,7 +47,8 @@
 
 "pqe-Y4-aTK.normalTitle" = "Подсказка";
 
-"B5t-uD-fYG.normalTitle" = "Подсказка";
+
+"tnC-Uc-wr0.normalTitle" = "Подсказка";
 
 
 
@@ -61,8 +62,7 @@
 
 "4uK-yS-wM9.normalTitle" = "Правила";
 
-"YDo-29-bjI.normalTitle" = "Правила";
-
+"wwz-ye-QvX.normalTitle" = "Правила";
 
 
 "3KN-tg-pS2.text" = "Подсказки: 0/4";
@@ -70,7 +70,7 @@
 "eOF-ed-wax.text" = "Подсказки: 0/4";
 "xeA-uw-tBu.text" = "Подсказки: 0/4";
 "AYq-ug-Xve.text" = "Подсказки: 0/4";
-"yHs-y1-Xlf.text" = "Подсказки: 0/4";
+"Dpe-S5-J3V.text" = "Подсказки: 0/4";
 
 
 "EmB-bj-EiF.text" = "Ошибки: 0/4";
@@ -78,7 +78,7 @@
 "heH-O6-dxb.text" = "Ошибки: 0/4";
 "mCh-gs-Usw.text" = "Ошибки: 0/4";
 "Q95-IW-SCH.text" = "Ошибки: 0/4";
-"Ni9-Vu-kfS.text" = "Ошибки: 0/4";
+"Aow-uf-Xax.text" = "Ошибки: 0/4";
 
 
 "JiB-IA-0yH.normalTitle" = "Диагональ";
@@ -92,6 +92,9 @@
 "TpC-x8-pYJ.normalTitle" = "Ромб";
 
 "aJy-6w-W8X.text" = "Судоку";
+
+"L1S-CB-PDw.normalTitle" = "Фигуры";
+
 
 "clp-7A-Ylc.text" = "Режим";
 
@@ -114,12 +117,6 @@
 
 "nRm-8k-LKa.text" = "Спрятать цифры";
 
-"JI2-kS-llG.text" = "Таймер";
-
-"ER6-mL-gIc.text" = "Темный режим";
-
-"jna-my-vl7.text" = "Синхр. темного режима";
-
 
 "ZKT-uX-Lwf.normalTitle" = "Стереть все";
 
@@ -127,5 +124,4 @@
 "4og-8D-820.normalTitle" = "Диагональ";
 "RKw-wd-TAh.normalTitle" = "Две диагонали";
 "OGs-XB-u5r.normalTitle" = "Ромб";
-"hfd-D4-rK4.normalTitle" = "Два ромба";
 "zKr-qD-unK.normalTitle" = "Фигуры";

@@ -161,6 +161,7 @@ protocol SudokuDelegate: class {
 
 protocol EraseViewDelegate: class {
     func eraseConfirmed()
+    func eraseCanceled()
 }
 
 

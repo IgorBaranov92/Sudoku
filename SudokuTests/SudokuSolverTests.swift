@@ -20,8 +20,8 @@ class SudokuSolverTests: XCTestCase {
         XCTAssert(SudokuSolver.getBaseGridBasedOn(.romb).count == 81, "error")
     }
     
-    func testTwoRombsBoard() {
-        XCTAssert(SudokuSolver.getBaseGridBasedOn(.twoRombs).count == 81, "error")
+    func testShapeBoard() {
+        XCTAssert(SudokuSolver.getBaseGridBasedOn(.shape).count == 81, "error")
     }
     
 }

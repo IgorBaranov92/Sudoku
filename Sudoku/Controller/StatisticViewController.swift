@@ -81,6 +81,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         view.addSubview(eraseView)
         EraseViewConstraints.activate(eraseView, view)
         TutorialViewAnimator.show(eraseView)
+        buttons.forEach { $0.isUserInteractionEnabled = false }
     }
     
     @IBAction func changeStatisticBasedOnGameType(_ sender: UIButton) {
@@ -115,6 +116,11 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         statistic.scores[index] = Statistic.Scores()
         saveStatistic()
         tableView.reloadData()
+        buttons.forEach { $0.isUserInteractionEnabled = true }
+    }
+    
+    func eraseCanceled() {
+        buttons.forEach { $0.isUserInteractionEnabled = true }
     }
     
 }
