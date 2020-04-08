@@ -2,21 +2,21 @@ import UIKit
 
 class CellAnimator {
 
-    class func animate(_ button:UIButton) {
+    class func animate(_ view:UIView) {
         
         UIViewPropertyAnimator.runningPropertyAnimator(
-            withDuration: 2.0,
+            withDuration: Constants.durationForFillingRegionAnimation,
             delay: 0.0,
             options: .curveLinear,
             animations: {
-                button.backgroundColor = .red
+                view.backgroundColor = UIColor.selection
         }) {  if $0 == .end {
             UIViewPropertyAnimator.runningPropertyAnimator(
-                withDuration: 2.0,
+                withDuration: Constants.durationForFillingRegionAnimation,
                 delay: 0.0,
                 options: .curveLinear,
                 animations: {
-                    button.backgroundColor = .clear
+                    view.backgroundColor = .clear
             })
             }
             

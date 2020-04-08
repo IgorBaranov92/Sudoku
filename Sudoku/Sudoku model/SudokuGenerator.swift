@@ -5,9 +5,8 @@ class SudokuGenerator: Sudoku {
     var difficult: Difficult = .easy
     var gameType: GameType = .classic
     
-    var gameCompleted: Bool { digits.filter { $0 == 0 }.isEmpty } //all cells solved
+    private var gameCompleted: Bool { digits.filter { $0 == 0 }.isEmpty } //all cells solved
     var completion: (() -> () )?
-    var shouldRestartGame = false
     
     
     weak var delegate: SudokuDelegate?
@@ -48,7 +47,9 @@ class SudokuGenerator: Sudoku {
                 }
             }
             
-        } 
+        }  else { // correct
+            checkIfSomethingFilledAt(index)
+        }
         if gameCompleted {
             if delegate == nil { fatalError("delegate can't be nil")}
             delegate?.gameWon()
@@ -64,11 +65,11 @@ class SudokuGenerator: Sudoku {
     func highlightButtons(_ index:Int) -> [Int] {
         var indexes = [Int]()
         let coordinates = self[index]
-        let rowOffset = coordinates.row - coordinates.row%3
-        let columnOffset = coordinates.column - coordinates.column%3
+        let rowOffset = coordinates.column - coordinates.column%3
+        let columnOffset = coordinates.row - coordinates.row%3
         for i in 0..<dimension {
-            indexes.append(dimension*coordinates.column + i )
-            indexes.append(coordinates.row + dimension*i )
+            indexes.append(dimension*coordinates.row + i )
+            indexes.append(coordinates.column + dimension*i )
             if gameType != .shape {
                 indexes.append(columnOffset*dimension + rowOffset + i/3*dimension + i%3)
             }
@@ -124,21 +125,22 @@ class SudokuGenerator: Sudoku {
         if hintsMade < hints  {
             if digits[index] == 0 {
                 digits[index] = answers[index]
+                checkIfSomethingFilledAt(index)
                 digitsCount[digits[index]] = digitsCount[digits[index]]! + 1
                 hintsMade += 1
                 if gameCompleted { delegate?.gameWon()}
             }
+        } else {
+            delegate?.hintsLimitUsed()
         }
     }
 
 
     private func generate() {
-        let firstRow = [9,8,7,6,5,4,3,2,1]
-        digits = firstRow + Array(repeating: 0, count: 72)
         digits = SudokuSolver.getBaseGridBasedOn(gameType)
         replaceDigits()
-//        removeDigits()
-      //  calculateDigits()
+        removeDigits()
+        calculateDigits()
         completion?()
     }
     
@@ -182,10 +184,42 @@ class SudokuGenerator: Sudoku {
         answers.removeAll()
         digitsCount.removeAll()
         mistakesMade.removeAll()
-        shouldRestartGame = false
+    }
+    
+    // MARK: - Delegation
+    
+    private func checkIfSomethingFilledAt(_ index:Int) {
+        checkIfRowFilledAt(index)
+        checkIfColumnFilledAt(index)
+        checkIfBlockFilledAt(index)
+        checkIfDiagonalFilledAt(index)
     }
     
     
+    private func checkIfRowFilledAt(_ index:Int) {
+        let coordinates = self[index]
+        var indexes = [Int]()
+        for column in 0...8 {
+            if self[coordinates.row,column] != 0 {
+                indexes.append(Sudoku[coordinates.row,column])
+            }
+        }
+        if indexes.count == 9 {
+            delegate?.animateRowWith(indexes)
+        }
+    }
+    
+    private func checkIfColumnFilledAt(_ index:Int) {
+        
+    }
+    
+    private func checkIfBlockFilledAt(_ index:Int) {
+        
+    }
+    
+    private func checkIfDiagonalFilledAt(_ index:Int) {
+        
+    }
     
     // persistence
     
@@ -223,8 +257,6 @@ class SudokuGenerator: Sudoku {
         case digits = "digits"
         case answers = "answers"
         case digitsCount = "digitsCount"
-        case expert = "expert"
-        case timer = "timer"
     }
    
 }

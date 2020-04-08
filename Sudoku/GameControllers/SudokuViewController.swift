@@ -237,21 +237,38 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     }
     
     func animateRowWith(_ indexes: [Int]) {
-//        indexes.forEach {
-//            let cell = cells[$0]
-//        }
+        print(indexes)
+        animatedAt(indexes)
     }
     
     func animateLineWith(_ indexes: [Int]) {
-//        indexes.forEach {
-//            let cell = cells[$0]
-//        }
+        print(indexes)
+
     }
     
     func animateBlockWith(_ indexes: [Int]) {
-//        indexes.forEach {
-//            let cell = cells[$0]
-//        }
+        print(indexes)
+
+    }
+    
+    private func animatedAt(_ indexes:[Int]) {
+        indexes.forEach {
+            cells[$0].active = false
+            cells[$0].hinted = false
+            cells[$0].highlight = false
+            let frame = cells[$0].convert(cells[$0].bounds, to: view)
+            let customView = UIView(frame: frame)
+            customView.backgroundColor = .clear
+            view.insertSubview(customView, at: 0)
+            CellAnimator.animate(customView)
+        }
+    }
+    
+    func hintsLimitUsed() {
+        guard let selectedButton = selectedButton else { return }
+        let center = selectedButton.convert(selectedButton.bounds.center, to: stackView)
+        let pivot = stackView.convert(center, to: view)
+        showErrorAt(pivot, message: localized("ErrorHintsLimit"))
     }
  
     // MARK: - Restoring and saving games

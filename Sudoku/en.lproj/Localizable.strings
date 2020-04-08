@@ -4,6 +4,7 @@
 
 "ErrorFilled" = "Can't solve native cell";
 
+"ErrorHintsLimit" = "Hints limit exceeded";
 
 "classicRules" = "Заполните игровое поле так чтобы:\n -в каждой строке\n -в каждом столбце\n -в каждом квадрате 3х3\n\n все цифры были разные";
 

@@ -17,18 +17,18 @@ class Sudoku: Codable {
     
     subscript(_ i:Int,_ j:Int) -> Int {
        set {
-           digits[j*dimension+i] = newValue
+           digits[i*dimension+j] = newValue
        } get {
-           return digits[j*dimension+i]
+           return digits[i*dimension+j]
        }
    }
    
     static subscript(_ i:Int,_ j:Int) -> Int {
-        return j*8+i
+        return i*9+j
     }
     
     subscript(_ index:Int) -> (row:Int,column:Int) {
-       return (index%dimension,index/dimension)
+       return (index/dimension,index%dimension)
    }
           
     
