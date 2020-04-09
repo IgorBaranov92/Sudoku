@@ -121,7 +121,7 @@ class SudokuGenerator: Sudoku {
         return output
     }
     
-    func hint(index:Int) {
+    func canHint(index:Int) -> Bool {
         if hintsMade < hints  {
             if digits[index] == 0 {
                 digits[index] = answers[index]
@@ -130,8 +130,10 @@ class SudokuGenerator: Sudoku {
                 hintsMade += 1
                 if gameCompleted { delegate?.gameWon()}
             }
+            return true
         } else {
             delegate?.hintsLimitUsed()
+            return false
         }
     }
 

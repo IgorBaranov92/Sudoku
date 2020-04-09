@@ -25,7 +25,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     private var hasActiveButton: Bool?
 
-    private var index: Int { return difficultChooser.selectedSegmentIndex }
+    private var gameIndex: Int { return difficultChooser.selectedSegmentIndex }
     
     // MARK: - ViewController lifecycle
     
@@ -93,7 +93,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
             if digit == sudoku.answers[index] { //right digit
                 selectedButton.setTitleColor(.text, for: .normal)
             } else { //mistake
-                statistic.scores[gameType.rawValue].scores[index][0] += 1
+                statistic.scores[gameType.rawValue].scores[gameIndex][0] += 1
                 saveStatistic()
                 if options.options[1] {
                     selectedButton.setTitleColor(.orange, for: .normal)
@@ -118,14 +118,15 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
             let pivot = stackView.convert(center, to: view)
             showErrorAt(pivot, message: localized("ErrorFilled"))
         } else { // empty cell, please hint me
-            sudoku.hint(index: index)
-            TextAppearenceAnimator.show(cells[index], string: String(sudoku.answers[index]))
-            updateLabels()
-            hideDigitIfPossible()
-            hasActiveButton = nil
-            saveGame()
-            statistic.scores[gameType.rawValue].scores[index][1] += 1
-            saveStatistic()
+            if sudoku.canHint(index: index) {
+                TextAppearenceAnimator.show(cells[index], string: String(sudoku.answers[index]))
+                updateLabels()
+                hideDigitIfPossible()
+                hasActiveButton = nil
+                saveGame()
+                statistic.scores[gameType.rawValue].scores[gameIndex][1] += 1
+                saveStatistic()
+            }
         }
         
     }
@@ -221,7 +222,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         view.addSubview(victory)
         TutorialViewConstraint.activate(victory, self.view)
         TutorialViewAnimator.show(victory)
-        statistic.scores[gameType.rawValue].scores[index][2] += 1
+        statistic.scores[gameType.rawValue].scores[gameIndex][2] += 1
         saveStatistic()
     }
     
@@ -230,7 +231,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         alert.addAction(UIAlertAction(title: "New game", style: .default, handler: { action in
             self.newGame()
         }))
-        statistic.scores[gameType.rawValue].scores[index][3] += 1
+        statistic.scores[gameType.rawValue].scores[gameIndex][3] += 1
         saveStatistic()
         present(alert, animated: true)
     }
