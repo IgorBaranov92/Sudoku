@@ -33,17 +33,21 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(clear)))
-        NotificationCenter.default.addObserver(self, selector: #selector(saveGame), name: UIApplication.willResignActiveNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateBoard), name: UIApplication.willEnterForegroundNotification, object: nil)
-        restoreOptions()
-        restoreStatistic()
+//        NotificationCenter.default.addObserver(self, selector: #selector(saveGame), name: UIApplication.willResignActiveNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(updateBoard), name: UIApplication.willEnterForegroundNotification, object: nil)
+//        restoreOptions()
+//        restoreStatistic()
         recreateGameIfNeeded()
     }
 
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         saveGame()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+//        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - IBActions
@@ -324,7 +328,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         view.isUserInteractionEnabled = true
         sudoku = SudokuGenerator(difficult: 0,gameType:gameType,delegate: self) { // game created
                                         DispatchQueue.main.async { [weak self] in
-                                            self?.saveGame()
+//                                            self?.saveGame()
                                             self?.updateUI()
             }}
 

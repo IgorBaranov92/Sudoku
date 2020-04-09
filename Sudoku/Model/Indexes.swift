@@ -69,10 +69,10 @@ struct Indexes {
         let columnOffset = coordinates.row - coordinates.row%3
         if gameType != .shape {
             for i in 0...8 {
-                    indexes.append(columnOffset*9 + rowOffset + i/3*9 + i%3)
+                indexes.append(columnOffset*9 + rowOffset + i/3*9 + i%3)
             }
         } else {
-            
+            indexes = ShapeSudoku.returnRightIndexesBasedOn(index)
         }
         return indexes
     }

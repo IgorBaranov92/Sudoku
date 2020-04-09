@@ -6,8 +6,8 @@ class SudokuGenerator: Sudoku {
     var gameType: GameType = .classic
     
     private var gameCompleted: Bool { digits.filter { $0 == 0 }.isEmpty } //all cells solved
-    var completion: (() -> () )?
     
+    var completion: (() -> () )?
     
     weak var delegate: SudokuDelegate?
     
@@ -19,7 +19,7 @@ class SudokuGenerator: Sudoku {
           
     init(difficult:Int,gameType:GameType, delegate: SudokuDelegate? = nil,completion:(() -> ())? = nil  ) {
         super.init()
-        DispatchQueue.global(qos: .userInitiated).async {
+        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
             self.delegate = delegate
             self.gameType = gameType
             self.completion = completion
