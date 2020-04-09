@@ -20,7 +20,7 @@ struct Constants {
     static let cornerRadiusForNoButton = 10
     static let cornerRadiusForYesButton = 10
     
-    static let durationForFillingRegionAnimation = 2.0
+    static let durationForFillingRegionAnimation = 1.0
     
 }
 

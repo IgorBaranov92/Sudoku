@@ -5,12 +5,10 @@ class Cell: BorderedCell {
     
     var active = false { didSet { setNeedsDisplay() }}
     var highlight = false { didSet { setNeedsDisplay() }}
-    var hinted = false { didSet { setNeedsDisplay() }}
-    
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        if active || hinted {
+        if active {
             let path = UIBezierPath(rect: rect)
             UIColor.selection.setFill()
             path.fill()

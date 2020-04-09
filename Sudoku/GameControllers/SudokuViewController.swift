@@ -76,7 +76,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         guard let digit = Int(title) else { return }
         guard hasActiveButton != nil else {
             reset(full:false)
-            sudoku.highlightAllButtonsBasedOn(digit: digit).active.forEach { cells[$0].hinted = true }
+            sudoku.highlightAllButtonsBasedOn(digit: digit).active.forEach { cells[$0].active = true }
             if options.options[3] {
                 sudoku.highlightAllButtonsBasedOn(digit: digit).related.forEach { cells[$0].highlight = true }
             }
@@ -197,7 +197,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         cells.forEach {
             $0.active = false
             $0.highlight = false
-            $0.hinted = false
             if full {
                 $0.setTitle("", for: .normal)
                 $0.setTitleColor(.text, for: .normal)
@@ -237,28 +236,23 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     }
     
     func animateRowWith(_ indexes: [Int]) {
-        print(indexes)
         animatedAt(indexes)
     }
     
     func animateLineWith(_ indexes: [Int]) {
-        print(indexes)
-
+        animatedAt(indexes)
     }
     
     func animateBlockWith(_ indexes: [Int]) {
-        print(indexes)
-
+        animatedAt(indexes)
     }
     
     private func animatedAt(_ indexes:[Int]) {
+        reset(full: false)
         indexes.forEach {
-            cells[$0].active = false
-            cells[$0].hinted = false
-            cells[$0].highlight = false
             let frame = cells[$0].convert(cells[$0].bounds, to: view)
             let customView = UIView(frame: frame)
-            customView.backgroundColor = .clear
+            customView.backgroundColor = .selection
             view.insertSubview(customView, at: 0)
             CellAnimator.animate(customView)
         }

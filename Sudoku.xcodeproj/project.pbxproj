@@ -13,7 +13,6 @@
 		78181F0523E5BD9C00836109 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78181F0323E5BD9C00836109 /* LaunchScreen.storyboard */; };
 		78181F1023E5BE2A00836109 /* SudokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78181F0F23E5BE2A00836109 /* SudokuViewController.swift */; };
 		78181F1223E5BE3300836109 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78181F1123E5BE3300836109 /* Cell.swift */; };
-		78181F1423E5C7F000836109 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78181F1323E5C7F000836109 /* Extensions.swift */; };
 		782239CB2420D967004E7D35 /* TriangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782239CA2420D967004E7D35 /* TriangleView.swift */; };
 		782239CD2420ECF7004E7D35 /* ShrinkableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782239CC2420ECF7004E7D35 /* ShrinkableButton.swift */; };
 		782239DB242133EF004E7D35 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782239DA242133EF004E7D35 /* Options.swift */; };
@@ -32,6 +31,13 @@
 		7862E4F7242A604C0030F8E8 /* NoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F6242A604B0030F8E8 /* NoButton.swift */; };
 		7862E4F9242A60550030F8E8 /* YesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F8242A60550030F8E8 /* YesButton.swift */; };
 		7862EC8323F2F4CE00399263 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862EC8223F2F4CD00399263 /* GameViewController.swift */; };
+		786BC689243F3E4D00D42553 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC688243F3E4D00D42553 /* Protocols.swift */; };
+		786BC68B243F3EC300D42553 /* CALayer+Layers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC68A243F3EC300D42553 /* CALayer+Layers.swift */; };
+		786BC68D243F3F5000D42553 /* UIDevice+device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC68C243F3F5000D42553 /* UIDevice+device.swift */; };
+		786BC68F243F3F6F00D42553 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC68E243F3F6F00D42553 /* Global.swift */; };
+		786BC691243F3F8700D42553 /* UIView+layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC690243F3F8700D42553 /* UIView+layer.swift */; };
+		786BC693243F3FB500D42553 /* CGRect+rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC692243F3FB500D42553 /* CGRect+rects.swift */; };
+		786BC695243F3FCB00D42553 /* Array+unique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC694243F3FCB00D42553 /* Array+unique.swift */; };
 		7876D3AC2438B6C900FEA18D /* ShapeSudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876D3AB2438B6C900FEA18D /* ShapeSudoku.swift */; };
 		7877D1B923ED95B000E43314 /* BorderedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7877D1B823ED95B000E43314 /* BorderedCell.swift */; };
 		78810CCA241F90B6002828E2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78810CC9241F90B6002828E2 /* MessageView.swift */; };
@@ -84,7 +90,6 @@
 		78181F0623E5BD9C00836109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78181F0F23E5BE2A00836109 /* SudokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuViewController.swift; sourceTree = "<group>"; };
 		78181F1123E5BE3300836109 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		78181F1323E5C7F000836109 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		782239CA2420D967004E7D35 /* TriangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriangleView.swift; sourceTree = "<group>"; };
 		782239CC2420ECF7004E7D35 /* ShrinkableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShrinkableButton.swift; sourceTree = "<group>"; };
 		782239DA242133EF004E7D35 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
@@ -107,6 +112,13 @@
 		7862E4F6242A604B0030F8E8 /* NoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoButton.swift; sourceTree = "<group>"; };
 		7862E4F8242A60550030F8E8 /* YesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesButton.swift; sourceTree = "<group>"; };
 		7862EC8223F2F4CD00399263 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		786BC688243F3E4D00D42553 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		786BC68A243F3EC300D42553 /* CALayer+Layers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Layers.swift"; sourceTree = "<group>"; };
+		786BC68C243F3F5000D42553 /* UIDevice+device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+device.swift"; sourceTree = "<group>"; };
+		786BC68E243F3F6F00D42553 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		786BC690243F3F8700D42553 /* UIView+layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layer.swift"; sourceTree = "<group>"; };
+		786BC692243F3FB500D42553 /* CGRect+rects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+rects.swift"; sourceTree = "<group>"; };
+		786BC694243F3FCB00D42553 /* Array+unique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+unique.swift"; sourceTree = "<group>"; };
 		7876D3AB2438B6C900FEA18D /* ShapeSudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSudoku.swift; sourceTree = "<group>"; };
 		7877D1B823ED95B000E43314 /* BorderedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedCell.swift; sourceTree = "<group>"; };
 		78810CC9241F90B6002828E2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -196,6 +208,7 @@
 				78294FD6241BACDA00854A97 /* GameControllers */,
 				7862EC8423F2F4D300399263 /* Controller */,
 				788CDC8024223ACA00420F9B /* TableViewCell */,
+				786BC687243F3E3B00D42553 /* Extensions */,
 				78181F0C23E5BDCA00836109 /* Misc */,
 			);
 			path = Sudoku;
@@ -205,9 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				78181EF823E5BD9B00836109 /* AppDelegate.swift */,
-				78181F1323E5C7F000836109 /* Extensions.swift */,
+				786BC688243F3E4D00D42553 /* Protocols.swift */,
 				78294FD0241B93A700854A97 /* Constants.swift */,
-				788CDC8D242345D800420F9B /* UIColor+Colors.swift */,
 				78181F0123E5BD9C00836109 /* Assets.xcassets */,
 				78181F0323E5BD9C00836109 /* LaunchScreen.storyboard */,
 				78181F0623E5BD9C00836109 /* Info.plist */,
@@ -277,6 +289,20 @@
 				78C9B5E7241D08BC00E1DB7A /* StatisticViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		786BC687243F3E3B00D42553 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				788CDC8D242345D800420F9B /* UIColor+Colors.swift */,
+				786BC68A243F3EC300D42553 /* CALayer+Layers.swift */,
+				786BC68C243F3F5000D42553 /* UIDevice+device.swift */,
+				786BC690243F3F8700D42553 /* UIView+layer.swift */,
+				786BC692243F3FB500D42553 /* CGRect+rects.swift */,
+				786BC694243F3FCB00D42553 /* Array+unique.swift */,
+				786BC68E243F3F6F00D42553 /* Global.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7883A1C2241D2BBB00ECB3FD /* Constraints */ = {
@@ -472,12 +498,13 @@
 				788CDC8A2422745900420F9B /* CellAnimator.swift in Sources */,
 				785C734323F1957A00757B0E /* SudokuGenerator.swift in Sources */,
 				788CDC8E242345D800420F9B /* UIColor+Colors.swift in Sources */,
+				786BC689243F3E4D00D42553 /* Protocols.swift in Sources */,
 				7891FA80241A2F3D003BF6BA /* MainViewController.swift in Sources */,
-				78181F1423E5C7F000836109 /* Extensions.swift in Sources */,
 				782239CD2420ECF7004E7D35 /* ShrinkableButton.swift in Sources */,
 				78C9B5E8241D08BC00E1DB7A /* StatisticViewController.swift in Sources */,
 				782239CB2420D967004E7D35 /* TriangleView.swift in Sources */,
 				78294FD1241B93A700854A97 /* Constants.swift in Sources */,
+				786BC68F243F3F6F00D42553 /* Global.swift in Sources */,
 				78181F1023E5BE2A00836109 /* SudokuViewController.swift in Sources */,
 				7895216B241A431C004F8C1C /* BackButton.swift in Sources */,
 				785C734123F192A000757B0E /* SudokuSolver.swift in Sources */,
@@ -495,11 +522,16 @@
 				788CDC882422638E00420F9B /* StatisticTableViewCell.swift in Sources */,
 				78C9B5E6241D08A500E1DB7A /* OptionsViewController.swift in Sources */,
 				78181F1223E5BE3300836109 /* Cell.swift in Sources */,
+				786BC68D243F3F5000D42553 /* UIDevice+device.swift in Sources */,
 				78B9B144243B6FB200024738 /* InfoView.swift in Sources */,
+				786BC691243F3F8700D42553 /* UIView+layer.swift in Sources */,
 				7883A1CF241D43AC00ECB3FD /* FinishGameView.swift in Sources */,
+				786BC695243F3FCB00D42553 /* Array+unique.swift in Sources */,
 				7896973F241A321B0054397E /* DiagonalCell.swift in Sources */,
+				786BC68B243F3EC300D42553 /* CALayer+Layers.swift in Sources */,
 				788CDC8624225DAB00420F9B /* TimerCounter.swift in Sources */,
 				788CDC8C24233DD200420F9B /* TextAppearenceAnimator.swift in Sources */,
+				786BC693243F3FB500D42553 /* CGRect+rects.swift in Sources */,
 				78181EF923E5BD9B00836109 /* AppDelegate.swift in Sources */,
 				7862E4F7242A604C0030F8E8 /* NoButton.swift in Sources */,
 				7876D3AC2438B6C900FEA18D /* ShapeSudoku.swift in Sources */,

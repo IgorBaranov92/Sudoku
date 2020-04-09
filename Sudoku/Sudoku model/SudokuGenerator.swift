@@ -210,11 +210,24 @@ class SudokuGenerator: Sudoku {
     }
     
     private func checkIfColumnFilledAt(_ index:Int) {
-        
+        let coordinates = self[index]
+        var indexes = [Int]()
+        for row in 0...8 {
+            if self[row,coordinates.column] != 0 {
+                indexes.append(Sudoku[row,coordinates.column])
+            }
+        }
+        if indexes.count == 9 {
+            delegate?.animateLineWith(indexes)
+        }
     }
     
     private func checkIfBlockFilledAt(_ index:Int) {
-        
+        if gameType != .shape {
+            
+        } else {
+            
+        }
     }
     
     private func checkIfDiagonalFilledAt(_ index:Int) {
