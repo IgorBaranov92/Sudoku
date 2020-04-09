@@ -9,21 +9,10 @@ struct Statistic: Codable {
     
     static let difficult = [localized("easy"),localized("medium"),localized("hard")]
     
-    var scores = Array(repeating: Scores(), count: 6)
+    var scores = Array(repeating: Scores(), count: 5)
         
     var json: Data? { try? JSONEncoder().encode(self) }
-    
-    
-    struct Scores: Codable {
 
-        var scores = [[0,0,0,0],[0,0,0,0],[0,0,0,0]]
-        
-        let descriptions = [localized("mistakesMade"),localized("hintsUsed"),localized("gameWon"),localized("gameLost")]
-        
-        
-        
-    }
-     
     init() {}
     
     init?(json:Data){
@@ -31,14 +20,15 @@ struct Statistic: Codable {
             self = newValue
         }
     }
+ 
+    struct Scores: Codable {
+
+        var scores = [[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+        
+        let descriptions = [localized("mistakesMade"),localized("hintsUsed"),localized("gameWon"),localized("gameLost")]
+    }
     
 }
 
 
-enum GameType: Int,Codable {
-    case classic = 0
-    case diagonal = 1
-    case twoDiagonals = 2
-    case romb = 3
-    case shape = 4
-}
+

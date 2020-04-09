@@ -45,7 +45,6 @@
 		7883A1C9241D3D9200ECB3FD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7883A1CB241D3D9200ECB3FD /* Localizable.strings */; };
 		7883A1CF241D43AC00ECB3FD /* FinishGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7883A1CE241D43AC00ECB3FD /* FinishGameView.swift */; };
 		788CDC7F2422373900420F9B /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CDC7E2422373900420F9B /* Statistic.swift */; };
-		788CDC8624225DAB00420F9B /* TimerCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CDC8524225DAB00420F9B /* TimerCounter.swift */; };
 		788CDC882422638E00420F9B /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CDC872422638E00420F9B /* StatisticTableViewCell.swift */; };
 		788CDC8A2422745900420F9B /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CDC892422745900420F9B /* CellAnimator.swift */; };
 		788CDC8C24233DD200420F9B /* TextAppearenceAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CDC8B24233DD200420F9B /* TextAppearenceAnimator.swift */; };
@@ -129,7 +128,6 @@
 		7883A1CD241D3D9C00ECB3FD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7883A1CE241D43AC00ECB3FD /* FinishGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGameView.swift; sourceTree = "<group>"; };
 		788CDC7E2422373900420F9B /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
-		788CDC8524225DAB00420F9B /* TimerCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCounter.swift; sourceTree = "<group>"; };
 		788CDC872422638E00420F9B /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatisticTableViewCell.swift; path = Sudoku/Model/StatisticTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		788CDC892422745900420F9B /* CellAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
 		788CDC8B24233DD200420F9B /* TextAppearenceAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAppearenceAnimator.swift; sourceTree = "<group>"; };
@@ -242,7 +240,6 @@
 				785C734623F19EBC00757B0E /* Game.swift */,
 				782239DA242133EF004E7D35 /* Options.swift */,
 				788CDC7E2422373900420F9B /* Statistic.swift */,
-				788CDC8524225DAB00420F9B /* TimerCounter.swift */,
 				78EABF39242E296B00EF9A1E /* Rules.swift */,
 			);
 			path = Model;
@@ -529,7 +526,6 @@
 				786BC695243F3FCB00D42553 /* Array+unique.swift in Sources */,
 				7896973F241A321B0054397E /* DiagonalCell.swift in Sources */,
 				786BC68B243F3EC300D42553 /* CALayer+Layers.swift in Sources */,
-				788CDC8624225DAB00420F9B /* TimerCounter.swift in Sources */,
 				788CDC8C24233DD200420F9B /* TextAppearenceAnimator.swift in Sources */,
 				786BC693243F3FB500D42553 /* CGRect+rects.swift in Sources */,
 				78181EF923E5BD9B00836109 /* AppDelegate.swift in Sources */,

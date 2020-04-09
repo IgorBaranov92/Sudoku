@@ -676,10 +676,10 @@
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5M-Sd-okg" customClass="BackButton" customModule="Sudoku" customModuleProvider="target">
-                                <rect key="frame" x="10" y="52" width="30" height="30"/>
+                                <rect key="frame" x="10" y="52" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="0TL-iC-NE2"/>
-                                    <constraint firstAttribute="width" constant="30" id="S3d-La-hEa"/>
+                                    <constraint firstAttribute="height" constant="40" id="0TL-iC-NE2"/>
+                                    <constraint firstAttribute="width" constant="40" id="S3d-La-hEa"/>
                                 </constraints>
                                 <connections>
                                     <action selector="done:" destination="Lkk-ZP-3QW" eventType="touchUpInside" id="g9S-gY-ZXf"/>
@@ -2097,10 +2097,10 @@
                                 <variation key="heightClass=regular-widthClass=regular" spacing="20"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGi-4k-JcQ" customClass="BackButton" customModule="Sudoku" customModuleProvider="target">
-                                <rect key="frame" x="10" y="52" width="30" height="30"/>
+                                <rect key="frame" x="10" y="52" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="rsh-ZC-lAC"/>
-                                    <constraint firstAttribute="width" constant="30" id="z7b-Rw-UwK"/>
+                                    <constraint firstAttribute="height" constant="40" id="rsh-ZC-lAC"/>
+                                    <constraint firstAttribute="width" constant="40" id="z7b-Rw-UwK"/>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -3861,10 +3861,10 @@
                                 <variation key="heightClass=regular-widthClass=regular" spacing="20"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y01-E6-ZSJ" customClass="BackButton" customModule="Sudoku" customModuleProvider="target">
-                                <rect key="frame" x="10" y="52" width="30" height="30"/>
+                                <rect key="frame" x="10" y="52" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="h4X-hB-1Dq"/>
-                                    <constraint firstAttribute="width" constant="30" id="u6R-5P-diX"/>
+                                    <constraint firstAttribute="height" constant="40" id="h4X-hB-1Dq"/>
+                                    <constraint firstAttribute="width" constant="40" id="u6R-5P-diX"/>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -5624,10 +5624,10 @@
                                 <variation key="heightClass=compact" axis="vertical" spacing="15"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gb-AP-XD6" customClass="BackButton" customModule="Sudoku" customModuleProvider="target">
-                                <rect key="frame" x="10" y="52" width="30" height="30"/>
+                                <rect key="frame" x="10" y="52" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="9rU-3j-A77"/>
-                                    <constraint firstAttribute="height" constant="30" id="ugG-HW-HzT"/>
+                                    <constraint firstAttribute="width" constant="40" id="9rU-3j-A77"/>
+                                    <constraint firstAttribute="height" constant="40" id="ugG-HW-HzT"/>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -5669,7 +5669,7 @@
                             <constraint firstItem="jG0-sl-qWi" firstAttribute="centerY" secondItem="1gO-ca-xfq" secondAttribute="centerY" id="bfu-uR-uRh"/>
                             <constraint firstItem="9bn-Jp-OYf" firstAttribute="top" secondItem="1vd-YN-xa5" secondAttribute="bottom" id="dJC-Wc-ecg"/>
                             <constraint firstAttribute="trailing" secondItem="1vd-YN-xa5" secondAttribute="trailing" constant="16" id="e14-HJ-R6S"/>
-                            <constraint firstItem="5Gb-AP-XD6" firstAttribute="top" secondItem="gyd-hM-f8R" secondAttribute="bottom" constant="20" symbolic="YES" id="e9Y-HH-C8m"/>
+                            <constraint firstItem="5Gb-AP-XD6" firstAttribute="top" secondItem="gyd-hM-f8R" secondAttribute="bottom" constant="8" symbolic="YES" id="e9Y-HH-C8m"/>
                             <constraint firstItem="REX-wb-A4z" firstAttribute="leading" secondItem="1gO-ca-xfq" secondAttribute="leading" constant="16" id="hrA-Dh-neq"/>
                             <constraint firstItem="jG0-sl-qWi" firstAttribute="top" secondItem="gyd-hM-f8R" secondAttribute="bottom" constant="10" id="iCI-Xp-upr"/>
                             <constraint firstItem="REX-wb-A4z" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1gO-ca-xfq" secondAttribute="leading" id="rgj-wq-7tq"/>
@@ -7322,10 +7322,10 @@
                                 <variation key="heightClass=compact" axis="vertical" spacing="15"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPJ-S4-FZT" customClass="BackButton" customModule="Sudoku" customModuleProvider="target">
-                                <rect key="frame" x="10" y="52" width="30" height="30"/>
+                                <rect key="frame" x="10" y="52" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="QOB-QJ-jvs"/>
-                                    <constraint firstAttribute="width" constant="30" id="sUa-Xd-XcM"/>
+                                    <constraint firstAttribute="height" constant="40" id="QOB-QJ-jvs"/>
+                                    <constraint firstAttribute="width" constant="40" id="sUa-Xd-XcM"/>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -7370,7 +7370,7 @@
                             <constraint firstItem="Npj-NW-VQX" firstAttribute="centerX" secondItem="tYB-lP-TMV" secondAttribute="centerX" id="ZRU-0r-s9a"/>
                             <constraint firstItem="p7r-Xl-dUm" firstAttribute="top" secondItem="lKO-5t-GU3" secondAttribute="bottom" constant="10" id="Zg8-xl-YBf"/>
                             <constraint firstItem="8B6-3h-XHe" firstAttribute="centerX" secondItem="tYB-lP-TMV" secondAttribute="centerX" id="czP-QL-So5"/>
-                            <constraint firstItem="wPJ-S4-FZT" firstAttribute="top" secondItem="dR0-86-5Al" secondAttribute="bottom" constant="20" symbolic="YES" id="dDp-sL-ECn"/>
+                            <constraint firstItem="wPJ-S4-FZT" firstAttribute="top" secondItem="dR0-86-5Al" secondAttribute="bottom" constant="8" symbolic="YES" id="dDp-sL-ECn"/>
                             <constraint firstItem="8B6-3h-XHe" firstAttribute="leading" secondItem="tYB-lP-TMV" secondAttribute="leading" constant="16" id="fvh-85-3hy"/>
                             <constraint firstItem="L7G-4j-x0d" firstAttribute="top" secondItem="Npj-NW-VQX" secondAttribute="bottom" constant="8" symbolic="YES" id="hoe-1V-Aei"/>
                             <constraint firstItem="8B6-3h-XHe" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="p7r-Xl-dUm" secondAttribute="top" id="iPa-fT-eAw"/>
@@ -9065,10 +9065,10 @@
                                 <variation key="heightClass=compact" axis="vertical" spacing="15"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtm-E5-d52" customClass="BackButton" customModule="Sudoku" customModuleProvider="target">
-                                <rect key="frame" x="10" y="52" width="30" height="30"/>
+                                <rect key="frame" x="10" y="52" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="B8a-zT-5cY"/>
-                                    <constraint firstAttribute="width" constant="30" id="geC-rc-wCa"/>
+                                    <constraint firstAttribute="height" constant="40" id="B8a-zT-5cY"/>
+                                    <constraint firstAttribute="width" constant="40" id="geC-rc-wCa"/>
                                 </constraints>
                                 <state key="normal">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
