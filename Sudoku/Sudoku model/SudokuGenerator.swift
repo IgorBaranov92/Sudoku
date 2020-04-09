@@ -169,48 +169,18 @@ class SudokuGenerator: Sudoku {
     
     
     private func checkIfRowFilledAt(_ index:Int) {
-        let coordinates = self[index]
-        var indexes = [Int]()
-        for column in 0...8 {
-            if self[coordinates.row,column] != 0 {
-                indexes.append(Sudoku[coordinates.row,column])
-            }
-        }
-        if indexes.count == 9 {
-            delegate?.animateRowWith(indexes)
-        }
+        let indexes = Indexes.lineIndexesAt(index).filter { digits[$0] != 0 }
+        if indexes.count == 9 { delegate?.animateRowWith(indexes) }
     }
     
     private func checkIfColumnFilledAt(_ index:Int) {
-        let coordinates = self[index]
-        var indexes = [Int]()
-        for row in 0...8 {
-            if self[row,coordinates.column] != 0 {
-                indexes.append(Sudoku[row,coordinates.column])
-            }
-        }
-        if indexes.count == 9 {
-            delegate?.animateLineWith(indexes)
-        }
+        let indexes = Indexes.columnIndexesAt(index).filter { digits[$0] != 0 }
+        if indexes.count == 9 { delegate?.animateLineWith(indexes) }
     }
     
     private func checkIfBlockFilledAt(_ index:Int) {
-        let coordinates = self[index]
-        var indexes = [Int]()
-        let rowOffset = coordinates.column - coordinates.column%3
-        let columnOffset = coordinates.row - coordinates.row%3
-        if gameType != .shape {
-            for i in 0..<dimension {
-                if digits[columnOffset*dimension + rowOffset + i/3*dimension + i%3] != 0 {
-                    indexes.append(columnOffset*dimension + rowOffset + i/3*dimension + i%3)
-                }
-            }
-        } else {
-            
-        }
-        if indexes.count == 9 {
-            delegate?.animateBlockWith(indexes)
-        }
+        let indexes = Indexes.blockIndexesAt(index, gameType: gameType).filter { digits[$0] != 0 }
+        if indexes.count == 9 { delegate?.animateBlockWith(indexes) }
     }
     
     private func checkIfDiagonalFilledAt(_ index:Int) {

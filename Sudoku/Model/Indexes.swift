@@ -42,4 +42,39 @@ struct Indexes {
         return (firstIndexes,secondIndexes)
     }
     
+    
+    static func lineIndexesAt(_ index:Int) -> [Int] {
+        let coordinates = Sudoku[index]
+        var indexes = [Int]()
+        for column in 0...8 {
+                indexes.append(Sudoku[coordinates.row,column])
+        }
+        return indexes
+    }
+    
+    
+    static func columnIndexesAt(_ index:Int) -> [Int] {
+        let coordinates = Sudoku[index]
+        var indexes = [Int]()
+        for row in 0...8 {
+            indexes.append(Sudoku[row,coordinates.column])
+        }
+        return indexes
+    }
+    
+    static func blockIndexesAt(_ index:Int,gameType:GameType) -> [Int] {
+        let coordinates = Sudoku[index]
+        var indexes = [Int]()
+        let rowOffset = coordinates.column - coordinates.column%3
+        let columnOffset = coordinates.row - coordinates.row%3
+        if gameType != .shape {
+            for i in 0...8 {
+                    indexes.append(columnOffset*9 + rowOffset + i/3*9 + i%3)
+            }
+        } else {
+            
+        }
+        return indexes
+    }
+    
 }
