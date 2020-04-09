@@ -43,7 +43,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-   //     timer?.invalidate()
         saveGame()
     }
     

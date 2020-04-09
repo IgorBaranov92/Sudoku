@@ -30,7 +30,10 @@ class Sudoku: Codable {
     subscript(_ index:Int) -> (row:Int,column:Int) {
        return (index/dimension,index%dimension)
    }
-          
+    
+    static subscript(_ index:Int) -> (row:Int,column:Int) {
+        return (index/9,index%9)
+    }
     
     
 }
