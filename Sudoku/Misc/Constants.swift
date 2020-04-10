@@ -22,5 +22,8 @@ struct Constants {
     
     static let durationForFillingRegionAnimation = 1.0
     
+    static let lineWidth: CGFloat = 0.25
+    static let doubleLineWidth: CGFloat = 2.0
+    
 }
 

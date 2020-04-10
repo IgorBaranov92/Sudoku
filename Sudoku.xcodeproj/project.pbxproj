@@ -39,6 +39,9 @@
 		786BC693243F3FB500D42553 /* CGRect+rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC692243F3FB500D42553 /* CGRect+rects.swift */; };
 		786BC695243F3FCB00D42553 /* Array+unique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC694243F3FCB00D42553 /* Array+unique.swift */; };
 		786BC697243F656100D42553 /* Indexes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC696243F656100D42553 /* Indexes.swift */; };
+		7871BBB82440E14700A6FF81 /* ShapeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871BBB72440E14700A6FF81 /* ShapeSelectionViewController.swift */; };
+		7871BBBA2440E1B700A6FF81 /* ShapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871BBB92440E1B700A6FF81 /* ShapeCollectionViewCell.swift */; };
+		7871BBBD2440E1D700A6FF81 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871BBBC2440E1D700A6FF81 /* ShapeView.swift */; };
 		7876D3AC2438B6C900FEA18D /* ShapeSudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876D3AB2438B6C900FEA18D /* ShapeSudoku.swift */; };
 		7877D1B923ED95B000E43314 /* BorderedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7877D1B823ED95B000E43314 /* BorderedCell.swift */; };
 		78810CCA241F90B6002828E2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78810CC9241F90B6002828E2 /* MessageView.swift */; };
@@ -120,6 +123,9 @@
 		786BC692243F3FB500D42553 /* CGRect+rects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+rects.swift"; sourceTree = "<group>"; };
 		786BC694243F3FCB00D42553 /* Array+unique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+unique.swift"; sourceTree = "<group>"; };
 		786BC696243F656100D42553 /* Indexes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indexes.swift; sourceTree = "<group>"; };
+		7871BBB72440E14700A6FF81 /* ShapeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSelectionViewController.swift; sourceTree = "<group>"; };
+		7871BBB92440E1B700A6FF81 /* ShapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeCollectionViewCell.swift; sourceTree = "<group>"; };
+		7871BBBC2440E1D700A6FF81 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
 		7876D3AB2438B6C900FEA18D /* ShapeSudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSudoku.swift; sourceTree = "<group>"; };
 		7877D1B823ED95B000E43314 /* BorderedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedCell.swift; sourceTree = "<group>"; };
 		78810CC9241F90B6002828E2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
@@ -202,9 +208,12 @@
 				785C734423F19E6900757B0E /* Model */,
 				7894D919242B62B90067D313 /* Sudoku model */,
 				7895216C241A4B6A004F8C1C /* Button */,
+				7871BBBB2440E1C700A6FF81 /* Shapes */,
 				785C734523F19E7200757B0E /* View */,
 				7883A1C2241D2BBB00ECB3FD /* Constraints */,
 				78C9B5DE241BF18400E1DB7A /* Animation */,
+				7871BBB52440E11100A6FF81 /* CollectionViewController */,
+				7871BBB62440E12B00A6FF81 /* CollectionViewCell */,
 				78294FD6241BACDA00854A97 /* GameControllers */,
 				7862EC8423F2F4D300399263 /* Controller */,
 				788CDC8024223ACA00420F9B /* TableViewCell */,
@@ -303,6 +312,30 @@
 				786BC68E243F3F6F00D42553 /* Global.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7871BBB52440E11100A6FF81 /* CollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7871BBB72440E14700A6FF81 /* ShapeSelectionViewController.swift */,
+			);
+			path = CollectionViewController;
+			sourceTree = "<group>";
+		};
+		7871BBB62440E12B00A6FF81 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7871BBB92440E1B700A6FF81 /* ShapeCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		7871BBBB2440E1C700A6FF81 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				7871BBBC2440E1D700A6FF81 /* ShapeView.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 		7883A1C2241D2BBB00ECB3FD /* Constraints */ = {
@@ -525,6 +558,8 @@
 				78C9B5E8241D08BC00E1DB7A /* StatisticViewController.swift in Sources */,
 				786BC697243F656100D42553 /* Indexes.swift in Sources */,
 				782239CB2420D967004E7D35 /* TriangleView.swift in Sources */,
+				7871BBB82440E14700A6FF81 /* ShapeSelectionViewController.swift in Sources */,
+				7871BBBA2440E1B700A6FF81 /* ShapeCollectionViewCell.swift in Sources */,
 				78294FD1241B93A700854A97 /* Constants.swift in Sources */,
 				786BC68F243F3F6F00D42553 /* Global.swift in Sources */,
 				78181F1023E5BE2A00836109 /* SudokuViewController.swift in Sources */,
@@ -544,6 +579,7 @@
 				788CDC882422638E00420F9B /* StatisticTableViewCell.swift in Sources */,
 				78C9B5E6241D08A500E1DB7A /* OptionsViewController.swift in Sources */,
 				78181F1223E5BE3300836109 /* Cell.swift in Sources */,
+				7871BBBD2440E1D700A6FF81 /* ShapeView.swift in Sources */,
 				786BC68D243F3F5000D42553 /* UIDevice+device.swift in Sources */,
 				78B9B144243B6FB200024738 /* InfoView.swift in Sources */,
 				786BC691243F3F8700D42553 /* UIView+layer.swift in Sources */,

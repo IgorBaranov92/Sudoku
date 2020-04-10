@@ -3,7 +3,7 @@ import UIKit
 @IBDesignable
 class BorderedCell: UIButton {
 
-    let lineWidth: CGFloat = UIDevice.isIpad ? 4 : 2
+    let lineWidth: CGFloat = Constants.doubleLineWidth
 
     @IBInspectable
     var line1:Int = 0 { didSet { setNeedsDisplay() }}

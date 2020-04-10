@@ -34,7 +34,7 @@ class Cell: BorderedCell {
     }
     
     private func setup() {
-        layer.borderWidth = UIDevice.isIpad ? 0.5 : 0.25
+        layer.borderWidth = Constants.lineWidth
         layer.borderColor = UIColor.border.cgColor
     }
 
