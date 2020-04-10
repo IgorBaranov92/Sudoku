@@ -122,5 +122,4 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     func eraseCanceled() {
         buttons.forEach { $0.isUserInteractionEnabled = true }
     }
-    
 }

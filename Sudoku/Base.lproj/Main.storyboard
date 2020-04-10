@@ -2119,6 +2119,9 @@
                                     <segment title="Medium"/>
                                     <segment title="Hard"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeDifficult:" destination="BYZ-38-t0r" eventType="valueChanged" id="aYr-4F-VRF"/>
+                                </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eCx-u0-RpT">
                                 <rect key="frame" x="102.66666666666669" y="91" width="170" height="40"/>
@@ -9088,6 +9091,9 @@
                                     <segment title="Medium"/>
                                     <segment title="Hard"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeDifficult:" destination="Rbj-QZ-mjJ" eventType="valueChanged" id="tda-0h-VEH"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" name="DynamicBackgroundColor"/>

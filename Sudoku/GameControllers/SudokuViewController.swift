@@ -33,10 +33,10 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(clear)))
-//        NotificationCenter.default.addObserver(self, selector: #selector(saveGame), name: UIApplication.willResignActiveNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(updateBoard), name: UIApplication.willEnterForegroundNotification, object: nil)
-//        restoreOptions()
-//        restoreStatistic()
+        NotificationCenter.default.addObserver(self, selector: #selector(saveGame), name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateBoard), name: UIApplication.willEnterForegroundNotification, object: nil)
+        restoreOptions()
+        restoreStatistic()
         recreateGameIfNeeded()
     }
 
@@ -47,7 +47,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-//        NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - IBActions
@@ -135,7 +135,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     }
     
     @IBAction private func changeDifficult(_ sender: UISegmentedControl) {
-//        let index = sender.selectedSegmentIndex
+        saveGame()
+        recreateGameIfNeeded()
     }
     
   
@@ -167,15 +168,15 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     @objc
     private func updateBoard() {
-        cells.forEach { $0.setTitle("", for: .normal) }
+        cells?.forEach { $0.setTitle("", for: .normal) }
         for index in sudoku.digits.indices {
             if sudoku.digits[index] != 0 {
-                cells[index].setTitle("\(sudoku.digits[index])", for: .normal)
+                cells?[index].setTitle("\(sudoku.digits[index])", for: .normal)
             }
             if options.options[1] {
-             cells[index].setTitleColor(sudoku.mistakesMade.contains(index) ? .orange : .text, for: .normal)
+             cells?[index].setTitleColor(sudoku.mistakesMade.contains(index) ? .orange : .text, for: .normal)
             } else {
-                cells[index].setTitleColor(.text, for: .normal)
+                cells?[index].setTitleColor(.text, for: .normal)
             }
         }
     }
@@ -272,9 +273,9 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     // MARK: - Restoring and saving games
        
     private func recreateGameIfNeeded() {
-        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("games"),let data = try? Data(contentsOf: url),let newValue = Game(json: data) {
+        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(path),let data = try? Data(contentsOf: url),let newValue = Game(json: data) {
             game = newValue
-            guard let game = game.games[0] else { newGame();return  }
+            guard let game = game.games[gameIndex] else { newGame();return  }
             sudoku = game
             sudoku.delegate = self
             updateUI()
@@ -315,10 +316,10 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     @objc
     private func saveGame() {
-//        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("games"),let json = game.json {
-//            game.games[0] = sudoku
-//            try? json.write(to: url)
-//        }
+        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(path),let json = game.json {
+            game.games[gameIndex] = sudoku
+            try? json.write(to: url)
+        }
     }
     
     private func newGame() {
@@ -326,13 +327,17 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         digits.forEach { $0.isHidden = false }
         hasActiveButton = nil
         view.isUserInteractionEnabled = true
-        sudoku = SudokuGenerator(difficult: 0,gameType:gameType,delegate: self) { // game created
-                                        DispatchQueue.main.async { [weak self] in
-//                                            self?.saveGame()
+        sudoku = SudokuGenerator(difficult: gameIndex,
+                                 gameType:gameType,
+                                 delegate: self) { [weak self] in
+                                        DispatchQueue.main.async {
+                                            self?.saveGame()
                                             self?.updateUI()
             }}
 
     }
+    
+    
     
     @IBAction func back(_ sender:UIButton) {
         dismiss(animated: true)
