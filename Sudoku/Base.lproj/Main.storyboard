@@ -5650,6 +5650,9 @@
                                     <segment title="Medium"/>
                                     <segment title="Hard"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeDifficult:" destination="bm4-Y1-iEE" eventType="valueChanged" id="hN5-zF-lzv"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" name="DynamicBackgroundColor"/>

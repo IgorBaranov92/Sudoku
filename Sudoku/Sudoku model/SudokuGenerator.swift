@@ -62,32 +62,43 @@ class SudokuGenerator: Sudoku {
         digitsCount[digit] = digitsCount[digit]! - 1
    }
    
-    func highlightButtons(_ index:Int) -> [Int] {
-        var indexes = [Int]()
+    func highlightButtons(_ index:Int) -> Set<Int> {
+        var indexes = Set<Int>()
         let coordinates = self[index]
         let rowOffset = coordinates.column - coordinates.column%3
         let columnOffset = coordinates.row - coordinates.row%3
         for i in 0..<dimension {
-            indexes.append(dimension*coordinates.row + i )
-            indexes.append(coordinates.column + dimension*i )
+            indexes.insert(dimension*coordinates.row + i )
+            indexes.insert(coordinates.column + dimension*i )
             if gameType != .shape {
-                indexes.append(columnOffset*dimension + rowOffset + i/3*dimension + i%3)
+                indexes.insert(columnOffset*dimension + rowOffset + i/3*dimension + i%3)
             }
         }
-        indexes += Indexes.getIndexesBasedOn(gameType, index: index).first
-        indexes += Indexes.getIndexesBasedOn(gameType, index: index).second
-        return indexes.unique()
+        indexes.formUnion(Indexes.getIndexesBasedOn(gameType, index: index).first)
+        indexes.formUnion(Indexes.getIndexesBasedOn(gameType, index: index).second)
+        return indexes
     }
 
-    func highlightAllButtonsBasedOn(digit:Int) -> (active:[Int],related:[Int]) {
-        var output = (active:[Int](),related:[Int]())
+    func highlightAllButtonsBasedOn(digit:Int) -> (active:Set<Int>,related:Set<Int>) {
+        var output = (active:Set<Int>(),related:Set<Int>())
         for index in digits.indices {
             if digit == digits[index] {
                 let coordinate = self[index]
-                output.active.append(index)
-                output.related += highlightButtons(coordinate.row*dimension+coordinate.column)
+                output.active.insert(index)
+            output.related.formUnion(highlightButtons(coordinate.row*dimension+coordinate.column))
+                switch gameType {
+                case .diagonal:
+                    if coordinate.row == coordinate.column { //left
+                        output.related.formUnion([0,10,20,30,40,50,60,70,80])
+                    }
+                    if coordinate.row + coordinate.column == 8 { //right
+                        output.related.formUnion([8,16,24,32,40,48,56,64,72])
+                    }
+                default:break
+                }
             }
         }
+        print(output.related.count)
         return output
     }
     
