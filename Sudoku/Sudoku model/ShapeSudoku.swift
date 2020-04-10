@@ -2,8 +2,8 @@ import Foundation
 
 final class ShapeSudoku {
     
-    static func returnRightIndexesBasedOn(_ index:Int) -> [Int] {
-        var output = [Int]()
+    static func returnRightIndexesBasedOn(_ index:Int) -> Set<Int> {
+        var output = Set<Int>()
         let set1 = Set(arrayLiteral: 0,9,10,11,18,19,27,28,36)
         let set2 = Set(arrayLiteral: 1,2,3,4,12,13,20,21,29)
         let set3 = Set(arrayLiteral: 5,6,7,15,16,24,25,32,33)
@@ -16,7 +16,7 @@ final class ShapeSudoku {
         let sets = [set1,set2,set3,set4,set5,set6,set7,set8,set9]
         for set in sets {
             if set.contains(index) {
-                output = Array(set)
+                output = set
             }
         }
         return output

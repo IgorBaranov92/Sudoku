@@ -33,20 +33,21 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(clear)))
-        NotificationCenter.default.addObserver(self, selector: #selector(saveGame), name: UIApplication.willResignActiveNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateBoard), name: UIApplication.willEnterForegroundNotification, object: nil)
         restoreOptions()
         restoreStatistic()
         recreateGameIfNeeded()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(saveGame), name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(updateBoard), name: UIApplication.willEnterForegroundNotification, object: nil)
+
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         saveGame()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
     
@@ -79,9 +80,10 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         guard let digit = Int(title) else { return }
         guard hasActiveButton != nil else {
             reset(full:false)
-            sudoku.highlightAllButtonsBasedOn(digit: digit).active.forEach { cells[$0].active = true }
+            let indexes = sudoku.highlightAllButtonsBasedOn(digit: digit)
+            indexes.active.forEach { cells[$0].active = true }
             if options.options[3] {
-                sudoku.highlightAllButtonsBasedOn(digit: digit).related.forEach { cells[$0].highlight = true }
+                indexes.related.forEach { cells[$0].highlight = true }
             }
             return
         }
@@ -240,19 +242,19 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         present(alert, animated: true)
     }
     
-    func animateRowWith(_ indexes: [Int]) {
+    func animateRowWith(_ indexes: Set<Int> ) {
         animatedAt(indexes)
     }
     
-    func animateLineWith(_ indexes: [Int]) {
+    func animateLineWith(_ indexes: Set<Int> ) {
         animatedAt(indexes)
     }
     
-    func animateBlockWith(_ indexes: [Int]) {
+    func animateBlockWith(_ indexes: Set<Int> ) {
         animatedAt(indexes)
     }
     
-    private func animatedAt(_ indexes:[Int]) {
+    private func animatedAt(_ indexes:Set<Int> ) {
         reset(full: false)
         indexes.forEach {
             let frame = cells[$0].convert(cells[$0].bounds, to: view)

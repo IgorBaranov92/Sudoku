@@ -86,19 +86,11 @@ class SudokuGenerator: Sudoku {
                 let coordinate = self[index]
                 output.active.insert(index)
             output.related.formUnion(highlightButtons(coordinate.row*dimension+coordinate.column))
-                switch gameType {
-                case .diagonal:
-                    if coordinate.row == coordinate.column { //left
-                        output.related.formUnion([0,10,20,30,40,50,60,70,80])
-                    }
-                    if coordinate.row + coordinate.column == 8 { //right
-                        output.related.formUnion([8,16,24,32,40,48,56,64,72])
-                    }
-                default:break
-                }
+                output.related.formUnion(Indexes.getIndexesBasedOn(gameType, index: index).first)
+                output.related.formUnion(Indexes.getIndexesBasedOn(gameType, index: index).second)
             }
         }
-        print(output.related.count)
+
         return output
     }
     
@@ -218,6 +210,7 @@ class SudokuGenerator: Sudoku {
         digits = try container.decode([Int].self, forKey: .digits)
         answers = try container.decode([Int].self, forKey: .answers)
         digitsCount = try container.decode([Int:Int].self, forKey: .digitsCount)
+        gameType = try container.decode(GameType.self, forKey: .gameType)
     }
     
     override func encode(to encoder: Encoder) throws {
@@ -230,6 +223,7 @@ class SudokuGenerator: Sudoku {
         try container.encode(digits, forKey: .digits)
         try container.encode(answers, forKey: .answers)
         try container.encode(digitsCount, forKey: .digitsCount)
+        try container.encode(gameType, forKey: .gameType)
     }
     
     private enum CodingKeys:String,CodingKey {
@@ -241,6 +235,7 @@ class SudokuGenerator: Sudoku {
         case digits = "digits"
         case answers = "answers"
         case digitsCount = "digitsCount"
+        case gameType = "gameType"
     }
    
 }
