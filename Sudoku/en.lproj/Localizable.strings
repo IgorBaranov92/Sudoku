@@ -1,6 +1,6 @@
 "ErrorNative" = "Can't erase native cell";
 
-"ErrorEmpty" = "Can't erase empty cell";
+"ErrorEmpty" = "Can't erase";
 
 "ErrorFilled" = "Can't solve native cell";
 

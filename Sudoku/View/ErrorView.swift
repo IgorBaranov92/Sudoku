@@ -15,9 +15,10 @@ class ErrorView: UIView {
 
         if pivot.x  < rect.center.x {
             label.textAlignment = .left
+            label.frame.origin.x = max(pivot.x + rect.height*1.5 - label.bounds.width,10)
         } else if pivot.x > rect.center.x {
             label.textAlignment = .right
-            label.frame.origin.x = rect.width - label.frame.size.width - 20
+            label.frame.origin.x = max(pivot.x + rect.height*1.5 - label.bounds.width,10)
         } else {
             label.textAlignment = .center
             label.frame.origin.x = rect.width/2 - label.frame.size.width/2
@@ -47,3 +48,5 @@ class ErrorView: UIView {
     }
     
 }
+
+

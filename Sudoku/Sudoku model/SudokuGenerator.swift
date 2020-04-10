@@ -41,7 +41,7 @@ class SudokuGenerator: Sudoku {
         if digits[index] != answers[index] { //mistake
             mistakesMade.append(index)
             if shouldCountMistakes {
-                if mistakesMade.count == mistakes + 1 { //game lost
+                if mistakesMade.count >= mistakes + 1 { //game lost
                     if delegate == nil { fatalError("delegate can't be nil")}
                     delegate?.gameLost()
                 }
