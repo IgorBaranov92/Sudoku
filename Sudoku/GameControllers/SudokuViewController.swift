@@ -7,6 +7,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     lazy var sudoku = SudokuGenerator(difficult: 0,gameType:gameType,delegate: self)
     var gameType: GameType = .classic
     var path = String()
+    
     var selectedButton: Cell? { cells.filter { $0.active == true }.first}
     var game = Game()
     var options = Options()

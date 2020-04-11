@@ -23,8 +23,12 @@
 		785C734323F1957A00757B0E /* SudokuGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C734223F1957A00757B0E /* SudokuGenerator.swift */; };
 		785C734723F19EBC00757B0E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C734623F19EBC00757B0E /* Game.swift */; };
 		785C734F23F2B81800757B0E /* SudokuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C734E23F2B81800757B0E /* SudokuUITests.swift */; };
+		785D09302440E40F00053AD8 /* Helper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 785D092F2440E40F00053AD8 /* Helper.storyboard */; };
+		785D09342440EC2E00053AD8 /* UIBezierPath+Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D09332440EC2E00053AD8 /* UIBezierPath+Points.swift */; };
+		785D09362440F94100053AD8 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785D09352440F94100053AD8 /* Shapes.swift */; };
 		785ED3FA23F2EAE6009E78B0 /* SudokuSolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785ED3F923F2EAE6009E78B0 /* SudokuSolverTests.swift */; };
 		785F42BB23EC69AB00B2CCA0 /* Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F42BA23EC69AB00B2CCA0 /* Sudoku.swift */; };
+		7860C8FF2441CAA60012B007 /* ShapeSudokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860C8FE2441CAA60012B007 /* ShapeSudokuViewController.swift */; };
 		7862E4ED242651AD0030F8E8 /* StatisticButtonAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4EC242651AD0030F8E8 /* StatisticButtonAnimator.swift */; };
 		7862E4F3242A5B610030F8E8 /* EraseStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F2242A5B610030F8E8 /* EraseStatisticView.swift */; };
 		7862E4F5242A5BAA0030F8E8 /* EraseViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F4242A5BAA0030F8E8 /* EraseViewConstraints.swift */; };
@@ -105,10 +109,14 @@
 		785C734C23F2B81800757B0E /* SudokuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		785C734E23F2B81800757B0E /* SudokuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuUITests.swift; sourceTree = "<group>"; };
 		785C735023F2B81800757B0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		785D092F2440E40F00053AD8 /* Helper.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Helper.storyboard; sourceTree = "<group>"; };
+		785D09332440EC2E00053AD8 /* UIBezierPath+Points.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+Points.swift"; sourceTree = "<group>"; };
+		785D09352440F94100053AD8 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		785ED3F923F2EAE6009E78B0 /* SudokuSolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuSolverTests.swift; sourceTree = "<group>"; };
 		785F42B023EC53E200B2CCA0 /* SudokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		785F42B423EC53E200B2CCA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		785F42BA23EC69AB00B2CCA0 /* Sudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sudoku.swift; sourceTree = "<group>"; };
+		7860C8FE2441CAA60012B007 /* ShapeSudokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSudokuViewController.swift; sourceTree = "<group>"; };
 		7862E4EC242651AD0030F8E8 /* StatisticButtonAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticButtonAnimator.swift; sourceTree = "<group>"; };
 		7862E4F2242A5B610030F8E8 /* EraseStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EraseStatisticView.swift; sourceTree = "<group>"; };
 		7862E4F4242A5BAA0030F8E8 /* EraseViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EraseViewConstraints.swift; sourceTree = "<group>"; };
@@ -204,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				78181EFE23E5BD9B00836109 /* Main.storyboard */,
+				785D092F2440E40F00053AD8 /* Helper.storyboard */,
 				7883A1CB241D3D9200ECB3FD /* Localizable.strings */,
 				785C734423F19E6900757B0E /* Model */,
 				7894D919242B62B90067D313 /* Sudoku model */,
@@ -241,6 +250,7 @@
 			children = (
 				7862EC8223F2F4CD00399263 /* GameViewController.swift */,
 				78181F0F23E5BE2A00836109 /* SudokuViewController.swift */,
+				7860C8FE2441CAA60012B007 /* ShapeSudokuViewController.swift */,
 			);
 			path = GameControllers;
 			sourceTree = "<group>";
@@ -310,6 +320,7 @@
 				786BC692243F3FB500D42553 /* CGRect+rects.swift */,
 				786BC694243F3FCB00D42553 /* Array+unique.swift */,
 				786BC68E243F3F6F00D42553 /* Global.swift */,
+				785D09332440EC2E00053AD8 /* UIBezierPath+Points.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				7871BBBC2440E1D700A6FF81 /* ShapeView.swift */,
+				785D09352440F94100053AD8 /* Shapes.swift */,
 			);
 			path = Shapes;
 			sourceTree = "<group>";
@@ -501,6 +513,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				785D09302440E40F00053AD8 /* Helper.storyboard in Resources */,
 				78181F0523E5BD9C00836109 /* LaunchScreen.storyboard in Resources */,
 				7883A1C9241D3D9200ECB3FD /* Localizable.strings in Resources */,
 				78181F0223E5BD9C00836109 /* Assets.xcassets in Resources */,
@@ -563,6 +576,7 @@
 				78294FD1241B93A700854A97 /* Constants.swift in Sources */,
 				786BC68F243F3F6F00D42553 /* Global.swift in Sources */,
 				78181F1023E5BE2A00836109 /* SudokuViewController.swift in Sources */,
+				7860C8FF2441CAA60012B007 /* ShapeSudokuViewController.swift in Sources */,
 				7895216B241A431C004F8C1C /* BackButton.swift in Sources */,
 				785C734123F192A000757B0E /* SudokuSolver.swift in Sources */,
 				7862E4F5242A5BAA0030F8E8 /* EraseViewConstraints.swift in Sources */,
@@ -596,9 +610,11 @@
 				78C9B5E2241BF35D00E1DB7A /* ErrorViewAnimation.swift in Sources */,
 				78969737241A2FAB0054397E /* LevelsViewController.swift in Sources */,
 				782239DB242133EF004E7D35 /* Options.swift in Sources */,
+				785D09342440EC2E00053AD8 /* UIBezierPath+Points.swift in Sources */,
 				7877D1B923ED95B000E43314 /* BorderedCell.swift in Sources */,
 				7862E4ED242651AD0030F8E8 /* StatisticButtonAnimator.swift in Sources */,
 				78C9B5DB241BE98100E1DB7A /* TutorialView.swift in Sources */,
+				785D09362440F94100053AD8 /* Shapes.swift in Sources */,
 				78EABF3A242E296B00EF9A1E /* Rules.swift in Sources */,
 				7862E4F3242A5B610030F8E8 /* EraseStatisticView.swift in Sources */,
 			);

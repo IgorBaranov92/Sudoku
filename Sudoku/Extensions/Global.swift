@@ -12,8 +12,3 @@ enum GameType: Int,Codable {
     case romb = 3
     case shape = 4
 }
-
-//TODO: - Reset all statistic
-//TODO: - Lose game view
-//TODO: - Mistakes limit issue
-//TODO: - Right animation complete row

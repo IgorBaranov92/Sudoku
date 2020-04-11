@@ -36,10 +36,13 @@ class LevelsViewController: UIViewController, UIScrollViewDelegate {
             case "RombSudoku":
                 destination.gameType = .romb
                 destination.path = "romb"
-            case "ShapeSudoku":
+            default:break
+            }
+        }
+        if let destination = segue.destination as? ShapeSelectionViewController, let id = segue.identifier {
+            if id == "ShapeSudokuLevels" {
                 destination.gameType = .shape
                 destination.path = "shape"
-            default:break
             }
         }
     }
