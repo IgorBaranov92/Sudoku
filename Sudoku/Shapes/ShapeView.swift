@@ -3,7 +3,7 @@ import UIKit
 @IBDesignable
 class ShapeView: UIView {
 
-    var id = 1 { didSet { setNeedsDisplay() }}
+    var id = 8 { didSet { setNeedsDisplay() }}
     
     override func draw(_ rect: CGRect) {
         let outerPath = UIBezierPath(rect: rect.insetBy(dx: 1.0, dy: 1.0))
