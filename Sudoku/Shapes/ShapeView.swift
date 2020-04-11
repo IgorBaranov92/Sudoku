@@ -6,7 +6,7 @@ class ShapeView: UIView {
     var id = 1 { didSet { setNeedsDisplay() }}
     
     override func draw(_ rect: CGRect) {
-        let outerPath = UIBezierPath(rect: rect)
+        let outerPath = UIBezierPath(rect: rect.insetBy(dx: 1.0, dy: 1.0))
         outerPath.lineWidth = Constants.doubleLineWidth
         UIColor.border.setStroke()
         outerPath.stroke()
