@@ -2,7 +2,7 @@ import Foundation
 
 final class ShapeSudoku {
     
-    static func returnRightIndexesBasedOn(_ index:Int) -> Set<Int> {
+    static func returnRightIndexesBasedOn(_ index:Int,id:Int) -> Set<Int> {
         var output = Set<Int>()
         let set1 = Set(arrayLiteral: 0,9,10,11,18,19,27,28,36)
         let set2 = Set(arrayLiteral: 1,2,3,4,12,13,20,21,29)

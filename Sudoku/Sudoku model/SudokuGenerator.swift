@@ -4,6 +4,7 @@ class SudokuGenerator: Sudoku {
     
     var difficult: Difficult = .easy
     var gameType: GameType = .classic
+    var id = 0
     
     private var gameCompleted: Bool { digits.filter { $0 == 0 }.isEmpty } //all cells solved
     
@@ -74,8 +75,12 @@ class SudokuGenerator: Sudoku {
                 indexes.insert(columnOffset*dimension + rowOffset + i/3*dimension + i%3)
             }
         }
-        indexes.formUnion(Indexes.getIndexesBasedOn(gameType, index: index).first)
-        indexes.formUnion(Indexes.getIndexesBasedOn(gameType, index: index).second)
+        if gameType != .shape {
+            indexes.formUnion(Indexes.getIndexesBasedOn(gameType, index: index).first)
+            indexes.formUnion(Indexes.getIndexesBasedOn(gameType, index: index).second)
+        } else {
+            indexes.formUnion(ShapeSudoku.returnRightIndexesBasedOn(index, id: id))
+        }
         return indexes
     }
 
@@ -86,8 +91,12 @@ class SudokuGenerator: Sudoku {
                 let coordinate = self[index]
                 output.active.insert(index)
             output.related.formUnion(highlightButtons(coordinate.row*dimension+coordinate.column))
+                if gameType != .shape {
                 output.related.formUnion(Indexes.getIndexesBasedOn(gameType, index: index).first)
                 output.related.formUnion(Indexes.getIndexesBasedOn(gameType, index: index).second)
+                } else {
+                output.related.formUnion(ShapeSudoku.returnRightIndexesBasedOn(index, id: id))
+                }
             }
         }
 
@@ -112,7 +121,11 @@ class SudokuGenerator: Sudoku {
 
 
     private func generate() {
-        digits = SudokuSolver.getBaseGridBasedOn(gameType)
+        if gameType == .shape {
+            digits = ShapeSudokuSolver.getBaseGridBasedOn(id)
+        } else {
+            digits = SudokuSolver.getBaseGridBasedOn(gameType)
+        }
         replaceDigits()
         removeDigits()
         calculateDigits()
@@ -182,7 +195,7 @@ class SudokuGenerator: Sudoku {
     }
     
     private func checkIfBlockFilledAt(_ index:Int) {
-        let indexes = Indexes.blockIndexesAt(index, gameType: gameType).filter { digits[$0] != 0 }
+        let indexes = Indexes.blockIndexesAt(index, gameType: gameType,id:id).filter { digits[$0] != 0 }
         if indexes.count == 9 { delegate?.animateBlockWith(indexes) }
     }
     
@@ -211,6 +224,7 @@ class SudokuGenerator: Sudoku {
         answers = try container.decode([Int].self, forKey: .answers)
         digitsCount = try container.decode([Int:Int].self, forKey: .digitsCount)
         gameType = try container.decode(GameType.self, forKey: .gameType)
+        id = try container.decode(Int.self, forKey: .id)
     }
     
     override func encode(to encoder: Encoder) throws {
@@ -224,6 +238,7 @@ class SudokuGenerator: Sudoku {
         try container.encode(answers, forKey: .answers)
         try container.encode(digitsCount, forKey: .digitsCount)
         try container.encode(gameType, forKey: .gameType)
+        try container.encode(id, forKey: .id)
     }
     
     private enum CodingKeys:String,CodingKey {
@@ -236,6 +251,7 @@ class SudokuGenerator: Sudoku {
         case answers = "answers"
         case digitsCount = "digitsCount"
         case gameType = "gameType"
+        case id = "id"
     }
    
 }

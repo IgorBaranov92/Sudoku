@@ -122,4 +122,14 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     func eraseCanceled() {
         buttons.forEach { $0.isUserInteractionEnabled = true }
     }
+    
+    func eraseAll() {
+        for index in statistic.scores.indices {
+            statistic.scores[index] = Statistic.Scores()
+        }
+        saveStatistic()
+        tableView.reloadData()
+        buttons.forEach { $0.isUserInteractionEnabled = true }
+    }
+    
 }

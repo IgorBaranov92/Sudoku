@@ -35,8 +35,6 @@ struct Indexes {
             if coordinates.column - coordinates.row == 4 || coordinates.row + coordinates.column == 12 { // right
                 secondIndexes.formUnion([4,14,24,34,44,52,60,68,76])
             }
-        case .shape :
-            firstIndexes.formUnion(ShapeSudoku.returnRightIndexesBasedOn(index))
         default:break
         }
         return (firstIndexes,secondIndexes)
@@ -62,7 +60,7 @@ struct Indexes {
         return indexes
     }
     
-    static func blockIndexesAt(_ index:Int,gameType:GameType) -> Set<Int> {
+    static func blockIndexesAt(_ index:Int,gameType:GameType,id:Int) -> Set<Int> {
         let coordinates = Sudoku[index]
         var indexes = Set<Int>()
         let rowOffset = coordinates.column - coordinates.column%3
@@ -72,7 +70,7 @@ struct Indexes {
                 indexes.insert(columnOffset*9 + rowOffset + i/3*9 + i%3)
             }
         } else {
-            indexes = ShapeSudoku.returnRightIndexesBasedOn(index)
+            indexes = ShapeSudoku.returnRightIndexesBasedOn(index,id:id)
         }
         return indexes
     }

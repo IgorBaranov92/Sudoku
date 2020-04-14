@@ -21,7 +21,18 @@ class SudokuSolverTests: XCTestCase {
     }
     
     func testShapeBoard() {
-        XCTAssert(SudokuSolver.getBaseGridBasedOn(.shape).count == 81, "error")
+        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(0).count == 81, "error")
+        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(1).count == 81, "error")
+        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(2).count == 81, "error")
+        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(3).count == 81, "error")
+        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(4).count == 81, "error")
+        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(5).count == 81, "error")
+        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(6).count == 81, "error")
+        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(7).count == 81, "error")
+        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(8).count == 81, "error")
+        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(9).count == 81, "error")
+        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(10).count == 81, "error")
+        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(11).count == 81, "error")
     }
     
 }
