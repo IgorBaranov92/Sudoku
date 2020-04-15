@@ -8,6 +8,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     var gameType: GameType = .classic
     var path = String()
     
+    
     var selectedButton: Cell? { cells.filter { $0.active == true }.first}
     var game = Game()
     var options = Options()
@@ -376,7 +377,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     // MARK: - Protocol conformance
     
     func cancelButtonTouched() {
-        //save game progress
+        //save game progres
         dismiss(animated: true)
     }
 }

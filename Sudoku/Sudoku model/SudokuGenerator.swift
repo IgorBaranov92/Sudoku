@@ -4,7 +4,7 @@ class SudokuGenerator: Sudoku {
     
     var difficult: Difficult = .easy
     var gameType: GameType = .classic
-    var id = 0
+    var id = 2
     
     private var gameCompleted: Bool { digits.filter { $0 == 0 }.isEmpty } //all cells solved
     
