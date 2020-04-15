@@ -1,6 +1,6 @@
 import UIKit
 
-class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDelegate {
+class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegate {
     
     // MARK: - Public API
     
@@ -15,6 +15,17 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     var statistic = Statistic()
     
     // MARK: - Outlets
+    
+    @IBOutlet weak var mistakesLabel: UILabel!
+    @IBOutlet weak var difficultChooser: UISegmentedControl!
+    @IBOutlet weak var stackView: UIStackView!
+
+    @IBOutlet private weak var hintView: HintView! { didSet {
+        hintView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showHint(_:))))
+        }}
+    @IBOutlet private weak var eraseView: UIImageView! { didSet {
+        eraseView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(erase(_:))))
+        }}
     
     @IBOutlet var cells: [Cell]! { didSet {
         cells.forEach {
@@ -55,25 +66,28 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     
     // MARK: - IBActions
     
-    
-    @IBAction func erase(_ sender: UIButton) {
-        hasActiveButton = nil
-        guard let button = selectedButton else { return }
-        guard let buttonIndex = cells.firstIndex(of: button) else { return }
-        guard let title = button.currentTitle else { return }
-        let center = button.convert(button.bounds.center, to: stackView)
-        let pivot = stackView.convert(center, to: view)
-        guard let digit = Int(title) else {
-            showErrorAt(pivot, message: localized("ErrorEmpty"))
-            return
-        }
-        if sudoku.mistakesMade.contains(buttonIndex) {// erase only mistakes
-            eraseDigit(digit, at: buttonIndex)
-            cells[buttonIndex].setTitleColor(.text, for: .normal)
+    @objc
+    func erase(_ recognizer: UITapGestureRecognizer) {
+        if recognizer.state == .ended {
+            hasActiveButton = nil
+            guard let button = selectedButton else { return }
+            guard let buttonIndex = cells.firstIndex(of: button) else { return }
+            guard let title = button.currentTitle else { return }
+            let center = button.convert(button.bounds.center, to: stackView)
+            let pivot = stackView.convert(center, to: view)
+            guard let digit = Int(title) else {
+                showErrorAt(pivot, message: localized("ErrorEmpty"))
+                return
+            }
+            if sudoku.mistakesMade.contains(buttonIndex) {// erase only mistakes
+                eraseDigit(digit, at: buttonIndex)
+                cells[buttonIndex].setTitleColor(.text, for: .normal)
 
-        } else {
-            showErrorAt(pivot, message: localized("ErrorNative"))
+            } else {
+                showErrorAt(pivot, message: localized("ErrorNative"))
+            }
         }
+        
     }
     
     
@@ -116,26 +130,27 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
         }
     }
     
-     
-    @IBAction func showHint(_ sender:UIButton){
-        guard let selectedButton = selectedButton else { return }
-        guard let index = cells.firstIndex(of: selectedButton) else { return }
-        if sudoku.digits[index] != 0 { //cell is solved already
-            let center = selectedButton.convert(selectedButton.bounds.center, to: stackView)
-            let pivot = stackView.convert(center, to: view)
-            showErrorAt(pivot, message: localized("ErrorFilled"))
-        } else { // empty cell, please hint me
-            if sudoku.canHint(index: index) {
-                TextAppearenceAnimator.show(cells[index], string: String(sudoku.answers[index]))
-                updateLabels()
-                hideDigitIfPossible()
-                hasActiveButton = nil
-                saveGame()
-                statistic.scores[gameType.rawValue].scores[gameIndex][1] += 1
-                saveStatistic()
+    @objc
+    func showHint(_ recognier: UITapGestureRecognizer) {
+        if recognier.state == .ended {
+            guard let selectedButton = selectedButton else { return }
+            guard let index = cells.firstIndex(of: selectedButton) else { return }
+            if sudoku.digits[index] != 0 { //cell is solved already
+                let center = selectedButton.convert(selectedButton.bounds.center, to: stackView)
+                let pivot = stackView.convert(center, to: view)
+                showErrorAt(pivot, message: localized("ErrorFilled"))
+            } else { // empty cell, please hint me
+                if sudoku.canHint(index: index) {
+                    TextAppearenceAnimator.show(cells[index], string: String(sudoku.answers[index]))
+                    updateLabels()
+                    hideDigitIfPossible()
+                    hasActiveButton = nil
+                    saveGame()
+                    statistic.scores[gameType.rawValue].scores[gameIndex][1] += 1
+                    saveStatistic()
+                }
             }
         }
-        
     }
     
     @IBAction private func changeDifficult(_ sender: UISegmentedControl) {
@@ -188,7 +203,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, MessageViewDeleg
     private func updateLabels() {
         mistakesLabel.isHidden = !(options.options[0])
         mistakesLabel.text = "\(localized("mistakes")): \(sudoku.mistakesMade.count)/\(sudoku.mistakes)"
-        hintsLabel.text = "\(localized("hints")): \(sudoku.hintsMade)/\(sudoku.hints)"
+        hintView.hintsCount = sudoku.hints - sudoku.hintsMade
     }
     
     private func hideDigitIfPossible() {
