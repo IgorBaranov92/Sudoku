@@ -57,7 +57,7 @@
 		7883A1CF241D43AC00ECB3FD /* FinishGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7883A1CE241D43AC00ECB3FD /* FinishGameView.swift */; };
 		78859E572449CC9000F93442 /* ShapeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78859E562449CC9000F93442 /* ShapeSelectionViewController.swift */; };
 		78859E59244A06D900F93442 /* Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78859E58244A06D900F93442 /* Hexagon.swift */; };
-		78859E5B244A06F300F93442 /* Enneagon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78859E5A244A06F300F93442 /* Enneagon.storyboard */; };
+		78859E5D244A1BB000F93442 /* LevelsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78859E5C244A1BB000F93442 /* LevelsCollectionViewController.swift */; };
 		788CDC7F2422373900420F9B /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CDC7E2422373900420F9B /* Statistic.swift */; };
 		788CDC882422638E00420F9B /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CDC872422638E00420F9B /* StatisticTableViewCell.swift */; };
 		788CDC8A2422745900420F9B /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CDC892422745900420F9B /* CellAnimator.swift */; };
@@ -152,7 +152,7 @@
 		7883A1CE241D43AC00ECB3FD /* FinishGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGameView.swift; sourceTree = "<group>"; };
 		78859E562449CC9000F93442 /* ShapeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeSelectionViewController.swift; sourceTree = "<group>"; };
 		78859E58244A06D900F93442 /* Hexagon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexagon.swift; sourceTree = "<group>"; };
-		78859E5A244A06F300F93442 /* Enneagon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Enneagon.storyboard; sourceTree = "<group>"; };
+		78859E5C244A1BB000F93442 /* LevelsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsCollectionViewController.swift; sourceTree = "<group>"; };
 		788CDC7E2422373900420F9B /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
 		788CDC872422638E00420F9B /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StatisticTableViewCell.swift; path = Sudoku/TableViewCell/StatisticTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		788CDC892422745900420F9B /* CellAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
@@ -221,7 +221,6 @@
 			children = (
 				78181EFE23E5BD9B00836109 /* Main.storyboard */,
 				787C57942448B972009C0C34 /* Helper.storyboard */,
-				78859E5A244A06F300F93442 /* Enneagon.storyboard */,
 				7883A1CB241D3D9200ECB3FD /* Localizable.strings */,
 				785C734423F19E6900757B0E /* Model */,
 				7894D919242B62B90067D313 /* Sudoku model */,
@@ -313,6 +312,7 @@
 		7862EC8423F2F4D300399263 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				78859E5C244A1BB000F93442 /* LevelsCollectionViewController.swift */,
 				78969736241A2FAB0054397E /* LevelsViewController.swift */,
 				78C9B5E5241D08A500E1DB7A /* OptionsViewController.swift */,
 				78C9B5E7241D08BC00E1DB7A /* StatisticViewController.swift */,
@@ -526,7 +526,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				787C57952448B972009C0C34 /* Helper.storyboard in Resources */,
-				78859E5B244A06F300F93442 /* Enneagon.storyboard in Resources */,
 				78181F0523E5BD9C00836109 /* LaunchScreen.storyboard in Resources */,
 				7883A1C9241D3D9200ECB3FD /* Localizable.strings in Resources */,
 				78181F0223E5BD9C00836109 /* Assets.xcassets in Resources */,
@@ -596,6 +595,7 @@
 				78859E572449CC9000F93442 /* ShapeSelectionViewController.swift in Sources */,
 				785FDEB624471A3F00E56F62 /* HintView.swift in Sources */,
 				78810CCA241F90B6002828E2 /* MessageView.swift in Sources */,
+				78859E5D244A1BB000F93442 /* LevelsCollectionViewController.swift in Sources */,
 				785F42BB23EC69AB00B2CCA0 /* Sudoku.swift in Sources */,
 				78294FCF241B882C00854A97 /* ErrorView.swift in Sources */,
 				78C9B5DD241BEAAC00E1DB7A /* DoneButton.swift in Sources */,

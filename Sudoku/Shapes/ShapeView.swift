@@ -10,7 +10,6 @@ class ShapeView: SudokuView {
         super.draw(rect)
         UIColor.border.setStroke()
         Shapes.getPathBasedAt(id, rect: rect).stroke()
-        
     }
 
 
