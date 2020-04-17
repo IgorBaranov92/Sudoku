@@ -11,6 +11,8 @@ final class Rules {
         case .twoDiagonals:
             return localized("twoDiagonalsRules")
         case .romb:
+            return localized("hexagonRules")
+        case .hexagon:
             return localized("rombRules")
         case .shape:
             return localized("shapeRules")

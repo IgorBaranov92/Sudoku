@@ -35,6 +35,10 @@ struct Indexes {
             if coordinates.column - coordinates.row == 4 || coordinates.row + coordinates.column == 12 { // right
                 secondIndexes.formUnion([4,14,24,34,44,52,60,68,76])
             }
+        case .hexagon:
+            if index == 4 || index == 10 || index == 36 || index == 64 || index == 76 || index == 70 || index == 44 || index == 16 {
+                firstIndexes.formUnion([4,10,36,64,76,70,44,16])
+            }
         default:break
         }
         return (firstIndexes,secondIndexes)

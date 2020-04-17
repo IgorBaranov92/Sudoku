@@ -9,7 +9,7 @@ struct Statistic: Codable {
     
     static let difficult = [localized("easy"),localized("medium"),localized("hard")]
     
-    var scores = Array(repeating: Scores(), count: 5)
+    var scores = Array(repeating: Scores(), count: 6)
         
     var json: Data? { try? JSONEncoder().encode(self) }
 

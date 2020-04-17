@@ -604,7 +604,7 @@
                                 <rect key="frame" x="0.0" y="177.66666666666669" width="414" height="684.33333333333326"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ncn-0N-Gdr">
-                                        <rect key="frame" x="16" y="11" width="382" height="360"/>
+                                        <rect key="frame" x="16" y="11" width="382" height="435"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVT-01-rDv" customClass="ShrinkableButton" customModule="Sudoku" customModuleProvider="target">
                                                 <rect key="frame" x="135.66666666666666" y="0.0" width="111" height="60"/>
@@ -658,8 +658,21 @@
                                                     <segue destination="BL7-a9-KkA" kind="presentation" identifier="RombSudoku" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="9vg-xc-yUJ"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdZ-kr-0Ws" customClass="ShrinkableButton" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="118.66666666666666" y="300" width="144.99999999999997" height="60"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                                <state key="normal" title="Hexagon">
+                                                    <color key="titleColor" name="DynamicBlackColor"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <segue destination="GUP-NI-CLB" kind="presentation" identifier="HexagonSudoku" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="zYn-KR-n7T"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKr-qD-unK" customClass="ShrinkableButton" customModule="Sudoku" customModuleProvider="target">
-                                                <rect key="frame" x="132.66666666666666" y="300" width="117" height="60"/>
+                                                <rect key="frame" x="132.66666666666666" y="375" width="117" height="60"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
                                                 <state key="normal" title="Shapes">
                                                     <color key="titleColor" name="DynamicBlackColor"/>
@@ -2345,6 +2358,1642 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="838" y="65"/>
+        </scene>
+        <!--Sudoku View Controller-->
+        <scene sceneID="6jZ-85-Lua">
+            <objects>
+                <viewController id="GUP-NI-CLB" customClass="SudokuViewController" customModule="Sudoku" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2R8-3D-IcE"/>
+                        <viewControllerLayoutGuide type="bottom" id="UZ6-bO-Dxm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r6W-Cc-Vvb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VoJ-KJ-dt8">
+                                <rect key="frame" x="10" y="351" width="394" height="394"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ukr-ro-wJb">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="43.666666666666664"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSF-rI-c0L" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="43.666666666666664"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="CSF-rI-c0L" secondAttribute="height" multiplier="1:1" id="V18-Hg-u86"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbQ-gF-FKa" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kas-Ob-3eG" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afe-9f-bdh" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zy-xz-srJ" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="175" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yg-nj-ehp" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsV-er-79G" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwg-Nx-lxJ" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdA-Tw-bFB" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1LR-dA-sRA">
+                                        <rect key="frame" x="0.0" y="43.666666666666686" width="394" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-rX-8Ve" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="kdd-rX-8Ve" secondAttribute="height" multiplier="1:1" id="GQt-Dw-ilM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0s-P5-c2B" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WD9-q0-PGs" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qkz-NA-5cr" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAe-7V-iai" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="175" y="0.0" width="44" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gc5-JD-MY0" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auB-OB-xle" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoI-EZ-nRY" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpB-5t-DsR" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WLi-t1-XPh">
+                                        <rect key="frame" x="0.0" y="87.666666666666686" width="394" height="43.666666666666657"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iVR-4e-XxV" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="43.666666666666664"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="iVR-4e-XxV" secondAttribute="height" multiplier="1:1" id="gey-e8-icz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6g-hv-hgD" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRZ-hM-yXf" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyj-Wh-NnQ" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFA-Qn-Bj3" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="175" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cna-m7-zkO" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxj-cy-x7J" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojo-b3-CeP" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGp-6p-qgz" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Q74-jP-0CC">
+                                        <rect key="frame" x="0.0" y="131.33333333333331" width="394" height="43.666666666666657"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMo-WX-rwU" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="43.666666666666664"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="dMo-WX-rwU" secondAttribute="height" multiplier="1:1" id="0nJ-Pk-6qY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cf0-z7-n3c" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ps-3V-Dc2" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5i-gK-Pvy" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiL-2U-YDt" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="175" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YH7-WD-EKR" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlp-GM-P41" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77F-CA-ntL" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFy-lM-oun" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Byk-cu-bOg">
+                                        <rect key="frame" x="0.0" y="175" width="394" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzn-td-HMS" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Gzn-td-HMS" secondAttribute="height" multiplier="1:1" id="s7b-sN-UMo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lca-O2-kFR" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P15-2f-XPJ" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjl-bv-1GN" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vL3-3L-pe8" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="175" y="0.0" width="44" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UL-N3-YMm" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHu-Sc-xMC" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kjb-Zx-8uC" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5l-iq-XRm" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4MB-95-lqE">
+                                        <rect key="frame" x="0.0" y="219" width="394" height="43.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohi-vw-FNz" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="43.666666666666664"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ohi-vw-FNz" secondAttribute="height" multiplier="1:1" id="hm5-8E-6BX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBJ-9N-EO9" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDA-rJ-Tuh" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOz-3n-a7e" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pou-hR-h93" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="175" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvl-kv-d15" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2P-Wk-1JW" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CVx-LR-yVn" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qC-aT-cKw" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rrg-kL-Lb3">
+                                        <rect key="frame" x="0.0" y="262.66666666666663" width="394" height="43.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ers-rV-qJt" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="43.666666666666664"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ers-rV-qJt" secondAttribute="height" multiplier="1:1" id="bBz-Jz-9y7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXi-oU-hHn" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGx-8O-0f1" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hnq-E9-7cx" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlB-Gb-SBP" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="175" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWI-uE-mwy" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RX4-H0-s1U" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JN8-vQ-oyT" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO3-rs-LCE" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ntN-nd-Rbf">
+                                        <rect key="frame" x="0.0" y="306.33333333333337" width="394" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCg-Th-SPt" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="SCg-Th-SPt" secondAttribute="height" multiplier="1:1" id="rFY-gk-ogn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKs-EE-ByH" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcu-vo-ZH6" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlB-eY-PFO" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSM-ar-VOa" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="175" y="0.0" width="44" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btw-0z-tIw" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypG-eC-qdA" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9s-qP-XjD" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7y4-oK-kk3" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="44"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="X6d-BI-jdZ">
+                                        <rect key="frame" x="0.0" y="350.33333333333337" width="394" height="43.666666666666686"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eE6-DI-6q9" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="43.666666666666664"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="eE6-DI-6q9" secondAttribute="height" multiplier="1:1" id="lCn-nY-RU6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REk-Z6-U5s" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NuC-Hl-0Ej" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKm-ir-q1M" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBw-SJ-qgl" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="175" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8d-2Y-mGw" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwH-3f-pob" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12V-bW-h7E" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                            <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlU-AM-WPW" customClass="Cell" customModule="Sudoku" customModuleProvider="target">
+                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line1">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="line2">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                                </variation>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VoJ-KJ-dt8" secondAttribute="height" multiplier="1:1" id="Nd2-lZ-g9j"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="F6h-L7-OEq">
+                                <rect key="frame" x="32" y="795" width="350" height="67"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXY-qj-Zot">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="67"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                        </state>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="xte-un-5TR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMc-va-e7F">
+                                        <rect key="frame" x="40" y="0.0" width="30" height="67"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                        <state key="normal" title="2">
+                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                        </state>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="Eqv-4K-CWe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQq-Mb-8eK">
+                                        <rect key="frame" x="80" y="0.0" width="30" height="67"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                        <state key="normal" title="3">
+                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                        </state>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="INi-xb-tbX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBn-E5-Wpv">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="67"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                        <state key="normal" title="4">
+                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                        </state>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="xFx-pn-X5T"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FB-Sj-5S6">
+                                        <rect key="frame" x="160" y="0.0" width="30" height="67"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                        <state key="normal" title="5">
+                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                        </state>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="dxa-Nc-ldG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKH-mV-keO">
+                                        <rect key="frame" x="200" y="0.0" width="30" height="67"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                        <state key="normal" title="6">
+                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                        </state>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="s72-cx-Tsp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdS-Q7-QQ6">
+                                        <rect key="frame" x="240" y="0.0" width="30" height="67"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                        <state key="normal" title="7">
+                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                        </state>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="sxW-d0-QHW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeD-ri-U7I">
+                                        <rect key="frame" x="280" y="0.0" width="30" height="67"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                        <state key="normal" title="8">
+                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                        </state>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="pxC-88-14Z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vul-9j-r6K">
+                                        <rect key="frame" x="320" y="0.0" width="30" height="67"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                        <state key="normal" title="9">
+                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                        </state>
+                                        <variation key="heightClass=compact">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="XFE-ZS-COA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="vertical"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="vertical"/>
+                                <variation key="heightClass=regular-widthClass=regular" spacing="20"/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpv-P0-IBh" customClass="Hexagon" customModule="Sudoku" customModuleProvider="target">
+                                <rect key="frame" x="10" y="351" width="394" height="394"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qpv-P0-IBh" secondAttribute="height" multiplier="1:1" id="IRu-ev-KvA"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCX-h5-KA6" customClass="BackButton" customModule="Sudoku" customModuleProvider="target">
+                                <rect key="frame" x="10" y="52" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ata-Mm-VKq"/>
+                                    <constraint firstAttribute="width" constant="40" id="ik5-sq-czn"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="back:" destination="GUP-NI-CLB" eventType="touchUpInside" id="9Cx-nP-rmk"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VCZ-rW-uRO">
+                                <rect key="frame" x="96.666666666666686" y="91" width="221" height="67"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Vz-1c-Wzf" customClass="HintView" customModule="Sudoku" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="67"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hint" translatesAutoresizingMaskIntoConstraints="NO" id="WEr-F7-Tz3">
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="67"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="WEr-F7-Tz3" secondAttribute="bottom" id="3iw-Or-UPw"/>
+                                            <constraint firstItem="WEr-F7-Tz3" firstAttribute="top" secondItem="6Vz-1c-Wzf" secondAttribute="top" id="acz-QZ-gqU"/>
+                                            <constraint firstItem="WEr-F7-Tz3" firstAttribute="leading" secondItem="6Vz-1c-Wzf" secondAttribute="leading" id="pBl-Oq-9V1"/>
+                                            <constraint firstAttribute="trailing" secondItem="WEr-F7-Tz3" secondAttribute="trailing" id="pSM-01-qMS"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Erase" translatesAutoresizingMaskIntoConstraints="NO" id="SU6-L7-Q2b">
+                                        <rect key="frame" x="76.999999999999986" y="0.0" width="67.000000000000014" height="67"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Va6-wh-orY" customClass="ShrinkableButton" customModule="Sudoku" customModuleProvider="target">
+                                        <rect key="frame" x="154" y="0.0" width="67" height="67"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Va6-wh-orY" secondAttribute="height" multiplier="1:1" id="iIM-s8-3iu"/>
+                                            <constraint firstAttribute="height" constant="67" id="rjS-sI-DCb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                        <state key="normal" title="?">
+                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showRules:" destination="GUP-NI-CLB" eventType="touchUpInside" id="MYV-ks-XBg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mistakes: 0/4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO2-Nc-JlH">
+                                <rect key="frame" x="152.66666666666666" y="318.33333333333331" width="108.66666666666666" height="24.666666666666686"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" name="DynamicBlackColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                </variation>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xSj-e3-Blx" customClass="DifficultChooser" customModule="Sudoku" customModuleProvider="target">
+                                <rect key="frame" x="119" y="52" width="176" height="32"/>
+                                <color key="backgroundColor" name="DynamicGreenColor"/>
+                                <segments>
+                                    <segment title="★"/>
+                                    <segment title="★★"/>
+                                    <segment title="★★★"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lCX-h5-KA6" firstAttribute="top" secondItem="2R8-3D-IcE" secondAttribute="bottom" constant="8" symbolic="YES" id="4TE-G9-fb1"/>
+                            <constraint firstItem="UZ6-bO-Dxm" firstAttribute="top" secondItem="VoJ-KJ-dt8" secondAttribute="bottom" constant="10" id="D1g-jj-3Of"/>
+                            <constraint firstItem="F6h-L7-OEq" firstAttribute="bottom" secondItem="UZ6-bO-Dxm" secondAttribute="top" id="DoX-Bo-W5V"/>
+                            <constraint firstItem="VCZ-rW-uRO" firstAttribute="top" secondItem="xSj-e3-Blx" secondAttribute="bottom" constant="8" symbolic="YES" id="I1F-eW-9L0"/>
+                            <constraint firstItem="VCZ-rW-uRO" firstAttribute="centerX" secondItem="r6W-Cc-Vvb" secondAttribute="centerX" id="LDk-fz-EsT"/>
+                            <constraint firstAttribute="trailing" secondItem="VCZ-rW-uRO" secondAttribute="trailing" constant="16" id="MYo-r5-Ymk"/>
+                            <constraint firstItem="qpv-P0-IBh" firstAttribute="leading" secondItem="r6W-Cc-Vvb" secondAttribute="leading" constant="10" id="NCL-bY-9gW"/>
+                            <constraint firstItem="VoJ-KJ-dt8" firstAttribute="top" secondItem="aO2-Nc-JlH" secondAttribute="bottom" constant="8" id="SbK-Dj-VOd"/>
+                            <constraint firstItem="F6h-L7-OEq" firstAttribute="top" secondItem="qpv-P0-IBh" secondAttribute="bottom" constant="50" id="Sew-8e-tSv"/>
+                            <constraint firstAttribute="trailing" secondItem="VoJ-KJ-dt8" secondAttribute="trailing" constant="10" id="YpF-3X-eQS"/>
+                            <constraint firstItem="VoJ-KJ-dt8" firstAttribute="centerX" secondItem="r6W-Cc-Vvb" secondAttribute="centerX" id="aH8-zg-178"/>
+                            <constraint firstItem="F6h-L7-OEq" firstAttribute="top" secondItem="VoJ-KJ-dt8" secondAttribute="bottom" constant="50" id="b3c-pT-c4E"/>
+                            <constraint firstItem="F6h-L7-OEq" firstAttribute="centerX" secondItem="r6W-Cc-Vvb" secondAttribute="centerX" id="bEB-iV-lF8"/>
+                            <constraint firstItem="F6h-L7-OEq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2R8-3D-IcE" secondAttribute="bottom" symbolic="YES" id="cMx-ha-KhV"/>
+                            <constraint firstItem="VoJ-KJ-dt8" firstAttribute="leading" secondItem="r6W-Cc-Vvb" secondAttribute="leading" constant="10" id="dM6-R3-EUv"/>
+                            <constraint firstItem="VoJ-KJ-dt8" firstAttribute="centerX" secondItem="r6W-Cc-Vvb" secondAttribute="centerX" id="dQI-LM-Lrc"/>
+                            <constraint firstItem="F6h-L7-OEq" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="UZ6-bO-Dxm" secondAttribute="top" id="gZW-yD-nqG"/>
+                            <constraint firstItem="VCZ-rW-uRO" firstAttribute="top" secondItem="2R8-3D-IcE" secondAttribute="bottom" constant="20" id="iYa-Kf-YVM"/>
+                            <constraint firstItem="F6h-L7-OEq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r6W-Cc-Vvb" secondAttribute="leading" id="ihq-rF-eE5"/>
+                            <constraint firstItem="xSj-e3-Blx" firstAttribute="centerX" secondItem="r6W-Cc-Vvb" secondAttribute="centerX" id="m6R-J0-lu9"/>
+                            <constraint firstItem="aO2-Nc-JlH" firstAttribute="centerX" secondItem="r6W-Cc-Vvb" secondAttribute="centerX" id="nDZ-jh-JHF"/>
+                            <constraint firstItem="lCX-h5-KA6" firstAttribute="leading" secondItem="r6W-Cc-Vvb" secondAttribute="leading" constant="10" id="nbT-FN-LC6"/>
+                            <constraint firstItem="xSj-e3-Blx" firstAttribute="top" secondItem="2R8-3D-IcE" secondAttribute="bottom" constant="8" symbolic="YES" id="pe7-7h-heZ"/>
+                            <constraint firstItem="VoJ-KJ-dt8" firstAttribute="top" secondItem="2R8-3D-IcE" secondAttribute="bottom" constant="10" id="tme-hR-5fQ"/>
+                            <constraint firstAttribute="trailing" secondItem="qpv-P0-IBh" secondAttribute="trailing" constant="10" id="ufU-Mg-xsZ"/>
+                            <constraint firstItem="F6h-L7-OEq" firstAttribute="leading" secondItem="r6W-Cc-Vvb" secondAttribute="leading" constant="16" id="vA1-Mi-Rma"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="F6h-L7-OEq" secondAttribute="trailing" id="vvY-0l-frM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MYo-r5-Ymk"/>
+                                <exclude reference="iYa-Kf-YVM"/>
+                                <exclude reference="aH8-zg-178"/>
+                                <exclude reference="dQI-LM-Lrc"/>
+                                <exclude reference="tme-hR-5fQ"/>
+                                <exclude reference="cMx-ha-KhV"/>
+                                <exclude reference="gZW-yD-nqG"/>
+                                <exclude reference="vA1-Mi-Rma"/>
+                                <exclude reference="D1g-jj-3Of"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="LDk-fz-EsT"/>
+                                <include reference="MYo-r5-Ymk"/>
+                                <include reference="iYa-Kf-YVM"/>
+                                <exclude reference="YpF-3X-eQS"/>
+                                <exclude reference="dM6-R3-EUv"/>
+                                <include reference="dQI-LM-Lrc"/>
+                                <include reference="tme-hR-5fQ"/>
+                                <exclude reference="DoX-Bo-W5V"/>
+                                <exclude reference="bEB-iV-lF8"/>
+                                <include reference="cMx-ha-KhV"/>
+                                <include reference="gZW-yD-nqG"/>
+                                <include reference="vA1-Mi-Rma"/>
+                                <exclude reference="vvY-0l-frM"/>
+                                <include reference="D1g-jj-3Of"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="YpF-3X-eQS"/>
+                                <include reference="aH8-zg-178"/>
+                                <exclude reference="dM6-R3-EUv"/>
+                                <exclude reference="ihq-rF-eE5"/>
+                                <exclude reference="vvY-0l-frM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="difficultChooser" destination="xSj-e3-Blx" id="hLG-AV-95S"/>
+                        <outlet property="eraseView" destination="SU6-L7-Q2b" id="2fL-RV-1HQ"/>
+                        <outlet property="hintView" destination="6Vz-1c-Wzf" id="cfP-BX-FPS"/>
+                        <outlet property="mistakesLabel" destination="aO2-Nc-JlH" id="p4F-65-hy9"/>
+                        <outlet property="stackView" destination="VoJ-KJ-dt8" id="qaV-ZT-ikx"/>
+                        <outletCollection property="digits" destination="hXY-qj-Zot" collectionClass="NSMutableArray" id="9wh-So-NsP"/>
+                        <outletCollection property="digits" destination="FMc-va-e7F" collectionClass="NSMutableArray" id="ixf-1F-Gdp"/>
+                        <outletCollection property="digits" destination="GQq-Mb-8eK" collectionClass="NSMutableArray" id="uML-Ov-poM"/>
+                        <outletCollection property="digits" destination="LBn-E5-Wpv" collectionClass="NSMutableArray" id="Bbx-vD-hsv"/>
+                        <outletCollection property="digits" destination="6FB-Sj-5S6" collectionClass="NSMutableArray" id="zEW-D1-FNQ"/>
+                        <outletCollection property="digits" destination="JKH-mV-keO" collectionClass="NSMutableArray" id="imO-4g-f6Q"/>
+                        <outletCollection property="digits" destination="QdS-Q7-QQ6" collectionClass="NSMutableArray" id="Pwf-2V-orw"/>
+                        <outletCollection property="digits" destination="VeD-ri-U7I" collectionClass="NSMutableArray" id="37R-EX-AKs"/>
+                        <outletCollection property="digits" destination="vul-9j-r6K" collectionClass="NSMutableArray" id="n40-EP-dGU"/>
+                        <outletCollection property="cells" destination="CSF-rI-c0L" collectionClass="NSMutableArray" id="n8L-OL-5Rk"/>
+                        <outletCollection property="cells" destination="cbQ-gF-FKa" collectionClass="NSMutableArray" id="eMg-L4-NMk"/>
+                        <outletCollection property="cells" destination="Kas-Ob-3eG" collectionClass="NSMutableArray" id="tlO-7B-VnH"/>
+                        <outletCollection property="cells" destination="Afe-9f-bdh" collectionClass="NSMutableArray" id="aFf-kM-iij"/>
+                        <outletCollection property="cells" destination="0zy-xz-srJ" collectionClass="NSMutableArray" id="BRZ-33-Lwb"/>
+                        <outletCollection property="cells" destination="2yg-nj-ehp" collectionClass="NSMutableArray" id="3uJ-1o-AWE"/>
+                        <outletCollection property="cells" destination="tsV-er-79G" collectionClass="NSMutableArray" id="TGT-5e-y87"/>
+                        <outletCollection property="cells" destination="Zwg-Nx-lxJ" collectionClass="NSMutableArray" id="TDi-eC-wbP"/>
+                        <outletCollection property="cells" destination="FdA-Tw-bFB" collectionClass="NSMutableArray" id="r7b-8o-hfg"/>
+                        <outletCollection property="cells" destination="kdd-rX-8Ve" collectionClass="NSMutableArray" id="1Ca-m7-O5r"/>
+                        <outletCollection property="cells" destination="N0s-P5-c2B" collectionClass="NSMutableArray" id="63e-vV-AHR"/>
+                        <outletCollection property="cells" destination="WD9-q0-PGs" collectionClass="NSMutableArray" id="78l-nM-Xv2"/>
+                        <outletCollection property="cells" destination="Qkz-NA-5cr" collectionClass="NSMutableArray" id="NXd-L9-2T1"/>
+                        <outletCollection property="cells" destination="vAe-7V-iai" collectionClass="NSMutableArray" id="d2f-f7-K7r"/>
+                        <outletCollection property="cells" destination="Gc5-JD-MY0" collectionClass="NSMutableArray" id="gU6-ON-xGE"/>
+                        <outletCollection property="cells" destination="auB-OB-xle" collectionClass="NSMutableArray" id="Zlp-ux-Gz1"/>
+                        <outletCollection property="cells" destination="CoI-EZ-nRY" collectionClass="NSMutableArray" id="LZ6-dv-PCk"/>
+                        <outletCollection property="cells" destination="kpB-5t-DsR" collectionClass="NSMutableArray" id="ofP-u1-4zw"/>
+                        <outletCollection property="cells" destination="iVR-4e-XxV" collectionClass="NSMutableArray" id="kQu-m6-3Hg"/>
+                        <outletCollection property="cells" destination="z6g-hv-hgD" collectionClass="NSMutableArray" id="rjg-LP-BVv"/>
+                        <outletCollection property="cells" destination="oRZ-hM-yXf" collectionClass="NSMutableArray" id="naS-DK-kcy"/>
+                        <outletCollection property="cells" destination="Zyj-Wh-NnQ" collectionClass="NSMutableArray" id="eNu-rb-mgH"/>
+                        <outletCollection property="cells" destination="cFA-Qn-Bj3" collectionClass="NSMutableArray" id="TzC-44-sUJ"/>
+                        <outletCollection property="cells" destination="Cna-m7-zkO" collectionClass="NSMutableArray" id="rcK-9D-lIu"/>
+                        <outletCollection property="cells" destination="Rxj-cy-x7J" collectionClass="NSMutableArray" id="YnM-f3-7Jm"/>
+                        <outletCollection property="cells" destination="ojo-b3-CeP" collectionClass="NSMutableArray" id="st5-Qk-4ak"/>
+                        <outletCollection property="cells" destination="TGp-6p-qgz" collectionClass="NSMutableArray" id="NpM-Su-ZNA"/>
+                        <outletCollection property="cells" destination="dMo-WX-rwU" collectionClass="NSMutableArray" id="aM1-Qt-416"/>
+                        <outletCollection property="cells" destination="Cf0-z7-n3c" collectionClass="NSMutableArray" id="2es-cO-BeF"/>
+                        <outletCollection property="cells" destination="4ps-3V-Dc2" collectionClass="NSMutableArray" id="ahA-SQ-Xz6"/>
+                        <outletCollection property="cells" destination="e5i-gK-Pvy" collectionClass="NSMutableArray" id="4Md-sg-diF"/>
+                        <outletCollection property="cells" destination="YiL-2U-YDt" collectionClass="NSMutableArray" id="2L2-LP-3DV"/>
+                        <outletCollection property="cells" destination="YH7-WD-EKR" collectionClass="NSMutableArray" id="NGS-5X-gyV"/>
+                        <outletCollection property="cells" destination="jlp-GM-P41" collectionClass="NSMutableArray" id="1JP-TW-Go2"/>
+                        <outletCollection property="cells" destination="77F-CA-ntL" collectionClass="NSMutableArray" id="m3E-Jp-5WS"/>
+                        <outletCollection property="cells" destination="nFy-lM-oun" collectionClass="NSMutableArray" id="mjG-sk-ZRR"/>
+                        <outletCollection property="cells" destination="Gzn-td-HMS" collectionClass="NSMutableArray" id="DSv-rE-g1X"/>
+                        <outletCollection property="cells" destination="Lca-O2-kFR" collectionClass="NSMutableArray" id="EL8-yX-aBi"/>
+                        <outletCollection property="cells" destination="P15-2f-XPJ" collectionClass="NSMutableArray" id="P55-Dk-xEK"/>
+                        <outletCollection property="cells" destination="Gjl-bv-1GN" collectionClass="NSMutableArray" id="a5E-IY-re7"/>
+                        <outletCollection property="cells" destination="vL3-3L-pe8" collectionClass="NSMutableArray" id="59p-a8-AGD"/>
+                        <outletCollection property="cells" destination="9UL-N3-YMm" collectionClass="NSMutableArray" id="cOg-UN-LKP"/>
+                        <outletCollection property="cells" destination="FHu-Sc-xMC" collectionClass="NSMutableArray" id="Cr6-r7-xFN"/>
+                        <outletCollection property="cells" destination="kjb-Zx-8uC" collectionClass="NSMutableArray" id="DCb-Pq-eDl"/>
+                        <outletCollection property="cells" destination="k5l-iq-XRm" collectionClass="NSMutableArray" id="uuu-gg-hbh"/>
+                        <outletCollection property="cells" destination="ohi-vw-FNz" collectionClass="NSMutableArray" id="9sB-rL-qx1"/>
+                        <outletCollection property="cells" destination="oBJ-9N-EO9" collectionClass="NSMutableArray" id="xvg-xF-YtC"/>
+                        <outletCollection property="cells" destination="HDA-rJ-Tuh" collectionClass="NSMutableArray" id="81Z-IB-I9X"/>
+                        <outletCollection property="cells" destination="oOz-3n-a7e" collectionClass="NSMutableArray" id="nsK-lG-3K2"/>
+                        <outletCollection property="cells" destination="Pou-hR-h93" collectionClass="NSMutableArray" id="74g-XU-uhi"/>
+                        <outletCollection property="cells" destination="Kvl-kv-d15" collectionClass="NSMutableArray" id="JFc-M6-pPs"/>
+                        <outletCollection property="cells" destination="l2P-Wk-1JW" collectionClass="NSMutableArray" id="djq-qp-dsT"/>
+                        <outletCollection property="cells" destination="CVx-LR-yVn" collectionClass="NSMutableArray" id="koQ-Sp-DIc"/>
+                        <outletCollection property="cells" destination="6qC-aT-cKw" collectionClass="NSMutableArray" id="1jv-2b-LYz"/>
+                        <outletCollection property="cells" destination="ers-rV-qJt" collectionClass="NSMutableArray" id="n3i-K4-lB7"/>
+                        <outletCollection property="cells" destination="gXi-oU-hHn" collectionClass="NSMutableArray" id="4jp-sr-n2i"/>
+                        <outletCollection property="cells" destination="CGx-8O-0f1" collectionClass="NSMutableArray" id="dtB-DH-NSz"/>
+                        <outletCollection property="cells" destination="Hnq-E9-7cx" collectionClass="NSMutableArray" id="TNj-EZ-5PR"/>
+                        <outletCollection property="cells" destination="tlB-Gb-SBP" collectionClass="NSMutableArray" id="ePm-Ai-cOK"/>
+                        <outletCollection property="cells" destination="uWI-uE-mwy" collectionClass="NSMutableArray" id="3ip-uf-M0R"/>
+                        <outletCollection property="cells" destination="RX4-H0-s1U" collectionClass="NSMutableArray" id="LtZ-FB-c1x"/>
+                        <outletCollection property="cells" destination="JN8-vQ-oyT" collectionClass="NSMutableArray" id="fdy-Sh-Ftk"/>
+                        <outletCollection property="cells" destination="GO3-rs-LCE" collectionClass="NSMutableArray" id="Tqj-Cw-AI1"/>
+                        <outletCollection property="cells" destination="SCg-Th-SPt" collectionClass="NSMutableArray" id="aMp-J3-rpS"/>
+                        <outletCollection property="cells" destination="PKs-EE-ByH" collectionClass="NSMutableArray" id="R39-Na-AIQ"/>
+                        <outletCollection property="cells" destination="bcu-vo-ZH6" collectionClass="NSMutableArray" id="wac-vZ-DT1"/>
+                        <outletCollection property="cells" destination="OlB-eY-PFO" collectionClass="NSMutableArray" id="Vpq-Ew-Ea5"/>
+                        <outletCollection property="cells" destination="ZSM-ar-VOa" collectionClass="NSMutableArray" id="xB2-Mu-36b"/>
+                        <outletCollection property="cells" destination="btw-0z-tIw" collectionClass="NSMutableArray" id="YtT-mA-81F"/>
+                        <outletCollection property="cells" destination="ypG-eC-qdA" collectionClass="NSMutableArray" id="fN3-ld-aoS"/>
+                        <outletCollection property="cells" destination="A9s-qP-XjD" collectionClass="NSMutableArray" id="pll-fi-3Bi"/>
+                        <outletCollection property="cells" destination="7y4-oK-kk3" collectionClass="NSMutableArray" id="Ai8-1J-R6H"/>
+                        <outletCollection property="cells" destination="eE6-DI-6q9" collectionClass="NSMutableArray" id="hqu-qM-0SD"/>
+                        <outletCollection property="cells" destination="REk-Z6-U5s" collectionClass="NSMutableArray" id="qRY-WY-U8V"/>
+                        <outletCollection property="cells" destination="NuC-Hl-0Ej" collectionClass="NSMutableArray" id="oYR-Br-v50"/>
+                        <outletCollection property="cells" destination="MKm-ir-q1M" collectionClass="NSMutableArray" id="gXL-5K-esX"/>
+                        <outletCollection property="cells" destination="TBw-SJ-qgl" collectionClass="NSMutableArray" id="jlx-Fg-9bV"/>
+                        <outletCollection property="cells" destination="K8d-2Y-mGw" collectionClass="NSMutableArray" id="ckI-HI-Ufy"/>
+                        <outletCollection property="cells" destination="UwH-3f-pob" collectionClass="NSMutableArray" id="prL-Cu-Xgc"/>
+                        <outletCollection property="cells" destination="12V-bW-h7E" collectionClass="NSMutableArray" id="OCJ-3K-qvI"/>
+                        <outletCollection property="cells" destination="KlU-AM-WPW" collectionClass="NSMutableArray" id="Ysg-bT-u61"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wp1-S0-3fG" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2442" y="751"/>
         </scene>
         <!--Shape Sudoku View Controller-->
         <scene sceneID="MIp-Pb-Nvx">
