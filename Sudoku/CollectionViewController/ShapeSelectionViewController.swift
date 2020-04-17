@@ -40,7 +40,7 @@ class ShapeSelectionViewController: UIViewController, UICollectionViewDataSource
             let index = collectionView.indexPath(for: cell){
             destination.path = path
             destination.gameType = gameType
-            destination.id = index.item
+            destination.index = index.item
         }
     }
     

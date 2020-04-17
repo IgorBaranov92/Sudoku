@@ -17,3 +17,7 @@ protocol EraseViewDelegate: class {
 protocol GameLostDelegate: class {
     
 }
+
+protocol NewGameDelegate: class {
+    func recreateGameIfNeededAt(_ index:Int)
+}

@@ -2,11 +2,15 @@ import UIKit
 
 class ShapeSudokuViewController: SudokuViewController {
 
-    var id = 0
+    var index = 0
 
     @IBOutlet weak var shapeView: ShapeView! { didSet {
-        shapeView?.id = id
+        shapeView?.id = index
         }}
     
+    override func viewDidLoad() {
+        super.id = index
+        super.viewDidLoad()
+    }
     
 }

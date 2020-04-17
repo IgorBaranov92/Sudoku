@@ -70,6 +70,26 @@ extension CALayer {
         insertSublayer(subLayer, at: 0)
     }
     
+    func addLineAt(width:CGFloat,start:CGPoint,end:CGPoint) {
+        let subLayer = CAShapeLayer()
+        let path = CGMutablePath()
+        path.move(to: start)
+        path.addLine(to: end)
+        subLayer.path = path
+        subLayer.lineWidth = width
+        subLayer.strokeColor = UIColor.black.cgColor
+        addSublayer(subLayer)
+    }
+    
+    func addColorLayer(_ rect:CGRect) {
+        let subLayer = CAShapeLayer()
+        let path = CGMutablePath()
+        path.addRect(rect)
+        subLayer.path = path
+        subLayer.fillColor = #colorLiteral(red: 0.4670000076, green: 0.7649999857, blue: 0.2669999897, alpha: 1).cgColor
+        insertSublayer(subLayer, at: 0)
+    }
+    
     enum LayerType:String {
         case leftDiagonal
         case rightDiagonal
@@ -78,10 +98,7 @@ extension CALayer {
         case topAngle
         case bottomAngle
     }
-    
-    
-    
-    
-    
-    
+
 }
+
+

@@ -71,7 +71,7 @@ final class ShapeSudoku {
          set3 = Set(arrayLiteral: 5,6,13,14,22,23,31,32,40)
          set4 = Set(arrayLiteral: 7,8,16,17,15,24,33,42,51)
          set5 = Set(arrayLiteral: 25,26,34,35,43,44,52,53,62)
-         set6 = Set(arrayLiteral: 77,78,79,80,69,70,72,60,61)
+         set6 = Set(arrayLiteral: 77,78,79,80,69,70,71,60,61)
          set7 = Set(arrayLiteral: 72,73,63,64,55,46,37,28,29)
          set8 = Set(arrayLiteral: 74,75,65,56,47,48,49,38,39)
          set9 = Set(arrayLiteral: 76,66,67,68,57,58,59,50,41)
@@ -94,7 +94,7 @@ final class ShapeSudoku {
          set6 = Set(arrayLiteral: 54,55,56,57,58,59,48,49,50)
          set7 = Set(arrayLiteral: 12,13,21,22,30,39,23,24,32)
          set8 = Set(arrayLiteral: 15,16,25,34,35,43,44,52,53)
-         set9 = Set(arrayLiteral: 62,61,60,51,42,33,40,39,30)
+         set9 = Set(arrayLiteral: 62,61,60,51,42,33,41,40,31)
         case 8:
          set1 = Set(arrayLiteral: 0,1,9,10,18,27,36,45,54)
          set2 = Set(arrayLiteral: 19,28,37,46,55,63,64,72,73)
@@ -122,7 +122,7 @@ final class ShapeSudoku {
          set4 = Set(arrayLiteral: 7,8,17,25,26,34,35,43,44)
          set5 = Set(arrayLiteral: 52,53,61,62,70,71,79,80,78)
          set6 = Set(arrayLiteral: 36,37,45,46,54,55,63,72,73)
-         set7 = Set(arrayLiteral: 18,27,28,30,31,39,40,48,49)
+         set7 = Set(arrayLiteral: 18,27,28,29,30,38,39,47,48)
          set8 = Set(arrayLiteral: 75,76,77,68,59,50,41,32,23)
          set9 = Set(arrayLiteral: 74,64,65,66,67,56,57,58,49)
         case 11:
@@ -138,9 +138,6 @@ final class ShapeSudoku {
             
         default:break
         }
-      //  let superSet = set1.union(set2).union(set3).union(set4).union(set5).union(set6).union(set7).union(set8).union(set9)
-
-        
         let sets = [set1,set2,set3,set4,set5,set6,set7,set8,set9]
         for set in sets {
             if set.contains(index) {

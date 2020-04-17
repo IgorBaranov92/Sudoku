@@ -1,31 +1,13 @@
 import UIKit
 
 @IBDesignable
-class ShapeView: UIView {
+class ShapeView: SudokuView {
 
-    var id = 11 { didSet { setNeedsDisplay() }}
+    var id = 0 { didSet { setNeedsDisplay() }}
     
     
     override func draw(_ rect: CGRect) {
-        let outerPath = UIBezierPath(rect: rect.insetBy(dx: 1.0, dy: 1.0))
-        outerPath.lineWidth = Constants.doubleLineWidth
-        UIColor.border.setStroke()
-        outerPath.stroke()
-        
-        for pivot in stride(from: 1/9*rect.width, to: rect.width, by: 1/9*rect.width) {
-            let verticalPath = UIBezierPath()
-            verticalPath.move(to: CGPoint(x: pivot, y: 0))
-            verticalPath.addLine(to: CGPoint(x: pivot, y: rect.maxY))
-            verticalPath.lineWidth = Constants.lineWidth
-            UIColor.border.setStroke()
-            verticalPath.stroke()
-            
-            let horizontalPath = UIBezierPath()
-            horizontalPath.move(to: CGPoint(x: 0, y: pivot))
-            horizontalPath.addLine(to: CGPoint(x: rect.maxX, y: pivot))
-            horizontalPath.lineWidth = Constants.lineWidth
-            horizontalPath.stroke()
-        }
+        super.draw(rect)
         UIColor.border.setStroke()
         Shapes.getPathBasedAt(id, rect: rect).stroke()
         

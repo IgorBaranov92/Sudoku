@@ -4,7 +4,7 @@ class SudokuGenerator: Sudoku {
     
     var difficult: Difficult = .easy
     var gameType: GameType = .classic
-    var id = 2
+    var id = 11
     
     private var gameCompleted: Bool { digits.filter { $0 == 0 }.isEmpty } //all cells solved
     
@@ -18,12 +18,13 @@ class SudokuGenerator: Sudoku {
     private(set) var hintsMade = 0
     private(set) var hints = 0
           
-    init(difficult:Int,gameType:GameType, delegate: SudokuDelegate? = nil,completion:(() -> ())? = nil  ) {
+    init(difficult:Int,gameType:GameType,id:Int, delegate: SudokuDelegate? = nil,completion:(() -> ())? = nil  ) {
         super.init()
         DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
             self.delegate = delegate
             self.gameType = gameType
             self.completion = completion
+            self.id = id
             switch difficult {
             case 0: self.difficult = .easy;self.mistakes = 4;self.hints = 4
             case 1: self.difficult = .medium;self.mistakes = 3;self.hints = 3

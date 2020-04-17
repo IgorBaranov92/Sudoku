@@ -1,13 +1,13 @@
 import UIKit
 
-class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegate {
+class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegate, NewGameDelegate {
     
     // MARK: - Public API
     
-    lazy var sudoku = SudokuGenerator(difficult: 0,gameType:gameType,delegate: self)
+    lazy var sudoku = SudokuGenerator(difficult: 0,gameType:gameType,id:id,delegate: self)
     var gameType: GameType = .classic
     var path = String()
-    
+    var id = 0
     
     var selectedButton: Cell? { cells.filter { $0.active == true }.first}
     var game = Game()
@@ -17,13 +17,18 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
     // MARK: - Outlets
     
     @IBOutlet weak var mistakesLabel: UILabel!
-    @IBOutlet weak var difficultChooser: UISegmentedControl!
+    @IBOutlet weak var difficultChooser: DifficultChooser! { didSet {
+        difficultChooser.delegate = self
+        }}
+    
     @IBOutlet weak var stackView: UIStackView!
 
     @IBOutlet private weak var hintView: HintView! { didSet {
         hintView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showHint(_:))))
         }}
+    
     @IBOutlet private weak var eraseView: UIImageView! { didSet {
+        eraseView.isUserInteractionEnabled = true
         eraseView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(erase(_:))))
         }}
     
@@ -38,13 +43,14 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
     
     private var hasActiveButton: Bool?
 
-    private var gameIndex: Int { return difficultChooser.selectedSegmentIndex }
+    private var gameIndex = 0
     
     // MARK: - ViewController lifecycle
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(id)
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(clear)))
         restoreOptions()
         restoreStatistic()
@@ -152,13 +158,6 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
             }
         }
     }
-    
-    @IBAction private func changeDifficult(_ sender: UISegmentedControl) {
-        saveGame()
-        recreateGameIfNeeded()
-    }
-    
-  
     
     @objc
     private func touchField(_ recognizer: UITapGestureRecognizer) {
@@ -292,7 +291,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
     // MARK: - Restoring and saving games
        
     private func recreateGameIfNeeded() {
-        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(path),let data = try? Data(contentsOf: url),let newValue = Game(json: data) {
+        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(gameType == .shape ? path + String(id) : path),let data = try? Data(contentsOf: url),let newValue = Game(json: data) {
             game = newValue
             guard let game = game.games[gameIndex] else { newGame();return  }
             sudoku = game
@@ -335,10 +334,11 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
     
     @objc
     private func saveGame() {
-        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(path),let json = game.json {
+        if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(gameType == .shape ? path + String(id) : path),let json = game.json {
             game.games[gameIndex] = sudoku
             try? json.write(to: url)
         }
+        
     }
     
     private func newGame() {
@@ -347,7 +347,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
         hasActiveButton = nil
         view.isUserInteractionEnabled = true
         sudoku = SudokuGenerator(difficult: gameIndex,
-                                 gameType:gameType,
+                                 gameType:gameType,id:id,
                                  delegate: self) { [weak self] in
                                         DispatchQueue.main.async {
                                             self?.saveGame()
@@ -394,5 +394,15 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
     func cancelButtonTouched() {
         //save game progres
         dismiss(animated: true)
+    }
+    
+    func recreateGameIfNeededAt(_ index: Int) {
+        if index == gameIndex {
+            newGame()
+        } else {
+            saveGame()
+            gameIndex = index
+            recreateGameIfNeeded()
+        }
     }
 }

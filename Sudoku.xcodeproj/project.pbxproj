@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78062D862449AF7300032FF0 /* LevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78062D852449AF7300032FF0 /* LevelCell.swift */; };
 		78181EF923E5BD9B00836109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78181EF823E5BD9B00836109 /* AppDelegate.swift */; };
 		78181F0023E5BD9B00836109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78181EFE23E5BD9B00836109 /* Main.storyboard */; };
 		78181F0223E5BD9C00836109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78181F0123E5BD9C00836109 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		7862E4F7242A604C0030F8E8 /* NoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F6242A604B0030F8E8 /* NoButton.swift */; };
 		7862E4F9242A60550030F8E8 /* YesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F8242A60550030F8E8 /* YesButton.swift */; };
 		786630F02445B62A002C0399 /* ShapeSudokuSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786630EF2445B62A002C0399 /* ShapeSudokuSolver.swift */; };
+		786A4955244983A8000A2E17 /* SudokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A4954244983A8000A2E17 /* SudokuView.swift */; };
 		786BC689243F3E4D00D42553 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC688243F3E4D00D42553 /* Protocols.swift */; };
 		786BC68B243F3EC300D42553 /* CALayer+Layers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC68A243F3EC300D42553 /* CALayer+Layers.swift */; };
 		786BC68D243F3F5000D42553 /* UIDevice+device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC68C243F3F5000D42553 /* UIDevice+device.swift */; };
@@ -48,6 +50,10 @@
 		7871BBBD2440E1D700A6FF81 /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871BBBC2440E1D700A6FF81 /* ShapeView.swift */; };
 		7876D3AC2438B6C900FEA18D /* ShapeSudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876D3AB2438B6C900FEA18D /* ShapeSudoku.swift */; };
 		7877D1B923ED95B000E43314 /* BorderedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7877D1B823ED95B000E43314 /* BorderedCell.swift */; };
+		787C578F244770D1009C0C34 /* DifficultChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787C578E244770D1009C0C34 /* DifficultChooser.swift */; };
+		787C57912448B8EB009C0C34 /* LevelsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787C57902448B8EB009C0C34 /* LevelsSelectionViewController.swift */; };
+		787C57932448B953009C0C34 /* LevelSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787C57922448B953009C0C34 /* LevelSelectionCollectionViewCell.swift */; };
+		787C57952448B972009C0C34 /* Helper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787C57942448B972009C0C34 /* Helper.storyboard */; };
 		78810CCA241F90B6002828E2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78810CC9241F90B6002828E2 /* MessageView.swift */; };
 		7883A1C4241D2BE100ECB3FD /* TutorialViewConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */; };
 		7883A1C9241D3D9200ECB3FD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7883A1CB241D3D9200ECB3FD /* Localizable.strings */; };
@@ -89,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		78062D852449AF7300032FF0 /* LevelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCell.swift; sourceTree = "<group>"; };
 		78181EF523E5BD9B00836109 /* Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78181EF823E5BD9B00836109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78181EFF23E5BD9B00836109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +130,7 @@
 		7862E4F6242A604B0030F8E8 /* NoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoButton.swift; sourceTree = "<group>"; };
 		7862E4F8242A60550030F8E8 /* YesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesButton.swift; sourceTree = "<group>"; };
 		786630EF2445B62A002C0399 /* ShapeSudokuSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSudokuSolver.swift; sourceTree = "<group>"; };
+		786A4954244983A8000A2E17 /* SudokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuView.swift; sourceTree = "<group>"; };
 		786BC688243F3E4D00D42553 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		786BC68A243F3EC300D42553 /* CALayer+Layers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Layers.swift"; sourceTree = "<group>"; };
 		786BC68C243F3F5000D42553 /* UIDevice+device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+device.swift"; sourceTree = "<group>"; };
@@ -136,6 +144,10 @@
 		7871BBBC2440E1D700A6FF81 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
 		7876D3AB2438B6C900FEA18D /* ShapeSudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSudoku.swift; sourceTree = "<group>"; };
 		7877D1B823ED95B000E43314 /* BorderedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedCell.swift; sourceTree = "<group>"; };
+		787C578E244770D1009C0C34 /* DifficultChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultChooser.swift; sourceTree = "<group>"; };
+		787C57902448B8EB009C0C34 /* LevelsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsSelectionViewController.swift; sourceTree = "<group>"; };
+		787C57922448B953009C0C34 /* LevelSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		787C57942448B972009C0C34 /* Helper.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Helper.storyboard; sourceTree = "<group>"; };
 		78810CC9241F90B6002828E2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewConstraint.swift; sourceTree = "<group>"; };
 		7883A1C5241D3CF200ECB3FD /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
@@ -210,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				78181EFE23E5BD9B00836109 /* Main.storyboard */,
+				787C57942448B972009C0C34 /* Helper.storyboard */,
 				7883A1CB241D3D9200ECB3FD /* Localizable.strings */,
 				785C734423F19E6900757B0E /* Model */,
 				7894D919242B62B90067D313 /* Sudoku model */,
@@ -274,6 +287,7 @@
 				78294FCE241B882C00854A97 /* ErrorView.swift */,
 				782239CA2420D967004E7D35 /* TriangleView.swift */,
 				785FDEB524471A3F00E56F62 /* HintView.swift */,
+				787C578E244770D1009C0C34 /* DifficultChooser.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,6 +339,7 @@
 		7871BBB52440E11100A6FF81 /* CollectionViewController */ = {
 			isa = PBXGroup;
 			children = (
+				787C57902448B8EB009C0C34 /* LevelsSelectionViewController.swift */,
 				7871BBB72440E14700A6FF81 /* ShapeSelectionViewController.swift */,
 			);
 			path = CollectionViewController;
@@ -333,6 +348,7 @@
 		7871BBB62440E12B00A6FF81 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				787C57922448B953009C0C34 /* LevelSelectionCollectionViewCell.swift */,
 				7871BBB92440E1B700A6FF81 /* ShapeCollectionViewCell.swift */,
 			);
 			path = CollectionViewCell;
@@ -341,6 +357,7 @@
 		7871BBBB2440E1C700A6FF81 /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
+				786A4954244983A8000A2E17 /* SudokuView.swift */,
 				7871BBBC2440E1D700A6FF81 /* ShapeView.swift */,
 				785D09352440F94100053AD8 /* Shapes.swift */,
 			);
@@ -380,6 +397,7 @@
 			isa = PBXGroup;
 			children = (
 				78181F1123E5BE3300836109 /* Cell.swift */,
+				78062D852449AF7300032FF0 /* LevelCell.swift */,
 				7895216A241A431C004F8C1C /* BackButton.swift */,
 				782239CC2420ECF7004E7D35 /* ShrinkableButton.swift */,
 				7877D1B823ED95B000E43314 /* BorderedCell.swift */,
@@ -510,6 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				787C57952448B972009C0C34 /* Helper.storyboard in Resources */,
 				78181F0523E5BD9C00836109 /* LaunchScreen.storyboard in Resources */,
 				7883A1C9241D3D9200ECB3FD /* Localizable.strings in Resources */,
 				78181F0223E5BD9C00836109 /* Assets.xcassets in Resources */,
@@ -564,6 +583,7 @@
 				788CDC8E242345D800420F9B /* UIColor+Colors.swift in Sources */,
 				786BC689243F3E4D00D42553 /* Protocols.swift in Sources */,
 				7891FA80241A2F3D003BF6BA /* MainViewController.swift in Sources */,
+				787C578F244770D1009C0C34 /* DifficultChooser.swift in Sources */,
 				782239CD2420ECF7004E7D35 /* ShrinkableButton.swift in Sources */,
 				78C9B5E8241D08BC00E1DB7A /* StatisticViewController.swift in Sources */,
 				786BC697243F656100D42553 /* Indexes.swift in Sources */,
@@ -575,6 +595,7 @@
 				78181F1023E5BE2A00836109 /* SudokuViewController.swift in Sources */,
 				7860C8FF2441CAA60012B007 /* ShapeSudokuViewController.swift in Sources */,
 				7895216B241A431C004F8C1C /* BackButton.swift in Sources */,
+				787C57932448B953009C0C34 /* LevelSelectionCollectionViewCell.swift in Sources */,
 				785C734123F192A000757B0E /* SudokuSolver.swift in Sources */,
 				7862E4F5242A5BAA0030F8E8 /* EraseViewConstraints.swift in Sources */,
 				785FDEB624471A3F00E56F62 /* HintView.swift in Sources */,
@@ -598,9 +619,11 @@
 				786BC695243F3FCB00D42553 /* Array+unique.swift in Sources */,
 				7896973F241A321B0054397E /* DiagonalCell.swift in Sources */,
 				786BC68B243F3EC300D42553 /* CALayer+Layers.swift in Sources */,
+				786A4955244983A8000A2E17 /* SudokuView.swift in Sources */,
 				788CDC8C24233DD200420F9B /* TextAppearenceAnimator.swift in Sources */,
 				786BC693243F3FB500D42553 /* CGRect+rects.swift in Sources */,
 				78181EF923E5BD9B00836109 /* AppDelegate.swift in Sources */,
+				787C57912448B8EB009C0C34 /* LevelsSelectionViewController.swift in Sources */,
 				7862E4F7242A604C0030F8E8 /* NoButton.swift in Sources */,
 				7876D3AC2438B6C900FEA18D /* ShapeSudoku.swift in Sources */,
 				7883A1C4241D2BE100ECB3FD /* TutorialViewConstraint.swift in Sources */,
@@ -612,6 +635,7 @@
 				7862E4ED242651AD0030F8E8 /* StatisticButtonAnimator.swift in Sources */,
 				78C9B5DB241BE98100E1DB7A /* TutorialView.swift in Sources */,
 				785D09362440F94100053AD8 /* Shapes.swift in Sources */,
+				78062D862449AF7300032FF0 /* LevelCell.swift in Sources */,
 				78EABF3A242E296B00EF9A1E /* Rules.swift in Sources */,
 				7862E4F3242A5B610030F8E8 /* EraseStatisticView.swift in Sources */,
 			);
