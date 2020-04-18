@@ -3,7 +3,8 @@ import UIKit
 @IBDesignable
 class ShapeView: SudokuView {
 
-    var id = 0 { didSet { setNeedsDisplay() }}
+    @IBInspectable
+    var id: Int = 0 { didSet { setNeedsDisplay() }}
     
     
     override func draw(_ rect: CGRect) {
