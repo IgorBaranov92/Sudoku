@@ -421,9 +421,9 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKT-uX-Lwf">
-                                            <rect key="frame" x="159.66666666666666" y="-1.6666666666666679" width="95" height="47.333333333333343"/>
+                                            <rect key="frame" x="175.66666666666666" y="-1.6666666666666679" width="63" height="47.333333333333343"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                            <state key="normal" title="Reset all">
+                                            <state key="normal" title="Reset">
                                                 <color key="titleColor" name="DynamicBlackColor"/>
                                             </state>
                                             <connections>
@@ -482,6 +482,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <items>
                                     <navigationItem title="Statistic" id="eVd-7B-yq3">
+                                        <barButtonItem key="leftBarButtonItem" title="Reset all" id="6sg-q5-Ixx">
+                                            <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="eraseAll:" destination="QfW-Aq-g2U" id="bRC-Mk-MbK"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="MY0-Iz-bQd">
                                             <connections>
                                                 <action selector="done:" destination="QfW-Aq-g2U" id="nWQ-7W-6WU"/>
@@ -584,6 +590,7 @@
                     </view>
                     <connections>
                         <outlet property="heightConstaint" destination="nNK-Dd-syJ" id="QN3-qP-33J"/>
+                        <outlet property="resetAllButton" destination="6sg-q5-Ixx" id="3Or-Zg-RkY"/>
                         <outlet property="scrollView" destination="JYM-Fn-NbM" id="74v-Pz-GHO"/>
                         <outlet property="stackView" destination="zgs-Ct-Obm" id="IV6-sJ-QEd"/>
                         <outlet property="tableView" destination="ctv-bj-NQc" id="GxR-o4-kXX"/>

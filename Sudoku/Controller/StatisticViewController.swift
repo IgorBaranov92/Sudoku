@@ -1,6 +1,6 @@
 import UIKit
 
-class StatisticViewController: UIViewController,UITableViewDataSource,UITableViewDelegate, EraseViewDelegate {
+class StatisticViewController: UIViewController,UITableViewDataSource,UITableViewDelegate, EraseViewDelegate, EraseAllViewDelegate {
     
 // MARK: - Model
     
@@ -18,6 +18,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     @IBOutlet var buttons: [UIButton]! { didSet {
         buttons[0].setTitleColor(.dynamicGreen, for: .normal)
         }}
+    @IBOutlet weak var resetAllButton: UIBarButtonItem!
     
     // MARK: - Private API
     @IBOutlet private weak var heightConstaint: NSLayoutConstraint!
@@ -82,6 +83,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         EraseViewConstraints.activate(eraseView, view)
         TutorialViewAnimator.show(eraseView)
         buttons.forEach { $0.isUserInteractionEnabled = false }
+        resetAllButton.isEnabled = false
     }
     
     @IBAction func changeStatisticBasedOnGameType(_ sender: UIButton) {
@@ -94,6 +96,19 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
             tableView.reloadData()
         }
     }
+    
+    @IBAction func eraseAll(_ sender:UIBarButtonItem) {
+        let eraseView = EraseAllView()
+        eraseView.eraseAllDelegate = self
+        eraseView.attentionMessage = "Внимание!"
+        eraseView.message = "Вы действительно хотите удалить всю статистику?\nДействие нельзя будет отменить."
+        view.addSubview(eraseView)
+        EraseViewConstraints.activate(eraseView, view)
+        TutorialViewAnimator.show(eraseView)
+        buttons.forEach { $0.isUserInteractionEnabled = false }
+        resetAllButton.isEnabled = false
+    }
+    
     
     private func updateStatistic() {
         if let validUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("statistic"),let data = try? Data(contentsOf: validUrl),let newValue = Statistic(json: data) {
@@ -117,19 +132,27 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         saveStatistic()
         tableView.reloadData()
         buttons.forEach { $0.isUserInteractionEnabled = true }
+        resetAllButton.isEnabled = true
     }
     
     func eraseCanceled() {
         buttons.forEach { $0.isUserInteractionEnabled = true }
+        resetAllButton.isEnabled = true
     }
     
-    func eraseAll() {
+    func eraseAllCanceled() {
+        buttons.forEach { $0.isUserInteractionEnabled = true }
+        resetAllButton.isEnabled = true
+    }
+    
+    func eraseAllConfirmed() {
         for index in statistic.scores.indices {
             statistic.scores[index] = Statistic.Scores()
         }
         saveStatistic()
         tableView.reloadData()
         buttons.forEach { $0.isUserInteractionEnabled = true }
+        resetAllButton.isEnabled = true
     }
-    
+   
 }

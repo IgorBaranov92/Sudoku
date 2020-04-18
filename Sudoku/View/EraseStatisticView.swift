@@ -40,13 +40,13 @@ class EraseStatisticView: InfoView {
     }
    
     @objc
-    private func dismiss() {
+    func dismiss() {
         delegate?.eraseCanceled()
         TutorialViewAnimator.dismiss(self)
     }
     
     @objc
-    private func erase () {
+    func erase () {
         delegate?.eraseConfirmed()
         TutorialViewAnimator.dismiss(self)
     }

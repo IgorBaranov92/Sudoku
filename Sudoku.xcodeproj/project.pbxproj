@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		78062D862449AF7300032FF0 /* LevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78062D852449AF7300032FF0 /* LevelCell.swift */; };
+		780A15F9244B108600FA52E1 /* EraseAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A15F8244B108600FA52E1 /* EraseAllView.swift */; };
 		78181EF923E5BD9B00836109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78181EF823E5BD9B00836109 /* AppDelegate.swift */; };
 		78181F0023E5BD9B00836109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78181EFE23E5BD9B00836109 /* Main.storyboard */; };
 		78181F0223E5BD9C00836109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78181F0123E5BD9C00836109 /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 
 /* Begin PBXFileReference section */
 		78062D852449AF7300032FF0 /* LevelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCell.swift; sourceTree = "<group>"; };
+		780A15F8244B108600FA52E1 /* EraseAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EraseAllView.swift; sourceTree = "<group>"; };
 		78181EF523E5BD9B00836109 /* Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78181EF823E5BD9B00836109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78181EFF23E5BD9B00836109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				78C9B5DA241BE98100E1DB7A /* TutorialView.swift */,
 				7883A1CE241D43AC00ECB3FD /* FinishGameView.swift */,
 				7862E4F2242A5B610030F8E8 /* EraseStatisticView.swift */,
+				780A15F8244B108600FA52E1 /* EraseAllView.swift */,
 				78294FCE241B882C00854A97 /* ErrorView.swift */,
 				782239CA2420D967004E7D35 /* TriangleView.swift */,
 				785FDEB524471A3F00E56F62 /* HintView.swift */,
@@ -577,6 +580,7 @@
 				788CDC8A2422745900420F9B /* CellAnimator.swift in Sources */,
 				786630F02445B62A002C0399 /* ShapeSudokuSolver.swift in Sources */,
 				785C734323F1957A00757B0E /* SudokuGenerator.swift in Sources */,
+				780A15F9244B108600FA52E1 /* EraseAllView.swift in Sources */,
 				788CDC8E242345D800420F9B /* UIColor+Colors.swift in Sources */,
 				786BC689243F3E4D00D42553 /* Protocols.swift in Sources */,
 				787C578F244770D1009C0C34 /* DifficultChooser.swift in Sources */,
