@@ -19,6 +19,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         buttons[0].setTitleColor(.dynamicGreen, for: .normal)
         }}
     @IBOutlet weak var resetAllButton: UIBarButtonItem!
+    @IBOutlet weak var resetButton: UIButton!
     
     // MARK: - Private API
     @IBOutlet private weak var heightConstaint: NSLayoutConstraint!
@@ -84,6 +85,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         TutorialViewAnimator.show(eraseView)
         buttons.forEach { $0.isUserInteractionEnabled = false }
         resetAllButton.isEnabled = false
+        resetButton.isUserInteractionEnabled = false
     }
     
     @IBAction func changeStatisticBasedOnGameType(_ sender: UIButton) {
@@ -107,6 +109,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         TutorialViewAnimator.show(eraseView)
         buttons.forEach { $0.isUserInteractionEnabled = false }
         resetAllButton.isEnabled = false
+        resetButton.isUserInteractionEnabled = false
     }
     
     
@@ -133,16 +136,19 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         tableView.reloadData()
         buttons.forEach { $0.isUserInteractionEnabled = true }
         resetAllButton.isEnabled = true
+        resetButton.isUserInteractionEnabled = true
     }
     
     func eraseCanceled() {
         buttons.forEach { $0.isUserInteractionEnabled = true }
         resetAllButton.isEnabled = true
+        resetButton.isUserInteractionEnabled = true
     }
     
     func eraseAllCanceled() {
         buttons.forEach { $0.isUserInteractionEnabled = true }
         resetAllButton.isEnabled = true
+        resetButton.isUserInteractionEnabled = true
     }
     
     func eraseAllConfirmed() {
@@ -153,6 +159,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         tableView.reloadData()
         buttons.forEach { $0.isUserInteractionEnabled = true }
         resetAllButton.isEnabled = true
+        resetButton.isUserInteractionEnabled = true
     }
    
 }

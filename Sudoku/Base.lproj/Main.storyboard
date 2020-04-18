@@ -591,6 +591,7 @@
                     <connections>
                         <outlet property="heightConstaint" destination="nNK-Dd-syJ" id="QN3-qP-33J"/>
                         <outlet property="resetAllButton" destination="6sg-q5-Ixx" id="3Or-Zg-RkY"/>
+                        <outlet property="resetButton" destination="ZKT-uX-Lwf" id="Use-DY-TWz"/>
                         <outlet property="scrollView" destination="JYM-Fn-NbM" id="74v-Pz-GHO"/>
                         <outlet property="stackView" destination="zgs-Ct-Obm" id="IV6-sJ-QEd"/>
                         <outlet property="tableView" destination="ctv-bj-NQc" id="GxR-o4-kXX"/>
