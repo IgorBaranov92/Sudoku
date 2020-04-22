@@ -8,7 +8,7 @@ class YesButton: UIButton {
         path.fill()
         titleLabel?.textAlignment = .center
         titleLabel?.font = UIFont(name: "Avenir Next", size: 25.0)
-        setTitle(localized("yes"), for: .normal)
+        setTitle("Да", for: .normal)
     }
 
 }

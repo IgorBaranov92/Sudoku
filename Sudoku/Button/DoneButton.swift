@@ -9,7 +9,7 @@ class DoneButton: UIButton {
         path.fill()
         titleLabel?.textAlignment = .center
         titleLabel?.font = UIFont(name: "Avenir Next", size: 20.0)
-        setTitle(localized("done"), for: .normal)
+        setTitle("Готово", for: .normal)
     }
 
 }

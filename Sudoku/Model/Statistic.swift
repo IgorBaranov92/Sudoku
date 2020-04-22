@@ -7,7 +7,7 @@ import Foundation
 
 struct Statistic: Codable {
     
-    static let difficult = [localized("easy"),localized("medium"),localized("hard")]
+    static let difficult = ["Легкий","Средний","Тяжелый"]
     
     var scores = Array(repeating: Scores(), count: 6)
         
@@ -25,7 +25,7 @@ struct Statistic: Codable {
 
         var scores = [[0,0,0,0],[0,0,0,0],[0,0,0,0]]
         
-        let descriptions = [localized("mistakesMade"),localized("hintsUsed"),localized("gameWon"),localized("gameLost")]
+        let descriptions = ["Ошибок допущено","Подсказок использовно","Игр выиграно","Игр проиграно"]
     }
     
 }

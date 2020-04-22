@@ -21,10 +21,11 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     @IBOutlet weak var resetAllButton: UIBarButtonItem!
     @IBOutlet weak var resetButton: UIButton!
     
+    
     // MARK: - Private API
     @IBOutlet private weak var heightConstaint: NSLayoutConstraint!
     
-    private var currentTitle = "classic"
+    private var currentTitle = "Классика"
     private var index = 0
     
     // MARK: - ViewController lifecycle
@@ -78,8 +79,8 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     @IBAction func resetAll(_ sender: UIButton) {
         let eraseView = EraseStatisticView()
         eraseView.delegate = self
-        eraseView.attentionMessage = localized("erareAttention")
-        eraseView.message = localized("eraseQuestion") + "'" + localized(currentTitle) + "'?" + "\n" + localized("eraseDescription")
+        eraseView.attentionMessage = "Внимание!"
+        eraseView.message = "Вы действительно хотите стереть всю статистику для режима " + "'" + currentTitle + "'?" + "\n" + "Действие нельзя будет отменить."
         view.addSubview(eraseView)
         EraseViewConstraints.activate(eraseView, view)
         TutorialViewAnimator.show(eraseView)

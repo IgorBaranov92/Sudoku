@@ -1,63 +1,33 @@
 import UIKit
 
-class LevelsCollectionViewController: UIViewController, UIScrollViewDelegate {
-
-    @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet weak var scrollView: UIScrollView! { didSet {
-        scrollView.delegate = self
+class LevelsCollectionViewController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    @IBOutlet weak var collectionView: UICollectionView! { didSet {
+        collectionView.dataSource = self
+        collectionView.delegate = self
         }}
     
-    @IBOutlet var widthConstraints: [NSLayoutConstraint]!
-    @IBOutlet var heightConstraints: [NSLayoutConstraint]!
+    private let levels = ["Классика","Диагональ","Две диагонали","Ромб","Октагон","Фигуры"]
     
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return stackView
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return levels.count
     }
     
-    // MARK: - ViewController lifecycle
-    
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        scrollView.contentSize = CGSize(width: view.bounds.width,
-                                       height: stackView.bounds.height + 25)
-        widthConstraints.forEach {
-            $0.constant = (view.bounds.width - 30)/2
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LevelCell", for: indexPath)
+        if let levelCell = cell as? LevelSelectionCollectionViewCell {
+            levelCell.levelLabel.text = levels[indexPath.item]
+            levelCell.levelPreview.id = indexPath.item
+            return levelCell
         }
-        heightConstraints.forEach {
-            $0.constant = (view.bounds.width - 30)/2 + 40
-        }
+        return cell
     }
     
 
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? SudokuViewController,let id = segue.identifier {
-            switch id {
-            case "ClassicSudoku":
-                destination.gameType = .classic
-                destination.path = "classic"
-             case "DiagonalSudoku":
-                destination.gameType = .diagonal
-                destination.path = "diagonal"
-            case "TwoDiagonalsSudoku":
-                destination.gameType = .twoDiagonals
-                destination.path = "twodiagonals"
-            case "RombSudoku":
-                destination.gameType = .romb
-                destination.path = "romb"
-            default:break
-            }
-        }
-        if let destination = segue.destination as? ShapeSelectionViewController, let id = segue.identifier {
-            if id == "ShapeSudokuLevels" {
-                destination.gameType = .shape
-                destination.path = "shape"
-            }
-        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: ((collectionView.bounds.width-31)/2),
+                      height:((collectionView.bounds.width-31)/2) + 40)
     }
-    
-    @IBAction func done(_ sender: UIButton) {
-        dismiss(animated: true)
-    }
+   
     
 }

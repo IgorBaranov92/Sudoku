@@ -6,7 +6,10 @@ struct Options: Codable {
     
     var descriptions = [String]()
     
-    private(set) var identity = ["mistakeslimit","mistakescheck","areaselection","smarthints","hidedigits"]
+    private(set) var optionsOnDescription = ["В зависимости от уровня сложности допускается совершить определенное количество ошибок","Выделять неправильно поставленную цифру","При нажатии на","smarthints","hidedigits"]
+    
+    private(set) var optionsOffDescription = ["Допускается любое количество ошибок","Не выделять неправильно поставленную цифру","","","Не прятать использованные цифры"]
+
     
     var json: Data? {
         return try? JSONEncoder().encode(self)
@@ -26,7 +29,7 @@ struct Options: Codable {
     
     init() {
         options = [true,true,true,true,true]
-        descriptions = identity
+        descriptions = optionsOnDescription
     }
     
 }

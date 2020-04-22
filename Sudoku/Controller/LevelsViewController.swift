@@ -7,9 +7,6 @@ class LevelsViewController: UIViewController, UIScrollViewDelegate {
         scrollView.delegate = self
         }}
     
-    @IBOutlet var widthConstraints: [NSLayoutConstraint]!
-    @IBOutlet var heightConstraints: [NSLayoutConstraint]!
-    
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return stackView
     }

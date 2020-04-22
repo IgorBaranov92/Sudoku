@@ -8,7 +8,7 @@ class NoButton: UIButton {
         path.fill()
         titleLabel?.textAlignment = .center
         titleLabel?.font = UIFont(name: "Avenir Next", size: 25.0)
-        setTitle(localized("no"), for: .normal)
+        setTitle("Нет", for: .normal)
     }
 
 }

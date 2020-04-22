@@ -22,19 +22,18 @@ class OptionsViewController: UITableViewController {
     
     @IBAction func switchChanged(_ sender: UISwitch) {
         let index = switches.firstIndex(of: sender) ?? 0
-        update(sender.isOn,options.identity[index], labels[index],index)
+        update(sender.isOn, labels[index],index)
         if sender == switches[0] { //mistakes limit switch
             switches[1].isOn = sender.isOn
             switches[1].isUserInteractionEnabled = !sender.isOn
             switches[1].alpha = sender.isOn ? 0.5 : 1.0
-            update(switches[1].isOn, options.identity[1], labels[1], 1)
+            update(switches[1].isOn, labels[1], 1)
         }
     }
     
-    func update(_ isOn: Bool,_ key:String,_ label:UILabel,_ index:Int) {
+    func update(_ isOn: Bool,_ label:UILabel,_ index:Int) {
         options.options[index] = isOn
-        options.descriptions[index] = isOn ? key : "no" + key
-        label.text = localized(options.descriptions[index])
+        label.text = isOn ? options.optionsOnDescription[index] : options.optionsOffDescription[index]
         saveOptions()
     }
     
@@ -61,13 +60,13 @@ class OptionsViewController: UITableViewController {
             }
             labels.forEach {
                 let index = labels.firstIndex(of: $0) ?? 0
-                $0.text = localized(options.descriptions[index])
+                $0.text = switches[index].isOn ? options.optionsOnDescription[index] : options.optionsOffDescription[index]
             }
             saveOptions()
         } else { // first time
             labels.forEach {
                 let index = labels.firstIndex(of: $0) ?? 0
-                $0.text = localized(options.descriptions[index])
+                $0.text = options.optionsOnDescription[index] 
             }
         }
         switches[1].isUserInteractionEnabled = !switches[0].isOn
