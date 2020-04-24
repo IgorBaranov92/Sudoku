@@ -26,9 +26,9 @@ class SudokuGenerator: Sudoku {
             self.completion = completion
             self.id = id
             switch difficult {
-            case 0: self.difficult = .easy;self.mistakes = 4;self.hints = 4
-            case 1: self.difficult = .medium;self.mistakes = 3;self.hints = 3
-            case 2: self.difficult = .hard; self.mistakes = 2;self.hints = 2
+            case 0: self.difficult = .easy;self.mistakes = 3;self.hints = 3
+            case 1: self.difficult = .medium;self.mistakes = 2;self.hints = 2
+            case 2: self.difficult = .hard; self.mistakes = 1;self.hints = 1
             default:break
             }
             self.clear()
@@ -82,6 +82,7 @@ class SudokuGenerator: Sudoku {
         } else {
             indexes.formUnion(ShapeSudoku.returnRightIndexesBasedOn(index, id: id))
         }
+        
         return indexes
     }
 
@@ -100,7 +101,9 @@ class SudokuGenerator: Sudoku {
                 }
             }
         }
-
+        for i in digits.indices {
+            if digits[i] != 0 { output.related.insert(i)}
+        }
         return output
     }
     

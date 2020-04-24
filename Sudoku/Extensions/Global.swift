@@ -1,8 +1,9 @@
 import Foundation
 
-func localized(_ key:String) -> String {
-    return NSLocalizedString(key, comment: " ")
-}
+//
+//func localized(_ key:String) -> String {
+//    return NSLocalizedString(key, comment: " ")
+//}
 
 
 enum GameType: Int,Codable {

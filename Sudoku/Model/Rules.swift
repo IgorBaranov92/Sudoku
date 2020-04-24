@@ -5,17 +5,17 @@ final class Rules {
     static func getRulesDescriptionBasedOn(_ gameType:GameType) -> String {
         switch gameType {
         case .classic:
-            return localized("classicRules")
+            return "classicRules"
         case .diagonal:
-            return localized("diagonalRules")
+            return "diagonalRules"
         case .twoDiagonals:
-            return localized("twoDiagonalsRules")
+            return "twoDiagonalsRules"
         case .romb:
-            return localized("hexagonRules")
+            return "hexagonRules"
         case .hexagon:
-            return localized("rombRules")
+            return "rombRules"
         case .shape:
-            return localized("shapeRules")
+            return "shapeRules"
         }
     }
     

@@ -4,7 +4,7 @@ import UIKit
 
 final class Shapes {
     
-    static func getPathBasedAt(_ index:Int,rect:CGRect) -> UIBezierPath {
+    static func getPathBasedAt(_ index:Int,rect:CGRect,width:CGFloat) -> UIBezierPath {
         let linePath = UIBezierPath()
         switch index {
         case 0:
@@ -632,7 +632,7 @@ final class Shapes {
             
         default: return UIBezierPath()
         }
-        linePath.lineWidth = 3.0
+        linePath.lineWidth = width
         return linePath
     }
     

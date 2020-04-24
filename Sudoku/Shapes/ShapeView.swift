@@ -10,7 +10,7 @@ class ShapeView: SudokuView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         UIColor.border.setStroke()
-        Shapes.getPathBasedAt(id, rect: rect).stroke()
+        Shapes.getPathBasedAt(id, rect: rect,width: 2.5).stroke()
     }
 
 

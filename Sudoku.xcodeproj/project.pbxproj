@@ -52,7 +52,6 @@
 		7879F06C244F56060062D3C9 /* LevelSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879F06B244F56060062D3C9 /* LevelSelectionCollectionViewCell.swift */; };
 		7879F06E244F57D60062D3C9 /* LevelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879F06D244F57D60062D3C9 /* LevelPreview.swift */; };
 		787C578F244770D1009C0C34 /* DifficultChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787C578E244770D1009C0C34 /* DifficultChooser.swift */; };
-		787C57952448B972009C0C34 /* Helper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787C57942448B972009C0C34 /* Helper.storyboard */; };
 		78810CCA241F90B6002828E2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78810CC9241F90B6002828E2 /* MessageView.swift */; };
 		7883A1C4241D2BE100ECB3FD /* TutorialViewConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */; };
 		7883A1CF241D43AC00ECB3FD /* FinishGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7883A1CE241D43AC00ECB3FD /* FinishGameView.swift */; };
@@ -65,7 +64,6 @@
 		788CDC8C24233DD200420F9B /* TextAppearenceAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CDC8B24233DD200420F9B /* TextAppearenceAnimator.swift */; };
 		788CDC8E242345D800420F9B /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788CDC8D242345D800420F9B /* UIColor+Colors.swift */; };
 		7895216B241A431C004F8C1C /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895216A241A431C004F8C1C /* BackButton.swift */; };
-		78969737241A2FAB0054397E /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78969736241A2FAB0054397E /* LevelsViewController.swift */; };
 		7896973F241A321B0054397E /* DiagonalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896973E241A321B0054397E /* DiagonalCell.swift */; };
 		78B9B144243B6FB200024738 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B9B143243B6FB200024738 /* InfoView.swift */; };
 		78C9B5DB241BE98100E1DB7A /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5DA241BE98100E1DB7A /* TutorialView.swift */; };
@@ -141,12 +139,10 @@
 		7871BBBC2440E1D700A6FF81 /* ShapeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
 		7876D3AB2438B6C900FEA18D /* ShapeSudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSudoku.swift; sourceTree = "<group>"; };
 		7877D1B823ED95B000E43314 /* BorderedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedCell.swift; sourceTree = "<group>"; };
-		7879F069244F043C0062D3C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7879F06A244F043C0062D3C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7879F06B244F56060062D3C9 /* LevelSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		7879F06D244F57D60062D3C9 /* LevelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPreview.swift; sourceTree = "<group>"; };
 		787C578E244770D1009C0C34 /* DifficultChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultChooser.swift; sourceTree = "<group>"; };
-		787C57942448B972009C0C34 /* Helper.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Helper.storyboard; sourceTree = "<group>"; };
 		78810CC9241F90B6002828E2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewConstraint.swift; sourceTree = "<group>"; };
 		7883A1CE241D43AC00ECB3FD /* FinishGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGameView.swift; sourceTree = "<group>"; };
@@ -159,8 +155,8 @@
 		788CDC8B24233DD200420F9B /* TextAppearenceAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextAppearenceAnimator.swift; sourceTree = "<group>"; };
 		788CDC8D242345D800420F9B /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		7895216A241A431C004F8C1C /* BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
-		78969736241A2FAB0054397E /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
 		7896973E241A321B0054397E /* DiagonalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagonalCell.swift; sourceTree = "<group>"; };
+		78975C9F24508194008AC114 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78B9B143243B6FB200024738 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		78C9B5DA241BE98100E1DB7A /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		78C9B5DC241BEAAC00E1DB7A /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
@@ -220,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				78181EFE23E5BD9B00836109 /* Main.storyboard */,
-				787C57942448B972009C0C34 /* Helper.storyboard */,
 				785C734423F19E6900757B0E /* Model */,
 				7894D919242B62B90067D313 /* Sudoku model */,
 				7895216C241A4B6A004F8C1C /* Button */,
@@ -313,7 +308,6 @@
 			children = (
 				78859E5C244A1BB000F93442 /* LevelsCollectionViewController.swift */,
 				78859E562449CC9000F93442 /* ShapeSelectionViewController.swift */,
-				78969736241A2FAB0054397E /* LevelsViewController.swift */,
 				78C9B5E5241D08A500E1DB7A /* OptionsViewController.swift */,
 				78C9B5E7241D08BC00E1DB7A /* StatisticViewController.swift */,
 			);
@@ -516,7 +510,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				787C57952448B972009C0C34 /* Helper.storyboard in Resources */,
 				78181F0523E5BD9C00836109 /* LaunchScreen.storyboard in Resources */,
 				78181F0223E5BD9C00836109 /* Assets.xcassets in Resources */,
 				78181F0023E5BD9B00836109 /* Main.storyboard in Resources */,
@@ -616,7 +609,6 @@
 				7876D3AC2438B6C900FEA18D /* ShapeSudoku.swift in Sources */,
 				7883A1C4241D2BE100ECB3FD /* TutorialViewConstraint.swift in Sources */,
 				78C9B5E2241BF35D00E1DB7A /* ErrorViewAnimation.swift in Sources */,
-				78969737241A2FAB0054397E /* LevelsViewController.swift in Sources */,
 				782239DB242133EF004E7D35 /* Options.swift in Sources */,
 				785D09342440EC2E00053AD8 /* UIBezierPath+Points.swift in Sources */,
 				7877D1B923ED95B000E43314 /* BorderedCell.swift in Sources */,
@@ -664,7 +656,7 @@
 		78181EFE23E5BD9B00836109 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7879F069244F043C0062D3C9 /* en */,
+				78975C9F24508194008AC114 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -808,7 +800,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sudoku.entert.vl.2019.Sudoku;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.developer.vl.studio.games.enter.sudoku;
 				PRODUCT_NAME = "Судоку";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -827,7 +819,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sudoku.entert.vl.2019.Sudoku;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.developer.vl.studio.games.enter.sudoku;
 				PRODUCT_NAME = "Судоку";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

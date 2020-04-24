@@ -50,7 +50,6 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(id)
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(clear)))
         restoreOptions()
         restoreStatistic()
@@ -82,7 +81,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
             let center = button.convert(button.bounds.center, to: stackView)
             let pivot = stackView.convert(center, to: view)
             guard let digit = Int(title) else {
-                showErrorAt(pivot, message: localized("ErrorEmpty"))
+                showErrorAt(pivot, message: "Нельзя стереть пустую клетку")
                 return
             }
             if sudoku.mistakesMade.contains(buttonIndex) {// erase only mistakes
@@ -90,7 +89,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
                 cells[buttonIndex].setTitleColor(.text, for: .normal)
 
             } else {
-                showErrorAt(pivot, message: localized("ErrorNative"))
+                showErrorAt(pivot, message: "Уже решенная клетка")
             }
         }
         
@@ -132,7 +131,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
         } else {
             let center = selectedButton.convert(selectedButton.bounds.center, to: stackView)
             let pivot = stackView.convert(center, to: view)
-            showErrorAt(pivot, message: localized("ErrorFilled"))
+            showErrorAt(pivot, message: "Уже заполненная клетка")
         }
     }
     
@@ -144,7 +143,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
             if sudoku.digits[index] != 0 { //cell is solved already
                 let center = selectedButton.convert(selectedButton.bounds.center, to: stackView)
                 let pivot = stackView.convert(center, to: view)
-                showErrorAt(pivot, message: localized("ErrorFilled"))
+                showErrorAt(pivot, message: "Уже заполненная клетка")
             } else { // empty cell, please hint me
                 if sudoku.canHint(index: index) {
                     TextAppearenceAnimator.show(cells[index], string: String(sudoku.answers[index]))
@@ -201,7 +200,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
     
     private func updateLabels() {
         mistakesLabel.isHidden = !(options.options[0])
-        mistakesLabel.text = "\(localized("mistakes")): \(sudoku.mistakesMade.count)/\(sudoku.mistakes)"
+        mistakesLabel.text = "Ошибок: \(sudoku.mistakesMade.count)/\(sudoku.mistakes)"
         hintView.hintsCount = sudoku.hints - sudoku.hintsMade
     }
     
@@ -285,7 +284,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
         guard let selectedButton = selectedButton else { return }
         let center = selectedButton.convert(selectedButton.bounds.center, to: stackView)
         let pivot = stackView.convert(center, to: view)
-        showErrorAt(pivot, message: localized("ErrorHintsLimit"))
+        showErrorAt(pivot, message: "Превышен лимит подсказок")
     }
  
     // MARK: - Restoring and saving games
