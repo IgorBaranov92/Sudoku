@@ -4,7 +4,7 @@ class SudokuGenerator: Sudoku {
     
     var difficult: Difficult = .easy
     var gameType: GameType = .classic
-    var id = 11
+    var id = 0
     
     private var gameCompleted: Bool { digits.filter { $0 == 0 }.isEmpty } //all cells solved
     
@@ -20,20 +20,19 @@ class SudokuGenerator: Sudoku {
           
     init(difficult:Int,gameType:GameType,id:Int, delegate: SudokuDelegate? = nil,completion:(() -> ())? = nil  ) {
         super.init()
-        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
-            self.delegate = delegate
-            self.gameType = gameType
-            self.completion = completion
-            self.id = id
-            switch difficult {
-            case 0: self.difficult = .easy;self.mistakes = 3;self.hints = 3
-            case 1: self.difficult = .medium;self.mistakes = 2;self.hints = 2
-            case 2: self.difficult = .hard; self.mistakes = 1;self.hints = 1
-            default:break
-            }
-            self.clear()
-            self.generate()
+        self.delegate = delegate
+        self.gameType = gameType
+        self.completion = completion
+        self.id = id
+        mistakes = 3
+        switch difficult {
+        case 0: self.difficult = .easy;hints = 3
+        case 1: self.difficult = .medium;hints = 2
+        case 2: self.difficult = .hard;hints = 1
+        default:break
         }
+        clear()
+        generate()
    }
     
    
@@ -43,7 +42,7 @@ class SudokuGenerator: Sudoku {
         if digits[index] != answers[index] { //mistake
             mistakesMade.append(index)
             if shouldCountMistakes {
-                if mistakesMade.count >= mistakes + 1 { //game lost
+                if mistakesMade.count >= mistakes { //game lost
                     if delegate == nil { fatalError("delegate can't be nil")}
                     delegate?.gameLost()
                 }
@@ -124,7 +123,7 @@ class SudokuGenerator: Sudoku {
     }
 
 
-    private func generate() {
+    func generate() {
         if gameType == .shape {
             digits = ShapeSudokuSolver.getBaseGridBasedOn(id)
         } else {
@@ -171,7 +170,7 @@ class SudokuGenerator: Sudoku {
         }
     }
     
-    private func clear() {
+    func clear() {
         digits.removeAll()
         answers.removeAll()
         digitsCount.removeAll()

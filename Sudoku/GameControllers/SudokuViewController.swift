@@ -238,23 +238,20 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
     // MARK: - Gamedelegate
 
     func gameWon() {
-        let victory = FinishGameView()
-        victory.delegate = self
-        view.addSubview(victory)
-        TutorialViewConstraint.activate(victory, self.view)
-        TutorialViewAnimator.show(victory)
+//        let victory = FinishGameView()
+//        victory.delegate = self
+//        view.addSubview(victory)
+//        TutorialViewConstraint.activate(victory, self.view)
+//        TutorialViewAnimator.show(victory)
         statistic.scores[gameType.rawValue].scores[gameIndex][2] += 1
         saveStatistic()
+        newGame()
     }
     
     func gameLost() {
-        let alert = UIAlertController(title: "Message", message: "Game lose", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "New game", style: .default, handler: { action in
-            self.newGame()
-        }))
         statistic.scores[gameType.rawValue].scores[gameIndex][3] += 1
         saveStatistic()
-        present(alert, animated: true)
+        newGame()
     }
     
     func animateRowWith(_ indexes: Set<Int> ) {
@@ -348,10 +345,11 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
         sudoku = SudokuGenerator(difficult: gameIndex,
                                  gameType:gameType,id:id,
                                  delegate: self) { [weak self] in
-                                        DispatchQueue.main.async {
-                                            self?.saveGame()
-                                            self?.updateUI()
-            }}
+                                    DispatchQueue.main.async {
+                                        self?.saveGame()
+                                        self?.updateUI()
+                                    }
+        }
 
     }
     
@@ -362,7 +360,11 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
     }
     
     @IBAction func showRules(_ sender: UIButton) {
-        showRules()
+        let tutorialView = TutorialView()
+        tutorialView.message = Rules.getRulesDescriptionBasedOn(gameType)
+        view.addSubview(tutorialView)
+        TutorialViewConstraint.activate(tutorialView, self.view)
+        TutorialViewAnimator.show(tutorialView)
     }
     
     private func showErrorAt(_ pivot:CGPoint,message:String) {
@@ -379,15 +381,6 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
         return CGRect(x: 0, y: center.y - button.bounds.height*1.5, width: view.bounds.width, height: button.bounds.height)
     }
   
-    private func showRules() {
-        let tutorialView = TutorialView()
-        tutorialView.message = Rules.getRulesDescriptionBasedOn(gameType)
-        view.addSubview(tutorialView)
-        TutorialViewConstraint.activate(tutorialView, self.view)
-        TutorialViewAnimator.show(tutorialView)
-    }
-
-
     // MARK: - Protocol conformance
     
     func cancelButtonTouched() {

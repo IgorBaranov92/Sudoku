@@ -1,8 +1,15 @@
 import XCTest
-@testable import Sudoku
+@testable import Судоку
 
 
 class SudokuSolverTests: XCTestCase {
+    
+    var sudoku: SudokuGenerator!
+    
+    override func setUp() {
+        sudoku = SudokuGenerator(difficult: 0, gameType: .classic, id: 0)
+    }
+
     
     func testClassicBoard() {
         XCTAssert(SudokuSolver.getBaseGridBasedOn(.classic).count == 81, "error")
@@ -22,7 +29,26 @@ class SudokuSolverTests: XCTestCase {
     
     func testHexagonBoard() {
         XCTAssert(SudokuSolver.getBaseGridBasedOn(.hexagon).count == 81, "error")
+    }
 
+    func testDigits() {
+        for i in 1...3000 {
+            sudoku.clear()
+            sudoku.generate()
+            let digits = sudoku.digitsCount
+            print("digits = \(digits) with \(i)")
+            XCTAssert(digits[1] != nil)
+            XCTAssert(digits[2] != nil)
+            XCTAssert(digits[3] != nil)
+            XCTAssert(digits[4] != nil)
+            XCTAssert(digits[5] != nil)
+            XCTAssert(digits[6] != nil)
+            XCTAssert(digits[7] != nil)
+            XCTAssert(digits[8] != nil)
+            XCTAssert(digits[9] != nil)
+            XCTAssert(sudoku.digits.count == 81)
+            XCTAssert(sudoku.answers.count == 81)
+        }
     }
     
     func testShapeBoard() {
@@ -195,3 +221,4 @@ class SudokuSolverTests: XCTestCase {
         return superSet
     }
 }
+

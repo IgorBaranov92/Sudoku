@@ -3,7 +3,7 @@ import UIKit
 @IBDesignable
 class HintView: UIView {
 
-    var hintsCount = 4 { didSet { setNeedsDisplay()}}
+    var hintsCount = 3 { didSet { setNeedsDisplay()}}
     
     private var label = UILabel()
     
