@@ -83,7 +83,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         eraseView.message = "Вы действительно хотите стереть всю статистику для режима " + "'" + currentTitle + "'?" + "\n" + "Действие нельзя будет отменить."
         view.addSubview(eraseView)
         EraseViewConstraints.activate(eraseView, view)
-        TutorialViewAnimator.show(eraseView)
+        ViewAppearanceAnimator.show(eraseView)
         buttons.forEach { $0.isUserInteractionEnabled = false }
         resetAllButton.isEnabled = false
         resetButton.isUserInteractionEnabled = false
@@ -107,7 +107,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         eraseView.message = "Вы действительно хотите удалить всю статистику?\nДействие нельзя будет отменить."
         view.addSubview(eraseView)
         EraseViewConstraints.activate(eraseView, view)
-        TutorialViewAnimator.show(eraseView)
+        ViewAppearanceAnimator.show(eraseView)
         buttons.forEach { $0.isUserInteractionEnabled = false }
         resetAllButton.isEnabled = false
         resetButton.isUserInteractionEnabled = false

@@ -19,8 +19,8 @@ protocol EraseAllViewDelegate:class {
     func eraseAllConfirmed()
 }
 
-protocol GameLostDelegate: class {
-    
+protocol EndGameDelegate: class {
+    func createNewGame()
 }
 
 protocol NewGameDelegate: class {

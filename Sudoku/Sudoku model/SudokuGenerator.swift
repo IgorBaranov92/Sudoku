@@ -34,7 +34,6 @@ class SudokuGenerator: Sudoku {
         clear()
         generate()
    }
-    
    
     func cellTouchedAt(index:Int, digit:Int,shouldCountMistakes:Bool) {
         digits[index] = digit

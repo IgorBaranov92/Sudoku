@@ -18,17 +18,22 @@ class RombCell: DiagonalCell {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         if left {
+            removeLayer(layerName: "leftAngle")
             layer.addDiagonalAt(edge: .leftAngle, width: Constants.lineWidthForDiagonal)
         }
         if right {
+            removeLayer(layerName: "rightAngle")
             layer.addDiagonalAt(edge: .rightAngle, width: Constants.lineWidthForDiagonal)
         }
         if top {
+            removeLayer(layerName: "topAngle")
             layer.addDiagonalAt(edge: .topAngle, width: Constants.lineWidthForDiagonal)
         }
         if bottom {
+            removeLayer(layerName: "bottomAngle")
             layer.addDiagonalAt(edge: .bottomAngle, width: Constants.lineWidthForDiagonal)
         }
+
     }
 
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegate, NewGameDelegate {
+class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, NewGameDelegate {
     
     // MARK: - Public API
     
@@ -61,14 +61,6 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
         NotificationCenter.default.addObserver(self, selector: #selector(saveGame), name: UIApplication.willResignActiveNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(updateBoard), name: UIApplication.willEnterForegroundNotification, object: nil)
 
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        let loseGameView = LoseGameView()
-      //  view.addSubview(loseGameView)
-//        LoseGaveViewConstraints.activate(loseGameView, view)
-//        TutorialViewAnimator.show(loseGameView)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -246,11 +238,6 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
     // MARK: - Gamedelegate
 
     func gameWon() {
-//        let victory = FinishGameView()
-//        victory.delegate = self
-//        view.addSubview(victory)
-//        TutorialViewConstraint.activate(victory, self.view)
-//        TutorialViewAnimator.show(victory)
         statistic.scores[gameType.rawValue].scores[gameIndex][2] += 1
         saveStatistic()
         newGame()
@@ -259,7 +246,12 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
     func gameLost() {
         statistic.scores[gameType.rawValue].scores[gameIndex][3] += 1
         saveStatistic()
-        newGame()
+        let loseGameView = EndGameView()
+        loseGameView.body = "Игра окончена."
+        loseGameView.delegate = self
+        view.addSubview(loseGameView)
+        EndGameViewConstraints.activate(loseGameView, view)
+        ViewAppearanceAnimator.show(loseGameView)
     }
     
     func animateRowWith(_ indexes: Set<Int> ) {
@@ -372,7 +364,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
         tutorialView.message = Rules.getRulesDescriptionBasedOn(gameType)
         view.addSubview(tutorialView)
         TutorialViewConstraint.activate(tutorialView, self.view)
-        TutorialViewAnimator.show(tutorialView)
+        ViewAppearanceAnimator.show(tutorialView)
     }
     
     private func showErrorAt(_ pivot:CGPoint,message:String) {
@@ -404,5 +396,10 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
             gameIndex = index
             recreateGameIfNeeded()
         }
+    }
+    
+    
+    func createNewGame() {
+        newGame()
     }
 }

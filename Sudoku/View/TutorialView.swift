@@ -32,7 +32,7 @@ class TutorialView: MessageView {
     
     @objc
     private func dismissSelf() {
-        TutorialViewAnimator.dismiss(self)
+        ViewAppearanceAnimator.dismiss(self)
     }
     
 

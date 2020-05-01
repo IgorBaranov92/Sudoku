@@ -29,7 +29,6 @@ class BorderedCell: UIButton {
         case 4: layer.addLineAt(edge: .bottom, width: lineWidth)
         default:break
         }
-     
     }
 
 

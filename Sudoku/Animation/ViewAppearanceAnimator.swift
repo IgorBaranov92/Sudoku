@@ -1,6 +1,6 @@
 import UIKit
 
-class TutorialViewAnimator {
+class ViewAppearanceAnimator {
     
     static func show(_ view:UIView) {
         view.alpha = 0

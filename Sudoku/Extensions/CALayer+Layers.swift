@@ -31,9 +31,11 @@ extension CALayer {
         case .leftDiagonal:
             path.move(to: upperLeft)
             path.addLine(to: lowerRight)
+            subLayer.name = "leftDiagonal"
         case .rightDiagonal:
             path.move(to: lowerLeft)
             path.addLine(to: upperRight)
+            subLayer.name = "rightDiagonal"
         case .leftAngle:
             path.move(to: lowerRight)
             path.addLine(to: center)
@@ -41,6 +43,7 @@ extension CALayer {
             p1.move(to: center)
             p1.addLine(to: upperRight)
             path.addPath(p1)
+            subLayer.name = "leftAngle"
         case .rightAngle:
             path.move(to: lowerLeft)
             path.addLine(to: center)
@@ -48,6 +51,7 @@ extension CALayer {
             p1.move(to: center)
             p1.addLine(to: upperLeft)
             path.addPath(p1)
+            subLayer.name = "rightAngle"
         case .topAngle:
             path.move(to: lowerLeft)
             path.addLine(to: center)
@@ -55,6 +59,7 @@ extension CALayer {
             p1.move(to: center)
             p1.addLine(to: lowerRight)
             path.addPath(p1)
+            subLayer.name = "topAngle"
         case .bottomAngle:
             path.move(to: upperLeft)
             path.addLine(to: center)
@@ -62,6 +67,7 @@ extension CALayer {
             p1.move(to: center)
             p1.addLine(to: upperRight)
             path.addPath(p1)
+            subLayer.name = "bottomAngle"
         }
         
         subLayer.path = path
@@ -82,6 +88,7 @@ extension CALayer {
         subLayer.path = path
         subLayer.lineWidth = width
         subLayer.strokeColor = UIColor.border.cgColor
+        subLayer.name = "vertical"
         addSublayer(subLayer)
     }
     
@@ -165,6 +172,7 @@ extension CALayer {
         subLayer.lineWidth = lineWidth
         subLayer.fillColor = UIColor.clear.cgColor
         subLayer.strokeColor = UIColor.border.cgColor
+        subLayer.name = "sudokuBorder"
         insertSublayer(subLayer, at: 0)
     }
     

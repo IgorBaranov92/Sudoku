@@ -10,11 +10,11 @@ class EraseAllView: EraseStatisticView {
 
     override func dismiss() {
         eraseAllDelegate?.eraseAllCanceled()
-        TutorialViewAnimator.dismiss(self)
+        ViewAppearanceAnimator.dismiss(self)
     }
     
     override func erase() {
         eraseAllDelegate?.eraseAllConfirmed()
-        TutorialViewAnimator.dismiss(self)
+        ViewAppearanceAnimator.dismiss(self)
     }
 }
