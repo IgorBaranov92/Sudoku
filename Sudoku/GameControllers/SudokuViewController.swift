@@ -63,6 +63,14 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+//        let loseGameView = LoseGameView()
+      //  view.addSubview(loseGameView)
+//        LoseGaveViewConstraints.activate(loseGameView, view)
+//        TutorialViewAnimator.show(loseGameView)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         saveGame()
@@ -271,7 +279,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, MessageViewDelegat
         indexes.forEach {
             let frame = cells[$0].convert(cells[$0].bounds, to: view)
             let customView = UIView(frame: frame)
-            customView.backgroundColor = .selection
+            customView.backgroundColor = #colorLiteral(red: 0.4670000076, green: 0.7649999857, blue: 0.2669999897, alpha: 1)
             view.insertSubview(customView, at: 0)
             CellAnimator.animate(customView)
         }

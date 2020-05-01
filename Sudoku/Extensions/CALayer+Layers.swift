@@ -130,6 +130,7 @@ extension CALayer {
         subLayer.lineWidth = lineWidth
         subLayer.fillColor = UIColor.clear.cgColor
         subLayer.strokeColor = UIColor.diagonal.cgColor
+        subLayer.name = "hexagon"
         insertSublayer(subLayer, at: 0)
     }
     

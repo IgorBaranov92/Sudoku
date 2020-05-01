@@ -17,7 +17,7 @@ class BackButton: UIButton {
         path.addLine(to: CGPoint(x: bounds.midX, y: bounds.midY))
         path.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
         path.lineWidth = 5.0
-        UIColor.button.setStroke()
+        #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1).setStroke()
         path.stroke()
     }
     

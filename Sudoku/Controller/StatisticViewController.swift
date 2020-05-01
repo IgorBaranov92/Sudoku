@@ -16,7 +16,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet var buttons: [UIButton]! { didSet {
-        buttons[0].setTitleColor(.dynamicGreen, for: .normal)
+        buttons[0].setTitleColor(#colorLiteral(red: 0.1879999936, green: 0.8199999928, blue: 0.3449999988, alpha: 1), for: .normal)
         }}
     @IBOutlet weak var resetAllButton: UIBarButtonItem!
     @IBOutlet weak var resetButton: UIButton!
@@ -94,7 +94,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         self.currentTitle = sender.currentTitle ?? " "
         StatisticButtonAnimator.animate(sender)
         if let buttonIndex = buttons.firstIndex(of:sender) {
-            sender.setTitleColor(.dynamicGreen, for: .normal)
+            sender.setTitleColor(#colorLiteral(red: 0.1879999936, green: 0.8199999928, blue: 0.3449999988, alpha: 1), for: .normal)
             index = buttonIndex
             tableView.reloadData()
         }
