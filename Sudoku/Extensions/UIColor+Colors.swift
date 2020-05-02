@@ -28,21 +28,19 @@ extension UIColor {
     }
     
     static var backgroundInactive: UIColor {
-        return UIColor(named: "BackgroundColor")!
+        return UIColor(named: "BackgroundInactive")!
     }
     
     static var diagonal: UIColor {
         return UIColor(named: "DiagonalColor")!
     }
-    
-    
-    
+        
     static var selection: UIColor {
-        return UIColor(named: "HighlightColor")!
+        return UIColor(named: "SelectionColor")!
     }
     
     static var highlight: UIColor {
-        return UIColor(named: "SelectionColor")!
+        return UIColor(named: "HighlightColor")!
     }
     
 }

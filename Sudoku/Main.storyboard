@@ -24,7 +24,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Судоку" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJy-6w-W8X">
                                 <rect key="frame" x="88.333333333333329" y="74" width="237.66666666666669" height="95.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="70"/>
-                                <color key="textColor" name="DynamicGreenColor"/>
+                                <color key="textColor" name="GreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wEk-ZI-con">
@@ -34,7 +34,7 @@
                                         <rect key="frame" x="35.999999999999986" y="0.0" width="115.00000000000001" height="60"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
                                         <state key="normal" title="Играть">
-                                            <color key="titleColor" name="DynamicBlackColor"/>
+                                            <color key="titleColor" name="BlackColor"/>
                                         </state>
                                         <connections>
                                             <segue destination="XL3-o7-nQm" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="dIE-HG-e4a"/>
@@ -44,7 +44,7 @@
                                         <rect key="frame" x="0.0" y="75" width="187" height="60"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
                                         <state key="normal" title="Статистика">
-                                            <color key="titleColor" name="DynamicBlackColor"/>
+                                            <color key="titleColor" name="BlackColor"/>
                                         </state>
                                         <connections>
                                             <segue destination="QfW-Aq-g2U" kind="presentation" identifier="Statistic" id="ltz-9n-egP"/>
@@ -54,7 +54,7 @@
                                         <rect key="frame" x="3" y="150" width="181" height="60"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
                                         <state key="normal" title="Настройки">
-                                            <color key="titleColor" name="DynamicBlackColor"/>
+                                            <color key="titleColor" name="BlackColor"/>
                                         </state>
                                         <connections>
                                             <segue destination="Wv0-0J-EsE" kind="presentation" modalTransitionStyle="coverVertical" id="5bL-sB-yMM"/>
@@ -63,7 +63,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wEk-ZI-con" firstAttribute="centerY" secondItem="cC1-fj-exf" secondAttribute="centerY" id="5Dr-eK-1jZ"/>
                             <constraint firstItem="aJy-6w-W8X" firstAttribute="centerX" secondItem="cC1-fj-exf" secondAttribute="centerX" id="PJb-bO-QwN"/>
@@ -83,7 +83,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="xU9-HG-UUL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="Q8d-Gn-sLv">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -111,7 +111,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Лимит ошибок" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7kx-QL-wUl">
                                                     <rect key="frame" x="20" y="11" width="307.33333333333331" height="28"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                                    <color key="textColor" name="DynamicBlackColor"/>
+                                                    <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FVb-Rf-MfB">
@@ -145,7 +145,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FAK-Z5-dI6">
                                                     <rect key="frame" x="16" y="0.0" width="382" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                                    <color key="textColor" name="DynamicHeaderTextColor"/>
+                                                    <color key="textColor" name="FooterColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -167,7 +167,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Проверять ошибки" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hHb-hL-bNE">
                                                     <rect key="frame" x="20" y="11" width="307" height="28"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                                    <color key="textColor" name="DynamicBlackColor"/>
+                                                    <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2XY-zI-oC2">
@@ -201,7 +201,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SXo-w9-V60">
                                                     <rect key="frame" x="16" y="0.0" width="382" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                                    <color key="textColor" name="DynamicHeaderTextColor"/>
+                                                    <color key="textColor" name="FooterColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -223,7 +223,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Выделение областей" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fEZ-mu-csh">
                                                     <rect key="frame" x="20" y="11" width="307" height="28"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                                    <color key="textColor" name="DynamicBlackColor"/>
+                                                    <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1n-wz-aOx">
@@ -257,7 +257,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kVd-il-gxS">
                                                     <rect key="frame" x="16" y="0.0" width="382" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                                    <color key="textColor" name="DynamicHeaderTextColor"/>
+                                                    <color key="textColor" name="FooterColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -279,7 +279,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Умные подсказки" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bEC-0B-8Mz">
                                                     <rect key="frame" x="20" y="11" width="307" height="28"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                                    <color key="textColor" name="DynamicBlackColor"/>
+                                                    <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEe-mU-ZGW">
@@ -313,7 +313,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AUO-xI-VWm">
                                                     <rect key="frame" x="16" y="0.0" width="382" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                                    <color key="textColor" name="DynamicHeaderTextColor"/>
+                                                    <color key="textColor" name="FooterColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -335,7 +335,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Скрывать цифры" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nRm-8k-LKa">
                                                     <rect key="frame" x="20" y="11" width="307" height="28"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                                    <color key="textColor" name="DynamicBlackColor"/>
+                                                    <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5u-Bh-p7s">
@@ -369,7 +369,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xu0-IS-zfl">
                                                     <rect key="frame" x="16" y="0.0" width="382" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                                    <color key="textColor" name="DynamicHeaderTextColor"/>
+                                                    <color key="textColor" name="FooterColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -420,7 +420,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="45" estimatedRowHeight="45" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ctv-bj-NQc">
                                 <rect key="frame" x="0.0" y="96" width="414" height="726"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="QEy-jf-cp3">
                                     <rect key="frame" x="0.0" y="118.33333206176758" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -429,14 +429,14 @@
                                             <rect key="frame" x="158.66666666666666" y="-1.6666666666666679" width="97" height="47.333333333333343"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
                                             <state key="normal" title="Стереть">
-                                                <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleColor" name="RedColor"/>
                                             </state>
                                             <connections>
                                                 <action selector="resetAll:" destination="QfW-Aq-g2U" eventType="touchUpInside" id="KEF-rn-EUD"/>
                                             </connections>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                                    <color key="backgroundColor" name="BackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="ZKT-uX-Lwf" firstAttribute="centerY" secondItem="QEy-jf-cp3" secondAttribute="centerY" id="Liv-Mn-Jlb"/>
                                         <constraint firstItem="ZKT-uX-Lwf" firstAttribute="centerX" secondItem="QEy-jf-cp3" secondAttribute="centerX" id="a5P-Uf-rxM"/>
@@ -453,7 +453,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RLr-Qc-7Pd">
                                                     <rect key="frame" x="16" y="0.0" width="324" height="45"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cS-nv-JEY">
@@ -462,7 +462,7 @@
                                                         <constraint firstAttribute="width" constant="50" id="G8s-Lg-9XC"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -476,7 +476,7 @@
                                                 <constraint firstItem="7cS-nv-JEY" firstAttribute="leading" secondItem="RLr-Qc-7Pd" secondAttribute="trailing" constant="8" id="zB6-nl-6FO"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="RLr-Qc-7Pd" id="9WG-GK-zkq"/>
                                             <outlet property="scoreLabel" destination="7cS-nv-JEY" id="tFS-6q-vAH"/>
@@ -494,7 +494,7 @@
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Стереть все" id="6sg-q5-Ixx">
-                                            <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="tintColor" name="RedColor"/>
                                             <connections>
                                                 <action selector="eraseAll:" destination="QfW-Aq-g2U" id="bRC-Mk-MbK"/>
                                             </connections>
@@ -512,7 +512,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                 <state key="normal" title="Классика">
-                                                    <color key="titleColor" name="DynamicBlackColor"/>
+                                                    <color key="titleColor" name="BlackColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="changeStatisticBasedOnGameType:" destination="QfW-Aq-g2U" eventType="touchUpInside" id="P09-Fx-iqW"/>
@@ -522,7 +522,7 @@
                                                 <rect key="frame" x="108" y="0.0" width="100" height="40"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                 <state key="normal" title="Диагональ">
-                                                    <color key="titleColor" name="DynamicBlackColor"/>
+                                                    <color key="titleColor" name="BlackColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="changeStatisticBasedOnGameType:" destination="QfW-Aq-g2U" eventType="touchUpInside" id="0FH-Wu-ce8"/>
@@ -532,7 +532,7 @@
                                                 <rect key="frame" x="228" y="0.0" width="140" height="40"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                 <state key="normal" title="Две диагонали">
-                                                    <color key="titleColor" name="DynamicBlackColor"/>
+                                                    <color key="titleColor" name="BlackColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="changeStatisticBasedOnGameType:" destination="QfW-Aq-g2U" eventType="touchUpInside" id="Iqc-Bc-e86"/>
@@ -542,7 +542,7 @@
                                                 <rect key="frame" x="388" y="0.0" width="50" height="40"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                 <state key="normal" title="Ромб">
-                                                    <color key="titleColor" name="DynamicBlackColor"/>
+                                                    <color key="titleColor" name="BlackColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="changeStatisticBasedOnGameType:" destination="QfW-Aq-g2U" eventType="touchUpInside" id="e6m-sC-0x4"/>
@@ -552,7 +552,7 @@
                                                 <rect key="frame" x="458" y="0.0" width="79" height="40"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                 <state key="normal" title="Октагон">
-                                                    <color key="titleColor" name="DynamicBlackColor"/>
+                                                    <color key="titleColor" name="BlackColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="changeStatisticBasedOnGameType:" destination="QfW-Aq-g2U" eventType="touchUpInside" id="Jv7-4d-fwz"/>
@@ -562,7 +562,7 @@
                                                 <rect key="frame" x="557" y="0.0" width="73" height="40"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                 <state key="normal" title="Фигуры">
-                                                    <color key="titleColor" name="DynamicBlackColor"/>
+                                                    <color key="titleColor" name="BlackColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="changeStatisticBasedOnGameType:" destination="QfW-Aq-g2U" eventType="touchUpInside" id="jHg-S4-40R"/>
@@ -1850,14 +1850,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="1">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2GH-Tx-vje"/>
                                         </connections>
@@ -1866,14 +1860,8 @@
                                         <rect key="frame" x="40" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="2">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aNN-bw-Lh8"/>
                                         </connections>
@@ -1882,14 +1870,8 @@
                                         <rect key="frame" x="80" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="3">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c4S-Ae-gTq"/>
                                         </connections>
@@ -1898,14 +1880,8 @@
                                         <rect key="frame" x="120" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="4">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cW4-hC-xe0"/>
                                         </connections>
@@ -1914,14 +1890,8 @@
                                         <rect key="frame" x="160" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="5">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gtq-Zg-VAP"/>
                                         </connections>
@@ -1930,14 +1900,8 @@
                                         <rect key="frame" x="200" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="6">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sG8-AG-nY9"/>
                                         </connections>
@@ -1946,14 +1910,8 @@
                                         <rect key="frame" x="240" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="7">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ATk-HX-Njs"/>
                                         </connections>
@@ -1962,14 +1920,8 @@
                                         <rect key="frame" x="280" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="8">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lDE-zD-Bk1"/>
                                         </connections>
@@ -1978,14 +1930,8 @@
                                         <rect key="frame" x="320" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="9">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJ6-PR-4vg"/>
                                         </connections>
@@ -2039,7 +1985,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="?">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
                                         <connections>
                                             <action selector="showRules:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X6k-GY-65l"/>
@@ -2050,15 +1996,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибок: 0/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heH-O6-dxb">
                                 <rect key="frame" x="152.33333333333334" y="318.33333333333331" width="109.66666666666666" height="24.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" name="DynamicBlackColor"/>
+                                <color key="textColor" name="BlackColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                </variation>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1W1-Wk-K6J" customClass="DifficultChooser" customModule="Судоку" customModuleProvider="target">
                                 <rect key="frame" x="119" y="52" width="176" height="32"/>
-                                <color key="backgroundColor" name="DynamicGreenColor"/>
+                                <color key="backgroundColor" name="GreenColor"/>
                                 <segments>
                                     <segment title="★"/>
                                     <segment title="★★"/>
@@ -2066,7 +2009,7 @@
                                 </segments>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eWl-qR-CY2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="1Km-9G-Jr3"/>
                             <constraint firstItem="eCx-u0-RpT" firstAttribute="top" secondItem="1W1-Wk-K6J" secondAttribute="bottom" constant="8" symbolic="YES" id="2Du-6b-fgN"/>
@@ -3446,14 +3389,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="1">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="xte-un-5TR"/>
                                         </connections>
@@ -3462,14 +3399,8 @@
                                         <rect key="frame" x="40" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="2">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="Eqv-4K-CWe"/>
                                         </connections>
@@ -3478,14 +3409,8 @@
                                         <rect key="frame" x="80" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="3">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="INi-xb-tbX"/>
                                         </connections>
@@ -3494,14 +3419,8 @@
                                         <rect key="frame" x="120" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="4">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="xFx-pn-X5T"/>
                                         </connections>
@@ -3510,14 +3429,8 @@
                                         <rect key="frame" x="160" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="5">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="dxa-Nc-ldG"/>
                                         </connections>
@@ -3526,14 +3439,8 @@
                                         <rect key="frame" x="200" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="6">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="s72-cx-Tsp"/>
                                         </connections>
@@ -3542,14 +3449,8 @@
                                         <rect key="frame" x="240" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="7">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="sxW-d0-QHW"/>
                                         </connections>
@@ -3558,14 +3459,8 @@
                                         <rect key="frame" x="280" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="8">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="pxC-88-14Z"/>
                                         </connections>
@@ -3574,14 +3469,8 @@
                                         <rect key="frame" x="320" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="9">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="GUP-NI-CLB" eventType="touchUpInside" id="XFE-ZS-COA"/>
                                         </connections>
@@ -3635,7 +3524,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="?">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
                                         <connections>
                                             <action selector="showRules:" destination="GUP-NI-CLB" eventType="touchUpInside" id="MYV-ks-XBg"/>
@@ -3646,15 +3535,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибок: 0/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO2-Nc-JlH">
                                 <rect key="frame" x="152.33333333333334" y="318.33333333333331" width="109.66666666666666" height="24.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" name="DynamicBlackColor"/>
+                                <color key="textColor" name="BlackColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                </variation>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xSj-e3-Blx" customClass="DifficultChooser" customModule="Судоку" customModuleProvider="target">
                                 <rect key="frame" x="119" y="52" width="176" height="32"/>
-                                <color key="backgroundColor" name="DynamicGreenColor"/>
+                                <color key="backgroundColor" name="GreenColor"/>
                                 <segments>
                                     <segment title="★"/>
                                     <segment title="★★"/>
@@ -3662,7 +3548,7 @@
                                 </segments>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lCX-h5-KA6" firstAttribute="top" secondItem="2R8-3D-IcE" secondAttribute="bottom" constant="8" symbolic="YES" id="4TE-G9-fb1"/>
                             <constraint firstItem="F6h-L7-OEq" firstAttribute="bottom" secondItem="UZ6-bO-Dxm" secondAttribute="top" id="DoX-Bo-W5V"/>
@@ -5286,14 +5172,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="1">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="gT3-pA-roP" eventType="touchUpInside" id="NXy-4G-Soh"/>
                                         </connections>
@@ -5302,14 +5182,8 @@
                                         <rect key="frame" x="40" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="2">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="gT3-pA-roP" eventType="touchUpInside" id="PsY-MG-xhg"/>
                                         </connections>
@@ -5318,14 +5192,8 @@
                                         <rect key="frame" x="80" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="3">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="gT3-pA-roP" eventType="touchUpInside" id="WGb-ka-fN5"/>
                                         </connections>
@@ -5334,14 +5202,8 @@
                                         <rect key="frame" x="120" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="4">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="gT3-pA-roP" eventType="touchUpInside" id="YKM-Uv-0uD"/>
                                         </connections>
@@ -5350,14 +5212,8 @@
                                         <rect key="frame" x="160" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="5">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="gT3-pA-roP" eventType="touchUpInside" id="SNO-ub-Wkg"/>
                                         </connections>
@@ -5366,14 +5222,8 @@
                                         <rect key="frame" x="200" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="6">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="gT3-pA-roP" eventType="touchUpInside" id="oIK-eB-Hou"/>
                                         </connections>
@@ -5382,14 +5232,8 @@
                                         <rect key="frame" x="240" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="7">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="gT3-pA-roP" eventType="touchUpInside" id="7W8-pf-5t4"/>
                                         </connections>
@@ -5398,14 +5242,8 @@
                                         <rect key="frame" x="280" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="8">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="gT3-pA-roP" eventType="touchUpInside" id="LIZ-KD-3Zi"/>
                                         </connections>
@@ -5414,14 +5252,8 @@
                                         <rect key="frame" x="320" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="9">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="gT3-pA-roP" eventType="touchUpInside" id="m07-2l-2CU"/>
                                         </connections>
@@ -5453,7 +5285,7 @@
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7D0-R9-LSB" customClass="DifficultChooser" customModule="Судоку" customModuleProvider="target">
                                 <rect key="frame" x="119" y="52" width="176" height="32"/>
-                                <color key="backgroundColor" name="DynamicGreenColor"/>
+                                <color key="backgroundColor" name="GreenColor"/>
                                 <segments>
                                     <segment title="★"/>
                                     <segment title="★★"/>
@@ -5463,11 +5295,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибок: 0/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y6-U7-aBv">
                                 <rect key="frame" x="152.33333333333334" y="318.33333333333331" width="109.66666666666666" height="24.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" name="DynamicBlackColor"/>
+                                <color key="textColor" name="BlackColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qmk-I5-z1C">
                                 <rect key="frame" x="96.666666666666686" y="91" width="221" height="67"/>
@@ -5500,7 +5329,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="?">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
                                         <connections>
                                             <action selector="showRules:" destination="gT3-pA-roP" eventType="touchUpInside" id="OdM-Bg-H8h"/>
@@ -5510,7 +5339,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7D0-R9-LSB" firstAttribute="centerX" secondItem="eyJ-e5-n2m" secondAttribute="centerX" id="5JC-2C-q0l"/>
                             <constraint firstAttribute="trailing" secondItem="rjW-fJ-iOM" secondAttribute="trailing" constant="10" id="8Ug-1U-tA2"/>
@@ -6918,14 +6747,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="1">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="bm4-Y1-iEE" eventType="touchUpInside" id="35U-L8-ypm"/>
                                         </connections>
@@ -6934,14 +6757,8 @@
                                         <rect key="frame" x="40" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="2">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="bm4-Y1-iEE" eventType="touchUpInside" id="U8S-2b-QJr"/>
                                         </connections>
@@ -6950,14 +6767,8 @@
                                         <rect key="frame" x="80" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="3">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="bm4-Y1-iEE" eventType="touchUpInside" id="mnA-ye-9yE"/>
                                         </connections>
@@ -6966,14 +6777,8 @@
                                         <rect key="frame" x="120" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="4">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="bm4-Y1-iEE" eventType="touchUpInside" id="5b1-Po-1fJ"/>
                                         </connections>
@@ -6982,14 +6787,8 @@
                                         <rect key="frame" x="160" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="5">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="bm4-Y1-iEE" eventType="touchUpInside" id="18s-hC-YYT"/>
                                         </connections>
@@ -6998,14 +6797,8 @@
                                         <rect key="frame" x="200" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="6">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="bm4-Y1-iEE" eventType="touchUpInside" id="hna-iF-1nY"/>
                                         </connections>
@@ -7014,14 +6807,8 @@
                                         <rect key="frame" x="240" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="7">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="bm4-Y1-iEE" eventType="touchUpInside" id="20i-ns-RVc"/>
                                         </connections>
@@ -7030,14 +6817,8 @@
                                         <rect key="frame" x="280" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="8">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="bm4-Y1-iEE" eventType="touchUpInside" id="as3-TA-JXk"/>
                                         </connections>
@@ -7046,14 +6827,8 @@
                                         <rect key="frame" x="320" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="9">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="bm4-Y1-iEE" eventType="touchUpInside" id="f30-QH-hie"/>
                                         </connections>
@@ -7078,7 +6853,7 @@
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oe6-0v-wIK" customClass="DifficultChooser" customModule="Судоку" customModuleProvider="target">
                                 <rect key="frame" x="119" y="52" width="176" height="32"/>
-                                <color key="backgroundColor" name="DynamicGreenColor"/>
+                                <color key="backgroundColor" name="GreenColor"/>
                                 <segments>
                                     <segment title="★"/>
                                     <segment title="★★"/>
@@ -7088,11 +6863,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибок: 0/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmB-bj-EiF">
                                 <rect key="frame" x="152.33333333333334" y="318.33333333333331" width="109.66666666666666" height="24.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" name="DynamicBlackColor"/>
+                                <color key="textColor" name="BlackColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8Wd-za-Eyx">
                                 <rect key="frame" x="96.666666666666686" y="91" width="221" height="67"/>
@@ -7125,7 +6897,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="?">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
                                         <connections>
                                             <action selector="showRules:" destination="bm4-Y1-iEE" eventType="touchUpInside" id="CBZ-pS-HM4"/>
@@ -7135,7 +6907,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5Gb-AP-XD6" firstAttribute="leading" secondItem="1gO-ca-xfq" secondAttribute="leading" constant="10" id="1cr-vh-bf1"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="REX-wb-A4z" secondAttribute="trailing" id="3zv-PC-OXH"/>
@@ -8549,14 +8321,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="1">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BL7-a9-KkA" eventType="touchUpInside" id="hP2-jo-9R5"/>
                                         </connections>
@@ -8565,14 +8331,8 @@
                                         <rect key="frame" x="40" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="2">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BL7-a9-KkA" eventType="touchUpInside" id="iKa-4F-cc2"/>
                                         </connections>
@@ -8581,14 +8341,8 @@
                                         <rect key="frame" x="80" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="3">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BL7-a9-KkA" eventType="touchUpInside" id="TIJ-G6-22H"/>
                                         </connections>
@@ -8597,14 +8351,8 @@
                                         <rect key="frame" x="120" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="4">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BL7-a9-KkA" eventType="touchUpInside" id="qZC-xo-3JX"/>
                                         </connections>
@@ -8613,14 +8361,8 @@
                                         <rect key="frame" x="160" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="5">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BL7-a9-KkA" eventType="touchUpInside" id="POw-2W-eRN"/>
                                         </connections>
@@ -8629,14 +8371,8 @@
                                         <rect key="frame" x="200" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="6">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BL7-a9-KkA" eventType="touchUpInside" id="Lsx-hl-L6d"/>
                                         </connections>
@@ -8645,14 +8381,8 @@
                                         <rect key="frame" x="240" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="7">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BL7-a9-KkA" eventType="touchUpInside" id="GPn-hP-iTo"/>
                                         </connections>
@@ -8661,14 +8391,8 @@
                                         <rect key="frame" x="280" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="8">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BL7-a9-KkA" eventType="touchUpInside" id="G7n-7h-L04"/>
                                         </connections>
@@ -8677,14 +8401,8 @@
                                         <rect key="frame" x="320" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="9">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="BL7-a9-KkA" eventType="touchUpInside" id="cha-lp-hr7"/>
                                         </connections>
@@ -8709,7 +8427,7 @@
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Npj-NW-VQX" customClass="DifficultChooser" customModule="Судоку" customModuleProvider="target">
                                 <rect key="frame" x="119" y="52" width="176" height="32"/>
-                                <color key="backgroundColor" name="DynamicGreenColor"/>
+                                <color key="backgroundColor" name="GreenColor"/>
                                 <segments>
                                     <segment title="★"/>
                                     <segment title="★★"/>
@@ -8719,11 +8437,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибок: 0/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KB3-a0-Aa4">
                                 <rect key="frame" x="152.33333333333334" y="318.33333333333331" width="109.66666666666666" height="24.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" name="DynamicBlackColor"/>
+                                <color key="textColor" name="BlackColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sfy-Er-fAp">
                                 <rect key="frame" x="96.666666666666686" y="91" width="221" height="67"/>
@@ -8756,7 +8471,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="?">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
                                         <connections>
                                             <action selector="showRules:" destination="BL7-a9-KkA" eventType="touchUpInside" id="MSy-0K-WhB"/>
@@ -8766,7 +8481,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KB3-a0-Aa4" firstAttribute="centerX" secondItem="tYB-lP-TMV" secondAttribute="centerX" id="1xR-eA-wre"/>
                             <constraint firstItem="8B6-3h-XHe" firstAttribute="bottom" secondItem="p7r-Xl-dUm" secondAttribute="top" id="4SO-Y3-tMS"/>
@@ -10220,14 +9935,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="1">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="Rbj-QZ-mjJ" eventType="touchUpInside" id="Cak-IP-XgL"/>
                                         </connections>
@@ -10236,14 +9945,8 @@
                                         <rect key="frame" x="40" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="2">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="Rbj-QZ-mjJ" eventType="touchUpInside" id="OQl-kS-bNs"/>
                                         </connections>
@@ -10252,14 +9955,8 @@
                                         <rect key="frame" x="80" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="3">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="Rbj-QZ-mjJ" eventType="touchUpInside" id="0ID-Pj-aSk"/>
                                         </connections>
@@ -10268,14 +9965,8 @@
                                         <rect key="frame" x="120" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="4">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="Rbj-QZ-mjJ" eventType="touchUpInside" id="SDF-sY-ect"/>
                                         </connections>
@@ -10284,14 +9975,8 @@
                                         <rect key="frame" x="160" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="5">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="Rbj-QZ-mjJ" eventType="touchUpInside" id="wJf-cx-XLa"/>
                                         </connections>
@@ -10300,14 +9985,8 @@
                                         <rect key="frame" x="200" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="6">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="Rbj-QZ-mjJ" eventType="touchUpInside" id="2Py-ws-4Yr"/>
                                         </connections>
@@ -10316,14 +9995,8 @@
                                         <rect key="frame" x="240" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="7">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="Rbj-QZ-mjJ" eventType="touchUpInside" id="gKT-bH-Dp5"/>
                                         </connections>
@@ -10332,14 +10005,8 @@
                                         <rect key="frame" x="280" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="8">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="Rbj-QZ-mjJ" eventType="touchUpInside" id="KVC-z7-2Q0"/>
                                         </connections>
@@ -10348,14 +10015,8 @@
                                         <rect key="frame" x="320" y="0.0" width="30" height="67"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="9">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
-                                        <variation key="heightClass=compact">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="60"/>
-                                        </variation>
                                         <connections>
                                             <action selector="digitTouched:" destination="Rbj-QZ-mjJ" eventType="touchUpInside" id="zlw-3v-Sea"/>
                                         </connections>
@@ -10380,7 +10041,7 @@
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4HT-zv-Tle" customClass="DifficultChooser" customModule="Судоку" customModuleProvider="target">
                                 <rect key="frame" x="119" y="52" width="176" height="32"/>
-                                <color key="backgroundColor" name="DynamicGreenColor"/>
+                                <color key="backgroundColor" name="GreenColor"/>
                                 <segments>
                                     <segment title="★"/>
                                     <segment title="★★"/>
@@ -10390,11 +10051,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибок: 0/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCh-gs-Usw">
                                 <rect key="frame" x="152.33333333333334" y="318.33333333333331" width="109.66666666666666" height="24.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
-                                <color key="textColor" name="DynamicBlackColor"/>
+                                <color key="textColor" name="BlackColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sD7-GU-dPV">
                                 <rect key="frame" x="96.666666666666686" y="91" width="221" height="67"/>
@@ -10427,7 +10085,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
                                         <state key="normal" title="?">
-                                            <color key="titleColor" name="DynamicGreenColor"/>
+                                            <color key="titleColor" name="GreenColor"/>
                                         </state>
                                         <connections>
                                             <action selector="showRules:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SDb-8V-2qS"/>
@@ -10437,7 +10095,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="syX-X5-vEq" secondAttribute="trailing" id="0TM-Wn-5pD"/>
                             <constraint firstItem="mCh-gs-Usw" firstAttribute="centerX" secondItem="kxZ-CG-RlY" secondAttribute="centerX" id="48B-5K-8cg"/>
@@ -10586,7 +10244,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6rN-bS-aqT">
                                 <rect key="frame" x="0.0" y="178" width="414" height="698"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gwa-3s-SDa">
                                     <size key="itemSize" width="190" height="190"/>
                                     <size key="estimatedItemSize" width="190" height="190"/>
@@ -10604,7 +10262,7 @@
                                             <subviews>
                                                 <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="efq-Nl-CJE" customClass="ShapeView" customModule="Судоку" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="174" height="174"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <color key="backgroundColor" name="BackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="efq-Nl-CJE" secondAttribute="height" multiplier="1:1" id="Cue-Lr-1te"/>
                                                     </constraints>
@@ -10637,11 +10295,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Уровень" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K87-2L-lj0">
                                 <rect key="frame" x="63.666666666666657" y="74" width="287" height="96"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="70"/>
-                                <color key="textColor" name="DynamicGreenColor"/>
+                                <color key="textColor" name="GreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6rN-bS-aqT" secondAttribute="trailing" id="0qC-LV-2M7"/>
                             <constraint firstItem="6rN-bS-aqT" firstAttribute="top" secondItem="K87-2L-lj0" secondAttribute="bottom" constant="8" id="4eq-vh-0Ui"/>
@@ -10686,12 +10344,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Режим" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Piv-bD-ig6">
                                 <rect key="frame" x="92.666666666666686" y="74" width="229" height="96"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="70"/>
-                                <color key="textColor" name="DynamicGreenColor"/>
+                                <color key="textColor" name="GreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vBi-HR-INg">
                                 <rect key="frame" x="0.0" y="178" width="414" height="718"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cD5-S7-KF1">
                                     <size key="itemSize" width="190" height="230"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -10712,7 +10370,7 @@
                                                         <constraint firstAttribute="height" constant="40" id="fYZ-2e-1cA"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
-                                                    <color key="textColor" name="DynamicTextColor"/>
+                                                    <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLS-2w-e76" customClass="LevelPreview" customModule="Судоку">
@@ -10742,7 +10400,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Piv-bD-ig6" firstAttribute="centerX" secondItem="JoM-gC-y9q" secondAttribute="centerX" id="DPz-ZG-NmI"/>
                             <constraint firstItem="fWt-DJ-Z2D" firstAttribute="top" secondItem="988-9B-a0X" secondAttribute="bottom" constant="8" symbolic="YES" id="Ph1-CN-8jH"/>
@@ -10773,20 +10431,23 @@
     <resources>
         <image name="Erase" width="150" height="150"/>
         <image name="Hint" width="150" height="150"/>
+        <namedColor name="BackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <namedColor name="BlackColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
         <namedColor name="DynamicBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </namedColor>
-        <namedColor name="DynamicBlackColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <namedColor name="FooterColor">
+            <color red="0.38999998569488525" green="0.38999998569488525" blue="0.38999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="DynamicGreenColor">
+        <namedColor name="GreenColor">
             <color red="0.18799999356269836" green="0.81999999284744263" blue="0.3449999988079071" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="DynamicHeaderTextColor">
-            <color red="0.31000000238418579" green="0.31000000238418579" blue="0.31000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="DynamicTextColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="RedColor">
+            <color red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
