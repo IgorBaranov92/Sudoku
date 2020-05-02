@@ -10,7 +10,7 @@ class TutorialView: MessageView {
         let label = UILabel(frame: CGRect(origin: CGPoint(x: 10, y: 10), size: CGSize(width: rect.width - 10, height: rect.height/10 - 10)))
         label.textAlignment = .center
         label.text = "Правила"
-        label.textColor = .systemGreen
+        label.textColor = .dynamicGreen
         label.font = UIFont(name: "Avenir Next", size: 35)
         addSubview(label)
         

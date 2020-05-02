@@ -15,7 +15,7 @@ class HintView: UIView {
         label.textAlignment = .center
         addSubview(label)
         let path = UIBezierPath(arcCenter: CGPoint(x: 3/4*rect.width, y: 1/4*rect.height), radius: 1/8*rect.width, startAngle: 0, endAngle: .pi*2, clockwise: false)
-        #colorLiteral(red: 0.1879999936, green: 0.8199999928, blue: 0.3449999988, alpha: 1).setFill()
+        UIColor.dynamicGreen.setFill()
         path.fill()
     }
 

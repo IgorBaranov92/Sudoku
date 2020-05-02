@@ -10,11 +10,11 @@ class Cell: BorderedCell {
         super.draw(rect)
         if active {
             let path = UIBezierPath(rect: rect)
-            #colorLiteral(red: 0.4670000076, green: 0.7649999857, blue: 0.2669999897, alpha: 1).setFill()
+            UIColor.selection.setFill()
             path.fill()
         } else if highlight {
             let path = UIBezierPath(rect: rect)
-            #colorLiteral(red: 0.7220000029, green: 0.8859999776, blue: 0.5920000076, alpha: 1).setFill()
+            UIColor.highlight.setFill()
             path.fill()
         } else {
             let path = UIBezierPath(rect: rect)
@@ -35,11 +35,11 @@ class Cell: BorderedCell {
     
     private func setup() {
         layer.borderWidth = Constants.lineWidth
-        layer.borderColor = UIColor.border.cgColor
+        layer.borderColor = UIColor.black.cgColor
     }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        setTitleColor(.text, for: .normal)
+        setTitleColor(.black, for: .normal)
     }
     
     

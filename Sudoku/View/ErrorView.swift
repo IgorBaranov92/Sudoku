@@ -26,7 +26,7 @@ class ErrorView: UIView {
         }
         let path = UIBezierPath(roundedRect: CGRect(x: label.frame.origin.x - 5, y: 0, width: label.frame.width + 10, height: rect.height),
                                cornerRadius: Constants.cornerRadiusForErrorView)
-        UIColor.orange.setFill()
+        UIColor.dynamicOrange.setFill()
         path.fill()
         addSubview(label)
         alpha = 0

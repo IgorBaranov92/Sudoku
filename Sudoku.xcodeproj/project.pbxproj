@@ -225,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				78181EF823E5BD9B00836109 /* AppDelegate.swift */,
+				786BC68E243F3F6F00D42553 /* Global.swift */,
 				786BC688243F3E4D00D42553 /* Protocols.swift */,
 				78294FD0241B93A700854A97 /* Constants.swift */,
 				78181F0123E5BD9C00836109 /* Assets.xcassets */,
@@ -294,7 +295,6 @@
 				786BC690243F3F8700D42553 /* UIView+layer.swift */,
 				786BC692243F3FB500D42553 /* CGRect+rects.swift */,
 				786BC694243F3FCB00D42553 /* Array+unique.swift */,
-				786BC68E243F3F6F00D42553 /* Global.swift */,
 				785D09332440EC2E00053AD8 /* UIBezierPath+Points.swift */,
 			);
 			path = Extensions;

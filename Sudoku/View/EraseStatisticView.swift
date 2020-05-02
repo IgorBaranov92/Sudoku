@@ -13,7 +13,7 @@ class EraseStatisticView: InfoView {
         let attentionLabel = UILabel(frame: CGRect(x: 0, y: 0, width: rect.width, height: 0.15*rect.height))
         attentionLabel.textAlignment = .center
         attentionLabel.text = attentionMessage
-        attentionLabel.textColor = .systemGreen
+        attentionLabel.textColor = .dynamicGreen
         attentionLabel.font = UIFont(name: "Avenir Next", size: 30)
         addSubview(attentionLabel)
         

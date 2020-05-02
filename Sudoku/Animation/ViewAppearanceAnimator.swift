@@ -25,7 +25,7 @@ class ViewAppearanceAnimator {
                        view.alpha = 0.0
                }) {  if $0 == .end {
                 if let superview = view.superview {
-                    superview.backgroundColor = UIColor(named: "DynamicBackgroundColor") ?? .white
+                    superview.backgroundColor = UIColor.background
                     superview.subviews.forEach { $0.isUserInteractionEnabled = true }
                 }
                    view.removeFromSuperview()

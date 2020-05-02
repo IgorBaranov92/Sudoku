@@ -86,7 +86,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
             }
             if sudoku.mistakesMade.contains(buttonIndex) {// erase only mistakes
                 eraseDigit(digit, at: buttonIndex)
-                cells[buttonIndex].setTitleColor(.text, for: .normal)
+                cells[buttonIndex].setTitleColor(.dynamicBlack, for: .normal)
 
             } else {
                 showErrorAt(pivot, message: "Уже решенная клетка")
@@ -117,14 +117,14 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
             hideDigitIfPossible()
             TextAppearenceAnimator.show(cells[index], string: title)
             if digit == sudoku.answers[index] { //right digit
-                selectedButton.setTitleColor(.text, for: .normal)
+                selectedButton.setTitleColor(.dynamicBlack, for: .normal)
             } else { //mistake
                 statistic.scores[gameType.rawValue].scores[gameIndex][0] += 1
                 saveStatistic()
                 if options.options[1] {
                     selectedButton.setTitleColor(.orange, for: .normal)
                 } else {
-                    selectedButton.setTitleColor(.text, for: .normal)
+                    selectedButton.setTitleColor(.dynamicBlack, for: .normal)
                 }
                 updateLabels()
             }
@@ -191,9 +191,9 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
                 cells?[index].setTitle("\(sudoku.digits[index])", for: .normal)
             }
             if options.options[1] {
-             cells?[index].setTitleColor(sudoku.mistakesMade.contains(index) ? .orange : .text, for: .normal)
+             cells?[index].setTitleColor(sudoku.mistakesMade.contains(index) ? .dynamicOrange : .dynamicBlack, for: .normal)
             } else {
-                cells?[index].setTitleColor(.text, for: .normal)
+                cells?[index].setTitleColor(.dynamicBlack, for: .normal)
             }
         }
     }
@@ -221,7 +221,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
             $0.highlight = false
             if full {
                 $0.setTitle("", for: .normal)
-                $0.setTitleColor(.text, for: .normal)
+                $0.setTitleColor(.dynamicBlack, for: .normal)
             }
         }
     }
@@ -240,7 +240,12 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
     func gameWon() {
         statistic.scores[gameType.rawValue].scores[gameIndex][2] += 1
         saveStatistic()
-        newGame()
+        let loseGameView = EndGameView()
+        loseGameView.body = "Победа!!!"
+        loseGameView.delegate = self
+        view.addSubview(loseGameView)
+        EndGameViewConstraints.activate(loseGameView, view)
+        ViewAppearanceAnimator.show(loseGameView)
     }
     
     func gameLost() {

@@ -14,7 +14,7 @@ class EndGameView: MessageView {
         let label = ShrinkableLabel(frame: CGRect(x: 0, y: 0, width: rect.width, height: rect.height*0.3))
         label.font = UIFont(name: "Avenir Next", size: 35)
         label.text = body
-        label.textColor = #colorLiteral(red: 0.1879999936, green: 0.8199999928, blue: 0.3449999988, alpha: 1)
+        label.textColor = .dynamicGreen
         label.textAlignment = .center
         addSubview(label)
         

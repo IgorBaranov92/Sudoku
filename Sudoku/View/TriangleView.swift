@@ -7,7 +7,7 @@ class TriangleView: UIView {
         path.move(to: CGPoint(x: 0, y: 0))
         path.addLine(to: rect.center)
         path.addLine(to: CGPoint(x: rect.maxX, y: 0))
-        UIColor.orange.setFill()
+        UIColor.dynamicOrange.setFill()
         path.fill()
     }
     

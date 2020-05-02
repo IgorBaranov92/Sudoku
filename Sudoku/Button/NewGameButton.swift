@@ -4,7 +4,7 @@ class NewGameButton: UIButton {
 
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath(roundedRect: rect, cornerRadius: Constants.cornerRadiusForNewGameButton)
-        UIColor(named: "DynamicGreenColor")!.setFill()
+        UIColor.dynamicGreen.setFill()
         path.fill()
         
 
@@ -23,7 +23,7 @@ class NewGameButton: UIButton {
     private func adjust() {
        setTitle("Новая игра", for: .normal)
        titleLabel?.font = UIFont(name: "Avenir Next", size: 20)
-       setTitleColor(UIColor(named: "DynamicBlackColor")!, for: .normal)
+        setTitleColor(.dynamicBlack, for: .normal)
     }
 
 }

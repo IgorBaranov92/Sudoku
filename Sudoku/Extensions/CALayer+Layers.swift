@@ -15,7 +15,7 @@ extension CALayer {
         default:break
         }
         subLayer.name = "border"
-        subLayer.backgroundColor = UIColor.border.cgColor
+        subLayer.backgroundColor = UIColor.dynamicBlack.cgColor
         addSublayer(subLayer)
     }
     
@@ -87,7 +87,7 @@ extension CALayer {
         path.addLine(to: end)
         subLayer.path = path
         subLayer.lineWidth = width
-        subLayer.strokeColor = UIColor.border.cgColor
+        subLayer.strokeColor = UIColor.dynamicBlack.cgColor
         subLayer.name = "vertical"
         addSublayer(subLayer)
     }
@@ -171,7 +171,7 @@ extension CALayer {
         subLayer.path = path
         subLayer.lineWidth = lineWidth
         subLayer.fillColor = UIColor.clear.cgColor
-        subLayer.strokeColor = UIColor.border.cgColor
+        subLayer.strokeColor = UIColor.dynamicBlack.cgColor
         subLayer.name = "sudokuBorder"
         insertSublayer(subLayer, at: 0)
     }

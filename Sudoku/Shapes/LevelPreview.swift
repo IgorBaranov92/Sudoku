@@ -17,7 +17,7 @@ class LevelPreview: SudokuView {
         case 4:
             layer.addHexagonAt(rect, lineWidth: 1)
         case 5:
-            UIColor.border.setStroke()
+            UIColor.black.setStroke()
             Shapes.getPathBasedAt(0, rect: rect,width: 1.5).stroke()
         default: break
         }

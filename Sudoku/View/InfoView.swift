@@ -5,7 +5,7 @@ class InfoView: UIView {
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath(roundedRect: bounds,
                                 cornerRadius: Constants.cornerRadiusForTutorialView)
-        (UIColor(named: "DynamicColorForMessageView") ?? .white).setFill()
+        UIColor.background.setFill()
         path.fill()
     }
 
@@ -23,7 +23,7 @@ class InfoView: UIView {
        func setup() {
            backgroundColor = .clear
            layer.cornerRadius = Constants.cornerRadiusForTutorialView
-           layer.borderColor = UIColor(named:"DynamicBorderMessageViewColor")?.cgColor ?? UIColor.black.cgColor
+           layer.borderColor =  UIColor.dynamicBlack.cgColor
            layer.borderWidth = 2.0
         }
        

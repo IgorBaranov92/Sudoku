@@ -90,11 +90,11 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     }
     
     @IBAction func changeStatisticBasedOnGameType(_ sender: UIButton) {
-        buttons.forEach { $0.setTitleColor(.text, for: .normal)}
+        buttons.forEach { $0.setTitleColor(.dynamicBlack, for: .normal)}
         self.currentTitle = sender.currentTitle ?? " "
         StatisticButtonAnimator.animate(sender)
         if let buttonIndex = buttons.firstIndex(of:sender) {
-            sender.setTitleColor(#colorLiteral(red: 0.1879999936, green: 0.8199999928, blue: 0.3449999988, alpha: 1), for: .normal)
+            sender.setTitleColor(.dynamicGreen, for: .normal)
             index = buttonIndex
             tableView.reloadData()
         }
