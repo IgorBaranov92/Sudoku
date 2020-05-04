@@ -32,6 +32,7 @@
 		7862E4F7242A604C0030F8E8 /* NoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F6242A604B0030F8E8 /* NoButton.swift */; };
 		7862E4F9242A60550030F8E8 /* YesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F8242A60550030F8E8 /* YesButton.swift */; };
 		786630F02445B62A002C0399 /* ShapeSudokuSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786630EF2445B62A002C0399 /* ShapeSudokuSolver.swift */; };
+		78693EAC24605F87001CB3D2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78693EAB24605F87001CB3D2 /* Launch Screen.storyboard */; };
 		786A4955244983A8000A2E17 /* SudokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A4954244983A8000A2E17 /* SudokuView.swift */; };
 		786BC689243F3E4D00D42553 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC688243F3E4D00D42553 /* Protocols.swift */; };
 		786BC68B243F3EC300D42553 /* CALayer+Layers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC68A243F3EC300D42553 /* CALayer+Layers.swift */; };
@@ -116,6 +117,7 @@
 		7862E4F6242A604B0030F8E8 /* NoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoButton.swift; sourceTree = "<group>"; };
 		7862E4F8242A60550030F8E8 /* YesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesButton.swift; sourceTree = "<group>"; };
 		786630EF2445B62A002C0399 /* ShapeSudokuSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSudokuSolver.swift; sourceTree = "<group>"; };
+		78693EAB24605F87001CB3D2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		786A4954244983A8000A2E17 /* SudokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuView.swift; sourceTree = "<group>"; };
 		786BC688243F3E4D00D42553 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		786BC68A243F3EC300D42553 /* CALayer+Layers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Layers.swift"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				78294FD0241B93A700854A97 /* Constants.swift */,
 				78181F0123E5BD9C00836109 /* Assets.xcassets */,
 				78181F0623E5BD9C00836109 /* Info.plist */,
+				78693EAB24605F87001CB3D2 /* Launch Screen.storyboard */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 			files = (
 				7880F4C32460335F008CB541 /* Helper.storyboard in Resources */,
 				78181F0223E5BD9C00836109 /* Assets.xcassets in Resources */,
+				78693EAC24605F87001CB3D2 /* Launch Screen.storyboard in Resources */,
 				78975CB62453453C008AC114 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

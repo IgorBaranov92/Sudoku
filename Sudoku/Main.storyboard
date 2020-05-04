@@ -1911,13 +1911,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpv-P0-IBh" customClass="Hexagon" customModule="Судоку" customModuleProvider="target">
-                                <rect key="frame" x="10" y="351" width="394" height="394"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="qpv-P0-IBh" secondAttribute="height" multiplier="1:1" id="IRu-ev-KvA"/>
-                                </constraints>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VoJ-KJ-dt8">
                                 <rect key="frame" x="10" y="351" width="394" height="394"/>
                                 <subviews>
@@ -3231,6 +3224,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpv-P0-IBh" customClass="Hexagon" customModule="Судоку" customModuleProvider="target">
+                                <rect key="frame" x="10" y="351" width="394" height="394"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qpv-P0-IBh" secondAttribute="height" multiplier="1:1" id="IRu-ev-KvA"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCX-h5-KA6" customClass="BackButton" customModule="Судоку" customModuleProvider="target">
                                 <rect key="frame" x="10" y="52" width="40" height="40"/>
                                 <constraints>
@@ -10130,7 +10130,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="Mbf-qO-bhP" secondAttribute="trailing" id="kRt-7h-kYA"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" name="DynamicBackgroundColor"/>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
                                         <connections>
                                             <outlet property="levelLabel" destination="Mbf-qO-bhP" id="lsl-qH-PR2"/>
                                             <outlet property="levelPreview" destination="RLS-2w-e76" id="lyW-UA-c6m"/>
@@ -10175,9 +10175,6 @@
         </namedColor>
         <namedColor name="BlackColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </namedColor>
-        <namedColor name="DynamicBackgroundColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="FooterColor">
             <color red="0.38999998569488525" green="0.38999998569488525" blue="0.38999998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

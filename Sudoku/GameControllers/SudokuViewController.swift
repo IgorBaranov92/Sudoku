@@ -276,7 +276,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
         indexes.forEach {
             let frame = cells[$0].convert(cells[$0].bounds, to: view)
             let customView = UIView(frame: frame)
-            customView.backgroundColor = #colorLiteral(red: 0.4670000076, green: 0.7649999857, blue: 0.2669999897, alpha: 1)
+            customView.backgroundColor = .selection
             view.insertSubview(customView, at: 0)
             CellAnimator.animate(customView)
         }
@@ -346,7 +346,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
         reset(full: true)
         digits.forEach { $0.isHidden = false }
         hasActiveButton = nil
-        view.isUserInteractionEnabled = true
+        view.subviews.forEach { $0.isUserInteractionEnabled = true }
         sudoku = SudokuGenerator(difficult: gameIndex,
                                  gameType:gameType,id:id,
                                  delegate: self) { [weak self] in
@@ -394,6 +394,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
     }
     
     func recreateGameIfNeededAt(_ index: Int) {
+        reset(full: false)
         if index == gameIndex {
             newGame()
         } else {
