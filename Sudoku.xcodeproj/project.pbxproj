@@ -48,6 +48,7 @@
 		7879F06C244F56060062D3C9 /* LevelSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879F06B244F56060062D3C9 /* LevelSelectionCollectionViewCell.swift */; };
 		7879F06E244F57D60062D3C9 /* LevelPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879F06D244F57D60062D3C9 /* LevelPreview.swift */; };
 		787C578F244770D1009C0C34 /* DifficultChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787C578E244770D1009C0C34 /* DifficultChooser.swift */; };
+		7880F4C32460335F008CB541 /* Helper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7880F4C22460335F008CB541 /* Helper.storyboard */; };
 		78810CCA241F90B6002828E2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78810CC9241F90B6002828E2 /* MessageView.swift */; };
 		7883A1C4241D2BE100ECB3FD /* TutorialViewConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */; };
 		78859E572449CC9000F93442 /* ShapeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78859E562449CC9000F93442 /* ShapeSelectionViewController.swift */; };
@@ -66,7 +67,6 @@
 		7896973F241A321B0054397E /* DiagonalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7896973E241A321B0054397E /* DiagonalCell.swift */; };
 		78975CA124530C5D008AC114 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78975CA024530C5D008AC114 /* Messages.swift */; };
 		78975CAC24531251008AC114 /* SudokuTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78975CAB24531251008AC114 /* SudokuTest.swift */; };
-		78975CB4245344F7008AC114 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78975CB3245344F7008AC114 /* Launch Screen.storyboard */; };
 		78975CB62453453C008AC114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78975CB52453453C008AC114 /* Main.storyboard */; };
 		78B9B144243B6FB200024738 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B9B143243B6FB200024738 /* InfoView.swift */; };
 		78C9B5DB241BE98100E1DB7A /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9B5DA241BE98100E1DB7A /* TutorialView.swift */; };
@@ -132,6 +132,7 @@
 		7879F06B244F56060062D3C9 /* LevelSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		7879F06D244F57D60062D3C9 /* LevelPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelPreview.swift; sourceTree = "<group>"; };
 		787C578E244770D1009C0C34 /* DifficultChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultChooser.swift; sourceTree = "<group>"; };
+		7880F4C22460335F008CB541 /* Helper.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Helper.storyboard; sourceTree = "<group>"; };
 		78810CC9241F90B6002828E2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewConstraint.swift; sourceTree = "<group>"; };
 		78859E562449CC9000F93442 /* ShapeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeSelectionViewController.swift; sourceTree = "<group>"; };
@@ -152,7 +153,6 @@
 		78975CA924531251008AC114 /* SudokuTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudokuTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78975CAB24531251008AC114 /* SudokuTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuTest.swift; sourceTree = "<group>"; };
 		78975CAD24531251008AC114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78975CB3245344F7008AC114 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		78975CB52453453C008AC114 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		78B9B143243B6FB200024738 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		78C9B5DA241BE98100E1DB7A /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
@@ -230,7 +230,6 @@
 				78294FD0241B93A700854A97 /* Constants.swift */,
 				78181F0123E5BD9C00836109 /* Assets.xcassets */,
 				78181F0623E5BD9C00836109 /* Info.plist */,
-				78975CB3245344F7008AC114 /* Launch Screen.storyboard */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -326,6 +325,7 @@
 				7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */,
 				7862E4F4242A5BAA0030F8E8 /* EraseViewConstraints.swift */,
 				788DA7B1245C5630006AA93D /* EndGameViewConstraints.swift */,
+				7880F4C22460335F008CB541 /* Helper.storyboard */,
 			);
 			path = Constraints;
 			sourceTree = "<group>";
@@ -471,7 +471,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78975CB4245344F7008AC114 /* Launch Screen.storyboard in Resources */,
+				7880F4C32460335F008CB541 /* Helper.storyboard in Resources */,
 				78181F0223E5BD9C00836109 /* Assets.xcassets in Resources */,
 				78975CB62453453C008AC114 /* Main.storyboard in Resources */,
 			);

@@ -1,6 +1,5 @@
 import UIKit
 
-
 class Cell: BorderedCell {
     
     var active = false { didSet { setNeedsDisplay() }}
@@ -35,12 +34,9 @@ class Cell: BorderedCell {
     
     private func setup() {
         layer.borderWidth = Constants.lineWidth
-        layer.borderColor = UIColor.black.cgColor
+        layer.borderColor = UIColor.dynamicBlack.cgColor
     }
 
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        setTitleColor(.black, for: .normal)
-    }
     
     
 }
