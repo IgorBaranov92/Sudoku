@@ -1,5 +1,6 @@
 import UIKit
 
+@IBDesignable
 class SudokuView: UIView {
 
     override func draw(_ rect: CGRect) {

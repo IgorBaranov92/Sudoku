@@ -297,10 +297,13 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
         if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(gameType == .shape ? path + String(id) : path),let data = try? Data(contentsOf: url),let newValue = Game(json: data) {
             game = newValue
             guard let game = game.games[gameIndex] else { newGame();return  }
-            sudoku = game
-            sudoku.delegate = self
-            updateUI()
-            saveGame()
+            if game.gameLost { newGame() }
+            else {
+                sudoku = game
+                sudoku.delegate = self
+                updateUI()
+                saveGame()
+            }
         } else {
             newGame()
         }

@@ -17,7 +17,8 @@ class SudokuGenerator: Sudoku {
     private(set) var mistakesMade = [Int?]()
     private(set) var hintsMade = 0
     private(set) var hints = 0
-          
+    private(set) var gameLost = false
+    
     init(difficult:Int,gameType:GameType,id:Int, delegate: SudokuDelegate? = nil,completion:(() -> ())? = nil  ) {
         super.init()
         self.delegate = delegate
@@ -25,6 +26,7 @@ class SudokuGenerator: Sudoku {
         self.completion = completion
         self.id = id
         mistakes = 3
+        gameLost = false
         switch difficult {
         case 0: self.difficult = .easy;hints = 3
         case 1: self.difficult = .medium;hints = 2
@@ -43,6 +45,7 @@ class SudokuGenerator: Sudoku {
             if shouldCountMistakes {
                 if mistakesMade.count >= mistakes { //game lost
                     if delegate == nil { fatalError("delegate can't be nil")}
+                    gameLost = true
                     delegate?.gameLost()
                 }
             }
@@ -129,7 +132,7 @@ class SudokuGenerator: Sudoku {
             digits = SudokuSolver.getBaseGridBasedOn(gameType)
         }
         replaceDigits()
-       // removeDigits()
+        removeDigits()
         calculateDigits()
         completion?()
     }
@@ -227,6 +230,7 @@ class SudokuGenerator: Sudoku {
         digitsCount = try container.decode([Int:Int].self, forKey: .digitsCount)
         gameType = try container.decode(GameType.self, forKey: .gameType)
         id = try container.decode(Int.self, forKey: .id)
+        gameLost = try container.decode(Bool.self, forKey: .gameLost)
     }
     
     override func encode(to encoder: Encoder) throws {
@@ -241,6 +245,7 @@ class SudokuGenerator: Sudoku {
         try container.encode(digitsCount, forKey: .digitsCount)
         try container.encode(gameType, forKey: .gameType)
         try container.encode(id, forKey: .id)
+        try container.encode(gameLost, forKey: .gameLost)
     }
     
     private enum CodingKeys:String,CodingKey {
@@ -250,6 +255,7 @@ class SudokuGenerator: Sudoku {
         case mistakesMade = "mistakesMade"
         case difficult = "difficult"
         case digits = "digits"
+        case gameLost = "gameLost"
         case answers = "answers"
         case digitsCount = "digitsCount"
         case gameType = "gameType"
