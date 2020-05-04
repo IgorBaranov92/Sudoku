@@ -13,4 +13,9 @@ class ShapeSudokuViewController: SudokuViewController {
         super.viewDidLoad()
     }
     
+    override func newGame() {
+        super.newGame()
+        shapeView?.isUserInteractionEnabled = false
+    }
+    
 }

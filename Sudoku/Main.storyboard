@@ -3342,6 +3342,7 @@
                     <connections>
                         <outlet property="difficultChooser" destination="xSj-e3-Blx" id="hLG-AV-95S"/>
                         <outlet property="eraseView" destination="SU6-L7-Q2b" id="2fL-RV-1HQ"/>
+                        <outlet property="hexagon" destination="qpv-P0-IBh" id="Ysd-VE-66A"/>
                         <outlet property="hintView" destination="6Vz-1c-Wzf" id="cfP-BX-FPS"/>
                         <outlet property="mistakesLabel" destination="aO2-Nc-JlH" id="p4F-65-hy9"/>
                         <outlet property="stackView" destination="VoJ-KJ-dt8" id="qaV-ZT-ikx"/>

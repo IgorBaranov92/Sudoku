@@ -39,6 +39,8 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
     
     @IBOutlet var digits: [UIButton]!
     
+    @IBOutlet private weak var hexagon: Hexagon!
+    
     // MARK: - private vars
     
     private var hasActiveButton: Bool?
@@ -342,11 +344,12 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
         
     }
     
-    private func newGame() {
+    func newGame() {
         reset(full: true)
         digits.forEach { $0.isHidden = false }
         hasActiveButton = nil
         view.subviews.forEach { $0.isUserInteractionEnabled = true }
+        hexagon?.isUserInteractionEnabled = false
         sudoku = SudokuGenerator(difficult: gameIndex,
                                  gameType:gameType,id:id,
                                  delegate: self) { [weak self] in

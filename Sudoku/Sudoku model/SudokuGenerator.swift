@@ -129,7 +129,7 @@ class SudokuGenerator: Sudoku {
             digits = SudokuSolver.getBaseGridBasedOn(gameType)
         }
         replaceDigits()
-        removeDigits()
+       // removeDigits()
         calculateDigits()
         completion?()
     }
