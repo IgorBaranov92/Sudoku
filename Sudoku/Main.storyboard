@@ -616,6 +616,7 @@
         <!--Shape Sudoku View Controller-->
         <scene sceneID="MIp-Pb-Nvx">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cB-PE-fSl" sceneMemberID="firstResponder"/>
                 <viewController id="gT3-pA-roP" customClass="ShapeSudokuViewController" customModule="Судоку" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zyM-9h-Rbf"/>
@@ -2393,7 +2394,6 @@
                         <outletCollection property="cells" destination="66u-Lb-ops" collectionClass="NSMutableArray" id="uU0-6n-VIW"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9cB-PE-fSl" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1520" y="725"/>
         </scene>
