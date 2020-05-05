@@ -23,13 +23,12 @@ class LevelsCollectionViewController: UIViewController, UICollectionViewDataSour
         return cell
     }
     
+    private var index = 0
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        index = indexPath.item
         switch indexPath.item {
-        case 0: performSegue(withIdentifier: "ClassicSudoku", sender: self)
-        case 1: performSegue(withIdentifier: "DiagonalSudoku", sender: self)
-        case 2: performSegue(withIdentifier: "TwoDiagonals", sender: self)
-        case 3: performSegue(withIdentifier: "RombSudoku", sender: self)
-        case 4: performSegue(withIdentifier: "HexagonSudoku", sender: self)
+        case 0...4: performSegue(withIdentifier: "Sudoku", sender: self)
         case 5: performSegue(withIdentifier: "ShapeSelection", sender: self)
         default:break
         }
@@ -41,32 +40,32 @@ class LevelsCollectionViewController: UIViewController, UICollectionViewDataSour
     }
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier {
-            if let gameVC = segue.destination as? SudokuViewController {
-                switch identifier {
-                case "ClassicSudoku":
-                    gameVC.gameType = .classic
+        if let identifier = segue.identifier,let gameVC = segue.destination as? SudokuViewController {
+            if identifier == "Sudoku" {
+                switch index {
+                case 0:
                     gameVC.path = "classic"
-                case "DiagonalSudoku":
-                gameVC.gameType = .diagonal
+                    gameVC.gameType = .classic
+                case 1:
                 gameVC.path = "diagonal"
-                case "TwoDiagonals":
-                gameVC.gameType = .twoDiagonals
+                gameVC.gameType = .diagonal
+                case 2:
                 gameVC.path = "twoDiagonals"
-                case "RombSudoku":
-                gameVC.gameType = .romb
+                gameVC.gameType = .twoDiagonals
+                case 3:
                 gameVC.path = "romb"
-                case "HexagonSudoku":
-                gameVC.gameType = .hexagon
+                gameVC.gameType = .romb
+                case 4:
                 gameVC.path = "hexagon"
+                gameVC.gameType = .hexagon
                 default:break
                 }
             }
+        }
             if let shapeVC = segue.destination as? ShapeSelectionViewController {
                 shapeVC.path = "shapes"
                 shapeVC.gameType = .shape
             }
-        }
     }
     
     @IBAction func done(_ sender:UIButton) {

@@ -1,12 +1,11 @@
 import UIKit
 
-class Cell: BorderedCell {
+class Cell: UIButton {
     
     var active = false { didSet { setNeedsDisplay() }}
     var highlight = false { didSet { setNeedsDisplay() }}
     
     override func draw(_ rect: CGRect) {
-        super.draw(rect)
         if active {
             let path = UIBezierPath(rect: rect)
             UIColor.selection.setFill()
@@ -22,21 +21,6 @@ class Cell: BorderedCell {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setup()
-    }
-    
-    private func setup() {
-        layer.borderWidth = Constants.lineWidth
-        layer.borderColor = UIColor.dynamicBlack.cgColor
-    }
 
-    
     
 }

@@ -39,7 +39,9 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
     
     @IBOutlet var digits: [UIButton]!
     
-    @IBOutlet private weak var hexagon: Hexagon!
+    @IBOutlet private weak var sudokuView: ClassicSudokuView! { didSet {
+        sudokuView.type = gameType
+        }}
     
     // MARK: - private vars
     
@@ -352,7 +354,7 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
         digits.forEach { $0.isHidden = false }
         hasActiveButton = nil
         view.subviews.forEach { $0.isUserInteractionEnabled = true }
-        hexagon?.isUserInteractionEnabled = false
+        sudokuView?.isUserInteractionEnabled = false
         sudoku = SudokuGenerator(difficult: gameIndex,
                                  gameType:gameType,id:id,
                                  delegate: self) { [weak self] in
