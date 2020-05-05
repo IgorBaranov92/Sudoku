@@ -1,6 +1,6 @@
 import UIKit
 
-class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, NewGameDelegate {
+class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate, NewGameDelegate {
     
     // MARK: - Public API
     
@@ -16,12 +16,9 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
     
     // MARK: - Outlets
     
-    @IBOutlet weak var mistakesLabel: UILabel!
     @IBOutlet weak var difficultChooser: DifficultChooser! { didSet {
         difficultChooser.delegate = self
         }}
-    
-    @IBOutlet weak var stackView: UIStackView!
 
     @IBOutlet private weak var hintView: HintView! { didSet {
         hintView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showHint(_:))))
@@ -36,8 +33,6 @@ class SudokuViewController: UIViewController, SudokuDelegate, EndGameDelegate, N
         cells.forEach {
             $0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(touchField)))
         }}}
-    
-    @IBOutlet var digits: [UIButton]!
     
     @IBOutlet private weak var sudokuView: ClassicSudokuView! { didSet {
         sudokuView.type = gameType

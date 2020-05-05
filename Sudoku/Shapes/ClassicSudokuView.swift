@@ -6,6 +6,7 @@ class ClassicSudokuView: SudokuView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
+        drawGridAt(rect)
         switch type {
         case .diagonal: layer.addDiagonalsAt(rect, lineWidth: 1)
         case .twoDiagonals: layer.addTwoDiagonalsAt(rect, lineWidth: 1)

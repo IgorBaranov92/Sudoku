@@ -13,4 +13,10 @@ class SudokuView: UIView {
         }
     }
 
+    func drawGridAt(_ rect:CGRect) {
+       for pivot in stride(from: 1/3*rect.width, to: rect.width, by: 1/3*rect.width) {
+           layer.addVertical(width: Constants.doubleLineWidth, start: CGPoint(x: pivot, y: 0), end: CGPoint(x: pivot, y: rect.maxY))
+           layer.addVertical(width: Constants.doubleLineWidth, start: CGPoint(x: 0, y: pivot), end: CGPoint(x: rect.maxX, y: pivot))
+       }
+   }
 }

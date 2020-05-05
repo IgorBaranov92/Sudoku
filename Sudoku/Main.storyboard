@@ -3710,6 +3710,8 @@
                         <outlet property="eraseView" destination="wvs-WQ-NFd" id="X71-9V-OHt"/>
                         <outlet property="hintView" destination="cau-eY-Mtd" id="FbJ-fa-1be"/>
                         <outlet property="mistakesLabel" destination="9Or-Lj-19A" id="DWG-Em-cEb"/>
+                        <outlet property="spacingConstraint" destination="NHx-5C-z2Y" id="OYH-Cd-TVy"/>
+                        <outlet property="spacingTwoConstraint" destination="Bgt-HR-sUw" id="q6S-WC-YDU"/>
                         <outlet property="stackView" destination="E0Q-AK-5h0" id="PTD-pz-5sM"/>
                         <outlet property="sudokuView" destination="hNm-pn-xmZ" id="BGH-98-JSe"/>
                         <outletCollection property="digits" destination="aLh-Oa-xuj" collectionClass="NSMutableArray" id="lNy-Rg-P7t"/>
