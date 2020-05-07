@@ -23,7 +23,7 @@ class NewGameButton: UIButton {
     private func adjust() {
        setTitle("Новая игра", for: .normal)
        titleLabel?.font = UIFont(name: "Avenir Next", size: 20)
-        setTitleColor(.dynamicBlack, for: .normal)
+       setTitleColor(.dynamicBlack, for: .normal)
     }
 
 }

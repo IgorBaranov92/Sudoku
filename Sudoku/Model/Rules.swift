@@ -19,4 +19,8 @@ final class Rules {
         }
     }
     
+    private static var basicDescription: String {
+        return " "
+    }
+    
 }

@@ -9,7 +9,7 @@ class ShapeView: SudokuView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        UIColor.black.setStroke()
+        UIColor.dynamicBlack.setStroke()
         Shapes.getPathBasedAt(id, rect: rect,width: 2.5).stroke()
     }
 
