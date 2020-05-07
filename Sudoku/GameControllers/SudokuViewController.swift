@@ -349,6 +349,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         digits.forEach { $0.isHidden = false }
         hasActiveButton = nil
         view.subviews.forEach { $0.isUserInteractionEnabled = true }
+        cells.forEach { $0.isUserInteractionEnabled = true }
         sudokuView?.isUserInteractionEnabled = false
         sudoku = SudokuGenerator(difficult: gameIndex,
                                  gameType:gameType,id:id,
@@ -392,7 +393,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     // MARK: - Protocol conformance
     
     func cancelButtonTouched() {
-        //save game progres
         dismiss(animated: true)
     }
     

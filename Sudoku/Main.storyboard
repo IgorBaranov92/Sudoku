@@ -2183,6 +2183,9 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="Fgq-RM-Z3v"/>
+                                </constraints>
                             </stackView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rjW-fJ-iOM" customClass="ShapeView" customModule="Судоку" customModuleProvider="target">
                                 <rect key="frame" x="10" y="351" width="394" height="394"/>
@@ -2301,6 +2304,8 @@
                         <outlet property="hintView" destination="AAq-WR-cfn" id="QFU-kA-BeP"/>
                         <outlet property="mistakesLabel" destination="4y6-U7-aBv" id="pMU-yd-MU0"/>
                         <outlet property="shapeView" destination="rjW-fJ-iOM" id="k0u-B2-9mh"/>
+                        <outlet property="spacingConstraint" destination="OHy-P4-tI5" id="wPO-zI-yWm"/>
+                        <outlet property="spacingTwoConstraint" destination="uAX-JF-JQD" id="i2S-4Y-dWw"/>
                         <outlet property="stackView" destination="594-2e-uMD" id="xeZ-4B-6up"/>
                         <outletCollection property="digits" destination="KI5-Am-MHP" collectionClass="NSMutableArray" id="5N9-SR-haB"/>
                         <outletCollection property="digits" destination="ZxE-fg-bBE" collectionClass="NSMutableArray" id="3B6-iy-M9y"/>

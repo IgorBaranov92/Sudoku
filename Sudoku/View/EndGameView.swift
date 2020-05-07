@@ -28,8 +28,9 @@ class EndGameView: MessageView {
     
     @objc
     private func newGame() {
-        delegate?.createNewGame()
-        ViewAppearanceAnimator.dismiss(self)
+        ViewAppearanceAnimator.dismiss(self) { [weak self] in
+            self?.delegate?.createNewGame()
+        }
     }
 
 }

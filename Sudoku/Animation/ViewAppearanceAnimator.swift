@@ -15,7 +15,7 @@ class ViewAppearanceAnimator {
         })
     }
     
-    static func dismiss(_ view:UIView) {
+    static func dismiss(_ view:UIView,_ completion:( () -> () )? = nil ) {
         UIViewPropertyAnimator.runningPropertyAnimator(
                    withDuration: Constants.durationForDisapperaingTutorialView,
                    delay: 0.0,
@@ -28,7 +28,8 @@ class ViewAppearanceAnimator {
                     superview.backgroundColor = UIColor.background
                     superview.subviews.forEach { $0.isUserInteractionEnabled = true }
                 }
-                   view.removeFromSuperview()
+                    view.removeFromSuperview()
+                    completion?()
                    }
                }
     }

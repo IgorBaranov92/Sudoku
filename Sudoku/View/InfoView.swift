@@ -26,10 +26,6 @@ class InfoView: UIView {
            layer.borderColor =  UIColor.dynamicBlack.cgColor
            layer.borderWidth = 2.0
         }
-       
-       override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-           setup()
-       }
-    
+
     
 }
