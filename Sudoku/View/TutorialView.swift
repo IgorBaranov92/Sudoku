@@ -4,6 +4,7 @@ class TutorialView: MessageView {
 
     var message = " " { didSet { setNeedsDisplay() }}
     
+    weak var delegate: TutorialViewDelegate?
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -32,7 +33,9 @@ class TutorialView: MessageView {
     
     @objc
     private func dismissSelf() {
-        ViewAppearanceAnimator.dismiss(self)
+        ViewAppearanceAnimator.dismiss(self) { [weak self] in
+            self?.delegate?.enableUI()
+        }
     }
     
 

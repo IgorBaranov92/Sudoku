@@ -1,6 +1,6 @@
 import UIKit
 
-class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate, NewGameDelegate {
+class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate, NewGameDelegate, TutorialViewDelegate {
     
     // MARK: - Public API
     
@@ -69,6 +69,15 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     }
     
     // MARK: - IBActions
+    
+    @IBAction func showRules(_ sender: UIButton) {
+        let tutorialView = TutorialView()
+        tutorialView.message = Rules.getRulesDescriptionBasedOn(gameType)
+        tutorialView.delegate = self
+        view.addSubview(tutorialView)
+        TutorialViewConstraint.activate(tutorialView, self.view)
+        ViewAppearanceAnimator.show(tutorialView)
+    }
     
     @objc
     func erase(_ recognizer: UITapGestureRecognizer) {
@@ -215,6 +224,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     
     @objc
     private func reset(full:Bool) {
+        print("reset")
         cells.forEach {
             $0.active = false
             $0.highlight = false
@@ -347,10 +357,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     func newGame() {
         reset(full: true)
         digits.forEach { $0.isHidden = false }
-        hasActiveButton = nil
-        view.subviews.forEach { $0.isUserInteractionEnabled = true }
-        cells.forEach { $0.isUserInteractionEnabled = true }
-        sudokuView?.isUserInteractionEnabled = false
+        enableUI()
         sudoku = SudokuGenerator(difficult: gameIndex,
                                  gameType:gameType,id:id,
                                  delegate: self) { [weak self] in
@@ -367,15 +374,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     @IBAction func back(_ sender:UIButton) {
         dismiss(animated: true)
     }
-    
-    @IBAction func showRules(_ sender: UIButton) {
-        let tutorialView = TutorialView()
-        tutorialView.message = Rules.getRulesDescriptionBasedOn(gameType)
-        view.addSubview(tutorialView)
-        TutorialViewConstraint.activate(tutorialView, self.view)
-        ViewAppearanceAnimator.show(tutorialView)
-    }
-    
+        
     private func showErrorAt(_ pivot:CGPoint,message:String) {
         let rect = rightFrameBasedOn(pivot)
         let errorView = ErrorView(frame: rect)
@@ -411,4 +410,11 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     func createNewGame() {
         newGame()
     }
+    
+    func enableUI() {
+        view.subviews.forEach { $0.isUserInteractionEnabled = true }
+        cells.forEach { $0.isUserInteractionEnabled = true }
+        sudokuView?.isUserInteractionEnabled = false
+    }
+    
 }

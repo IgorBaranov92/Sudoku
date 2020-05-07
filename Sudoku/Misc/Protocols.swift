@@ -26,3 +26,7 @@ protocol EndGameDelegate: class {
 protocol NewGameDelegate: class {
     func recreateGameIfNeededAt(_ index:Int)
 }
+
+protocol TutorialViewDelegate: class {
+    func enableUI()
+}
