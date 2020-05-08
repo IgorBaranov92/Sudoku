@@ -24,7 +24,9 @@ protocol EndGameDelegate: class {
 }
 
 protocol NewGameDelegate: class {
-    func recreateGameIfNeededAt(_ index:Int)
+    func createEasyGame()
+    func createMediumGame()
+    func createHardGame()
 }
 
 protocol TutorialViewDelegate: class {

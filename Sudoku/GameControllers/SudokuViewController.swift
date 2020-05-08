@@ -16,8 +16,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     
     // MARK: - Outlets
     
-    @IBOutlet weak var difficultChooser: DifficultChooser! { didSet {
-        difficultChooser.delegate = self
+    @IBOutlet weak var levelChooser: LevelChooser! { didSet {
+        levelChooser.delegate = self
         }}
 
     @IBOutlet private weak var hintView: HintView! { didSet {
@@ -395,21 +395,25 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         dismiss(animated: true)
     }
     
-    func recreateGameIfNeededAt(_ index: Int) {
-        reset(full: false)
-        if index == gameIndex {
-            newGame()
-        } else {
-            saveGame()
-            gameIndex = index
-            recreateGameIfNeeded()
-        }
+    func createEasyGame() {
+        levelChooser.moveTo(0, from: gameIndex)
+        gameIndex = 0
     }
     
+    func createMediumGame() {
+        levelChooser.moveTo(1, from: gameIndex)
+        gameIndex = 1
+    }
+    
+    func createHardGame() {
+        levelChooser.moveTo(2, from: gameIndex)
+        gameIndex = 2
+    }
     
     func createNewGame() {
-        newGame()
+        
     }
+    
     
     func enableUI() {
         view.subviews.forEach { $0.isUserInteractionEnabled = true }
