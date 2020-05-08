@@ -35,12 +35,12 @@ class ShapeSelectionViewController: UIViewController, UICollectionViewDataSource
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShapeSudoku",
-            let destination = segue.destination as? ShapeSudokuViewController,
+            let destination = segue.destination as? SudokuViewController,
             let cell = sender as? ShapeCollectionViewCell,
-            let index = collectionView.indexPath(for: cell){
+            let index = collectionView.indexPath(for: cell) {
             destination.path = path
             destination.gameType = gameType
-            destination.index = index.item
+            destination.id = index.item
         }
     }
     

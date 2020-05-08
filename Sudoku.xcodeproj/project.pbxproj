@@ -27,7 +27,6 @@
 		785F42BB23EC69AB00B2CCA0 /* Sudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785F42BA23EC69AB00B2CCA0 /* Sudoku.swift */; };
 		785FDEB624471A3F00E56F62 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785FDEB524471A3F00E56F62 /* HintView.swift */; };
 		786057D42465ABB600BB3A5D /* LevelChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786057D32465ABB600BB3A5D /* LevelChooser.swift */; };
-		7860C8FF2441CAA60012B007 /* ShapeSudokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860C8FE2441CAA60012B007 /* ShapeSudokuViewController.swift */; };
 		7862E4ED242651AD0030F8E8 /* StatisticButtonAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4EC242651AD0030F8E8 /* StatisticButtonAnimator.swift */; };
 		7862E4F3242A5B610030F8E8 /* EraseStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F2242A5B610030F8E8 /* EraseStatisticView.swift */; };
 		7862E4F5242A5BAA0030F8E8 /* EraseViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F4242A5BAA0030F8E8 /* EraseViewConstraints.swift */; };
@@ -108,7 +107,6 @@
 		785F42BA23EC69AB00B2CCA0 /* Sudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sudoku.swift; sourceTree = "<group>"; };
 		785FDEB524471A3F00E56F62 /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
 		786057D32465ABB600BB3A5D /* LevelChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelChooser.swift; sourceTree = "<group>"; };
-		7860C8FE2441CAA60012B007 /* ShapeSudokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSudokuViewController.swift; sourceTree = "<group>"; };
 		7862E4EC242651AD0030F8E8 /* StatisticButtonAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticButtonAnimator.swift; sourceTree = "<group>"; };
 		7862E4F2242A5B610030F8E8 /* EraseStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EraseStatisticView.swift; sourceTree = "<group>"; };
 		7862E4F4242A5BAA0030F8E8 /* EraseViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EraseViewConstraints.swift; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 			children = (
 				78118B3A2461A80F00DF2EDC /* GameViewController.swift */,
 				78181F0F23E5BE2A00836109 /* SudokuViewController.swift */,
-				7860C8FE2441CAA60012B007 /* ShapeSudokuViewController.swift */,
 			);
 			path = GameControllers;
 			sourceTree = "<group>";
@@ -517,7 +514,6 @@
 				78294FD1241B93A700854A97 /* Constants.swift in Sources */,
 				786BC68F243F3F6F00D42553 /* Global.swift in Sources */,
 				78181F1023E5BE2A00836109 /* SudokuViewController.swift in Sources */,
-				7860C8FF2441CAA60012B007 /* ShapeSudokuViewController.swift in Sources */,
 				7895216B241A431C004F8C1C /* BackButton.swift in Sources */,
 				788DA7B6245C8DED006AA93D /* NewGameButton.swift in Sources */,
 				785C734123F192A000757B0E /* SudokuSolver.swift in Sources */,
