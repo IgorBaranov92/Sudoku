@@ -40,7 +40,7 @@ class LevelChooser: UIView {
         linePath.move(to: CGPoint(x: rect.width*2/3, y: 5))
         linePath.addLine(to: CGPoint(x: rect.width*2/3, y: 26))
         linePath.lineWidth = 0.25
-        UIColor.diagonal.setStroke()
+        UIColor.dynamicBlack.setStroke()
         linePath.stroke()
         
         whiteView.frame = CGRect(x: 0, y: 0, width: rect.width/3, height: 31)

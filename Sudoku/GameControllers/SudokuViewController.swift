@@ -396,22 +396,37 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     }
     
     func createEasyGame() {
-        levelChooser.moveTo(0, from: gameIndex)
-        gameIndex = 0
+        if gameIndex == 0 {
+            newGame()
+        } else {
+            levelChooser.moveTo(0, from: gameIndex)
+            gameIndex = 0
+            recreateGameIfNeeded()
+        }
     }
     
     func createMediumGame() {
-        levelChooser.moveTo(1, from: gameIndex)
-        gameIndex = 1
+        if gameIndex == 1 {
+            newGame()
+        } else {
+            levelChooser.moveTo(1, from: gameIndex)
+            gameIndex = 1
+            recreateGameIfNeeded()
+        }
     }
     
     func createHardGame() {
-        levelChooser.moveTo(2, from: gameIndex)
-        gameIndex = 2
+        if gameIndex == 2 {
+            newGame()
+        } else {
+            levelChooser.moveTo(2, from: gameIndex)
+            gameIndex = 2
+            recreateGameIfNeeded()
+        }
     }
     
     func createNewGame() {
-        
+        newGame()
     }
     
     

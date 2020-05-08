@@ -2206,15 +2206,6 @@
                                     <action selector="back:" destination="gT3-pA-roP" eventType="touchUpInside" id="XqA-oN-o1O"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7D0-R9-LSB" customClass="DifficultChooser" customModule="Судоку" customModuleProvider="target">
-                                <rect key="frame" x="119" y="52" width="176" height="32"/>
-                                <color key="backgroundColor" name="GreenColor"/>
-                                <segments>
-                                    <segment title="★"/>
-                                    <segment title="★★"/>
-                                    <segment title="★★★"/>
-                                </segments>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибок: 0/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4y6-U7-aBv">
                                 <rect key="frame" x="152.33333333333334" y="318.33333333333331" width="109.66666666666666" height="24.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
@@ -2260,22 +2251,30 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wsx-8O-cnK" customClass="LevelChooser" customModule="Судоку" customModuleProvider="target">
+                                <rect key="frame" x="119" y="52" width="176" height="31"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Wqk-J9-gwW"/>
+                                    <constraint firstAttribute="width" constant="176" id="fRz-HS-8Tm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7D0-R9-LSB" firstAttribute="centerX" secondItem="eyJ-e5-n2m" secondAttribute="centerX" id="5JC-2C-q0l"/>
+                            <constraint firstItem="Wsx-8O-cnK" firstAttribute="top" secondItem="zyM-9h-Rbf" secondAttribute="bottom" constant="20" symbolic="YES" id="49O-Pp-zKc"/>
                             <constraint firstAttribute="trailing" secondItem="rjW-fJ-iOM" secondAttribute="trailing" constant="10" id="8Ug-1U-tA2"/>
                             <constraint firstItem="rjW-fJ-iOM" firstAttribute="leading" secondItem="eyJ-e5-n2m" secondAttribute="leading" constant="10" id="Dl3-zu-1I4"/>
                             <constraint firstItem="RPT-Jc-Zow" firstAttribute="centerX" secondItem="eyJ-e5-n2m" secondAttribute="centerX" id="FQx-2k-kLc"/>
                             <constraint firstItem="qmk-I5-z1C" firstAttribute="centerX" secondItem="eyJ-e5-n2m" secondAttribute="centerX" id="HLa-Gh-W8N"/>
-                            <constraint firstItem="7D0-R9-LSB" firstAttribute="top" secondItem="zyM-9h-Rbf" secondAttribute="bottom" constant="8" symbolic="YES" id="Ihh-9i-XHD"/>
+                            <constraint firstItem="qmk-I5-z1C" firstAttribute="top" secondItem="Wsx-8O-cnK" secondAttribute="bottom" constant="8" id="LdI-zg-cZ2"/>
                             <constraint firstItem="RPT-Jc-Zow" firstAttribute="top" secondItem="594-2e-uMD" secondAttribute="bottom" constant="50" id="OHy-P4-tI5"/>
                             <constraint firstAttribute="trailing" secondItem="594-2e-uMD" secondAttribute="trailing" constant="10" id="Uwx-rE-AhP"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RPT-Jc-Zow" secondAttribute="trailing" id="XOk-8h-OLu"/>
                             <constraint firstItem="RPT-Jc-Zow" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eyJ-e5-n2m" secondAttribute="leading" id="ctP-7t-tjw"/>
                             <constraint firstItem="594-2e-uMD" firstAttribute="top" secondItem="4y6-U7-aBv" secondAttribute="bottom" constant="8" id="d9Z-mk-zW8"/>
                             <constraint firstItem="V9i-73-0a8" firstAttribute="leading" secondItem="eyJ-e5-n2m" secondAttribute="leading" constant="10" id="fwC-as-Cn4"/>
-                            <constraint firstItem="qmk-I5-z1C" firstAttribute="top" secondItem="7D0-R9-LSB" secondAttribute="bottom" constant="8" symbolic="YES" id="jT4-gD-wpt"/>
+                            <constraint firstItem="Wsx-8O-cnK" firstAttribute="centerX" secondItem="eyJ-e5-n2m" secondAttribute="centerX" id="hKY-bu-Buy"/>
                             <constraint firstItem="RPT-Jc-Zow" firstAttribute="bottom" secondItem="atz-cU-mAb" secondAttribute="top" id="tGX-7E-RLy"/>
                             <constraint firstItem="RPT-Jc-Zow" firstAttribute="top" secondItem="rjW-fJ-iOM" secondAttribute="bottom" constant="50" id="uAX-JF-JQD"/>
                             <constraint firstItem="4y6-U7-aBv" firstAttribute="centerX" secondItem="eyJ-e5-n2m" secondAttribute="centerX" id="v2B-0s-xqm"/>
@@ -2298,9 +2297,9 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="difficultChooser" destination="7D0-R9-LSB" id="zjA-KR-OaR"/>
                         <outlet property="eraseView" destination="rRd-RG-sQI" id="U18-pU-8Ee"/>
                         <outlet property="hintView" destination="AAq-WR-cfn" id="QFU-kA-BeP"/>
+                        <outlet property="levelChooser" destination="Wsx-8O-cnK" id="aCQ-i0-eOh"/>
                         <outlet property="mistakesLabel" destination="4y6-U7-aBv" id="pMU-yd-MU0"/>
                         <outlet property="shapeView" destination="rjW-fJ-iOM" id="k0u-B2-9mh"/>
                         <outlet property="spacingConstraint" destination="OHy-P4-tI5" id="wPO-zI-yWm"/>
@@ -3668,16 +3667,6 @@
                                     <constraint firstAttribute="width" constant="176" id="lxG-i2-PKV"/>
                                 </constraints>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lnq-35-QPu" customClass="DifficultChooser" customModule="Судоку" customModuleProvider="target">
-                                <rect key="frame" x="119" y="166" width="176" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" name="GreenColor"/>
-                                <segments>
-                                    <segment title="★"/>
-                                    <segment title="★★"/>
-                                    <segment title="★★★"/>
-                                </segments>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>

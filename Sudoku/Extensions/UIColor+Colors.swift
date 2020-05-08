@@ -8,7 +8,7 @@ extension UIColor {
     }
     
     static var dynamicGreen: UIColor {
-        return UIColor(named: "GreenColor") ?? .green
+        return UIColor(named: "GreenColor") ?? #colorLiteral(red: 0.1879999936, green: 0.8199999928, blue: 0.3449999988, alpha: 1)
     }
     
     static var dynamicBlue: UIColor {
