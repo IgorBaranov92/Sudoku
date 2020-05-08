@@ -19,6 +19,7 @@ class ShapeSelectionViewController: UIViewController, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath)
         if let shapeCell = cell as? ShapeCollectionViewCell {
+            shapeCell.shapeView.type = .shape
             shapeCell.shapeView.id = indexPath.item
         }
         return cell

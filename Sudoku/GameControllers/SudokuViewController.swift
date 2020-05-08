@@ -34,8 +34,9 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
             $0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(touchField)))
         }}}
     
-    @IBOutlet private weak var sudokuView: ClassicSudokuView! { didSet {
+    @IBOutlet private weak var sudokuView: SudokuView! { didSet {
         sudokuView.type = gameType
+        sudokuView.id = id
         }}
     
     // MARK: - private vars

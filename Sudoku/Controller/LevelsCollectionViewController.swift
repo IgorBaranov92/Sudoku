@@ -9,6 +9,8 @@ class LevelsCollectionViewController: UIViewController, UICollectionViewDataSour
     
     private let levels = ["Классика","Диагональ","Две диагонали","Ромб","Октагон","Фигуры"]
     
+    private let types: [GameType] = [.classic,.diagonal,.twoDiagonals,.romb,.hexagon,.shape]
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return levels.count
     }
@@ -18,6 +20,7 @@ class LevelsCollectionViewController: UIViewController, UICollectionViewDataSour
         if let levelCell = cell as? LevelSelectionCollectionViewCell {
             levelCell.levelLabel.text = levels[indexPath.item]
             levelCell.levelPreview.id = indexPath.item
+            levelCell.levelPreview.type = types[indexPath.item]
             return levelCell
         }
         return cell

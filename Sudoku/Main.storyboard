@@ -643,7 +643,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="efq-Nl-CJE" customClass="ShapeView" customModule="Судоку" customModuleProvider="target">
+                                                <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="efq-Nl-CJE" customClass="SudokuView" customModule="Судоку" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="174" height="174"/>
                                                     <color key="backgroundColor" name="BackgroundColor"/>
                                                     <constraints>
@@ -705,7 +705,7 @@
         <!--Levels Collection View Controller-->
         <scene sceneID="5CX-P6-y5i">
             <objects>
-                <viewController id="XL3-o7-nQm" customClass="LevelsCollectionViewController" customModule="Судоку" sceneMemberID="viewController">
+                <viewController id="XL3-o7-nQm" customClass="LevelsCollectionViewController" customModule="Судоку" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="988-9B-a0X"/>
                         <viewControllerLayoutGuide type="bottom" id="5Kd-g4-6dc"/>
@@ -756,7 +756,7 @@
                                                     <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLS-2w-e76" customClass="LevelPreview" customModule="Судоку">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLS-2w-e76" customClass="SudokuView" customModule="Судоку" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="40" width="190" height="190"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
@@ -1708,7 +1708,7 @@
                                     <constraint firstAttribute="width" secondItem="E0Q-AK-5h0" secondAttribute="height" multiplier="1:1" id="xh9-gP-5iQ"/>
                                 </constraints>
                             </stackView>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNm-pn-xmZ" customClass="ClassicSudokuView" customModule="Судоку" customModuleProvider="target">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNm-pn-xmZ" customClass="SudokuView" customModule="Судоку" customModuleProvider="target">
                                 <rect key="frame" x="10" y="351" width="394" height="394"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -2027,7 +2027,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9Aw-8Q-G7l"/>
+        <segue reference="yfo-y6-WwJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Erase" width="150" height="150"/>
