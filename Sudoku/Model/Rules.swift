@@ -11,7 +11,7 @@ final class Rules {
         case .twoDiagonals:
             return desc1 + "в каждой из четырех диагоналей, " + desc2
         case .romb:
-            return desc1 + desc2
+            return desc1 + "" + desc2
         case .hexagon:
             return desc1 + "в каждой вершине октагона " + desc2
         case .shape:

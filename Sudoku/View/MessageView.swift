@@ -6,12 +6,7 @@ class MessageView: InfoView {
         super.draw(rect)
         if let superview = self.superview {
             superview.backgroundColor = .backgroundInactive
-            superview.isUserInteractionEnabled = false
-            print(superview)
-            print(self.isUserInteractionEnabled)
+//            superview.isUserInteractionEnabled = false
         }
     }
-    
-    
-   
 }
