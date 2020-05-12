@@ -34,7 +34,7 @@ class TutorialView: MessageView {
     @objc
     private func dismissSelf() {
         ViewAppearanceAnimator.dismiss(self) { [weak self] in
-            self?.delegate?.enableUI()
+            self?.delegate?.enableUI(true)
         }
     }
     

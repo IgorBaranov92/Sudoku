@@ -30,5 +30,5 @@ protocol NewGameDelegate: class {
 }
 
 protocol TutorialViewDelegate: class {
-    func enableUI()
+    func enableUI(_ yes:Bool)
 }

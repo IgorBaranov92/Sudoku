@@ -20,6 +20,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         levelChooser.delegate = self
         }}
 
+    @IBOutlet weak var backButton: BackButton!
+    
     @IBOutlet private weak var hintView: HintView! { didSet {
         hintView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showHint(_:))))
         }}
@@ -37,9 +39,12 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     @IBOutlet private weak var sudokuView: SudokuView! { didSet {
         sudokuView.type = gameType
         sudokuView.id = id
+        sudokuView.isUserInteractionEnabled = false
         }}
     
-    @IBOutlet private weak var gameView: UIView!
+    @IBOutlet private weak var showRulesButton: UIButton!
+    
+    lazy var tapGesture = UITapGestureRecognizer(target: self, action: #selector(clear))
     
     // MARK: - private vars
     
@@ -52,7 +57,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(clear)))
+        view.addGestureRecognizer(tapGesture)
         restoreOptions()
         restoreStatistic()
         recreateGameIfNeeded()
@@ -74,6 +79,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     // MARK: - IBActions
     
     @IBAction func showRules(_ sender: UIButton) {
+        enableUI(false)
         let tutorialView = TutorialView()
         tutorialView.message = Rules.getRulesDescriptionBasedOn(gameType)
         tutorialView.delegate = self
@@ -227,12 +233,11 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     
     @objc
     private func reset(full:Bool) {
-        print("reset")
         cells.forEach {
             $0.active = false
             $0.highlight = false
             if full {
-                $0.setTitle("", for: .normal)
+                $0.setTitle(" ", for: .normal)
                 $0.setTitleColor(.dynamicBlack, for: .normal)
             }
         }
@@ -360,7 +365,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     func newGame() {
         reset(full: true)
         digits.forEach { $0.isHidden = false }
-        enableUI()
+        enableUI(true)
         sudoku = SudokuGenerator(difficult: gameIndex,
                                  gameType:gameType,id:id,
                                  delegate: self) { [weak self] in
@@ -433,10 +438,16 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     }
     
     
-    func enableUI() {
-        view.subviews.forEach { $0.isUserInteractionEnabled = true }
-        cells.forEach { $0.isUserInteractionEnabled = true }
+    func enableUI(_ yes:Bool) {
+        digits.forEach { $0.isUserInteractionEnabled = yes }
+        cells.forEach { $0.isUserInteractionEnabled = yes }
+        tapGesture.isEnabled = yes
+        backButton.isUserInteractionEnabled = yes
+        levelChooser.isUserInteractionEnabled = yes
         sudokuView?.isUserInteractionEnabled = false
+        hintView.isUserInteractionEnabled = yes
+        eraseView.isUserInteractionEnabled = yes
+        showRulesButton.isUserInteractionEnabled = yes
     }
     
 }

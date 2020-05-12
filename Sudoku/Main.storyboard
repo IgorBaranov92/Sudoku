@@ -818,10 +818,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0C-OO-c6t">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" name="GreenColor"/>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E0Q-AK-5h0">
                                 <rect key="frame" x="10" y="351" width="394" height="394"/>
                                 <subviews>
@@ -1888,18 +1884,14 @@
                         <constraints>
                             <constraint firstItem="1M2-aw-uZH" firstAttribute="top" secondItem="Qpl-yu-7oq" secondAttribute="bottom" constant="8" symbolic="YES" id="1mO-jv-Hlo"/>
                             <constraint firstItem="1M2-aw-uZH" firstAttribute="leading" secondItem="Laj-Dm-eH7" secondAttribute="leading" constant="10" id="32M-g5-dr5"/>
-                            <constraint firstAttribute="bottom" secondItem="I0C-OO-c6t" secondAttribute="bottom" id="3en-po-FBy"/>
-                            <constraint firstAttribute="trailing" secondItem="I0C-OO-c6t" secondAttribute="trailing" id="6Mc-Ch-oIr"/>
                             <constraint firstItem="Wtq-bl-3Z1" firstAttribute="top" secondItem="E0Q-AK-5h0" secondAttribute="bottom" constant="50" id="Bgt-HR-sUw"/>
                             <constraint firstAttribute="trailing" secondItem="E0Q-AK-5h0" secondAttribute="trailing" constant="10" id="C4M-bV-g2z"/>
                             <constraint firstItem="hNm-pn-xmZ" firstAttribute="leading" secondItem="Laj-Dm-eH7" secondAttribute="leading" constant="10" id="Efz-8a-ShZ"/>
                             <constraint firstItem="Wtq-bl-3Z1" firstAttribute="bottom" secondItem="Nam-Fv-axC" secondAttribute="top" id="JOQ-P4-2tS"/>
-                            <constraint firstItem="I0C-OO-c6t" firstAttribute="leading" secondItem="Laj-Dm-eH7" secondAttribute="leading" id="KOQ-nA-ViS"/>
                             <constraint firstItem="Wtq-bl-3Z1" firstAttribute="top" secondItem="hNm-pn-xmZ" secondAttribute="bottom" constant="50" id="NHx-5C-z2Y"/>
                             <constraint firstItem="5eG-Km-pJA" firstAttribute="top" secondItem="Qpl-yu-7oq" secondAttribute="bottom" constant="8" id="TNV-DY-kjh"/>
                             <constraint firstItem="E0Q-AK-5h0" firstAttribute="top" secondItem="9Or-Lj-19A" secondAttribute="bottom" constant="8" id="Utr-1G-y5k"/>
                             <constraint firstAttribute="trailing" secondItem="hNm-pn-xmZ" secondAttribute="trailing" constant="10" id="dWI-yd-9RO"/>
-                            <constraint firstItem="I0C-OO-c6t" firstAttribute="top" secondItem="Laj-Dm-eH7" secondAttribute="top" id="err-Ej-u9B"/>
                             <constraint firstItem="9Or-Lj-19A" firstAttribute="centerX" secondItem="Laj-Dm-eH7" secondAttribute="centerX" id="faQ-iD-2KH"/>
                             <constraint firstItem="qho-wB-qYk" firstAttribute="centerX" secondItem="Laj-Dm-eH7" secondAttribute="centerX" id="gtv-Pz-FIm"/>
                             <constraint firstItem="E0Q-AK-5h0" firstAttribute="leading" secondItem="Laj-Dm-eH7" secondAttribute="leading" constant="10" id="ilW-Yl-8ml"/>
@@ -1929,11 +1921,12 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="1M2-aw-uZH" id="ww0-c7-ilk"/>
                         <outlet property="eraseView" destination="wvs-WQ-NFd" id="X71-9V-OHt"/>
-                        <outlet property="gameView" destination="I0C-OO-c6t" id="hrc-TK-25Y"/>
                         <outlet property="hintView" destination="cau-eY-Mtd" id="FbJ-fa-1be"/>
                         <outlet property="levelChooser" destination="5eG-Km-pJA" id="C4m-Lf-dns"/>
                         <outlet property="mistakesLabel" destination="9Or-Lj-19A" id="DWG-Em-cEb"/>
+                        <outlet property="showRulesButton" destination="RoI-ln-nnW" id="Ood-5Z-IDa"/>
                         <outlet property="spacingConstraint" destination="NHx-5C-z2Y" id="OYH-Cd-TVy"/>
                         <outlet property="spacingTwoConstraint" destination="Bgt-HR-sUw" id="q6S-WC-YDU"/>
                         <outlet property="stackView" destination="E0Q-AK-5h0" id="PTD-pz-5sM"/>
