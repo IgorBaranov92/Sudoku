@@ -9,12 +9,14 @@ class EraseAllView: EraseStatisticView {
     }
 
     override func dismiss() {
-        eraseAllDelegate?.eraseAllCanceled()
-        ViewAppearanceAnimator.dismiss(self)
+        ViewAppearanceAnimator.dismiss(self) { [weak self] in
+            self?.eraseAllDelegate?.eraseAllCanceled()
+        }
     }
     
     override func erase() {
-        eraseAllDelegate?.eraseAllConfirmed()
-        ViewAppearanceAnimator.dismiss(self)
+        ViewAppearanceAnimator.dismiss(self) { [weak self] in
+            self?.eraseAllDelegate?.eraseAllConfirmed()
+        }
     }
 }

@@ -41,14 +41,16 @@ class EraseStatisticView: InfoView {
    
     @objc
     func dismiss() {
-        delegate?.eraseCanceled()
-        ViewAppearanceAnimator.dismiss(self)
+        ViewAppearanceAnimator.dismiss(self) { [weak self] in
+            self?.delegate?.eraseCanceled()
+        }
     }
     
     @objc
     func erase () {
-        delegate?.eraseConfirmed()
-        ViewAppearanceAnimator.dismiss(self)
+        ViewAppearanceAnimator.dismiss(self) { [weak self] in
+            self?.delegate?.eraseConfirmed()
+        }
     }
 
 }

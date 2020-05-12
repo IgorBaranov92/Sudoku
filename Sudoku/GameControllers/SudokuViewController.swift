@@ -39,6 +39,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         sudokuView.id = id
         }}
     
+    @IBOutlet private weak var gameView: UIView!
+    
     // MARK: - private vars
     
     private var hasActiveButton: Bool?
