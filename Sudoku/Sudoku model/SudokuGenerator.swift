@@ -132,7 +132,7 @@ class SudokuGenerator: Sudoku {
             digits = SudokuSolver.getBaseGridBasedOn(gameType)
         }
         replaceDigits()
-        removeDigits()
+      //  removeDigits()
         calculateDigits()
         completion?()
     }
@@ -145,17 +145,11 @@ class SudokuGenerator: Sudoku {
         }
         answers = digits
     }
-    
+        
     private func removeDigits() {
         var indexesToDelete = Set<Int>()
-        while indexesToDelete.count <= difficult.rawValue - 2 {
-            let randomRow = Int.random(in: 0...8)
-            let randomColumn = Int.random(in: 0...8)
-            let symmetricRow = dimension - 1 - randomRow
-            let index = randomColumn*dimension+randomRow
-            let symmetricIndex = randomColumn*dimension+symmetricRow
-            indexesToDelete.insert(index)
-            indexesToDelete.insert(symmetricIndex)
+        while indexesToDelete.count <= difficult.rawValue {
+            indexesToDelete.insert(Int.random(in: 0...80))
         }
         indexesToDelete.forEach { digits[$0] = 0 }
     }

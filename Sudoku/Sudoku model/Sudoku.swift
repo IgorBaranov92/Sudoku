@@ -11,7 +11,7 @@ class Sudoku: Codable {
     enum Difficult: Int, Codable {
         case easy = 42
         case medium = 48
-        case hard = 52
+        case hard = 55
     }
 
     
