@@ -433,6 +433,16 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         }
     }
     
+    func createExpertGame() {
+        if gameIndex == 3 {
+            newGame()
+        } else {
+            levelChooser.moveTo(3, from: gameIndex)
+            gameIndex = 3
+            recreateGameIfNeeded()
+        }
+    }
+    
     func createNewGame() {
         newGame()
     }

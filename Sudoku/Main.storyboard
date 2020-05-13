@@ -86,7 +86,7 @@
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="Q8d-Gn-sLv">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="508" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Настройки" id="wKJ-8W-8IW">
@@ -1872,11 +1872,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eG-Km-pJA" customClass="LevelChooser" customModule="Судоку" customModuleProvider="target">
-                                <rect key="frame" x="119" y="52" width="176" height="31"/>
+                                <rect key="frame" x="92" y="52" width="230" height="31"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="UHG-OE-u97"/>
-                                    <constraint firstAttribute="width" constant="176" id="lxG-i2-PKV"/>
+                                    <constraint firstAttribute="width" constant="230" id="lxG-i2-PKV"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1892,13 +1892,14 @@
                             <constraint firstItem="5eG-Km-pJA" firstAttribute="top" secondItem="Qpl-yu-7oq" secondAttribute="bottom" constant="8" id="TNV-DY-kjh"/>
                             <constraint firstItem="E0Q-AK-5h0" firstAttribute="top" secondItem="9Or-Lj-19A" secondAttribute="bottom" constant="8" id="Utr-1G-y5k"/>
                             <constraint firstAttribute="trailing" secondItem="hNm-pn-xmZ" secondAttribute="trailing" constant="10" id="dWI-yd-9RO"/>
+                            <constraint firstItem="5eG-Km-pJA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1M2-aw-uZH" secondAttribute="trailing" constant="10" id="ddb-qc-tRj"/>
                             <constraint firstItem="9Or-Lj-19A" firstAttribute="centerX" secondItem="Laj-Dm-eH7" secondAttribute="centerX" id="faQ-iD-2KH"/>
                             <constraint firstItem="qho-wB-qYk" firstAttribute="centerX" secondItem="Laj-Dm-eH7" secondAttribute="centerX" id="gtv-Pz-FIm"/>
                             <constraint firstItem="E0Q-AK-5h0" firstAttribute="leading" secondItem="Laj-Dm-eH7" secondAttribute="leading" constant="10" id="ilW-Yl-8ml"/>
                             <constraint firstItem="qho-wB-qYk" firstAttribute="top" secondItem="Qpl-yu-7oq" secondAttribute="bottom" constant="47" id="jBy-4h-Fb4"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wtq-bl-3Z1" secondAttribute="trailing" id="thQ-hN-eND"/>
                             <constraint firstItem="Wtq-bl-3Z1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Laj-Dm-eH7" secondAttribute="leading" id="tkP-gh-R3j"/>
-                            <constraint firstItem="5eG-Km-pJA" firstAttribute="centerX" secondItem="Laj-Dm-eH7" secondAttribute="centerX" id="xqw-jL-E8E"/>
+                            <constraint firstItem="5eG-Km-pJA" firstAttribute="centerX" secondItem="Laj-Dm-eH7" secondAttribute="centerX" priority="999" id="xqw-jL-E8E"/>
                             <constraint firstItem="Wtq-bl-3Z1" firstAttribute="centerX" secondItem="Laj-Dm-eH7" secondAttribute="centerX" id="ygY-Wu-7nI"/>
                         </constraints>
                         <variation key="heightClass=compact">

@@ -16,34 +16,49 @@ class LevelChooser: UIView {
         #colorLiteral(red: 0.1879999936, green: 0.8199999928, blue: 0.3449999988, alpha: 1).setFill()
         path.fill()
 
-        let firstLabel = UILabel(frame: CGRect(x: 0, y: 0, width: rect.width/3, height: 31))
+        let firstLabel = UILabel(frame: CGRect(x: 0, y: 0, width: rect.width/4, height: 31))
         firstLabel.text = "⭑"
+        firstLabel.font = UIFont(name: "Avenir Next", size: 20)
         configure(firstLabel)
         firstLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(newEasyGame(_:))))
         addSubview(firstLabel)
 
-        let secondLabel = UILabel(frame: CGRect(x: rect.width/3, y: 0, width: rect.width/3,height: 31))
-        secondLabel.text = "⭑⭑"
+        let secondLabel = UILabel(frame: CGRect(x: rect.width/4, y: 0, width: rect.width/4,height: 31))
+        secondLabel.text = "⭑"
+        secondLabel.font = UIFont(name: "Avenir Next", size: 26)
+
         configure(secondLabel)
         secondLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(newMediumGame(_:))))
         addSubview(secondLabel)
 
-        let thirdLabel = UILabel(frame: CGRect(x: rect.width*2/3, y: 0, width: rect.width/3, height: 31))
-        thirdLabel.text = "⭑⭑⭑"
+        let thirdLabel = UILabel(frame: CGRect(x: rect.width*2/4, y: 0, width: rect.width/4, height: 31))
+        thirdLabel.text = "⭑"
+        thirdLabel.font = UIFont(name: "Avenir Next", size: 32)
+
         configure(thirdLabel)
         thirdLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(newHardGame(_:))))
         addSubview(thirdLabel)
         
+        let fourthLabel = UILabel(frame: CGRect(x: rect.width*3/4, y: 0, width: rect.width/4, height: 31))
+        fourthLabel.text = "⭑"
+        fourthLabel.font = UIFont(name: "Avenir Next", size: 38)
+
+        configure(fourthLabel)
+        fourthLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(newExpertGame(_:))))
+        addSubview(fourthLabel)
+        
         let linePath = UIBezierPath()
-        linePath.move(to: CGPoint(x: rect.width/3, y: 5))
-        linePath.addLine(to: CGPoint(x: rect.width/3, y: 26))
-        linePath.move(to: CGPoint(x: rect.width*2/3, y: 5))
-        linePath.addLine(to: CGPoint(x: rect.width*2/3, y: 26))
+        linePath.move(to: CGPoint(x: rect.width/4, y: 5))
+        linePath.addLine(to: CGPoint(x: rect.width/4, y: 26))
+        linePath.move(to: CGPoint(x: rect.width*2/4, y: 5))
+        linePath.addLine(to: CGPoint(x: rect.width*2/4, y: 26))
+        linePath.move(to: CGPoint(x: rect.width*3/4, y: 5))
+        linePath.addLine(to: CGPoint(x: rect.width*3/4, y: 26))
         linePath.lineWidth = 0.25
         UIColor.dynamicBlack.setStroke()
         linePath.stroke()
         
-        whiteView.frame = CGRect(x: 0, y: 0, width: rect.width/3, height: 31)
+        whiteView.frame = CGRect(x: 0, y: 0, width: rect.width/4, height: 31)
         insertSubview(whiteView, at: 0)
     }
 
@@ -51,7 +66,6 @@ class LevelChooser: UIView {
     private func configure(_ label:UILabel) {
         label.textAlignment = .center
         label.textColor = .dynamicBlack
-        label.font = UIFont(name: "Avenir Next", size: 20)
         label.isUserInteractionEnabled = true
     }
     
@@ -61,7 +75,7 @@ class LevelChooser: UIView {
             delay: 0.0,
             options: .curveLinear,
             animations: {
-                self.whiteView.frame.origin.x = self.viewWidth/3*CGFloat(level)
+                self.whiteView.frame.origin.x = self.viewWidth/4*CGFloat(level)
         }) {  if $0 == .end {}
         }
     }
@@ -85,6 +99,13 @@ class LevelChooser: UIView {
     private func newHardGame(_ recognizer: UITapGestureRecognizer) {
         if recognizer.state == .ended {
             delegate?.createHardGame()
+        }
+    }
+    
+    @objc
+    private func newExpertGame(_ recognizer: UITapGestureRecognizer) {
+        if recognizer.state == .ended {
+            delegate?.createExpertGame()
         }
     }
     

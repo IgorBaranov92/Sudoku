@@ -27,6 +27,7 @@ protocol NewGameDelegate: class {
     func createEasyGame()
     func createMediumGame()
     func createHardGame()
+    func createExpertGame()
 }
 
 protocol TutorialViewDelegate: class {
