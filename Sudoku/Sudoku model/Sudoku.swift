@@ -9,10 +9,10 @@ class Sudoku: Codable {
 
     //how many cells delete
     enum Difficult: Int, Codable {
-        case easy = 42
+        case easy = 45
         case medium = 48
-        case hard = 55
-        case expert = 57
+        case hard = 51
+        case expert = 54
     }
 
     

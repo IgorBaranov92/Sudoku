@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yk7-Qc-fMA">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -18,20 +18,20 @@
                         <viewControllerLayoutGuide type="bottom" id="B6A-hE-3d1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cC1-fj-exf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Судоку" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJy-6w-W8X" customClass="ShrinkableLabel" customModule="Судоку" customModuleProvider="target">
-                                <rect key="frame" x="88.333333333333329" y="74" width="237.66666666666669" height="95.666666666666686"/>
+                                <rect key="frame" x="68.666666666666671" y="74" width="237.66666666666663" height="95.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="70"/>
                                 <color key="textColor" name="GreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wEk-ZI-con">
-                                <rect key="frame" x="113.66666666666669" y="343" width="187" height="210"/>
+                                <rect key="frame" x="94" y="301" width="187" height="210"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXf-s9-Bty" customClass="ShrinkableButton" customModule="Судоку" customModuleProvider="target">
-                                        <rect key="frame" x="35.999999999999986" y="0.0" width="115.00000000000001" height="60"/>
+                                        <rect key="frame" x="36" y="0.0" width="115" height="60"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
                                         <state key="normal" title="Играть">
                                             <color key="titleColor" name="BlackColor"/>
@@ -81,12 +81,12 @@
             <objects>
                 <tableViewController id="Wv0-0J-EsE" customClass="OptionsViewController" customModule="Судоку" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="xU9-HG-UUL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="Q8d-Gn-sLv">
-                            <rect key="frame" x="0.0" y="0.0" width="508" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Настройки" id="wKJ-8W-8IW">
@@ -102,20 +102,20 @@
                             <tableViewSection headerTitle=" " id="Tzb-o5-SJH">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="OptionCell" rowHeight="50" id="Bnm-QF-UNc">
-                                        <rect key="frame" x="0.0" y="99.333332061767578" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="99.333332061767578" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bnm-QF-UNc" id="Xzy-aV-sC9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Лимит ошибок" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7kx-QL-wUl" customClass="ShrinkableLabel" customModule="Судоку" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="11" width="307.33333333333331" height="28"/>
+                                                    <rect key="frame" x="16" y="11" width="272.33333333333331" height="28"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
                                                     <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FVb-Rf-MfB">
-                                                    <rect key="frame" x="343" y="9.6666666666666643" width="51" height="31"/>
+                                                    <rect key="frame" x="304" y="9.6666666666666643" width="51" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="49" id="RIX-8z-RQB"/>
                                                     </constraints>
@@ -136,14 +136,14 @@
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionCell" rowHeight="50" id="kUh-5L-AwC">
-                                        <rect key="frame" x="0.0" y="149.33333206176758" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="149.33333206176758" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kUh-5L-AwC" id="6sG-jo-5sa">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FAK-Z5-dI6">
-                                                    <rect key="frame" x="16" y="0.0" width="382" height="0.0"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" name="FooterColor"/>
                                                     <nil key="highlightedColor"/>
@@ -158,20 +158,20 @@
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="OptionCell" rowHeight="50" id="eEc-Xj-pMT">
-                                        <rect key="frame" x="0.0" y="199.33333206176758" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="199.33333206176758" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eEc-Xj-pMT" id="Ugw-Bo-TKu">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Проверять ошибки" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hHb-hL-bNE" customClass="ShrinkableLabel" customModule="Судоку" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="11" width="307" height="28"/>
+                                                    <rect key="frame" x="16" y="11" width="272" height="28"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
                                                     <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2XY-zI-oC2">
-                                                    <rect key="frame" x="343" y="9.6666666666666643" width="51" height="31"/>
+                                                    <rect key="frame" x="304" y="9.6666666666666643" width="51" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="49" id="LqW-rm-G0z"/>
                                                     </constraints>
@@ -192,14 +192,14 @@
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionCell" rowHeight="50" id="DMQ-iL-w4G">
-                                        <rect key="frame" x="0.0" y="249.33333206176758" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="249.33333206176758" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DMQ-iL-w4G" id="geZ-ye-IdP">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SXo-w9-V60">
-                                                    <rect key="frame" x="16" y="0.0" width="382" height="0.0"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" name="FooterColor"/>
                                                     <nil key="highlightedColor"/>
@@ -214,20 +214,20 @@
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="OptionCell" rowHeight="50" id="DdM-Dm-n0b">
-                                        <rect key="frame" x="0.0" y="299.33333206176758" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="299.33333206176758" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DdM-Dm-n0b" id="6z4-EF-EuI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Выделение областей" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fEZ-mu-csh" customClass="ShrinkableLabel" customModule="Судоку" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="11" width="307" height="28"/>
+                                                    <rect key="frame" x="16" y="11" width="272" height="28"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
                                                     <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s1n-wz-aOx">
-                                                    <rect key="frame" x="343" y="9.6666666666666643" width="51" height="31"/>
+                                                    <rect key="frame" x="304" y="9.6666666666666643" width="51" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="49" id="0F9-2x-A3l"/>
                                                     </constraints>
@@ -248,14 +248,14 @@
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionCell" rowHeight="50" id="ydt-td-xHj">
-                                        <rect key="frame" x="0.0" y="349.33333206176758" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="349.33333206176758" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ydt-td-xHj" id="wio-uu-HER">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kVd-il-gxS">
-                                                    <rect key="frame" x="16" y="0.0" width="382" height="0.0"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" name="FooterColor"/>
                                                     <nil key="highlightedColor"/>
@@ -270,20 +270,20 @@
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="OptionCell" rowHeight="50" id="gs7-51-1wc">
-                                        <rect key="frame" x="0.0" y="399.33333206176758" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="399.33333206176758" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gs7-51-1wc" id="fqL-B7-Oxu">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Умные подсказки" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bEC-0B-8Mz" customClass="ShrinkableLabel" customModule="Судоку" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="11" width="307" height="28"/>
+                                                    <rect key="frame" x="16" y="11" width="272" height="28"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
                                                     <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dEe-mU-ZGW">
-                                                    <rect key="frame" x="343" y="9.6666666666666643" width="51" height="31"/>
+                                                    <rect key="frame" x="304" y="9.6666666666666643" width="51" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="49" id="RyS-t6-e5n"/>
                                                     </constraints>
@@ -304,14 +304,14 @@
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionCell" rowHeight="50" id="E2P-Tt-5ZU">
-                                        <rect key="frame" x="0.0" y="449.33333206176758" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="449.33333206176758" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E2P-Tt-5ZU" id="rtu-xW-IdZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AUO-xI-VWm">
-                                                    <rect key="frame" x="16" y="0.0" width="382" height="0.0"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" name="FooterColor"/>
                                                     <nil key="highlightedColor"/>
@@ -326,20 +326,20 @@
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="OptionCell" rowHeight="50" id="QxR-2k-TGX">
-                                        <rect key="frame" x="0.0" y="499.33333206176758" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="499.33333206176758" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QxR-2k-TGX" id="wpu-ng-q75">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Скрывать цифры" textAlignment="natural" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nRm-8k-LKa" customClass="ShrinkableLabel" customModule="Судоку" customModuleProvider="target">
-                                                    <rect key="frame" x="20" y="11" width="307" height="28"/>
+                                                    <rect key="frame" x="16" y="11" width="272" height="28"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
                                                     <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5u-Bh-p7s">
-                                                    <rect key="frame" x="343" y="9.6666666666666643" width="51" height="31"/>
+                                                    <rect key="frame" x="304" y="9.6666666666666643" width="51" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="49" id="9jS-c2-MBL"/>
                                                     </constraints>
@@ -360,14 +360,14 @@
                                         <color key="backgroundColor" name="BackgroundColor"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionCell" rowHeight="50" id="5e2-vr-Mmu">
-                                        <rect key="frame" x="0.0" y="549.33333206176758" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="549.33333206176758" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5e2-vr-Mmu" id="DgU-aS-fcX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xu0-IS-zfl">
-                                                    <rect key="frame" x="16" y="0.0" width="382" height="0.0"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" name="FooterColor"/>
                                                     <nil key="highlightedColor"/>
@@ -415,18 +415,18 @@
                         <viewControllerLayoutGuide type="bottom" id="uMT-k1-gAd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FPt-El-jOU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="45" estimatedRowHeight="45" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ctv-bj-NQc">
-                                <rect key="frame" x="0.0" y="96" width="414" height="726"/>
+                                <rect key="frame" x="0.0" y="96" width="375" height="642"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="QEy-jf-cp3">
-                                    <rect key="frame" x="0.0" y="118.33333206176758" width="414" height="44"/>
+                                    <rect key="frame" x="0.0" y="118.33333206176758" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKT-uX-Lwf">
-                                            <rect key="frame" x="158.66666666666666" y="-1.6666666666666679" width="97" height="47.333333333333343"/>
+                                            <rect key="frame" x="139" y="-1.6666666666666679" width="97" height="47.333333333333343"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
                                             <state key="normal" title="Стереть">
                                                 <color key="titleColor" name="RedColor"/>
@@ -444,20 +444,20 @@
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StatisticCell" id="BId-4E-1AM" customClass="StatisticTableViewCell" customModule="Судоку" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.333332061767578" width="414" height="45"/>
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BId-4E-1AM" id="sZs-Pi-KSV">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RLr-Qc-7Pd">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="45"/>
+                                                    <rect key="frame" x="16" y="0.0" width="285" height="45"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                     <color key="textColor" name="BlackColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cS-nv-JEY">
-                                                    <rect key="frame" x="348" y="0.0" width="50" height="45"/>
+                                                    <rect key="frame" x="309" y="0.0" width="50" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="G8s-Lg-9XC"/>
                                                     </constraints>
@@ -485,7 +485,7 @@
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9pc-YQ-WgT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <items>
                                     <navigationItem title="Статистика" id="eVd-7B-yq3">
                                         <barButtonItem key="leftBarButtonItem" title="Назад" id="MY0-Iz-bQd">
@@ -503,7 +503,7 @@
                                 </items>
                             </navigationBar>
                             <scrollView verifyAmbiguity="off" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="56" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYM-Fn-NbM">
-                                <rect key="frame" x="8" y="56" width="398" height="40"/>
+                                <rect key="frame" x="8" y="56" width="359" height="40"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="zgs-Ct-Obm">
                                         <rect key="frame" x="0.0" y="0.0" width="630" height="40"/>
@@ -622,11 +622,11 @@
                         <viewControllerLayoutGuide type="bottom" id="svp-L6-gFP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PUY-xL-WbL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6rN-bS-aqT">
-                                <rect key="frame" x="0.0" y="178" width="414" height="698"/>
+                                <rect key="frame" x="0.0" y="178" width="375" height="614"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gwa-3s-SDa">
                                     <size key="itemSize" width="190" height="190"/>
@@ -637,7 +637,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell1" id="XC5-JZ-Q9p" customClass="ShapeCollectionViewCell" customModule="Судоку" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="190" height="190"/>
+                                        <rect key="frame" x="92.666666666666671" y="10" width="190" height="190"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ImL-ZM-cWB">
                                             <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
@@ -676,7 +676,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Уровень" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K87-2L-lj0">
-                                <rect key="frame" x="63.666666666666657" y="74" width="287" height="96"/>
+                                <rect key="frame" x="44" y="74" width="287" height="96"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="70"/>
                                 <color key="textColor" name="GreenColor"/>
                                 <nil key="highlightedColor"/>
@@ -711,7 +711,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5Kd-g4-6dc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JoM-gC-y9q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWt-DJ-Z2D" customClass="BackButton" customModule="Судоку" customModuleProvider="target">
@@ -725,13 +725,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Режим" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Piv-bD-ig6">
-                                <rect key="frame" x="92.666666666666686" y="74" width="229" height="96"/>
+                                <rect key="frame" x="73" y="74" width="229" height="96"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="70"/>
                                 <color key="textColor" name="GreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vBi-HR-INg">
-                                <rect key="frame" x="0.0" y="178" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="178" width="375" height="634"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cD5-S7-KF1">
                                     <size key="itemSize" width="190" height="230"/>
@@ -741,7 +741,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="center" reuseIdentifier="LevelCell" id="Egh-dD-FoE" customClass="LevelSelectionCollectionViewCell" customModule="Судоку">
-                                        <rect key="frame" x="10" y="10" width="190" height="230"/>
+                                        <rect key="frame" x="92.666666666666671" y="10" width="190" height="230"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pPC-W7-eSj">
                                             <rect key="frame" x="0.0" y="0.0" width="190" height="230"/>
@@ -815,17 +815,17 @@
                         <viewControllerLayoutGuide type="bottom" id="Nam-Fv-axC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Laj-Dm-eH7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E0Q-AK-5h0">
-                                <rect key="frame" x="10" y="351" width="394" height="394"/>
+                                <rect key="frame" x="10" y="306" width="355" height="355"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7T0-Kd-UPQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="43.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="39.333333333333336"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqE-UR-pE3" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="43.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="39.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="tqE-UR-pE3" secondAttribute="height" multiplier="1:1" id="Pw1-YW-cZV"/>
                                                 </constraints>
@@ -838,7 +838,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWu-j4-JnL" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="39.333333333333343" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -848,7 +848,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfY-eA-Baa" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="43.666666666666664"/>
+                                                <rect key="frame" x="79" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -858,7 +858,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iir-6V-KJj" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="43.666666666666664"/>
+                                                <rect key="frame" x="118.33333333333333" y="0.0" width="39.333333333333329" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -868,7 +868,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCn-pf-lkG" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="175" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -878,7 +878,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ec-Of-8qw" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="197.33333333333334" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -888,7 +888,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3TY-VT-Xyc" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="236.66666666666666" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -898,7 +898,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfO-Mh-w9s" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="276" y="0.0" width="39.666666666666686" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -908,7 +908,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SzK-uC-AIW" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="39.333333333333314" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -920,10 +920,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GsR-Uo-ezz">
-                                        <rect key="frame" x="0.0" y="43.666666666666686" width="394" height="44"/>
+                                        <rect key="frame" x="0.0" y="39.333333333333314" width="355" height="39.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6wc-J8-8qn" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="39.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="6wc-J8-8qn" secondAttribute="height" multiplier="1:1" id="m9Z-NG-v8Y"/>
                                                 </constraints>
@@ -936,7 +936,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgZ-Oe-Owk" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="39.333333333333343" y="0.0" width="39.666666666666657" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -946,7 +946,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z2N-xu-DtO" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="44"/>
+                                                <rect key="frame" x="79" y="0.0" width="39.333333333333343" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -956,7 +956,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BsK-pr-KdN" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="44"/>
+                                                <rect key="frame" x="118.33333333333333" y="0.0" width="39.333333333333329" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -966,7 +966,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6g-77-HsX" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="175" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="39.666666666666657" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -976,7 +976,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mt-O3-htJ" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="44"/>
+                                                <rect key="frame" x="197.33333333333334" y="0.0" width="39.333333333333343" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -986,7 +986,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1b-d2-NA2" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="44"/>
+                                                <rect key="frame" x="236.66666666666666" y="0.0" width="39.333333333333343" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -996,7 +996,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbU-Jq-KiY" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="276" y="0.0" width="39.666666666666686" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1006,7 +1006,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MkN-ef-4El" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="44"/>
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="39.333333333333314" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1018,10 +1018,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IzT-VD-A9g">
-                                        <rect key="frame" x="0.0" y="87.666666666666686" width="394" height="43.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="79" width="355" height="39.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIm-Gt-W7J" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="43.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="39.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="LIm-Gt-W7J" secondAttribute="height" multiplier="1:1" id="SZP-ST-kVK"/>
                                                 </constraints>
@@ -1034,7 +1034,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwN-1n-UjD" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="39.333333333333343" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1044,7 +1044,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iql-pc-oiY" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="43.666666666666664"/>
+                                                <rect key="frame" x="79" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1054,7 +1054,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ce5-5t-pbz" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="43.666666666666664"/>
+                                                <rect key="frame" x="118.33333333333333" y="0.0" width="39.333333333333329" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1064,7 +1064,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhV-ln-PSq" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="175" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1074,7 +1074,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRJ-YY-AqM" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="197.33333333333334" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1084,7 +1084,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgm-g3-4ng" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="236.66666666666666" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1094,7 +1094,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spN-DQ-CvM" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="276" y="0.0" width="39.666666666666686" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1104,7 +1104,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9us-ba-m24" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="39.333333333333314" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1116,10 +1116,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="C1N-tj-RhW">
-                                        <rect key="frame" x="0.0" y="131.33333333333331" width="394" height="43.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="118.3333333333333" width="355" height="39.333333333333329"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHB-8u-RIe" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="43.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="39.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="UHB-8u-RIe" secondAttribute="height" multiplier="1:1" id="M4u-9C-VFA"/>
                                                 </constraints>
@@ -1132,7 +1132,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0l-vm-fAP" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="39.333333333333343" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1142,7 +1142,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44u-9T-Q9k" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="43.666666666666664"/>
+                                                <rect key="frame" x="79" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1152,7 +1152,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="il6-1t-1RJ" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="43.666666666666664"/>
+                                                <rect key="frame" x="118.33333333333333" y="0.0" width="39.333333333333329" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1162,7 +1162,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7N-tr-8CC" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="175" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1172,7 +1172,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfd-hi-OAu" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="197.33333333333334" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1182,7 +1182,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gu-nq-9op" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="236.66666666666666" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1192,7 +1192,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEQ-YA-8WT" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="276" y="0.0" width="39.666666666666686" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1202,7 +1202,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyl-Ae-peT" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="39.333333333333314" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1214,10 +1214,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="miG-hS-y1S">
-                                        <rect key="frame" x="0.0" y="175" width="394" height="44"/>
+                                        <rect key="frame" x="0.0" y="157.66666666666669" width="355" height="39.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fiu-lU-cCo" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="39.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Fiu-lU-cCo" secondAttribute="height" multiplier="1:1" id="kOA-Sb-Lzd"/>
                                                 </constraints>
@@ -1230,7 +1230,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjr-VM-Os7" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="39.333333333333343" y="0.0" width="39.666666666666657" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1240,7 +1240,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4i-UA-z8n" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="44"/>
+                                                <rect key="frame" x="79" y="0.0" width="39.333333333333343" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1250,7 +1250,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OB-Kq-xi5" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="44"/>
+                                                <rect key="frame" x="118.33333333333333" y="0.0" width="39.333333333333329" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1260,7 +1260,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VQ-Qj-Bw8" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="175" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="39.666666666666657" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1270,7 +1270,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ks1-Ul-aE0" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="44"/>
+                                                <rect key="frame" x="197.33333333333334" y="0.0" width="39.333333333333343" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1280,7 +1280,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWB-vT-SNb" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="44"/>
+                                                <rect key="frame" x="236.66666666666666" y="0.0" width="39.333333333333343" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1290,7 +1290,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPs-OM-XfU" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="276" y="0.0" width="39.666666666666686" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1300,7 +1300,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tL-vv-cGb" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="44"/>
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="39.333333333333314" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1312,10 +1312,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9Rh-Zi-est">
-                                        <rect key="frame" x="0.0" y="219" width="394" height="43.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="197.33333333333331" width="355" height="39.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcI-Sr-iFU" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="43.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="39.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="BcI-Sr-iFU" secondAttribute="height" multiplier="1:1" id="Cc1-sE-zDo"/>
                                                 </constraints>
@@ -1328,7 +1328,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tf-7G-Pjg" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="39.333333333333343" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1338,7 +1338,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGn-mR-xGS" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="43.666666666666664"/>
+                                                <rect key="frame" x="79" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1348,7 +1348,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQs-gT-lVC" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="43.666666666666664"/>
+                                                <rect key="frame" x="118.33333333333333" y="0.0" width="39.333333333333329" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1358,7 +1358,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlw-nW-SgB" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="175" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1368,7 +1368,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCS-kq-6Gk" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="197.33333333333334" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1378,7 +1378,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHP-8u-KDy" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="236.66666666666666" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1388,7 +1388,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zw0-3f-qqk" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="276" y="0.0" width="39.666666666666686" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1398,7 +1398,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZE-yC-9hW" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="39.333333333333314" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1410,10 +1410,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3E8-3G-Jfc">
-                                        <rect key="frame" x="0.0" y="262.66666666666663" width="394" height="43.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="236.66666666666666" width="355" height="39.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWc-lh-PxN" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="43.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="39.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="KWc-lh-PxN" secondAttribute="height" multiplier="1:1" id="O1X-sB-sNL"/>
                                                 </constraints>
@@ -1426,7 +1426,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9B-GU-NfL" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="39.333333333333343" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1436,7 +1436,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TA-7M-jLi" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="43.666666666666664"/>
+                                                <rect key="frame" x="79" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1446,7 +1446,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrn-CX-fTk" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="43.666666666666664"/>
+                                                <rect key="frame" x="118.33333333333333" y="0.0" width="39.333333333333329" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1456,7 +1456,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOK-IX-5GY" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="175" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1466,7 +1466,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1x-1f-jjP" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="197.33333333333334" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1476,7 +1476,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exR-4J-ufg" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="236.66666666666666" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1486,7 +1486,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUF-Lv-Xyi" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="276" y="0.0" width="39.666666666666686" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1496,7 +1496,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vl4-NT-jZN" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="39.333333333333314" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1508,10 +1508,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="V3J-iA-3Hi">
-                                        <rect key="frame" x="0.0" y="306.33333333333337" width="394" height="44"/>
+                                        <rect key="frame" x="0.0" y="276" width="355" height="39.666666666666686"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k92-Nh-LBY" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="44"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="39.666666666666664"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="k92-Nh-LBY" secondAttribute="height" multiplier="1:1" id="kqB-Xb-6Xz"/>
                                                 </constraints>
@@ -1524,7 +1524,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y51-sl-evV" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="39.333333333333343" y="0.0" width="39.666666666666657" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1534,7 +1534,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgF-9d-Vbj" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="44"/>
+                                                <rect key="frame" x="79" y="0.0" width="39.333333333333343" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1544,7 +1544,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyW-Tg-CnX" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="44"/>
+                                                <rect key="frame" x="118.33333333333333" y="0.0" width="39.333333333333329" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1554,7 +1554,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jh2-2W-j0w" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="175" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="39.666666666666657" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1564,7 +1564,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9M0-gQ-Toq" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="44"/>
+                                                <rect key="frame" x="197.33333333333334" y="0.0" width="39.333333333333343" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1574,7 +1574,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuc-v8-JaD" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="44"/>
+                                                <rect key="frame" x="236.66666666666666" y="0.0" width="39.333333333333343" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1584,7 +1584,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xc9-Cu-lay" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="44"/>
+                                                <rect key="frame" x="276" y="0.0" width="39.666666666666686" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1594,7 +1594,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubq-ZQ-fDV" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="44"/>
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="39.333333333333314" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1606,10 +1606,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LHy-hA-saE">
-                                        <rect key="frame" x="0.0" y="350.33333333333337" width="394" height="43.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="315.66666666666663" width="355" height="39.333333333333314"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBt-qE-J5C" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="43.666666666666664" height="43.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="39.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="vBt-qE-J5C" secondAttribute="height" multiplier="1:1" id="F2b-D8-iEV"/>
                                                 </constraints>
@@ -1622,7 +1622,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Js-oE-8PH" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="43.666666666666657" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="39.333333333333343" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1632,7 +1632,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpy-Us-PJc" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="87.666666666666671" y="0.0" width="43.666666666666671" height="43.666666666666664"/>
+                                                <rect key="frame" x="79" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1642,7 +1642,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8c-Si-otv" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="131.33333333333334" y="0.0" width="43.666666666666657" height="43.666666666666664"/>
+                                                <rect key="frame" x="118.33333333333333" y="0.0" width="39.333333333333329" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1652,7 +1652,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbq-eG-sBT" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="175" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="157.66666666666666" y="0.0" width="39.666666666666657" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1662,7 +1662,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNG-MR-a76" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="219" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="197.33333333333334" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1672,7 +1672,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LE-uN-Xjz" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="262.66666666666669" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="236.66666666666666" y="0.0" width="39.333333333333343" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1682,7 +1682,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxx-HV-2Tv" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="306.33333333333331" y="0.0" width="44" height="43.666666666666664"/>
+                                                <rect key="frame" x="276" y="0.0" width="39.666666666666686" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1692,7 +1692,7 @@
                                                 </variation>
                                             </button>
                                             <button opaque="NO" contentMode="redraw" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbr-Lk-iF7" customClass="Cell" customModule="Судоку" customModuleProvider="target">
-                                                <rect key="frame" x="350.33333333333331" y="0.0" width="43.666666666666686" height="43.666666666666664"/>
+                                                <rect key="frame" x="315.66666666666669" y="0.0" width="39.333333333333314" height="39.333333333333336"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1709,14 +1709,14 @@
                                 </constraints>
                             </stackView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNm-pn-xmZ" customClass="SudokuView" customModule="Судоку" customModuleProvider="target">
-                                <rect key="frame" x="10" y="351" width="394" height="394"/>
+                                <rect key="frame" x="10" y="306" width="355" height="355"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hNm-pn-xmZ" secondAttribute="height" multiplier="1:1" id="G8t-ut-nuh"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wtq-bl-3Z1">
-                                <rect key="frame" x="32" y="795" width="350" height="67"/>
+                                <rect key="frame" x="12.666666666666657" y="711" width="350" height="67"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLh-Oa-xuj">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="67"/>
@@ -1827,7 +1827,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qho-wB-qYk">
-                                <rect key="frame" x="96.666666666666686" y="91" width="221" height="67"/>
+                                <rect key="frame" x="77" y="91" width="221" height="67"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cau-eY-Mtd" customClass="HintView" customModule="Судоку" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="67" height="67"/>
@@ -1846,7 +1846,7 @@
                                         </constraints>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Erase" translatesAutoresizingMaskIntoConstraints="NO" id="wvs-WQ-NFd">
-                                        <rect key="frame" x="76.999999999999986" y="0.0" width="67.000000000000014" height="67"/>
+                                        <rect key="frame" x="77" y="0.0" width="67" height="67"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RoI-ln-nnW" customClass="ShrinkableButton" customModule="Судоку" customModuleProvider="target">
@@ -1866,18 +1866,21 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ошибок: 0/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Or-Lj-19A">
-                                <rect key="frame" x="152.33333333333334" y="318.33333333333331" width="109.66666666666666" height="24.666666666666686"/>
+                                <rect key="frame" x="132.66666666666666" y="273.33333333333331" width="109.66666666666666" height="24.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
                                 <color key="textColor" name="BlackColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eG-Km-pJA" customClass="LevelChooser" customModule="Судоку" customModuleProvider="target">
-                                <rect key="frame" x="92" y="52" width="230" height="31"/>
+                                <rect key="frame" x="72.666666666666686" y="52" width="230" height="35"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="UHG-OE-u97"/>
+                                    <constraint firstAttribute="height" constant="35" id="UHG-OE-u97"/>
                                     <constraint firstAttribute="width" constant="230" id="lxG-i2-PKV"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="heightConstraint" destination="UHG-OE-u97" id="b1A-XV-UWi"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
