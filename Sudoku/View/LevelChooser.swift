@@ -3,9 +3,6 @@ import UIKit
 @IBDesignable
 class LevelChooser: UIView {
 
-    
-    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
-    
     var whiteView = WhiteView()
     
     weak var delegate: NewGameDelegate?
@@ -19,14 +16,14 @@ class LevelChooser: UIView {
         #colorLiteral(red: 0.1879999936, green: 0.8199999928, blue: 0.3449999988, alpha: 1).setFill()
         path.fill()
 
-        let firstLabel = UILabel(frame: CGRect(x: 0, y: 0, width: rect.width/4, height: heightConstraint.constant))
+        let firstLabel = UILabel(frame: CGRect(x: 0, y: 0, width: rect.width/4, height: 35))
         firstLabel.text = "⭑"
         firstLabel.font = UIFont(name: "Avenir Next", size: 20)
         configure(firstLabel)
         firstLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(newEasyGame(_:))))
         addSubview(firstLabel)
 
-        let secondLabel = UILabel(frame: CGRect(x: rect.width/4, y: 0, width: rect.width/4,height: heightConstraint.constant))
+        let secondLabel = UILabel(frame: CGRect(x: rect.width/4, y: 0, width: rect.width/4,height: 35))
         secondLabel.text = "⭑"
         secondLabel.font = UIFont(name: "Avenir Next", size: 26)
 
@@ -34,7 +31,7 @@ class LevelChooser: UIView {
         secondLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(newMediumGame(_:))))
         addSubview(secondLabel)
 
-        let thirdLabel = UILabel(frame: CGRect(x: rect.width*2/4, y: 0, width: rect.width/4, height: heightConstraint.constant))
+        let thirdLabel = UILabel(frame: CGRect(x: rect.width*2/4, y: 0, width: rect.width/4, height: 35))
         thirdLabel.text = "⭑"
         thirdLabel.font = UIFont(name: "Avenir Next", size: 32)
 
@@ -42,7 +39,7 @@ class LevelChooser: UIView {
         thirdLabel.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(newHardGame(_:))))
         addSubview(thirdLabel)
         
-        let fourthLabel = UILabel(frame: CGRect(x: rect.width*3/4, y: 0, width: rect.width/4, height: heightConstraint.constant))
+        let fourthLabel = UILabel(frame: CGRect(x: rect.width*3/4, y: 0, width: rect.width/4, height: 35))
         fourthLabel.text = "⭑"
         fourthLabel.font = UIFont(name: "Avenir Next", size: 38)
 
@@ -52,16 +49,16 @@ class LevelChooser: UIView {
         
         let linePath = UIBezierPath()
         linePath.move(to: CGPoint(x: rect.width/4, y: 5))
-        linePath.addLine(to: CGPoint(x: rect.width/4, y: heightConstraint.constant - 5))
+        linePath.addLine(to: CGPoint(x: rect.width/4, y: 30))
         linePath.move(to: CGPoint(x: rect.width*2/4, y: 5))
-        linePath.addLine(to: CGPoint(x: rect.width*2/4, y: heightConstraint.constant - 5))
+        linePath.addLine(to: CGPoint(x: rect.width*2/4, y: 30))
         linePath.move(to: CGPoint(x: rect.width*3/4, y: 5))
-        linePath.addLine(to: CGPoint(x: rect.width*3/4, y: heightConstraint.constant - 5))
+        linePath.addLine(to: CGPoint(x: rect.width*3/4, y: 30))
         linePath.lineWidth = 0.25
         UIColor.dynamicBlack.setStroke()
         linePath.stroke()
         
-        whiteView.frame = CGRect(x: 0, y: 0, width: rect.width/4, height: heightConstraint.constant)
+        whiteView.frame = CGRect(x: 0, y: 0, width: rect.width/4, height: 35)
         insertSubview(whiteView, at: 0)
     }
 

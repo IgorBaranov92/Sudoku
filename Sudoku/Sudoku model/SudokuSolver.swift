@@ -4,6 +4,7 @@ final class SudokuSolver {
     
     class func getBaseGridBasedOn(_ gameType:GameType) -> [Int] {
         let random = Int.random(in: 0...10)
+        print(random)
         switch gameType {
         case .classic:
             switch random {
