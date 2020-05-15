@@ -43,6 +43,7 @@
 		7871BBBA2440E1B700A6FF81 /* ShapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871BBB92440E1B700A6FF81 /* ShapeCollectionViewCell.swift */; };
 		7876D3AC2438B6C900FEA18D /* ShapeSudoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876D3AB2438B6C900FEA18D /* ShapeSudoku.swift */; };
 		7879F06C244F56060062D3C9 /* LevelSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7879F06B244F56060062D3C9 /* LevelSelectionCollectionViewCell.swift */; };
+		787D8CC3246EF3C1004AD527 /* BackToLevelsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787D8CC2246EF3C1004AD527 /* BackToLevelsButton.swift */; };
 		78810CCA241F90B6002828E2 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78810CC9241F90B6002828E2 /* MessageView.swift */; };
 		7883A1C4241D2BE100ECB3FD /* TutorialViewConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */; };
 		78859E572449CC9000F93442 /* ShapeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78859E562449CC9000F93442 /* ShapeSelectionViewController.swift */; };
@@ -119,6 +120,7 @@
 		7871BBB92440E1B700A6FF81 /* ShapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeCollectionViewCell.swift; sourceTree = "<group>"; };
 		7876D3AB2438B6C900FEA18D /* ShapeSudoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSudoku.swift; sourceTree = "<group>"; };
 		7879F06B244F56060062D3C9 /* LevelSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		787D8CC2246EF3C1004AD527 /* BackToLevelsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackToLevelsButton.swift; sourceTree = "<group>"; };
 		78810CC9241F90B6002828E2 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		7883A1C3241D2BE000ECB3FD /* TutorialViewConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewConstraint.swift; sourceTree = "<group>"; };
 		78859E562449CC9000F93442 /* ShapeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeSelectionViewController.swift; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 				7862E4F6242A604B0030F8E8 /* NoButton.swift */,
 				7862E4F8242A60550030F8E8 /* YesButton.swift */,
 				788DA7B5245C8DED006AA93D /* NewGameButton.swift */,
+				787D8CC2246EF3C1004AD527 /* BackToLevelsButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				788DA7B4245C8C3B006AA93D /* ShrinkableLabel.swift in Sources */,
 				7862E4ED242651AD0030F8E8 /* StatisticButtonAnimator.swift in Sources */,
 				78C9B5DB241BE98100E1DB7A /* TutorialView.swift in Sources */,
+				787D8CC3246EF3C1004AD527 /* BackToLevelsButton.swift in Sources */,
 				785D09362440F94100053AD8 /* Shapes.swift in Sources */,
 				78EABF3A242E296B00EF9A1E /* Rules.swift in Sources */,
 				7862E4F3242A5B610030F8E8 /* EraseStatisticView.swift in Sources */,

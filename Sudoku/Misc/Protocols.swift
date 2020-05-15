@@ -21,6 +21,7 @@ protocol EraseAllViewDelegate:class {
 
 protocol EndGameDelegate: class {
     func createNewGame()
+    func returnToLevels()
 }
 
 protocol NewGameDelegate: class {

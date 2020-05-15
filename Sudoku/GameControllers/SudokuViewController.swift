@@ -255,10 +255,11 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     // MARK: - Gamedelegate
 
     func gameWon() {
+        enableUI(false)
         statistic.scores[gameType.rawValue].scores[gameIndex][2] += 1
         saveStatistic()
         let loseGameView = EndGameView()
-        loseGameView.body = "Победа!!!"
+        loseGameView.header = "Победа"
         loseGameView.delegate = self
         view.addSubview(loseGameView)
         EndGameViewConstraints.activate(loseGameView, view)
@@ -266,10 +267,12 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     }
     
     func gameLost() {
+        enableUI(false)
         statistic.scores[gameType.rawValue].scores[gameIndex][3] += 1
         saveStatistic()
         let loseGameView = EndGameView()
-        loseGameView.body = "Игра окончена."
+        loseGameView.header = "Игра окончена"
+        loseGameView.body = "Вы допустили три ошибки и проиграли игру"
         loseGameView.delegate = self
         view.addSubview(loseGameView)
         EndGameViewConstraints.activate(loseGameView, view)
@@ -447,6 +450,9 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         newGame()
     }
     
+    func returnToLevels() {
+        dismiss(animated: true)
+    }
     
     func enableUI(_ yes:Bool) {
         digits.forEach { $0.isUserInteractionEnabled = yes }
