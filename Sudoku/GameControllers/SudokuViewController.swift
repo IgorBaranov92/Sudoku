@@ -407,6 +407,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     }
     
     func createEasyGame() {
+        saveGame()
         if gameIndex == 0 {
             newGame()
         } else {
@@ -417,6 +418,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     }
     
     func createMediumGame() {
+        saveGame()
         if gameIndex == 1 {
             newGame()
         } else {
@@ -427,6 +429,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     }
     
     func createHardGame() {
+        saveGame()
         if gameIndex == 2 {
             newGame()
         } else {
@@ -437,6 +440,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     }
     
     func createExpertGame() {
+        saveGame()
         if gameIndex == 3 {
             newGame()
         } else {
