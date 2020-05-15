@@ -7,6 +7,7 @@ class SudokuView: UIView {
     var id = 0 { didSet { setNeedsDisplay() }}
     
     override func draw(_ rect: CGRect) {
+        layer.sublayers?.removeAll()
         drawBasedAt(rect)
         if type != .shape { drawGridAt(rect) }
         switch type {
@@ -19,10 +20,10 @@ class SudokuView: UIView {
             Shapes.getPathBasedAt(id, rect: rect,width: 2.5).stroke()
         default:break
         }
+        print(layer.sublayers?.count ?? -1)
     }
 
     private func drawGridAt(_ rect:CGRect) {
-        
        for pivot in stride(from: 1/3*rect.width, to: rect.width, by: 1/3*rect.width) {
            layer.addVertical(width: Constants.doubleLineWidth, start: CGPoint(x: pivot, y: 0), end: CGPoint(x: pivot, y: rect.maxY))
            layer.addVertical(width: Constants.doubleLineWidth, start: CGPoint(x: 0, y: pivot), end: CGPoint(x: rect.maxX, y: pivot))
@@ -30,8 +31,6 @@ class SudokuView: UIView {
    }
     
     private func drawBasedAt(_ rect:CGRect) {
-        removeLayer(layerName: "sudokuBorder")
-        removeLayer(layerName: "vertical")
         layer.addBorderAt(rect.insetBy(dx: 1.0, dy: 1.0), lineWidth: Constants.doubleLineWidth)
         for pivot in stride(from: 1/9*rect.width, to: rect.width, by: 1/9*rect.width) {
             layer.addVertical(width: Constants.lineWidth, start: CGPoint(x: pivot, y: 0), end: CGPoint(x: pivot, y: rect.maxY))

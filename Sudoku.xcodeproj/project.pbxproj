@@ -38,7 +38,6 @@
 		786BC68B243F3EC300D42553 /* CALayer+Layers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC68A243F3EC300D42553 /* CALayer+Layers.swift */; };
 		786BC68D243F3F5000D42553 /* UIDevice+device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC68C243F3F5000D42553 /* UIDevice+device.swift */; };
 		786BC68F243F3F6F00D42553 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC68E243F3F6F00D42553 /* Global.swift */; };
-		786BC691243F3F8700D42553 /* UIView+layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC690243F3F8700D42553 /* UIView+layer.swift */; };
 		786BC693243F3FB500D42553 /* CGRect+rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC692243F3FB500D42553 /* CGRect+rects.swift */; };
 		786BC697243F656100D42553 /* Indexes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786BC696243F656100D42553 /* Indexes.swift */; };
 		7871BBBA2440E1B700A6FF81 /* ShapeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7871BBB92440E1B700A6FF81 /* ShapeCollectionViewCell.swift */; };
@@ -115,7 +114,6 @@
 		786BC68A243F3EC300D42553 /* CALayer+Layers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Layers.swift"; sourceTree = "<group>"; };
 		786BC68C243F3F5000D42553 /* UIDevice+device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+device.swift"; sourceTree = "<group>"; };
 		786BC68E243F3F6F00D42553 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		786BC690243F3F8700D42553 /* UIView+layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+layer.swift"; sourceTree = "<group>"; };
 		786BC692243F3FB500D42553 /* CGRect+rects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+rects.swift"; sourceTree = "<group>"; };
 		786BC696243F656100D42553 /* Indexes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indexes.swift; sourceTree = "<group>"; };
 		7871BBB92440E1B700A6FF81 /* ShapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -277,7 +275,6 @@
 				788CDC8D242345D800420F9B /* UIColor+Colors.swift */,
 				786BC68A243F3EC300D42553 /* CALayer+Layers.swift */,
 				786BC68C243F3F5000D42553 /* UIDevice+device.swift */,
-				786BC690243F3F8700D42553 /* UIView+layer.swift */,
 				786BC692243F3FB500D42553 /* CGRect+rects.swift */,
 				785D09332440EC2E00053AD8 /* UIBezierPath+Points.swift */,
 			);
@@ -527,7 +524,6 @@
 				7879F06C244F56060062D3C9 /* LevelSelectionCollectionViewCell.swift in Sources */,
 				786BC68D243F3F5000D42553 /* UIDevice+device.swift in Sources */,
 				78B9B144243B6FB200024738 /* InfoView.swift in Sources */,
-				786BC691243F3F8700D42553 /* UIView+layer.swift in Sources */,
 				786057D42465ABB600BB3A5D /* LevelChooser.swift in Sources */,
 				786BC68B243F3EC300D42553 /* CALayer+Layers.swift in Sources */,
 				786A4955244983A8000A2E17 /* SudokuView.swift in Sources */,

@@ -27,11 +27,12 @@ class SudokuGenerator: Sudoku {
         self.id = id
         mistakes = 3
         gameLost = false
+        hints = 2
         switch difficult {
-        case 0: self.difficult = .easy;hints = 4
-        case 1: self.difficult = .medium;hints = 3
-        case 2: self.difficult = .hard;hints = 2
-        case 3: self.difficult = .expert;hints = 1
+        case 0: self.difficult = .easy
+        case 1: self.difficult = .medium
+        case 2: self.difficult = .hard
+        case 3: self.difficult = .expert
         default:break
         }
         clear()
