@@ -20,7 +20,6 @@ class SudokuView: UIView {
             Shapes.getPathBasedAt(id, rect: rect,width: 2.5).stroke()
         default:break
         }
-        print(layer.sublayers?.count ?? -1)
     }
 
     private func drawGridAt(_ rect:CGRect) {
