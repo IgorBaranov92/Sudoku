@@ -61,8 +61,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         restoreOptions()
         restoreStatistic()
         recreateGameIfNeeded()
-        gameWon()
-//        gameLost()
     }
 
     override func viewWillAppear(_ animated: Bool) {
