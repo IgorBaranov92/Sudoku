@@ -61,6 +61,8 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         restoreOptions()
         restoreStatistic()
         recreateGameIfNeeded()
+        gameWon()
+//        gameLost()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -260,6 +262,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         saveStatistic()
         let loseGameView = EndGameView()
         loseGameView.header = "Победа"
+        loseGameView.body = Messages.getVictoryMessageWith(gameType, difficult: sudoku.difficult)
         loseGameView.delegate = self
         view.addSubview(loseGameView)
         EndGameViewConstraints.activate(loseGameView, view)

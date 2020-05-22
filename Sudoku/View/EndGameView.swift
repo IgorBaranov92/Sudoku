@@ -18,11 +18,11 @@ class EndGameView: MessageView {
         label.textAlignment = .center
         addSubview(label)
         
-        let textView = UITextView(frame: CGRect(x: 0, y: rect.height*0.2, width: rect.width, height: rect.height*0.3))
+        let textView = UITextView(frame: CGRect(x: 15, y: rect.height*0.2, width: rect.width-30, height: rect.height*0.3))
         textView.font = UIFont(name: "Avenir Next", size: 20)
         textView.text = body
         textView.textColor = .dynamicBlack
-        textView.textAlignment = .center
+        textView.textAlignment = .natural
         textView.isEditable = false
         textView.allowsEditingTextAttributes = false
         textView.isSelectable = false
