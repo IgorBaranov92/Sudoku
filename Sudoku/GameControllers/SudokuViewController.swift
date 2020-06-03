@@ -253,7 +253,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     
     
     // MARK: - Gamedelegate
-
+    @objc
     func gameWon() {
         enableUI(false)
         statistic.scores[gameType.rawValue].scores[gameIndex][2] += 1
@@ -266,7 +266,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         EndGameViewConstraints.activate(loseGameView, view)
         ViewAppearanceAnimator.show(loseGameView)
     }
-    
+    @objc 
     func gameLost() {
         enableUI(false)
         statistic.scores[gameType.rawValue].scores[gameIndex][3] += 1

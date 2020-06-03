@@ -19,7 +19,7 @@ class LevelsCollectionViewController: UIViewController, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LevelCell", for: indexPath)
         if let levelCell = cell as? LevelSelectionCollectionViewCell {
             levelCell.levelLabel.text = levels[indexPath.item]
-            levelCell.levelPreview.id = indexPath.item
+            levelCell.levelPreview.id = 0
             levelCell.levelPreview.type = types[indexPath.item]
             return levelCell
         }

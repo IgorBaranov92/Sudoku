@@ -46,36 +46,6 @@ final class ShapeSudoku {
          set8 = Set(arrayLiteral: 75,76,77,78,79,58,59,67,68)
          set9 = Set(arrayLiteral: 31,40,41,33,34,42,43,51,52)
         case 3:
-         set1 = Set(arrayLiteral: 0,1,2,3,9,10,18,27,12)
-         set2 = Set(arrayLiteral: 4,13,14,22,23,31,30,29,38)
-         set3 = Set(arrayLiteral: 5,6,7,15,24,33,32,41,40)
-         set4 = Set(arrayLiteral: 54,55,56,63,64,65,72,73,47)
-         set5 = Set(arrayLiteral: 74,75,76,77,78,79,80,69,70)
-         set6 = Set(arrayLiteral: 35,44,53,62,71,61,60,59,52)
-         set7 = Set(arrayLiteral: 66,67,68,57,58,48,49,39,50)
-         set8 = Set(arrayLiteral: 11,19,20,21,28,36,37,45,46)
-         set9 = Set(arrayLiteral: 8,17,26,16,25,34,43,42,51)
-        case 4:
-         set1 = Set(arrayLiteral: 0,1,2,9,18,27,36,45,54)
-         set2 = Set(arrayLiteral: 10,11,19,20,28,29,37,46,55)
-         set3 = Set(arrayLiteral: 3,12,13,21,30,39,38,47,48)
-         set4 = Set(arrayLiteral: 4,5,6,7,8,14,15,16,23)
-         set5 = Set(arrayLiteral: 17,24,25,26,33,34,35,42,43)
-         set6 = Set(arrayLiteral: 60,61,62,69,70,71,78,79,80)
-         set7 = Set(arrayLiteral: 63,64,66,67,72,73,74,75,76)
-         set8 = Set(arrayLiteral: 44,41,50,51,52,53,59,68,77)
-         set9 = Set(arrayLiteral: 22,31,32,40,49,58,57,56,65)
-        case 5:
-         set1 = Set(arrayLiteral: 0,9,10,18,19,27,36,45,54)
-         set2 = Set(arrayLiteral: 1,2,3,4,11,12,20,21,30)
-         set3 = Set(arrayLiteral: 5,6,13,14,22,23,31,32,40)
-         set4 = Set(arrayLiteral: 7,8,16,17,15,24,33,42,51)
-         set5 = Set(arrayLiteral: 25,26,34,35,43,44,52,53,62)
-         set6 = Set(arrayLiteral: 77,78,79,80,69,70,71,60,61)
-         set7 = Set(arrayLiteral: 72,73,63,64,55,46,37,28,29)
-         set8 = Set(arrayLiteral: 74,75,65,56,47,48,49,38,39)
-         set9 = Set(arrayLiteral: 76,66,67,68,57,58,59,50,41)
-        case 6:
          set1 = Set(arrayLiteral: 0,1,2,3,4,5,9,18,12)
          set2 = Set(arrayLiteral: 6,15,14,13,23,24,32,33,41)
          set3 = Set(arrayLiteral: 7,8,16,17,25,26,34,43,42)
@@ -85,7 +55,7 @@ final class ShapeSudoku {
          set7 = Set(arrayLiteral: 36,37,38,39,45,46,54,55,56)
          set8 = Set(arrayLiteral: 47,48,57,49,50,51,40,31,22)
          set9 = Set(arrayLiteral: 35,44,53,52,62,61,60,59,58)
-        case 7:
+        case 4:
          set1 = Set(arrayLiteral: 0,1,9,18,27,36,45,46,47)
          set2 = Set(arrayLiteral: 2,10,11,19,20,28,29,37,38)
          set3 = Set(arrayLiteral: 3,4,5,6,7,8,14,17,26)
@@ -95,7 +65,7 @@ final class ShapeSudoku {
          set7 = Set(arrayLiteral: 12,13,21,22,30,39,23,24,32)
          set8 = Set(arrayLiteral: 15,16,25,34,35,43,44,52,53)
          set9 = Set(arrayLiteral: 62,61,60,51,42,33,41,40,31)
-        case 8:
+        case 5:
          set1 = Set(arrayLiteral: 0,1,9,10,18,27,36,45,54)
          set2 = Set(arrayLiteral: 19,28,37,46,55,63,64,72,73)
          set3 = Set(arrayLiteral: 2,3,11,20,21,29,38,47,56)
@@ -105,7 +75,7 @@ final class ShapeSudoku {
          set7 = Set(arrayLiteral: 76,77,68,78,79,80,70,71,61)
          set8 = Set(arrayLiteral: 26,35,44,53,62,52,51,60,69)
          set9 = Set(arrayLiteral: 30,39,40,41,42,43,32,50,59)
-        case 9:
+        case 6:
          set1 = Set(arrayLiteral: 0,9,18,27,36,45,54,55,37)
          set2 = Set(arrayLiteral: 1,2,10,19,28,29,38,47,46)
          set3 = Set(arrayLiteral: 3,11,12,20,21,30,39,48,57)
@@ -115,17 +85,7 @@ final class ShapeSudoku {
          set7 = Set(arrayLiteral: 71,62,61,60,59,58,51,52,53)
          set8 = Set(arrayLiteral: 13,14,22,23,31,32,33,40,49)
          set9 = Set(arrayLiteral: 15,24,25,34,41,42,43,44,50)
-        case 10:
-         set1 = Set(arrayLiteral: 0,1,2,3,9,10,11,19,20)
-         set2 = Set(arrayLiteral: 4,5,12,13,14,21,22,31,40)
-         set3 = Set(arrayLiteral: 6,15,16,24,33,42,51,60,69)
-         set4 = Set(arrayLiteral: 7,8,17,25,26,34,35,43,44)
-         set5 = Set(arrayLiteral: 52,53,61,62,70,71,79,80,78)
-         set6 = Set(arrayLiteral: 36,37,45,46,54,55,63,72,73)
-         set7 = Set(arrayLiteral: 18,27,28,29,30,38,39,47,48)
-         set8 = Set(arrayLiteral: 75,76,77,68,59,50,41,32,23)
-         set9 = Set(arrayLiteral: 74,64,65,66,67,56,57,58,49)
-        case 11:
+        case 7:
          set1 = Set(arrayLiteral: 0,9,18,27,36,37,45,46,54)
          set2 = Set(arrayLiteral: 1,2,3,4,10,19,28,12,21)
          set3 = Set(arrayLiteral: 5,6,7,8,16,14,23,32,41)
@@ -148,3 +108,6 @@ final class ShapeSudoku {
     }
     
 }
+
+
+
