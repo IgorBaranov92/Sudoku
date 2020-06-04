@@ -60,10 +60,6 @@ class SudokuSolverTests: XCTestCase {
         XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(5).count == 81, "error")
         XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(6).count == 81, "error")
         XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(7).count == 81, "error")
-        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(8).count == 81, "error")
-        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(9).count == 81, "error")
-        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(10).count == 81, "error")
-        XCTAssert(ShapeSudokuSolver.getBaseGridBasedOn(11).count == 81, "error")
     }
     
     func testSetCount() {
@@ -75,10 +71,6 @@ class SudokuSolverTests: XCTestCase {
         XCTAssert(returnRightIndexesBasedOn(id: 5).count == 81)
         XCTAssert(returnRightIndexesBasedOn(id: 6).count == 81)
         XCTAssert(returnRightIndexesBasedOn(id: 7).count == 81)
-        XCTAssert(returnRightIndexesBasedOn(id: 8).count == 81)
-        XCTAssert(returnRightIndexesBasedOn(id: 9).count == 81)
-        XCTAssert(returnRightIndexesBasedOn(id: 10).count == 81)
-        XCTAssert(returnRightIndexesBasedOn(id: 11).count == 81)
     }
     
     private func returnRightIndexesBasedOn(id:Int) -> Set<Int> {

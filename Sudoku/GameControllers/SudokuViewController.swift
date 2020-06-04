@@ -61,6 +61,12 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         restoreOptions()
         restoreStatistic()
         recreateGameIfNeeded()
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(gameLost))
+        swipeLeft.direction = .left
+        view.addGestureRecognizer(swipeLeft)
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(gameWon))
+        rightSwipe.direction = .right
+        view.addGestureRecognizer(rightSwipe)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -266,7 +272,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         EndGameViewConstraints.activate(loseGameView, view)
         ViewAppearanceAnimator.show(loseGameView)
     }
-    @objc 
+    @objc
     func gameLost() {
         enableUI(false)
         statistic.scores[gameType.rawValue].scores[gameIndex][3] += 1
