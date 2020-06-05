@@ -61,12 +61,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         restoreOptions()
         restoreStatistic()
         recreateGameIfNeeded()
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(gameLost))
-        swipeLeft.direction = .left
-        view.addGestureRecognizer(swipeLeft)
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(gameWon))
-        rightSwipe.direction = .right
-        view.addGestureRecognizer(rightSwipe)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -322,7 +316,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         if let url = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(gameType == .shape ? path + String(id) : path),let data = try? Data(contentsOf: url),let newValue = Game(json: data) {
             game = newValue
             guard let game = game.games[gameIndex] else { newGame();return  }
-            if game.gameLost && options.options[0] { newGame() }
+            if game.gameLost { newGame() }
             else {
                 sudoku = game
                 sudoku.delegate = self

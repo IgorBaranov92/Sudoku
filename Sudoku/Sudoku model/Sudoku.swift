@@ -12,7 +12,7 @@ class Sudoku: Codable {
         case easy = 45
         case medium = 48
         case hard = 51
-        case expert = 54
+        case expert = 55
     }
 
     
