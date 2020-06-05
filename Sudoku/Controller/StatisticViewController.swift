@@ -1,6 +1,6 @@
 import UIKit
 
-class StatisticViewController: UIViewController,UITableViewDataSource,UITableViewDelegate, EraseViewDelegate, EraseAllViewDelegate {
+class StatisticViewController: UIViewController,UITableViewDataSource,UITableViewDelegate, EraseViewDelegate {
     
 // MARK: - Model
     
@@ -16,7 +16,6 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet var buttons: [UIButton]!
-    @IBOutlet weak var resetAllButton: UIBarButtonItem!
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var bottomView: UIView!
     
@@ -78,7 +77,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         let eraseView = EraseStatisticView()
         eraseView.delegate = self
         eraseView.attentionMessage = "Внимание!"
-        eraseView.message = "Вы действительно хотите стереть всю статистику для режима " + "'" + currentTitle + "'?" + "\n" + "Действие нельзя будет отменить."
+        eraseView.message = "Вы действительно хотите сбросить всю статистику для режима " + "'" + currentTitle + "'?" + "\n" + "Действие нельзя будет отменить."
         view.addSubview(eraseView)
         EraseViewConstraints.activate(eraseView, view)
         ViewAppearanceAnimator.show(eraseView)
@@ -95,18 +94,6 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
             tableView.reloadData()
         }
     }
-    
-    @IBAction func eraseAll(_ sender:UIBarButtonItem) {
-        let eraseView = EraseAllView()
-        eraseView.eraseAllDelegate = self
-        eraseView.attentionMessage = "Внимание!"
-        eraseView.message = "Вы действительно хотите удалить всю статистику?\nДействие нельзя будет отменить."
-        view.addSubview(eraseView)
-        EraseViewConstraints.activate(eraseView, view)
-        ViewAppearanceAnimator.show(eraseView)
-        enableUI(false)
-    }
-    
     
     private func updateStatistic() {
         if let validUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("statistic"),let data = try? Data(contentsOf: validUrl),let newValue = Statistic(json: data) {
@@ -136,23 +123,8 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         enableUI(true)
     }
     
-    func eraseAllCanceled() {
-        enableUI(true)
-    }
-    
-    func eraseAllConfirmed() {
-        for index in statistic.scores.indices {
-            statistic.scores[index] = Statistic.Scores()
-        }
-        saveStatistic()
-        tableView.reloadData()
-        enableUI(true)
-    }
-    
-    
     private func enableUI(_ yes:Bool) {
         buttons.forEach { $0.isUserInteractionEnabled = yes }
-        resetAllButton.isEnabled = yes
         resetButton.isUserInteractionEnabled = yes
         tableView.backgroundColor = yes ? .background : .backgroundInactive
         tableView.visibleCells.forEach { $0.backgroundColor = yes ? .background : .backgroundInactive }

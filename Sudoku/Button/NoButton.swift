@@ -7,7 +7,7 @@ class NoButton: UIButton {
         UIColor.dynamicBlue.setFill()
         path.fill()
         titleLabel?.textAlignment = .center
-        titleLabel?.font = UIFont(name: "Avenir Next", size: 25.0)
+        titleLabel?.font = UIFont(name: "Avenir Next", size: 35)
         setTitle("Нет", for: .normal)
     }
 

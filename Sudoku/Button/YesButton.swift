@@ -7,7 +7,7 @@ class YesButton: UIButton {
         UIColor.dynamicRed.setFill()
         path.fill()
         titleLabel?.textAlignment = .center
-        titleLabel?.font = UIFont(name: "Avenir Next", size: 25.0)
+        titleLabel?.font = UIFont(name: "Avenir Next", size: 35)
         setTitle("Да", for: .normal)
     }
 

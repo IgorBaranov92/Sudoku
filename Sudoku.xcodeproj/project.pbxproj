@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		780A15F9244B108600FA52E1 /* EraseAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780A15F8244B108600FA52E1 /* EraseAllView.swift */; };
 		78118B3B2461A80F00DF2EDC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78118B3A2461A80F00DF2EDC /* GameViewController.swift */; };
 		78181EF923E5BD9B00836109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78181EF823E5BD9B00836109 /* AppDelegate.swift */; };
 		78181F0223E5BD9C00836109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78181F0123E5BD9C00836109 /* Assets.xcassets */; };
@@ -82,7 +81,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		780A15F8244B108600FA52E1 /* EraseAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EraseAllView.swift; sourceTree = "<group>"; };
 		78118B3A2461A80F00DF2EDC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		78181EF523E5BD9B00836109 /* Судоку.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Судоку.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78181EF823E5BD9B00836109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 				788DA7AF245C5613006AA93D /* EndGameView.swift */,
 				78C9B5DA241BE98100E1DB7A /* TutorialView.swift */,
 				7862E4F2242A5B610030F8E8 /* EraseStatisticView.swift */,
-				780A15F8244B108600FA52E1 /* EraseAllView.swift */,
 				78294FCE241B882C00854A97 /* ErrorView.swift */,
 				782239CA2420D967004E7D35 /* TriangleView.swift */,
 				785FDEB524471A3F00E56F62 /* HintView.swift */,
@@ -494,7 +491,6 @@
 				78975CA124530C5D008AC114 /* Messages.swift in Sources */,
 				786630F02445B62A002C0399 /* ShapeSudokuSolver.swift in Sources */,
 				785C734323F1957A00757B0E /* SudokuGenerator.swift in Sources */,
-				780A15F9244B108600FA52E1 /* EraseAllView.swift in Sources */,
 				788CDC8E242345D800420F9B /* UIColor+Colors.swift in Sources */,
 				786BC689243F3E4D00D42553 /* Protocols.swift in Sources */,
 				782239CD2420ECF7004E7D35 /* ShrinkableButton.swift in Sources */,

@@ -419,16 +419,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="45" estimatedRowHeight="45" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ctv-bj-NQc">
-                                <rect key="frame" x="0.0" y="96" width="414" height="746"/>
+                                <rect key="frame" x="0.0" y="104" width="414" height="738"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="QEy-jf-cp3">
                                     <rect key="frame" x="0.0" y="118.33333206176758" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKT-uX-Lwf">
-                                            <rect key="frame" x="158.66666666666666" y="-1.6666666666666679" width="97" height="47.333333333333343"/>
+                                            <rect key="frame" x="149" y="0.0" width="116" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="KtF-0J-BBZ"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
-                                            <state key="normal" title="Стереть">
+                                            <state key="normal" title="Сбросить">
                                                 <color key="titleColor" name="RedColor"/>
                                             </state>
                                             <connections>
@@ -438,7 +441,7 @@
                                     </subviews>
                                     <color key="backgroundColor" name="BackgroundColor"/>
                                     <constraints>
-                                        <constraint firstItem="ZKT-uX-Lwf" firstAttribute="centerY" secondItem="QEy-jf-cp3" secondAttribute="centerY" id="Liv-Mn-Jlb"/>
+                                        <constraint firstItem="ZKT-uX-Lwf" firstAttribute="top" secondItem="QEy-jf-cp3" secondAttribute="top" id="BM7-ZG-lvD"/>
                                         <constraint firstItem="ZKT-uX-Lwf" firstAttribute="centerX" secondItem="QEy-jf-cp3" secondAttribute="centerX" id="a5P-Uf-rxM"/>
                                     </constraints>
                                 </view>
@@ -491,12 +494,6 @@
                                         <barButtonItem key="leftBarButtonItem" title="Назад" id="MY0-Iz-bQd">
                                             <connections>
                                                 <action selector="done:" destination="QfW-Aq-g2U" id="nWQ-7W-6WU"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Стереть все" id="6sg-q5-Ixx">
-                                            <color key="tintColor" name="RedColor"/>
-                                            <connections>
-                                                <action selector="eraseAll:" destination="QfW-Aq-g2U" id="bRC-Mk-MbK"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -582,7 +579,7 @@
                         </subviews>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ctv-bj-NQc" firstAttribute="top" secondItem="JYM-Fn-NbM" secondAttribute="bottom" id="8GR-qJ-Hl9"/>
+                            <constraint firstItem="ctv-bj-NQc" firstAttribute="top" secondItem="JYM-Fn-NbM" secondAttribute="bottom" constant="8" symbolic="YES" id="8GR-qJ-Hl9"/>
                             <constraint firstAttribute="trailing" secondItem="ctv-bj-NQc" secondAttribute="trailing" id="Cb0-ip-9ih"/>
                             <constraint firstAttribute="trailing" secondItem="JYM-Fn-NbM" secondAttribute="trailing" constant="8" id="Ewc-Dc-uqo"/>
                             <constraint firstAttribute="trailing" secondItem="9pc-YQ-WgT" secondAttribute="trailing" symbolic="YES" id="O9d-Rn-OgJ"/>
@@ -597,7 +594,6 @@
                     <connections>
                         <outlet property="bottomView" destination="QEy-jf-cp3" id="3kP-cJ-X6P"/>
                         <outlet property="heightConstaint" destination="nNK-Dd-syJ" id="QN3-qP-33J"/>
-                        <outlet property="resetAllButton" destination="6sg-q5-Ixx" id="3Or-Zg-RkY"/>
                         <outlet property="resetButton" destination="ZKT-uX-Lwf" id="Use-DY-TWz"/>
                         <outlet property="scrollView" destination="JYM-Fn-NbM" id="74v-Pz-GHO"/>
                         <outlet property="stackView" destination="zgs-Ct-Obm" id="IV6-sJ-QEd"/>

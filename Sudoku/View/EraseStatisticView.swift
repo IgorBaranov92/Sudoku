@@ -21,18 +21,18 @@ class EraseStatisticView: InfoView {
         textView.text = message
         textView.textAlignment = .natural
         textView.backgroundColor = .clear
-        textView.font = UIFont(name: "Avenir Next", size: 15)
+        textView.font = UIFont(name: "Avenir Next", size: 20)
         textView.isEditable = false
         textView.allowsEditingTextAttributes = false
         textView.isSelectable = false
         addSubview(textView)
         
-        let noButtonFrame = CGRect(x: 5, y: rect.height*0.8+5, width: rect.width/2-10, height: rect.height*0.2-10)
+        let noButtonFrame = CGRect(x: 5, y: rect.height*0.85+5, width: rect.width/2-10, height: rect.height*0.15-10)
         let noButton = NoButton(frame: noButtonFrame)
         noButton.addTarget(self, action: #selector(dismiss), for: .touchUpInside)
         addSubview(noButton)
         
-        let yesButtonFrame = CGRect(x: rect.width/2 + 5, y: rect.height*0.8+5, width: rect.width/2-10, height: rect.height*0.2-10)
+        let yesButtonFrame = CGRect(x: rect.width/2 + 5, y: rect.height*0.85+5, width: rect.width/2-10, height: rect.height*0.15-10)
         let yesButton = YesButton(frame: yesButtonFrame)
         yesButton.addTarget(self, action: #selector(erase), for: .touchUpInside)
         addSubview(yesButton)
