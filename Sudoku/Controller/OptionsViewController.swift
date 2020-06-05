@@ -33,7 +33,7 @@ class OptionsViewController: UITableViewController {
     
     func update(_ isOn: Bool,_ label:UILabel,_ index:Int) {
         options.options[index] = isOn
-        label.text = isOn ? options.optionsOnDescription[index] : options.optionsOffDescription[index]
+        label.text = isOn ? Descriptions.optionsOnDescription[index] : Descriptions.optionsOffDescription[index]
         saveOptions()
     }
     
@@ -60,13 +60,13 @@ class OptionsViewController: UITableViewController {
             }
             labels.forEach {
                 let index = labels.firstIndex(of: $0) ?? 0
-                $0.text = switches[index].isOn ? options.optionsOnDescription[index] : options.optionsOffDescription[index]
+                $0.text = switches[index].isOn ? Descriptions.optionsOnDescription[index] : Descriptions.optionsOffDescription[index]
             }
             saveOptions()
         } else { // first time
             labels.forEach {
                 let index = labels.firstIndex(of: $0) ?? 0
-                $0.text = options.optionsOnDescription[index] 
+                $0.text = Descriptions.optionsOnDescription[index] 
             }
         }
         switches[1].isUserInteractionEnabled = !switches[0].isOn
