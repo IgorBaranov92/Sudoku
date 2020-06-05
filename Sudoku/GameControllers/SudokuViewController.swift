@@ -154,7 +154,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         } else {
             let center = selectedButton.convert(selectedButton.bounds.center, to: stackView)
             let pivot = stackView.convert(center, to: view)
-            showErrorAt(pivot, message: "Уже заполненная клетка")
+            showErrorAt(pivot, message: "Уже решенная клетка")
         }
     }
     
@@ -166,7 +166,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
             if sudoku.digits[index] != 0 { //cell is solved already
                 let center = selectedButton.convert(selectedButton.bounds.center, to: stackView)
                 let pivot = stackView.convert(center, to: view)
-                showErrorAt(pivot, message: "Уже заполненная клетка")
+                showErrorAt(pivot, message: "Уже решенная клетка")
             } else { // empty cell, please hint me
                 if sudoku.canHint(index: index) {
                     TextAppearenceAnimator.show(cells[index], string: String(sudoku.answers[index]))

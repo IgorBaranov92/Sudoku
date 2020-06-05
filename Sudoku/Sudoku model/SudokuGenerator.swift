@@ -51,10 +51,8 @@ class SudokuGenerator: Sudoku {
                     delegate?.gameLost()
                 }
             }
-            
-        }  else { // correct
-            checkIfSomethingFilledAt(index)
         }
+        checkIfSomethingFilledAt(index)
         if gameCompleted {
             if delegate == nil { fatalError("delegate can't be nil")}
             delegate?.gameWon()
