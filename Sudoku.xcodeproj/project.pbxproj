@@ -30,6 +30,7 @@
 		7862E4F5242A5BAA0030F8E8 /* EraseViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F4242A5BAA0030F8E8 /* EraseViewConstraints.swift */; };
 		7862E4F7242A604C0030F8E8 /* NoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F6242A604B0030F8E8 /* NoButton.swift */; };
 		7862E4F9242A60550030F8E8 /* YesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7862E4F8242A60550030F8E8 /* YesButton.swift */; };
+		786376F6248A8DA9006CC7EC /* Descriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786376F5248A8DA9006CC7EC /* Descriptions.swift */; };
 		786630F02445B62A002C0399 /* ShapeSudokuSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786630EF2445B62A002C0399 /* ShapeSudokuSolver.swift */; };
 		78693EAC24605F87001CB3D2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78693EAB24605F87001CB3D2 /* Launch Screen.storyboard */; };
 		786A4955244983A8000A2E17 /* SudokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786A4954244983A8000A2E17 /* SudokuView.swift */; };
@@ -106,6 +107,7 @@
 		7862E4F4242A5BAA0030F8E8 /* EraseViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EraseViewConstraints.swift; sourceTree = "<group>"; };
 		7862E4F6242A604B0030F8E8 /* NoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoButton.swift; sourceTree = "<group>"; };
 		7862E4F8242A60550030F8E8 /* YesButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesButton.swift; sourceTree = "<group>"; };
+		786376F5248A8DA9006CC7EC /* Descriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Descriptions.swift; sourceTree = "<group>"; };
 		786630EF2445B62A002C0399 /* ShapeSudokuSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeSudokuSolver.swift; sourceTree = "<group>"; };
 		78693EAB24605F87001CB3D2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		786A4954244983A8000A2E17 /* SudokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudokuView.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				78EABF39242E296B00EF9A1E /* Rules.swift */,
 				786BC696243F656100D42553 /* Indexes.swift */,
 				78975CA024530C5D008AC114 /* Messages.swift */,
+				786376F5248A8DA9006CC7EC /* Descriptions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				7862E4ED242651AD0030F8E8 /* StatisticButtonAnimator.swift in Sources */,
 				78C9B5DB241BE98100E1DB7A /* TutorialView.swift in Sources */,
 				787D8CC3246EF3C1004AD527 /* BackToLevelsButton.swift in Sources */,
+				786376F6248A8DA9006CC7EC /* Descriptions.swift in Sources */,
 				785D09362440F94100053AD8 /* Shapes.swift in Sources */,
 				78EABF3A242E296B00EF9A1E /* Rules.swift in Sources */,
 				7862E4F3242A5B610030F8E8 /* EraseStatisticView.swift in Sources */,
