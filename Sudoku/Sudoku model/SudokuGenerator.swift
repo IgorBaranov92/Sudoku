@@ -44,13 +44,12 @@ class SudokuGenerator: Sudoku {
         digitsCount[digit] = digitsCount[digit]! + 1
         if digits[index] != answers[index] { //mistake
             mistakesMade.append(index)
-            if shouldCountMistakes {
-                if mistakesMade.count >= mistakes { //game lost
-                    if delegate == nil { fatalError("delegate can't be nil")}
-                    gameLost = true
-                    delegate?.gameLost()
-                }
+            if mistakesMade.count >= mistakes { //game lost
+                if delegate == nil { fatalError("delegate can't be nil")}
+                gameLost = true
+                if shouldCountMistakes { delegate?.gameLost() }
             }
+            
         }
         checkIfSomethingFilledAt(index)
         if gameCompleted {
