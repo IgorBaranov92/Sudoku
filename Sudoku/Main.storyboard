@@ -419,7 +419,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="45" estimatedRowHeight="45" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ctv-bj-NQc">
-                                <rect key="frame" x="0.0" y="96" width="414" height="726"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="746"/>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="QEy-jf-cp3">
                                     <rect key="frame" x="0.0" y="118.33333206176758" width="414" height="44"/>
@@ -590,11 +590,12 @@
                             <constraint firstItem="9pc-YQ-WgT" firstAttribute="leading" secondItem="FPt-El-jOU" secondAttribute="leading" symbolic="YES" id="ZXd-6w-3SR"/>
                             <constraint firstItem="9pc-YQ-WgT" firstAttribute="top" secondItem="apG-MT-ObW" secondAttribute="bottom" symbolic="YES" id="Zmc-hA-I0f"/>
                             <constraint firstItem="JYM-Fn-NbM" firstAttribute="leading" secondItem="FPt-El-jOU" secondAttribute="leading" constant="8" id="eRp-ya-ql2"/>
-                            <constraint firstAttribute="bottom" secondItem="ctv-bj-NQc" secondAttribute="bottom" constant="20" symbolic="YES" id="fF7-ha-fJe"/>
+                            <constraint firstAttribute="bottom" secondItem="ctv-bj-NQc" secondAttribute="bottom" id="fF7-ha-fJe"/>
                             <constraint firstItem="ctv-bj-NQc" firstAttribute="leading" secondItem="FPt-El-jOU" secondAttribute="leading" id="xXt-tI-yab"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomView" destination="QEy-jf-cp3" id="3kP-cJ-X6P"/>
                         <outlet property="heightConstaint" destination="nNK-Dd-syJ" id="QN3-qP-33J"/>
                         <outlet property="resetAllButton" destination="6sg-q5-Ixx" id="3Or-Zg-RkY"/>
                         <outlet property="resetButton" destination="ZKT-uX-Lwf" id="Use-DY-TWz"/>

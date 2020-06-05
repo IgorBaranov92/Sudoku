@@ -18,7 +18,7 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var resetAllButton: UIBarButtonItem!
     @IBOutlet weak var resetButton: UIButton!
-    
+    @IBOutlet weak var bottomView: UIView!
     
     // MARK: - Private API
     @IBOutlet private weak var heightConstaint: NSLayoutConstraint!
@@ -154,6 +154,10 @@ class StatisticViewController: UIViewController,UITableViewDataSource,UITableVie
         buttons.forEach { $0.isUserInteractionEnabled = yes }
         resetAllButton.isEnabled = yes
         resetButton.isUserInteractionEnabled = yes
+        tableView.backgroundColor = yes ? .background : .backgroundInactive
+        tableView.visibleCells.forEach { $0.backgroundColor = yes ? .background : .backgroundInactive }
+        tableView.isUserInteractionEnabled = yes
+        bottomView.backgroundColor = yes ? .background : .backgroundInactive
     }
    
 }
