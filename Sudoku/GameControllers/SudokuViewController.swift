@@ -9,7 +9,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     var path = String()
     var id = 0
     
-    var selectedButton: Cell? { cells.filter { $0.active == true }.first}
+    var selectedButton: Cell? { cells.filter { $0.isSelect == true }.first}
     var game = Game()
     var options = Options()
     var statistic = Statistic()
@@ -48,8 +48,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     
     // MARK: - private vars
     
-    private var hasActiveButton: Bool?
-
     private var gameIndex = 0
     
     // MARK: - ViewController lifecycle
@@ -91,7 +89,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     @objc
     func erase(_ recognizer: UITapGestureRecognizer) {
         if recognizer.state == .ended {
-            hasActiveButton = nil
             guard let button = selectedButton else { return }
             guard let buttonIndex = cells.firstIndex(of: button) else { return }
             guard let title = button.currentTitle else { return }
@@ -116,7 +113,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
     @IBAction func digitTouched(_ sender: UIButton) {
         guard let title = sender.currentTitle else { return }
         guard let digit = Int(title) else { return }
-        guard hasActiveButton != nil else {
+        guard let selectedButton = selectedButton else {
             reset(full:false)
             let indexes = sudoku.highlightAllButtonsBasedOn(digit: digit)
             indexes.active.forEach { cells[$0].active = true }
@@ -125,8 +122,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
             }
             return
         }
-        hasActiveButton = nil
-        guard let selectedButton = selectedButton else { return }
         guard let index = cells.firstIndex(of: selectedButton) else { return }
         if selectedButton.currentTitle == "" {
             sudoku.cellTouchedAt(index: index, digit: digit,shouldCountMistakes: options.options[0])
@@ -166,7 +161,6 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
                     TextAppearenceAnimator.show(cells[index], string: String(sudoku.answers[index]))
                     updateLabels()
                     hideDigitIfPossible()
-                    hasActiveButton = nil
                     saveGame()
                     statistic.scores[gameType.rawValue].scores[gameIndex][1] += 1
                     saveStatistic()
@@ -181,11 +175,10 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
             if let button = recognizer.view as? Cell,
                 let index = cells.firstIndex(of: button) {
                 reset(full:false)
-                cells[index].active = true
+                cells[index].isSelect = true
                 if options.options[2] {
                     sudoku.highlightButtons(index).forEach { cells[$0].highlight = true }
                 }
-                hasActiveButton = true
             }
         }
     }
@@ -236,6 +229,7 @@ class SudokuViewController: GameViewController, SudokuDelegate, EndGameDelegate,
         cells.forEach {
             $0.active = false
             $0.highlight = false
+            $0.isSelect = false
             if full {
                 $0.setTitle(" ", for: .normal)
                 $0.setTitleColor(.dynamicBlack, for: .normal)

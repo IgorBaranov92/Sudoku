@@ -6,6 +6,8 @@ class SudokuSolverTests: XCTestCase {
     
     var sudoku: SudokuGenerator!
     
+    var shapeSudoku: ShapeSudokuSolver!
+    
     override func setUp() {
         sudoku = SudokuGenerator(difficult: 0, gameType: .classic, id: 0)
     }
@@ -31,6 +33,13 @@ class SudokuSolverTests: XCTestCase {
         XCTAssert(SudokuSolver.getBaseGridBasedOn(.hexagon).count == 81, "error")
     }
 
+    func testBoards() {
+        for _ in 1...3000 {
+            let digits = SudokuSolver.getBaseGridBasedOn(.shape)
+            XCTAssert(digits.count == 81)
+        }
+    }
+    
     func testDigits() {
         for i in 1...3000 {
             sudoku.clear()
